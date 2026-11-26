@@ -217,10 +217,7 @@ function estimatedDailyPercentile(score) {
 const screensEl = $('#screens'), screenEl = $('#screen'), scrBody = $('#scrBody');
 const scrLeft = $('#scrLeft'), screenScore = $('#screenScore'), fuse = $('#fuse'), sideWrap = $('#sideScreens');
 const input = $('#answer'), dock = $('#dock'), dockPrompt = $('#dockPrompt'), dockMsg = $('#dockMsg');
-const tabletTouch = matchMedia('(pointer: coarse) and (min-width: 600px)');
-function syncAnswerInputMode() { input.inputMode = tabletTouch.matches ? 'none' : 'text'; }
-syncAnswerInputMode();
-tabletTouch.addEventListener?.('change', syncAnswerInputMode);
+input.inputMode = 'text';
 const resultsEl = $('#results'), rigCanvas = $('#rig');
 const adminOverlay = $('#adminOverlay'), adminLoginPanel = $('#adminLoginPanel'), adminPanel = $('#adminPanel');
 const adminLoginForm = $('#adminLoginForm'), adminPassword = $('#adminPassword'), adminLoginStatus = $('#adminLoginStatus');
