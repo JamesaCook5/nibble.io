@@ -16,6 +16,7 @@ const SHADOW = 'rgba(48,26,12,.30)';
 let STAGES = [], ROWS = [];
 let P = 1, Q = 2, CW = 0, CH = 0, OX = 0, OY = 0, vignette = null;
 let layoutVW = 0, layoutVH = 0;
+let layoutLocked = false;
 
 const S = {
   stage: 0, prev: 0, t0: -1e9, dur: 900, zapT: -1e9, enterT: -1e9,
@@ -129,14 +130,14 @@ const SCREEN_BG = { green: '#0a1d12', amber: '#1a1005', dos: '#1d2c7a', teal: '#
 
 /* ---------- layout ---------- */
 function resize() {
-  const vw = innerWidth, actualVH = innerHeight, bar = smallQ.matches ? 84 : 26;
-  // Mobile browsers may shrink the viewport when the answer field opens the
-  // software keyboard. Keep the desk scene at its pre-keyboard size so it
-  // doesn't jump down and appear attached to that keyboard.
-  const keyboardResize = document.activeElement?.id === 'answer'
-    && layoutVW === vw && layoutVH > 0 && actualVH < layoutVH - 80;
-  const vh = keyboardResize ? layoutVH : actualVH;
-  if (!keyboardResize) { layoutVW = vw; layoutVH = vh; }
+  const actualVW = innerWidth, actualVH = innerHeight;
+  // Lock the scene to the viewport from before answer entry. Mobile browsers
+  // can resize or pan their viewport when an input receives focus; neither
+  // should move or rescale the computer while the player is typing.
+  const locked = layoutLocked && layoutVW > 0 && layoutVH > 0;
+  const vw = locked ? layoutVW : actualVW, vh = locked ? layoutVH : actualVH;
+  if (!locked) { layoutVW = vw; layoutVH = vh; }
+  const bar = vw <= 760 || vh <= 520 ? 84 : 26;
   const main = STAGES[S.stage]?.main || { x: 26.5, w: 47 };
   const mainWidth = portraitQ.matches ? RW * main.w / 100 : RW;
   const fit = Math.max(.4, Math.min((vw - (portraitQ.matches ? 24 : 0)) / mainWidth, (vh - bar) / RH));
@@ -682,6 +683,7 @@ window.Rig = {
     S.born = STAGES[n].side.map((_, i) => (animate && i >= prevSides) ? performance.now() : -1e9);
     if (portraitQ.matches) resize();
   },
+  lockViewport(locked) { layoutLocked = locked; if (!locked) resize(); },
   zap() { S.zapT = performance.now(); },
   press(code) {
     const k = S.keys.get(code) || { d: 0, v: 0, down: false, flash: 0 };

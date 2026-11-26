@@ -16,8 +16,8 @@
   color-scheme: dark;
 }
 * { box-sizing: border-box; }
-html, body { margin: 0; height: 100%; }
-body { overflow: hidden; background: #2a211c; color: var(--ink); font-family: var(--ui); }
+html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; overscroll-behavior: none; }
+body { position: fixed; inset: 0; background: #2a211c; color: var(--ink); font-family: var(--ui); }
 button, input { font: inherit; }
 
 /* the whole scene is one low-res canvas, scaled up without smoothing */

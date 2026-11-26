@@ -803,6 +803,15 @@ function next() {
   if (setDone()) { animateIpadOnNextRender = true; S.phase = 'done'; reviewOpen = -1; save(); applyStage(7, false); loadReviewAnswers(); renderAll(); scrBody.scrollTop = 0; return; }
   startRound();
 }
+let viewportUnlockTimer = 0;
+input.addEventListener('focus', () => {
+  clearTimeout(viewportUnlockTimer);
+  Rig.lockViewport(true);
+});
+input.addEventListener('blur', () => {
+  clearTimeout(viewportUnlockTimer);
+  viewportUnlockTimer = setTimeout(() => Rig.lockViewport(false), 350);
+});
 function focusInput() { if (document.activeElement !== input) input.focus({ preventScroll: true }); }
 
 /* ---------- loop ---------- */
