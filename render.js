@@ -18,6 +18,12 @@ let P = 1, Q = 2, CW = 0, CH = 0, OX = 0, OY = 0, vignette = null;
 let layoutVW = 0, layoutVH = 0;
 let layoutLocked = false;
 
+function syncSceneAnchor() {
+  const panY = layoutLocked ? Math.max(0, window.visualViewport?.offsetTop || 0) : 0;
+  document.documentElement.style.setProperty('--scene-anchor-y', `${panY}px`);
+  if (layoutLocked && window.scrollY) window.scrollTo(0, 0);
+}
+
 const S = {
   stage: 0, prev: 0, t0: -1e9, dur: 900, zapT: -1e9, enterT: -1e9,
   keys: new Map(), particles: [], keyRects: [], shift: false,
@@ -676,14 +682,14 @@ function frame(now) {
 
 /* ---------- public API ---------- */
 window.Rig = {
-  init(stages, rows, layoutCb) { try { for (const f of ['Press Start 2P', 'VT323']) document.fonts.load(`16px '${f}'`); } catch {} STAGES = stages; ROWS = rows; S.layoutCb = layoutCb; resize(); addEventListener('resize', resize); smallQ.addEventListener?.('change', resize); portraitQ.addEventListener?.('change', resize); requestAnimationFrame(frame); },
+  init(stages, rows, layoutCb) { try { for (const f of ['Press Start 2P', 'VT323']) document.fonts.load(`16px '${f}'`); } catch {} STAGES = stages; ROWS = rows; S.layoutCb = layoutCb; resize(); addEventListener('resize', resize); addEventListener('scroll', syncSceneAnchor, { passive: true }); window.visualViewport?.addEventListener('resize', syncSceneAnchor); window.visualViewport?.addEventListener('scroll', syncSceneAnchor); smallQ.addEventListener?.('change', resize); portraitQ.addEventListener?.('change', resize); requestAnimationFrame(frame); },
   setStage(n, animate) {
     const prevSides = STAGES[S.stage].side.length;
     S.prev = animate ? S.stage : n; S.stage = n; S.t0 = animate ? performance.now() : -1e9;
     S.born = STAGES[n].side.map((_, i) => (animate && i >= prevSides) ? performance.now() : -1e9);
     if (portraitQ.matches) resize();
   },
-  lockViewport(locked) { layoutLocked = locked; if (!locked) resize(); },
+  lockViewport(locked) { layoutLocked = locked; syncSceneAnchor(); if (!locked) resize(); },
   zap() { S.zapT = performance.now(); },
   press(code) {
     const k = S.keys.get(code) || { d: 0, v: 0, down: false, flash: 0 };

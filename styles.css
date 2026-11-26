@@ -21,11 +21,11 @@ body { position: fixed; inset: 0; background: #2a211c; color: var(--ink); font-f
 button, input { font: inherit; }
 
 /* the whole scene is one low-res canvas, scaled up without smoothing */
-.rig { position: fixed; left: 0; top: 0; image-rendering: pixelated; image-rendering: crisp-edges; z-index: 0; touch-action: manipulation; }
+.rig { position: fixed; left: 0; top: 0; image-rendering: pixelated; image-rendering: crisp-edges; z-index: 0; touch-action: manipulation; transform: translate3d(0, var(--scene-anchor-y, 0px), 0); }
 .screens { }
 
 /* ---------- screens ---------- */
-.screens { position: fixed; inset: 0; z-index: 5; pointer-events: none; }
+.screens { position: fixed; inset: 0; z-index: 5; pointer-events: none; transform: translate3d(0, var(--scene-anchor-y, 0px), 0); }
 .screen {
   position: absolute; left: 0; top: 0; width: 0; height: 0; pointer-events: auto; 
   overflow: hidden; display: flex; flex-direction: column;
