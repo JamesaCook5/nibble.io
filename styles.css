@@ -251,6 +251,9 @@ body { --barh: 84px; }
   .score { font-size: 22px; }
   .icon-btn { width: 34px; height: 34px; }
 }
+@media (max-width: 760px) and (orientation: portrait) {
+  .mprompt { display: none; }
+}
 
 /* results overlay */
 .results { position: fixed; z-index: 40; inset: 0; display: grid; place-items: center; padding: 20px; background: rgba(30,16,8,.45); }

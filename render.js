@@ -9,6 +9,7 @@ const cvs = document.getElementById('rig');
 const ctx = cvs.getContext('2d', { alpha: false });
 ctx.imageSmoothingEnabled = false;
 const smallQ = matchMedia('(max-width: 760px), (max-height: 520px)');
+const portraitQ = matchMedia('(max-width: 760px) and (orientation: portrait)');
 const UI_FONT = "'VT323', monospace";
 const SHADOW = 'rgba(48,26,12,.30)';
 
@@ -128,13 +129,17 @@ const SCREEN_BG = { green: '#0a1d12', amber: '#1a1005', dos: '#1d2c7a', teal: '#
 /* ---------- layout ---------- */
 function resize() {
   const vw = innerWidth, vh = innerHeight, bar = smallQ.matches ? 84 : 26;
-  const fit = Math.max(.4, Math.min(vw / RW, (vh - bar) / RH));   // CSS px per unit
+  const main = STAGES[S.stage]?.main || { x: 26.5, w: 47 };
+  const mainWidth = portraitQ.matches ? RW * main.w / 100 : RW;
+  const fit = Math.max(.4, Math.min((vw - (portraitQ.matches ? 24 : 0)) / mainWidth, (vh - bar) / RH));
   Q = Math.max(1, Math.round(fit / 1.6));                          // canvas px per unit
   P = fit / Q;                                                     // CSS px per canvas px
   CW = Math.ceil(vw / P); CH = Math.ceil(vh / P);
   cvs.width = CW; cvs.height = CH;
   cvs.style.width = CW * P + 'px'; cvs.style.height = CH * P + 'px';
-  OX = Math.floor((CW - RW * Q) / 2);
+  OX = portraitQ.matches
+    ? Math.floor(CW / 2 - (main.x + main.w / 2) * RW / 100 * Q)
+    : Math.floor((CW - RW * Q) / 2);
   OY = CH - Math.ceil(bar / P) - RH * Q;
   ctx.imageSmoothingEnabled = false;
   const g = ctx.createRadialGradient(CW / 2, CH * .55, Math.min(CW, CH) * .35, CW / 2, CH * .55, Math.max(CW, CH) * .8);
@@ -662,11 +667,12 @@ function frame(now) {
 
 /* ---------- public API ---------- */
 window.Rig = {
-  init(stages, rows, layoutCb) { try { for (const f of ['Press Start 2P', 'VT323']) document.fonts.load(`16px '${f}'`); } catch {} STAGES = stages; ROWS = rows; S.layoutCb = layoutCb; resize(); addEventListener('resize', resize); smallQ.addEventListener?.('change', resize); requestAnimationFrame(frame); },
+  init(stages, rows, layoutCb) { try { for (const f of ['Press Start 2P', 'VT323']) document.fonts.load(`16px '${f}'`); } catch {} STAGES = stages; ROWS = rows; S.layoutCb = layoutCb; resize(); addEventListener('resize', resize); smallQ.addEventListener?.('change', resize); portraitQ.addEventListener?.('change', resize); requestAnimationFrame(frame); },
   setStage(n, animate) {
     const prevSides = STAGES[S.stage].side.length;
     S.prev = animate ? S.stage : n; S.stage = n; S.t0 = animate ? performance.now() : -1e9;
     S.born = STAGES[n].side.map((_, i) => (animate && i >= prevSides) ? performance.now() : -1e9);
+    if (portraitQ.matches) resize();
   },
   zap() { S.zapT = performance.now(); },
   press(code) {
