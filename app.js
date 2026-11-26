@@ -225,6 +225,7 @@ const adminLoginForm = $('#adminLoginForm'), adminPassword = $('#adminPassword')
 const adminPromptList = $('#adminPromptList'), adminSearch = $('#adminSearch'), adminDate = $('#adminDate');
 const adminSelectionCount = $('#adminSelectionCount'), adminSaveStatus = $('#adminSaveStatus'), adminSave = $('#adminSave');
 const adminTest = $('#adminTest'), adminTestExit = $('#adminTestExit');
+const adminAnalyticsStatus = $('#adminAnalyticsStatus');
 const streakBadge = $('#streakBadge'), streakCount = $('#streakCount');
 let adminSequence = '', adminSequenceAt = 0, adminAuthenticated = false, adminTestMode = false;
 const adminAnswerCache = new Map();
@@ -241,6 +242,11 @@ renderStreakBadge();
 
 const syncModeLabel = () => { $('#dayLabel').textContent = adminTestMode ? 'TEST' : unlimited ? 'RANDOM' : '#' + day; };
 syncModeLabel();
+
+function recordSiteVisit() {
+  return fetch('/api/visit', {method:'POST', cache:'no-store', keepalive:true}).catch(() => null);
+}
+const siteVisitRecorded = recordSiteVisit();
 
 /* ---------- admin prompt editor ---------- */
 function openAdminLogin() {
@@ -315,6 +321,24 @@ async function loadAdminPromptChoices() {
   const available = window.PROMPTS.filter(prompt => !used.has(prompt.id));
   const selected = data.promptIds || available.slice(0, ROUNDS).map(prompt => prompt.id);
   renderAdminPromptChoices(selected, completed, scheduled);
+}
+async function loadAdminAnalytics() {
+  adminAnalyticsStatus.textContent = 'Loading cross-device counts…';
+  try {
+    await siteVisitRecorded;
+    const response = await fetch('/api/admin/analytics');
+    const data = await response.json();
+    if (!response.ok) throw new Error(data.error || 'Analytics unavailable.');
+    const format = value => new Intl.NumberFormat().format(value || 0);
+    $('#visitToday').textContent = format(data.visits_today);
+    $('#uniqueToday').textContent = format(data.unique_browsers_today);
+    $('#visitsWeek').textContent = format(data.visits_last_7_days);
+    $('#uniqueWeek').textContent = format(data.unique_browsers_last_7_days);
+    $('#visitsAllTime').textContent = format(data.total_page_views);
+    adminAnalyticsStatus.textContent = 'Shared site-wide';
+  } catch {
+    adminAnalyticsStatus.textContent = 'Cross-device counts need Neon database storage.';
+  }
 }
 
 function renderAdminAnswers(container, answers) {
@@ -952,7 +976,7 @@ adminLoginForm.addEventListener('submit', async e => {
     const response = await fetch('/api/admin/login',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({password:adminPassword.value})});
     if (!response.ok) { adminLoginStatus.textContent = 'Password not accepted.'; adminPassword.focus(); adminPassword.select(); return; }
     adminAuthenticated = true; adminLoginPanel.hidden = true; adminPanel.hidden = false; adminLoginStatus.textContent = '';
-    await loadAdminPromptChoices();
+    await Promise.all([loadAdminPromptChoices(), loadAdminAnalytics()]);
   } catch { adminLoginStatus.textContent = 'Admin service unavailable.'; }
 });
 adminPromptList.addEventListener('change', e => {

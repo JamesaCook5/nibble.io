@@ -15,7 +15,9 @@ function loadLocalEnv() {
 loadLocalEnv();
 const ADMIN_PASSWORD = process.env.NIBBLE_ADMIN_PASSWORD || '';
 const ADMIN_COOKIE = 'nibble_admin';
+const VISITOR_COOKIE = 'nibble_visitor';
 const adminSessions = new Map();
+let lastVisitCleanupDate = '';
 const dailyConfigPath = path.join(root, 'data', 'daily_prompts.json');
 const pool = process.env.DATABASE_URL ? new (require('pg').Pool)({
   connectionString: process.env.DATABASE_URL,
@@ -107,6 +109,17 @@ function isAdmin(req) {
   if (!expires || expires < Date.now()) { if (token) adminSessions.delete(token); return false; }
   return true;
 }
+function visitorCookie(req) {
+  const token = String(req.headers.cookie || '').split(';').map(v => v.trim())
+    .find(v => v.startsWith(VISITOR_COOKIE + '='))?.slice(VISITOR_COOKIE.length + 1) || '';
+  if (/^[a-f0-9]{64}$/.test(token)) return { token, setCookie:null };
+  const next = crypto.randomBytes(32).toString('hex');
+  const secure = req.socket.encrypted || req.headers['x-forwarded-proto'] === 'https' ? '; Secure' : '';
+  return { token:next, setCookie:`${VISITOR_COOKIE}=${next}; Path=/; HttpOnly; SameSite=Lax; Max-Age=7776000${secure}` };
+}
+function hashVisitor(token) {
+  return crypto.createHash('sha256').update(token).digest('hex');
+}
 function json(res, status, value, headers = {}) {
   res.writeHead(status, { 'content-type':'application/json; charset=utf-8', 'cache-control':'no-store', ...headers });
   res.end(JSON.stringify(value));
@@ -167,6 +180,45 @@ const httpServer = http.createServer((req,res)=>{
   if(pathname==='/api/admin/logout' && req.method==='POST'){
     adminSessions.delete(adminToken(req));
     return json(res, 200, {ok:true}, { 'set-cookie':`${ADMIN_COOKIE}=; Path=/; HttpOnly; SameSite=Strict; Max-Age=0` });
+  }
+  if(pathname==='/api/visit' && req.method==='POST'){
+    if(!pool) return json(res, 503, {error:'cross-device analytics needs Neon storage'});
+    const date = londonToday(), visitor = visitorCookie(req), visitorHash = hashVisitor(visitor.token);
+    pool.query(`WITH new_browser AS (
+        INSERT INTO nibble_site_browser_days (visit_date, browser_hash)
+        VALUES ($1, $2)
+        ON CONFLICT (visit_date, browser_hash) DO NOTHING
+        RETURNING 1
+      )
+      INSERT INTO nibble_site_visit_days (visit_date, page_views, unique_browsers)
+      VALUES ($1, 1, (SELECT count(*) FROM new_browser))
+      ON CONFLICT (visit_date) DO UPDATE SET
+        page_views = nibble_site_visit_days.page_views + 1,
+        unique_browsers = nibble_site_visit_days.unique_browsers + EXCLUDED.unique_browsers`, [date, visitorHash])
+      .then(async () => {
+        if (lastVisitCleanupDate !== date) {
+          await pool.query("DELETE FROM nibble_site_browser_days WHERE visit_date < $1::date - INTERVAL '90 days'", [date]);
+          lastVisitCleanupDate = date;
+        }
+        res.writeHead(204, {'cache-control':'no-store', ...(visitor.setCookie ? {'set-cookie':visitor.setCookie} : {})});
+        res.end();
+      })
+      .catch(() => json(res, 503, {error:'could not record site visit'}));
+    return;
+  }
+  if(pathname==='/api/admin/analytics' && req.method==='GET'){
+    if(!isAdmin(req)) return json(res, 401, {error:'admin login required'});
+    if(!pool) return json(res, 503, {error:'cross-device analytics needs Neon storage'});
+    const date = londonToday(), weekStart = addCalendarDays(date, -6);
+    pool.query(`SELECT
+        (SELECT COALESCE(sum(page_views), 0) FROM nibble_site_visit_days) AS total_page_views,
+        (SELECT COALESCE(page_views, 0) FROM nibble_site_visit_days WHERE visit_date = $1) AS visits_today,
+        (SELECT count(*) FROM nibble_site_browser_days WHERE visit_date = $1) AS unique_browsers_today,
+        (SELECT COALESCE(sum(page_views), 0) FROM nibble_site_visit_days WHERE visit_date >= $2) AS visits_last_7_days,
+        (SELECT count(DISTINCT browser_hash) FROM nibble_site_browser_days WHERE visit_date >= $2) AS unique_browsers_last_7_days`, [date, weekStart])
+      .then(({rows}) => json(res, 200, Object.fromEntries(Object.entries(rows[0]).map(([key, value]) => [key, Number(value)]))))
+      .catch(() => json(res, 503, {error:'could not load site analytics'}));
+    return;
   }
   if(pathname==='/api/admin/daily' && req.method==='GET'){
     if(!isAdmin(req)) return json(res, 401, {error:'admin login required'});

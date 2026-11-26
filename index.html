@@ -96,6 +96,20 @@
       <div class="admin-kicker">NEXT DAILY SET · <span id="adminDate"></span></div>
       <h2 id="adminTitlePanel">Choose tomorrow's prompts</h2>
       <p>Select exactly seven prompts for this date. The saved set is shared with everyone visiting this site.</p>
+      <section class="admin-analytics" aria-labelledby="adminAnalyticsTitle">
+        <div class="admin-analytics-heading">
+          <h3 id="adminAnalyticsTitle">Site visits</h3>
+          <span id="adminAnalyticsStatus" role="status" aria-live="polite">Loading cross-device counts…</span>
+        </div>
+        <div class="admin-analytics-grid">
+          <div><strong id="visitToday">—</strong><span>Visits today</span></div>
+          <div><strong id="uniqueToday">—</strong><span>Browsers today</span></div>
+          <div><strong id="visitsWeek">—</strong><span>Visits · 7 days</span></div>
+          <div><strong id="uniqueWeek">—</strong><span>Browsers · 7 days</span></div>
+          <div><strong id="visitsAllTime">—</strong><span>Total visits</span></div>
+        </div>
+        <p class="admin-analytics-note">Counts include visitors from every device. One browser on each device counts separately; reloads count as visits. An anonymous first-party ID is used to deduplicate daily browser counts.</p>
+      </section>
       <p class="admin-complete-note">Mark a prompt complete to keep it out of future daily sets. This status is saved globally.</p>
       <div class="admin-toolbar">
         <input id="adminSearch" class="admin-input" type="search" placeholder="Filter questions…" aria-label="Filter questions">
