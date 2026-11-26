@@ -572,12 +572,15 @@ function reviewHTML(animateHistogram = false) {
         <span class="rv-main"><span class="rv-q">${esc(p.prompt)}</span><span class="rv-a">${r.answer ? esc(r.answer) : '<span class="dim">no answer</span>'}</span>
           <span class="rv-t" style="--tc:${TIERS[r.tier].color}">${r.tier === 'miss' ? 'no signal' : TIERS[r.tier].name}</span></span>
         <span class="rv-pts" style="--tc:${TIERS[r.tier].color}">+${r.score}</span><span class="rv-car">${open ? '▾' : '▸'}</span>
-      </button>${open ? `<div class="rv-detail">${chipsHTML(p)}<input class="rv-search" type="text" spellcheck="false" autocomplete="off" placeholder="search every answer…" value="${esc(reviewQuery)}" aria-label="Search answers"><ul class="rv-answers">${answersHTML(p, r)}</ul></div>` : ''}
+      </button>${open ? reviewDetailHTML(p, r) : ''}
     </li>`;
   }).join('');
   return `${scoreCurveHTML(animateHistogram)}<div class="rv-top"><div class="answer-list-label">Your seven answers</div><div class="t-sub">${esc(STAGES[S.stage].label)} · tap a question to browse its answer set</div></div>
     <ol class="rv-list">${rows}</ol>
     <div class="rv-foot">new daily set at midnight (UK time) · <span class="locked-label" aria-disabled="true">Random locked</span></div>`;
+}
+function reviewDetailHTML(p, r) {
+  return `<div class="rv-detail">${chipsHTML(p)}<input class="rv-search" type="text" spellcheck="false" autocomplete="off" placeholder="search every answer…" value="${esc(reviewQuery)}" aria-label="Search answers"><ul class="rv-answers">${answersHTML(p, r)}</ul></div>`;
 }
 function chipsHTML(p) {
   const all = buildIndex(p).all, n = t => all.filter(i => i.tier === t).length;
@@ -607,12 +610,10 @@ scrBody.addEventListener('click', e => {
   if (t) {
     const i = +t.dataset.toggle; reviewOpen = reviewOpen === i ? -1 : i; reviewFilter = 'all'; reviewQuery = '';
     renderScreen();
-    scrBody.querySelector(`[data-toggle="${i}"]`)?.scrollIntoView({ block: 'start', behavior: 'smooth' });
   } else if (f) {
     reviewFilter = f.dataset.filter;
     scrBody.querySelectorAll('.rv-chip').forEach(c => c.classList.toggle('on', c === f));
     scrBody.querySelector('.rv-answers').innerHTML = answersHTML(prompts[reviewOpen], S.results[reviewOpen]);
-    f.parentElement.scrollIntoView({ block: 'start', behavior: 'smooth' });
   }
 });
 scrBody.addEventListener('input', e => {
@@ -710,6 +711,7 @@ function mirrorTyped() {
 let animateIpadOnNextRender = false;
 function renderResults() {
   if (S.phase !== 'done') { resultsEl.hidden = true; return; }
+  const answerScrollTop = resultsEl.hidden ? 0 : (resultsEl.querySelector('.ipad-body')?.scrollTop || 0);
   resultsEl.hidden = false;
   const animateHistogram=!histogramSortPlayed;
   resultsEl.innerHTML = `<div class="ipad-shell${animateIpadOnNextRender ? ' ipad-enter' : ''}"><div class="ipad-screen">
@@ -718,6 +720,7 @@ function renderResults() {
     <div class="ipad-body">${reviewHTML(animateHistogram)}</div>
     <footer class="ipad-footer"><button class="btn locked-action" type="button" disabled>Random locked</button><a class="btn ghost" href="?home=1">Home</a></footer>
   </div><div class="ipad-camera"></div><button class="ipad-side-button" type="button" aria-label="Tablet side button" tabindex="-1"></button></div>`;
+  resultsEl.querySelector('.ipad-body').scrollTop = answerScrollTop;
   if (animateHistogram) {
     histogramSortPlayed=true;
     const svg=resultsEl.querySelector('.score-curve svg');
@@ -809,6 +812,7 @@ input.addEventListener('blur', () => {
   clearTimeout(viewportUnlockTimer);
   viewportUnlockTimer = setTimeout(() => Rig.lockViewport(false), 350);
 });
+input.addEventListener('pointerdown', () => Rig.captureViewportAnchor(), { capture: true });
 function focusInput() { if (document.activeElement !== input) input.focus({ preventScroll: true }); }
 
 /* ---------- loop ---------- */
@@ -961,9 +965,40 @@ adminSave.addEventListener('click', async () => {
   } catch (err) { adminSaveStatus.textContent = err.message || 'Could not save daily set.'; }
   updateAdminSelection();
 });
+let answerReviewScrollBeforeClick = null;
+resultsEl.addEventListener('pointerdown', e => {
+  const toggle=e.target.closest('[data-toggle]');
+  if(toggle){
+    answerReviewScrollBeforeClick=resultsEl.querySelector('.ipad-body')?.scrollTop ?? 0;
+    e.preventDefault();
+  }
+}, true);
 resultsEl.addEventListener('click', e => {
   const toggle=e.target.closest('[data-toggle]'), filter=e.target.closest('[data-filter]');
-  if(toggle){const i=+toggle.dataset.toggle;reviewOpen=reviewOpen===i?-1:i;reviewFilter='all';reviewQuery='';renderAll();resultsEl.querySelector(`[data-toggle=\"${i}\"]`)?.scrollIntoView({block:'nearest',behavior:'smooth'});return;}
+  if(toggle){
+    const i=+toggle.dataset.toggle, previous=reviewOpen;
+    const answerBody=resultsEl.querySelector('.ipad-body');
+    const answerScrollTop=answerReviewScrollBeforeClick ?? answerBody?.scrollTop ?? 0;
+    answerReviewScrollBeforeClick=null;
+    reviewOpen=reviewOpen===i?-1:i;reviewFilter='all';reviewQuery='';
+    if(previous>=0){
+      const oldButton=resultsEl.querySelector(`[data-toggle="${previous}"]`), oldRow=oldButton?.closest('.rv-row');
+      oldButton?.setAttribute('aria-expanded','false');
+      const oldCar=oldButton?.querySelector('.rv-car'); if(oldCar)oldCar.textContent='▸';
+      oldRow?.classList.remove('open'); oldRow?.querySelector('.rv-detail')?.remove();
+    }
+    if(reviewOpen>=0){
+      const button=resultsEl.querySelector(`[data-toggle="${i}"]`), row=button?.closest('.rv-row');
+      button?.setAttribute('aria-expanded','true');
+      const car=button?.querySelector('.rv-car'); if(car)car.textContent='▾';
+      row?.classList.add('open'); row?.insertAdjacentHTML('beforeend',reviewDetailHTML(prompts[i],S.results[i]));
+    }
+    if(answerBody){
+      answerBody.scrollTop=answerScrollTop;
+      requestAnimationFrame(()=>{if(answerBody.isConnected)answerBody.scrollTop=answerScrollTop;});
+    }
+    return;
+  }
   if(filter){reviewFilter=filter.dataset.filter;resultsEl.querySelectorAll('.rv-chip').forEach(x=>x.classList.toggle('on',x===filter));const ul=resultsEl.querySelector('.rv-answers');if(ul)ul.innerHTML=answersHTML(prompts[reviewOpen],S.results[reviewOpen]);return;}
 });
 resultsEl.addEventListener('input', e => {if(!e.target.classList.contains('rv-search'))return;reviewQuery=e.target.value;const ul=resultsEl.querySelector('.rv-answers');if(ul)ul.innerHTML=answersHTML(prompts[reviewOpen],S.results[reviewOpen]);});

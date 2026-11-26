@@ -17,11 +17,23 @@ let STAGES = [], ROWS = [];
 let P = 1, Q = 2, CW = 0, CH = 0, OX = 0, OY = 0, vignette = null;
 let layoutVW = 0, layoutVH = 0;
 let layoutLocked = false;
+let sceneAnchorX = 0, sceneAnchorY = 0;
 
 function syncSceneAnchor() {
-  const panY = layoutLocked ? Math.max(0, window.visualViewport?.offsetTop || 0) : 0;
+  const vv = window.visualViewport;
+  const currentX = window.scrollX + (vv?.offsetLeft || 0);
+  const currentY = window.scrollY + (vv?.offsetTop || 0);
+  const panX = layoutLocked ? currentX - sceneAnchorX : 0;
+  const panY = layoutLocked ? currentY - sceneAnchorY : 0;
+  document.documentElement.style.setProperty('--scene-anchor-x', `${panX}px`);
   document.documentElement.style.setProperty('--scene-anchor-y', `${panY}px`);
-  if (layoutLocked && window.scrollY) window.scrollTo(0, 0);
+}
+
+function captureSceneAnchor() {
+  const vv = window.visualViewport;
+  sceneAnchorX = window.scrollX + (vv?.offsetLeft || 0);
+  sceneAnchorY = window.scrollY + (vv?.offsetTop || 0);
+  syncSceneAnchor();
 }
 
 const S = {
@@ -689,7 +701,13 @@ window.Rig = {
     S.born = STAGES[n].side.map((_, i) => (animate && i >= prevSides) ? performance.now() : -1e9);
     if (portraitQ.matches) resize();
   },
-  lockViewport(locked) { layoutLocked = locked; syncSceneAnchor(); if (!locked) resize(); },
+  lockViewport(locked) {
+    if (locked && !layoutLocked) captureSceneAnchor();
+    layoutLocked = locked;
+    syncSceneAnchor();
+    if (!locked) resize();
+  },
+  captureViewportAnchor() { if (layoutLocked) captureSceneAnchor(); },
   zap() { S.zapT = performance.now(); },
   press(code) {
     const k = S.keys.get(code) || { d: 0, v: 0, down: false, flash: 0 };

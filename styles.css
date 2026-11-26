@@ -21,11 +21,11 @@ body { position: fixed; inset: 0; background: #2a211c; color: var(--ink); font-f
 button, input { font: inherit; }
 
 /* the whole scene is one low-res canvas, scaled up without smoothing */
-.rig { position: fixed; left: 0; top: 0; image-rendering: pixelated; image-rendering: crisp-edges; z-index: 0; touch-action: manipulation; transform: translate3d(0, var(--scene-anchor-y, 0px), 0); }
+.rig { position: fixed; left: 0; top: 0; image-rendering: pixelated; image-rendering: crisp-edges; z-index: 0; touch-action: manipulation; transform: translate3d(var(--scene-anchor-x, 0px), var(--scene-anchor-y, 0px), 0); }
 .screens { }
 
 /* ---------- screens ---------- */
-.screens { position: fixed; inset: 0; z-index: 5; pointer-events: none; transform: translate3d(0, var(--scene-anchor-y, 0px), 0); }
+.screens { position: fixed; inset: 0; z-index: 5; pointer-events: none; transform: translate3d(var(--scene-anchor-x, 0px), var(--scene-anchor-y, 0px), 0); }
 .screen {
   position: absolute; left: 0; top: 0; width: 0; height: 0; pointer-events: auto; 
   overflow: hidden; display: flex; flex-direction: column;
@@ -362,7 +362,7 @@ body.ipad-results .results[hidden] { display:none; }
 .ipad-score { min-width:100px; display:flex; align-items:baseline; gap:8px; color:#f2c879; }
 .ipad-score strong { font-family:var(--px8); font-size:clamp(20px,3vw,34px); line-height:1.4; font-variant-numeric:tabular-nums; }
 .ipad-score span { color:#9ba8ba; font-size:14px; }
-.ipad-body { flex:1; overflow:auto; padding:10px clamp(18px,4vw,52px) 20px; }
+.ipad-body { flex:1; overflow:auto; overflow-anchor:none; padding:10px clamp(18px,4vw,52px) 20px; }
 .ipad-body .rv-top { padding:8px 0 12px; }
 .ipad-body .rv-top .t-sub { color:#9ba8ba; font-size:14px; }
 .ipad-body .rv-row { border-color:#2d3948; }
