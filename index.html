@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>nibble.io</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta name="theme-color" content="#2a211c">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<canvas id="rig" class="rig" aria-hidden="true"></canvas>
+<div id="screens" class="screens">
+  <div class="screen main-screen" id="screen">
+    <div class="scr-top">
+      <span id="scrLeft">BOOT</span>
+      <div class="scr-top-right">
+        <span id="screenScore">000</span>
+        <span id="streakBadge" class="screen-streak" role="status" aria-live="polite" aria-label="0-day daily streak on this device" title="Daily streak on this device">
+          <svg class="streak-fire" viewBox="0 0 12 14" shape-rendering="crispEdges" aria-hidden="true">
+            <path fill="#c83b2b" d="M6 0h2v2h2v2h1v3h1v3h-1v2H9v2H3v-1H1v-2H0V8h1V6h2V4h2V2h1z"/>
+            <path fill="#ff9638" d="M6 3h2v2h2v3h-1v3H8v1H4v-1H3V8h1V6h1V4h1z"/>
+            <path fill="#ffe477" d="M6 7h2v2h1v2H8v1H5v-1H4V9h1V8h1z"/>
+          </svg>
+          <span id="streakCount">0</span>
+        </span>
+      </div>
+    </div>
+    <div class="scr-body" id="scrBody"></div>
+    <div class="fuse"><div class="fuse-fill" id="fuse"></div></div>
+  </div>
+  <div id="sideScreens"></div>
+</div>
+
+<section class="panel hud-tl" aria-label="Score">
+  <div class="brand"><svg class="logo" viewBox="0 0 16 16" shape-rendering="crispEdges" aria-hidden="true"><rect x="2" y="1" width="12" height="10" fill="#f3e6cf"/><rect x="2" y="1" width="12" height="1" fill="#fff8ea"/><rect x="13" y="2" width="1" height="9" fill="#d9c6a6"/><rect x="2" y="10" width="12" height="1" fill="#d9c6a6"/><rect x="3" y="2" width="10" height="7" fill="#2f5d62"/><rect x="5" y="4" width="1" height="2" fill="#c8f7d8"/><rect x="10" y="4" width="1" height="2" fill="#c8f7d8"/><rect x="4" y="6" width="1" height="1" fill="#f3a492"/><rect x="11" y="6" width="1" height="1" fill="#f3a492"/><rect x="6" y="6" width="1" height="1" fill="#c8f7d8"/><rect x="7" y="7" width="2" height="1" fill="#c8f7d8"/><rect x="9" y="6" width="1" height="1" fill="#c8f7d8"/><rect x="11" y="9" width="1" height="1" fill="#5fe08a"/><rect x="7" y="11" width="2" height="1" fill="#c9b48f"/><rect x="5" y="12" width="6" height="1" fill="#e9dcc2"/><rect x="3" y="14" width="10" height="2" fill="#e9dcc2"/><rect x="4" y="14" width="8" height="1" fill="#fff8ea"/></svg><span class="brand-name">nibble<span class="dot">.io</span></span><span id="dayLabel" class="day"></span></div>
+  <div class="score"><span id="score">0</span><small>pts</small></div>
+  <div class="stage-name" id="stageName"></div>
+  <div class="meter"><div class="meter-fill" id="meterFill"></div></div>
+  <div class="meter-label" id="meterLabel"></div>
+  <div class="chips" id="chips"></div>
+</section>
+
+<nav class="panel hud-tr">
+  <button id="soundBtn" class="icon-btn" type="button" aria-pressed="true" title="Sound" aria-label="Sound">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4V5z" fill="currentColor"/><g class="on"><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></g><g class="off"><path d="m16 9 6 6M22 9l-6 6"/></g></svg>
+  </button>
+  <button id="helpBtn" class="icon-btn" type="button" title="How to play" aria-label="How to play">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9.5"/><path d="M9.5 9.2a2.6 2.6 0 0 1 5 .9c0 1.8-2.5 2.2-2.5 4"/><circle cx="12" cy="17.3" r=".6" fill="currentColor"/></svg>
+  </button>
+  <button id="practiceBtn" class="icon-btn locked" type="button" disabled title="Random locked" aria-label="Random locked">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h4l10 10h4M17 3l4 4-4 4M3 17h4l2.5-2.5M13.5 9.5 17 7h4"/><path d="m17 13 4 4-4 4"/></svg>
+  </button>
+  <button id="resultsBtn" class="icon-btn" type="button" title="Results" aria-label="Results" hidden>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>
+  </button>
+</nav>
+<div id="help" class="panel help" hidden>
+  <h3>How to play</h3>
+  <ul>
+    <li>Daily: 111<sub>2</sub> prompts a day, the same for everyone.</li>
+    <li>Random: 111<sub>2</sub> prompts picked at random. See every accepted answer after the set.</li>
+    <li>3 s to read, then 25 s to answer. Wrong answers can be retried.</li>
+    <li>Any correct answer scores. Rarer answers score more: Bit 10, Nibble 30, Byte 60, Kilobyte 85, Megabyte 100.</li>
+    <li>Every 75 points upgrades the computer on your desk.</li>
+  </ul>
+</div>
+
+<div class="panel mprompt" id="dockPrompt"></div>
+<div class="bar-msg" id="dockMsg" aria-live="polite"></div>
+<form id="dock" class="bar" autocomplete="off">
+  <button type="button" id="passBtn" class="pass panel-ish" disabled>Pass</button>
+  <div class="ring panel-ish" id="ring"><svg viewBox="0 0 50 50"><circle class="track" cx="25" cy="25" r="22"/><circle class="prog" id="ringProg" cx="25" cy="25" r="22"/></svg><span id="ringNum">25</span></div>
+  <input id="answer" class="answer panel-ish" type="text" maxlength="64" spellcheck="false" autocapitalize="off" autocorrect="off" enterkeyhint="go" aria-label="Your answer" placeholder="Press Enter to start">
+  <button type="submit" class="go panel-ish" id="goBtn" aria-label="Submit">→</button>
+</form>
+
+<section id="adminOverlay" class="admin-overlay" hidden aria-label="Admin access">
+  <div class="admin-card" role="dialog" aria-modal="true" aria-labelledby="adminTitle">
+    <button id="adminClose" class="admin-close" type="button" aria-label="Close admin">×</button>
+    <div id="adminLoginPanel">
+      <div class="admin-kicker">NIBBLE.IO · PRIVATE</div>
+      <h2 id="adminTitle">Admin access</h2>
+      <p>Enter the password to schedule the next daily set.</p>
+      <form id="adminLoginForm" autocomplete="off">
+        <label class="admin-label" for="adminPassword">Password</label>
+        <input id="adminPassword" class="admin-input" type="password" autocomplete="current-password" required>
+        <div id="adminLoginStatus" class="admin-status" role="status" aria-live="polite"></div>
+        <button class="admin-button" type="submit">Unlock</button>
+      </form>
+    </div>
+    <div id="adminPanel" hidden>
+      <div class="admin-kicker">NEXT DAILY SET · <span id="adminDate"></span></div>
+      <h2 id="adminTitlePanel">Choose tomorrow's prompts</h2>
+      <p>Select exactly seven prompts for this date. The saved set is shared with everyone visiting this site.</p>
+      <p class="admin-complete-note">Mark a prompt complete to keep it out of future daily sets. This status is saved globally.</p>
+      <div class="admin-toolbar">
+        <input id="adminSearch" class="admin-input" type="search" placeholder="Filter questions…" aria-label="Filter questions">
+        <strong id="adminSelectionCount">0 / 7 selected · 0 complete</strong>
+      </div>
+      <div id="adminPromptList" class="admin-prompt-list"></div>
+      <div id="adminSaveStatus" class="admin-status" role="status" aria-live="polite"></div>
+      <button id="adminSave" class="admin-button" type="button" disabled>Save tomorrow's set</button>
+    </div>
+  </div>
+</section>
+
+<section id="results" class="results" hidden></section>
+
+<script src="questions.js"></script>
+<script src="render.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

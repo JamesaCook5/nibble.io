@@ -1,0 +1,2461 @@
+{
+  "meta": {
+    "version": 3,
+    "created": "2026-11-25",
+    "count": 127,
+    "notes": "Prompts only. No answers or rarity yet; answers to come from Wikipedia scraping plus LLM guidance. judge_score is 1-10 enjoyment from an independent judge agent. overlap_groups lists pairs/groups the judge thought overlap; high = keep one, medium = fine if never on the same day. v2 (James, 2026-11-25): cut every prompt scoring 4 or below, the number-system overlap, and pop-culture prompts with no tech or maths link (video games stay). See removed_v2. v3 (James, 2026-11-25): every prompt rated for clarity (1 = clear on first read, 2 = an example helps, 3 = vague without one) and given a 'like ...' example unless clarity is 1; the example is a common answer, so the game may want to score it as Bit or block it. est_answers is a rough count of valid answers from the Wikipedia source; every kept prompt is 50+. Prompts under 50 were merged into a broader prompt or cut (see removed_v3). v4 (James, 2026-11-25): removed 40 selected prompts and added \"Name a Greek letter\". Removed the inventor prompt at James’s request.",
+    "dropped_placeholders": [
+      "gate (logic gate: tiny closed set)",
+      "http (HTTP status code: dry recall)",
+      "class (complexity class: tiny closed set)",
+      "py (Python built-in: dry recall)",
+      "sql (SQL keyword: dry recall)",
+      "type (primitive data type: tiny closed set)"
+    ]
+  },
+  "overlap_groups": [
+    {
+      "ids": [
+        "hash-function",
+        "crypto"
+      ],
+      "severity": "medium",
+      "why": "SHA-256 and MD5 are top answers for both hash functions and modern crypto algorithms.",
+      "keep": "crypto",
+      "group": "g3"
+    },
+    {
+      "ids": [
+        "hash-function",
+        "errordetecting-errorcorrecting-code"
+      ],
+      "severity": "medium",
+      "why": "CRC and checksums are typed for both hash functions and error-detecting codes.",
+      "keep": "hash-function",
+      "group": "g4"
+    },
+    {
+      "ids": [
+        "lossless-lossy-compression-algorithm",
+        "video-audio-codec"
+      ],
+      "severity": "medium",
+      "why": "The lossy half of compression (JPEG, MP3, H.264) is the same as the codec set.",
+      "keep": "lossless-lossy-compression-algorithm",
+      "group": "g5"
+    },
+    {
+      "ids": [
+        "attack",
+        "attack-on-cipher-hash"
+      ],
+      "severity": "medium",
+      "why": "Brute force, dictionary and rainbow-table attacks fit both prompts.",
+      "keep": "attack",
+      "group": "g6"
+    },
+    {
+      "ids": [
+        "classical-cipher-method",
+        "famous-cipher-machine-code-unsolved"
+      ],
+      "severity": "medium",
+      "why": "Caesar, Vigenere and Playfair are likely typed as famous codes too.",
+      "keep": "classical-cipher-method",
+      "group": "g7"
+    },
+    {
+      "ids": [
+        "authentication-method",
+        "security-defence-technique"
+      ],
+      "severity": "medium",
+      "why": "2FA, MFA and passwords are top answers for both authentication and security defence.",
+      "keep": "authentication-method",
+      "group": "g8"
+    },
+    {
+      "ids": [
+        "classic-coding-interview-problem-dynamic",
+        "famous-beginner-programming-exercise"
+      ],
+      "severity": "medium",
+      "why": "FizzBuzz is the canonical answer to both the beginner exercise and interview problem prompts.",
+      "keep": "famous-beginner-programming-exercise",
+      "group": "g9"
+    },
+    {
+      "ids": [
+        "memory-management-concept-technique",
+        "concurrency-primitive-concept",
+        "operating-system-concept"
+      ],
+      "severity": "medium",
+      "why": "Paging, virtual memory, deadlock, semaphores and threads are top OS-concept answers that also fill memory and concurrency prompts.",
+      "keep": "operating-system-concept",
+      "group": "g10"
+    },
+    {
+      "ids": [
+        "pattern",
+        "software-architecture-style"
+      ],
+      "severity": "medium",
+      "why": "MVC, microservices and layered architecture are typed as both patterns and architecture styles.",
+      "keep": "pattern",
+      "group": "g11"
+    },
+    {
+      "ids": [
+        "package-manager",
+        "build-tool-build-automation-system"
+      ],
+      "severity": "medium",
+      "why": "npm, Maven, Gradle, Cargo sit in both package manager and build tool sets.",
+      "keep": "package-manager",
+      "group": "g12"
+    },
+    {
+      "ids": [
+        "web-framework",
+        "javascript-library-ui-framework"
+      ],
+      "severity": "medium",
+      "why": "Express and similar JS frameworks are valid and top-of-mind for both.",
+      "keep": "web-framework",
+      "group": "g13"
+    },
+    {
+      "ids": [
+        "port-connector",
+        "computer-bus-interconnect"
+      ],
+      "severity": "medium",
+      "why": "USB, PCIe, SATA, Thunderbolt and HDMI are top answers for both ports and buses.",
+      "keep": "port-connector",
+      "group": "g14"
+    },
+    {
+      "ids": [
+        "proto",
+        "wireless-communication-technology"
+      ],
+      "severity": "medium",
+      "why": "Wi-Fi, Bluetooth, Zigbee and NFC are typed as both protocols and wireless technologies.",
+      "keep": "proto",
+      "group": "g16"
+    },
+    {
+      "ids": [
+        "social-media-platform",
+        "messaging-chat-app"
+      ],
+      "severity": "medium",
+      "why": "WhatsApp, Discord, Telegram and Snapchat fit both social media and messaging.",
+      "keep": "social-media-platform",
+      "group": "g17"
+    },
+    {
+      "ids": [
+        "messaging-chat-app",
+        "project-management-team-collaboration-tool"
+      ],
+      "severity": "medium",
+      "why": "Slack, Teams and Discord are top answers for both messaging and team collaboration tools.",
+      "keep": "messaging-chat-app",
+      "group": "g18"
+    },
+    {
+      "ids": [
+        "people",
+        "famous-mathematician"
+      ],
+      "severity": "medium",
+      "why": "Turing, von Neumann and Godel are top answers for both computer scientists and mathematicians.",
+      "keep": "famous-mathematician",
+      "group": "g20"
+    },
+    {
+      "ids": [
+        "physicist",
+        "astronomer"
+      ],
+      "severity": "medium",
+      "why": "Galileo, Kepler, Newton, Hubble and Sagan fit both physicists and astronomers.",
+      "keep": "physicist",
+      "group": "g21"
+    },
+    {
+      "ids": [
+        "famous-specific-whole-number-maths",
+        "largenumber-word"
+      ],
+      "severity": "medium",
+      "why": "Googol and googolplex are headline answers for both prompts.",
+      "keep": "famous-specific-whole-number-maths",
+      "group": "g22"
+    },
+    {
+      "ids": [
+        "3d-shape-solid",
+        "famous-surface-manifold"
+      ],
+      "severity": "medium",
+      "why": "Torus and sphere are top 3D-shape answers and also the core famous surfaces.",
+      "keep": "3d-shape-solid",
+      "group": "g23"
+    },
+    {
+      "ids": [
+        "named-graph-family-graphs",
+        "graph-theory-term"
+      ],
+      "severity": "medium",
+      "why": "Complete, bipartite, planar and tree graphs are both named graph families and graph-theory terms.",
+      "keep": "graph-theory-term",
+      "group": "g24"
+    },
+    {
+      "ids": [
+        "algebraic-structure",
+        "mathematical-space"
+      ],
+      "severity": "medium",
+      "why": "Vector space, metric space and topological space blur algebraic structures and mathematical spaces.",
+      "keep": "algebraic-structure",
+      "group": "g25"
+    },
+    {
+      "ids": [
+        "numerical-method",
+        "metaheuristic-optimisation-algorithm"
+      ],
+      "severity": "medium",
+      "why": "Gradient descent, Newton's method and simulated annealing are typed for both.",
+      "keep": "numerical-method",
+      "group": "g26"
+    },
+    {
+      "ids": [
+        "famous-probability-puzzle",
+        "paradox-thought-experiment"
+      ],
+      "severity": "medium",
+      "why": "Monty Hall, birthday paradox, St Petersburg and Bertrand paradoxes fill both sets.",
+      "keep": "paradox-thought-experiment",
+      "group": "g27"
+    },
+    {
+      "ids": [
+        "logical-fallacy",
+        "cognitive-bias"
+      ],
+      "severity": "medium",
+      "why": "Gambler's fallacy, sunk cost and confirmation bias are typed for both fallacies and biases.",
+      "keep": "cognitive-bias",
+      "group": "g28"
+    },
+    {
+      "ids": [
+        "spacecraft-space-probe-space-telescope",
+        "rocket-launch-vehicle"
+      ],
+      "severity": "medium",
+      "why": "Space Shuttle, Soyuz, Starship and Dragon are typed for both rockets and spacecraft.",
+      "keep": "rocket-launch-vehicle",
+      "group": "g31"
+    },
+    {
+      "ids": [
+        "internet-slang-term-acronym",
+        "piece-gamer-slang"
+      ],
+      "severity": "medium",
+      "why": "GG, AFK, noob and pwned are top answers for both internet and gamer slang.",
+      "keep": "internet-slang-term-acronym",
+      "group": "g32"
+    },
+    {
+      "ids": [
+        "film-tv-show-about-computers",
+        "film-famous-its-cgi-visual"
+      ],
+      "severity": "medium",
+      "why": "Tron and The Matrix lead both computer films and CGI films.",
+      "keep": "film-tv-show-about-computers",
+      "group": "g34"
+    },
+    {
+      "ids": [
+        "film-tv-show-about-computers",
+        "film-about-mathematician-scientist"
+      ],
+      "severity": "medium",
+      "why": "The Imitation Game is the top answer for both films about computers and about scientists.",
+      "keep": "film-tv-show-about-computers",
+      "group": "g35"
+    },
+    {
+      "ids": [
+        "piece-fictional-technology",
+        "scifi-trope-concept"
+      ],
+      "severity": "medium",
+      "why": "Warp drive, teleporter, time machine and FTL are typed as both fictional tech and sci-fi tropes.",
+      "keep": "piece-fictional-technology",
+      "group": "g37"
+    },
+    {
+      "ids": [
+        "video-game-location-world",
+        "famous-video-game-level-map"
+      ],
+      "severity": "medium",
+      "why": "Green Hill Zone, Rainbow Road and Hyrule-style places are both locations and famous levels.",
+      "keep": "video-game-location-world",
+      "group": "g38"
+    },
+    {
+      "ids": [
+        "indie-game",
+        "roguelike-roguelite"
+      ],
+      "severity": "medium",
+      "why": "Hades, Binding of Isaac, Spelunky and Dead Cells are top answers for both.",
+      "keep": "indie-game",
+      "group": "g39"
+    },
+    {
+      "ids": [
+        "video-game-console",
+        "gaming-platform-game-store"
+      ],
+      "severity": "medium",
+      "why": "PlayStation and Xbox (and their networks) are typed as gaming platforms, overlapping consoles.",
+      "keep": "video-game-console",
+      "group": "g41"
+    },
+    {
+      "ids": [
+        "mathematical-operation",
+        "programming-operator-name"
+      ],
+      "severity": "medium",
+      "why": "Modulo, exponentiation, addition and bitwise ops appear in both operation and operator sets.",
+      "keep": "mathematical-operation",
+      "group": "g42"
+    },
+    {
+      "ids": [
+        "windows-system-tool-utility",
+        "windows-system-file-folder"
+      ],
+      "severity": "medium",
+      "why": "regedit, cmd.exe, Task Manager and System32 tools blur Windows tools and system files.",
+      "keep": "windows-system-tool-utility",
+      "group": "g43"
+    },
+    {
+      "ids": [
+        "famous-place-research-lab-tech",
+        "science-maths-tech-museum"
+      ],
+      "severity": "medium",
+      "why": "Bletchley Park and the Computer History Museum are top answers for both.",
+      "keep": "famous-place-research-lab-tech",
+      "group": "g44"
+    },
+    {
+      "ids": [
+        "code-smell-antipattern",
+        "piece-programmer-jargon"
+      ],
+      "severity": "medium",
+      "why": "Spaghetti code, god object and cargo cult are typed as both code smells and jargon.",
+      "keep": "piece-programmer-jargon",
+      "group": "g45"
+    }
+  ],
+  "prompts": [
+    {
+      "id": "graph",
+      "prompt": "Name a graph algorithm, like Dijkstra's algorithm",
+      "category": "algorithms",
+      "source_hint": "Category:Graph algorithms",
+      "judge_score": 8,
+      "kept_from_placeholder": true,
+      "clarity": 2,
+      "est_answers": 100,
+      "example": "Dijkstra's algorithm"
+    },
+    {
+      "id": "algorithmic-technique-trick",
+      "prompt": "Name an algorithmic technique or trick, like two pointers",
+      "category": "algorithms",
+      "source_hint": "Algorithmic paradigm; Category:Algorithm design techniques",
+      "judge_score": 7,
+      "clarity": 2,
+      "est_answers": 50,
+      "example": "two pointers"
+    },
+    {
+      "id": "lossless-lossy-compression-algorithm",
+      "prompt": "Name a compression algorithm or format, like ZIP",
+      "category": "algorithms",
+      "source_hint": "Category:Lossless compression algorithms; Category:Lossy compression algorithms",
+      "judge_score": 7,
+      "overlap_groups": [
+        "g5"
+      ],
+      "clarity": 2,
+      "est_answers": 100,
+      "example": "ZIP"
+    },
+    {
+      "id": "ds",
+      "prompt": "Name a data structure",
+      "category": "algorithms",
+      "source_hint": "List of data structures",
+      "judge_score": 10,
+      "kept_from_placeholder": true,
+      "clarity": 1,
+      "est_answers": 150
+    },
+    {
+      "id": "lang",
+      "prompt": "Name a programming language",
+      "category": "languages",
+      "source_hint": "List of programming languages",
+      "judge_score": 10,
+      "kept_from_placeholder": true,
+      "clarity": 1,
+      "est_answers": 500
+    },
+    {
+      "id": "text-editor-ide",
+      "prompt": "Name a text editor or IDE",
+      "category": "software",
+      "source_hint": "List of text editors; Comparison of integrated development environments",
+      "judge_score": 9,
+      "clarity": 1,
+      "est_answers": 150
+    },
+    {
+      "id": "word-ending-ware-type-malware",
+      "prompt": "Name a word ending in \"-ware\", like freeware",
+      "category": "software",
+      "source_hint": "Category:Software distribution; List of -ware terms (curated)",
+      "judge_score": 8,
+      "clarity": 2,
+      "est_answers": 55,
+      "example": "freeware"
+    },
+    {
+      "id": "linux-distribution",
+      "prompt": "Name a Linux distribution",
+      "category": "systems",
+      "source_hint": "List of Linux distributions",
+      "judge_score": 10,
+      "clarity": 1,
+      "est_answers": 300
+    },
+    {
+      "id": "part",
+      "prompt": "Name a component inside a computer",
+      "category": "hardware",
+      "source_hint": "Personal computer hardware; Category:Computer hardware",
+      "judge_score": 8,
+      "kept_from_placeholder": true,
+      "clarity": 1,
+      "est_answers": 50
+    },
+    {
+      "id": "type-computer-memory",
+      "prompt": "Name a type of computer memory, like RAM",
+      "category": "hardware",
+      "source_hint": "Computer memory; Category:Computer memory",
+      "judge_score": 7,
+      "clarity": 2,
+      "est_answers": 60,
+      "example": "RAM"
+    },
+    {
+      "id": "storage-medium",
+      "prompt": "Name a storage medium, like a floppy disk",
+      "category": "hardware",
+      "source_hint": "Data storage; Category:Storage media",
+      "judge_score": 8,
+      "clarity": 2,
+      "est_answers": 80,
+      "example": "a floppy disk"
+    },
+    {
+      "id": "computer-peripheral",
+      "prompt": "Name a computer peripheral, like a mouse",
+      "category": "hardware",
+      "source_hint": "Peripheral; Category:Computer peripherals",
+      "judge_score": 8,
+      "clarity": 2,
+      "est_answers": 60,
+      "example": "a mouse"
+    },
+    {
+      "id": "key",
+      "prompt": "Name a key on a keyboard",
+      "category": "hardware",
+      "source_hint": "List of keyboard keys (Computer keyboard)",
+      "judge_score": 8,
+      "kept_from_placeholder": true,
+      "clarity": 1,
+      "est_answers": 100
+    },
+    {
+      "id": "machine",
+      "prompt": "Name an electronic computer from before 1975, like ENIAC",
+      "category": "hardware",
+      "source_hint": "List of vacuum-tube computers; Category:Early computers",
+      "judge_score": 7,
+      "kept_from_placeholder": true,
+      "clarity": 2,
+      "est_answers": 100,
+      "example": "ENIAC"
+    },
+    {
+      "id": "web-browser",
+      "prompt": "Name a web browser",
+      "category": "networking",
+      "source_hint": "List of web browsers",
+      "judge_score": 8,
+      "clarity": 1,
+      "est_answers": 100
+    },
+    {
+      "id": "social-media-platform",
+      "prompt": "Name a social media platform",
+      "category": "networking",
+      "source_hint": "List of social platforms with at least 100 million monthly active users; List of defunct social networking services",
+      "judge_score": 9,
+      "overlap_groups": [
+        "g17"
+      ],
+      "clarity": 1,
+      "est_answers": 150
+    },
+    {
+      "id": "messaging-chat-app",
+      "prompt": "Name a messaging or chat app, like WhatsApp",
+      "category": "networking",
+      "source_hint": "Comparison of instant messaging protocols; List of instant messaging protocols",
+      "judge_score": 8,
+      "overlap_groups": [
+        "g17",
+        "g18"
+      ],
+      "clarity": 2,
+      "est_answers": 100,
+      "example": "WhatsApp"
+    },
+    {
+      "id": "email-client-email-service",
+      "prompt": "Name an email client or email service, like Gmail",
+      "category": "networking",
+      "source_hint": "Comparison of email clients; Comparison of webmail providers",
+      "judge_score": 7,
+      "clarity": 2,
+      "est_answers": 80,
+      "example": "Gmail"
+    },
+    {
+      "id": "cloud-storage-filehosting-service",
+      "prompt": "Name a cloud storage or file-hosting service, like Dropbox",
+      "category": "networking",
+      "source_hint": "Comparison of file hosting services",
+      "judge_score": 7,
+      "clarity": 2,
+      "est_answers": 80,
+      "example": "Dropbox"
+    },
+    {
+      "id": "attack",
+      "prompt": "Name a type of cyber attack that isn't a type of malware, like phishing",
+      "category": "security",
+      "source_hint": "Category:Cyberattacks; Category:Computer security exploits",
+      "judge_score": 8,
+      "overlap_groups": [
+        "g6"
+      ],
+      "kept_from_placeholder": true,
+      "clarity": 2,
+      "est_answers": 100,
+      "example": "phishing"
+    },
+    {
+      "id": "authentication-method",
+      "prompt": "Name an authentication method, like a fingerprint scan",
+      "category": "security",
+      "source_hint": "Authentication; Multi-factor authentication",
+      "judge_score": 7,
+      "overlap_groups": [
+        "g8"
+      ],
+      "clarity": 2,
+      "est_answers": 50,
+      "example": "a fingerprint scan"
+    },
+    {
+      "id": "hacker-group",
+      "prompt": "Name a hacker group, like Anonymous",
+      "category": "security",
+      "source_hint": "Category:Hacker groups",
+      "judge_score": 6,
+      "judge_note": "Anonymous dominates; modest recall.",
+      "clarity": 2,
+      "est_answers": 80,
+      "example": "Anonymous"
+    },
+    {
+      "id": "really-common-password",
+      "prompt": "Name a really common (bad) password, like 123456",
+      "category": "security",
+      "source_hint": "List of the most common passwords",
+      "judge_score": 9,
+      "clarity": 2,
+      "est_answers": 300,
+      "example": "123456"
+    },
+    {
+      "id": "ai-chatbot-language-model-voice",
+      "prompt": "Name an AI chatbot, language model or voice assistant, like ChatGPT",
+      "category": "ai",
+      "source_hint": "List of chatbots; Large language model (List)",
+      "judge_score": 9,
+      "clarity": 2,
+      "est_answers": 200,
+      "example": "ChatGPT"
+    },
+    {
+      "id": "ai-image-video-music-generator",
+      "prompt": "Name an AI image, video or music generator, like Midjourney",
+      "category": "ai",
+      "source_hint": "Text-to-image model; Text-to-video model",
+      "judge_score": 7,
+      "clarity": 2,
+      "est_answers": 60,
+      "example": "Midjourney"
+    },
+    {
+      "id": "real-robot",
+      "prompt": "Name a real robot, like a Roomba",
+      "category": "ai",
+      "source_hint": "Category:Robots; List of fictional robots (exclude)",
+      "judge_score": 7,
+      "clarity": 2,
+      "est_answers": 200,
+      "example": "a Roomba"
+    },
+    {
+      "id": "people",
+      "prompt": "Name a famous computer scientist",
+      "category": "people",
+      "source_hint": "List of computer scientists; List of pioneers in computer science",
+      "judge_score": 9,
+      "overlap_groups": [
+        "g20"
+      ],
+      "kept_from_placeholder": true,
+      "clarity": 1,
+      "est_answers": 500
+    },
+    {
+      "id": "tech-founder-ceo",
+      "prompt": "Name a tech founder or CEO",
+      "category": "people",
+      "source_hint": "Category:Technology company founders; List of chief executive officers",
+      "judge_score": 9,
+      "clarity": 1,
+      "est_answers": 300
+    },
+    {
+      "id": "famous-gamer-streamer-speedrunner",
+      "prompt": "Name a famous gamer, streamer or speedrunner, like PewDiePie",
+      "category": "people",
+      "source_hint": "List of most-followed Twitch channels; List of YouTubers (gaming)",
+      "judge_score": 7,
+      "clarity": 2,
+      "est_answers": 300,
+      "example": "PewDiePie"
+    },
+    {
+      "id": "science-maths-tech-youtube-channel",
+      "prompt": "Name a science, maths or tech YouTube channel, like Numberphile",
+      "category": "people",
+      "source_hint": "Category:Science YouTubers; Category:Educational YouTube channels",
+      "judge_score": 8,
+      "clarity": 2,
+      "est_answers": 200,
+      "example": "Numberphile"
+    },
+    {
+      "id": "famous-mathematician",
+      "prompt": "Name a famous mathematician",
+      "category": "people",
+      "source_hint": "List of mathematicians",
+      "judge_score": 10,
+      "overlap_groups": [
+        "g20"
+      ],
+      "clarity": 1,
+      "est_answers": 1000
+    },
+    {
+      "id": "university-known-computer-science-maths",
+      "prompt": "Name a university known for computer science or maths",
+      "category": "history",
+      "source_hint": "QS World University Rankings by subject (curated)",
+      "judge_score": 7,
+      "clarity": 1,
+      "est_answers": 300
+    },
+    {
+      "id": "famous-tech-flop-games-console",
+      "prompt": "Name a famous tech flop that isn't a games console, like Google Glass",
+      "category": "history",
+      "source_hint": "List of commercial failures in computer and video games (exclude consoles); Category:Discontinued products",
+      "judge_score": 8,
+      "clarity": 2,
+      "est_answers": 100,
+      "example": "Google Glass"
+    },
+    {
+      "id": "famous-error-message-error-screen",
+      "prompt": "Name a famous error message or error screen, like the Blue Screen of Death",
+      "category": "history",
+      "source_hint": "Blue screen of death; Category:Computer errors",
+      "judge_score": 8,
+      "clarity": 2,
+      "est_answers": 60,
+      "example": "the Blue Screen of Death"
+    },
+    {
+      "id": "electronic-toy-gadget-1970s-2000s",
+      "prompt": "Name an electronic toy or gadget from the 1970s to 2000s, like a Tamagotchi",
+      "category": "history",
+      "source_hint": "Category:Electronic toys; Category:2000s toys",
+      "judge_score": 8,
+      "clarity": 2,
+      "est_answers": 300,
+      "example": "a Tamagotchi"
+    },
+    {
+      "id": "tech-company-games-company",
+      "prompt": "Name a tech company that isn't a games company",
+      "category": "tech-industry",
+      "source_hint": "List of largest technology companies by revenue",
+      "judge_score": 9,
+      "clarity": 1,
+      "est_answers": 500
+    },
+    {
+      "id": "apple-product",
+      "prompt": "Name an Apple product",
+      "category": "tech-industry",
+      "source_hint": "List of Apple products; Timeline of Apple Inc. products",
+      "judge_score": 9,
+      "clarity": 1,
+      "est_answers": 100
+    },
+    {
+      "id": "google-product-service",
+      "prompt": "Name a Google product or service",
+      "category": "tech-industry",
+      "source_hint": "List of Google products; Google graveyard",
+      "judge_score": 9,
+      "clarity": 1,
+      "est_answers": 150
+    },
+    {
+      "id": "microsoft-product",
+      "prompt": "Name a Microsoft product",
+      "category": "tech-industry",
+      "source_hint": "List of Microsoft software; List of Microsoft hardware",
+      "judge_score": 9,
+      "clarity": 1,
+      "est_answers": 150
+    },
+    {
+      "id": "mobile-phone-brand-model",
+      "prompt": "Name a mobile phone, by brand or model",
+      "category": "tech-industry",
+      "source_hint": "List of best-selling mobile phones",
+      "judge_score": 8,
+      "clarity": 1,
+      "est_answers": 500
+    },
+    {
+      "id": "laptop-pc-brand",
+      "prompt": "Name a laptop or PC brand, like Dell",
+      "category": "tech-industry",
+      "source_hint": "List of computer hardware manufacturers; Category:Laptops",
+      "judge_score": 7,
+      "clarity": 2,
+      "est_answers": 80,
+      "example": "Dell"
+    },
+    {
+      "id": "streaming-service",
+      "prompt": "Name a streaming service",
+      "category": "tech-industry",
+      "source_hint": "List of streaming media services",
+      "judge_score": 7,
+      "clarity": 1,
+      "est_answers": 100
+    },
+    {
+      "id": "online-learning-website",
+      "prompt": "Name an online learning website, like Khan Academy",
+      "category": "tech-industry",
+      "source_hint": "Category:Educational websites; List of online educational platforms",
+      "judge_score": 6,
+      "judge_note": "Smallish set; not very geeky fun.",
+      "clarity": 2,
+      "est_answers": 80,
+      "example": "Khan Academy"
+    },
+    {
+      "id": "mathematical-constant",
+      "prompt": "Name a mathematical constant",
+      "category": "maths-numbers",
+      "source_hint": "List of mathematical constants",
+      "judge_score": 8,
+      "clarity": 1,
+      "est_answers": 100
+    },
+    {
+      "id": "type-number-property",
+      "prompt": "Name a type of number, like prime",
+      "category": "maths-numbers",
+      "source_hint": "Category:Integer sequences; List of types of numbers",
+      "judge_score": 9,
+      "clarity": 2,
+      "est_answers": 300,
+      "example": "prime"
+    },
+    {
+      "id": "number-base-numeral-system",
+      "prompt": "Name a number base, numeral system or binary number format, like hexadecimal",
+      "category": "maths-numbers",
+      "source_hint": "List of numeral systems",
+      "judge_score": 7,
+      "clarity": 2,
+      "est_answers": 80,
+      "example": "hexadecimal"
+    },
+    {
+      "id": "named-mathematical-function",
+      "prompt": "Name a mathematical function, like sine",
+      "category": "maths-numbers",
+      "source_hint": "List of mathematical functions",
+      "judge_score": 7,
+      "clarity": 2,
+      "est_answers": 200,
+      "example": "sine"
+    },
+    {
+      "id": "mathematical-operation",
+      "prompt": "Name a mathematical operation, like addition",
+      "category": "maths-numbers",
+      "source_hint": "Operation (mathematics); Category:Binary operations",
+      "judge_score": 7,
+      "overlap_groups": [
+        "g42"
+      ],
+      "clarity": 2,
+      "est_answers": 60,
+      "example": "addition"
+    },
+    {
+      "id": "mathematical-notation-system",
+      "prompt": "Name a mathematical notation, like Big O notation",
+      "category": "maths-numbers",
+      "source_hint": "Category:Mathematical notation",
+      "judge_score": 5,
+      "judge_note": "Vague set; validity hard to judge.",
+      "clarity": 3,
+      "est_answers": 50,
+      "example": "Big O notation"
+    },
+    {
+      "id": "mathematical-symbol-greek-letter",
+      "prompt": "Name a mathematical symbol that isn't a Greek letter, like the infinity symbol",
+      "category": "maths-numbers",
+      "source_hint": "Glossary of mathematical symbols",
+      "judge_score": 6,
+      "judge_note": "Naming symbols in words is awkward.",
+      "clarity": 2,
+      "est_answers": 100,
+      "example": "the infinity symbol"
+    },
+    {
+      "id": "2d-shape",
+      "prompt": "Name a 2D shape",
+      "category": "maths-structures",
+      "source_hint": "List of two-dimensional geometric shapes",
+      "judge_score": 8,
+      "clarity": 1,
+      "est_answers": 100
+    },
+    {
+      "id": "3d-shape-solid",
+      "prompt": "Name a 3D shape or solid",
+      "category": "maths-structures",
+      "source_hint": "List of polyhedra; Category:Geometric shapes (3D)",
+      "judge_score": 8,
+      "overlap_groups": [
+        "g23"
+      ],
+      "clarity": 1,
+      "est_answers": 150
+    },
+    {
+      "id": "branch-mathematics",
+      "prompt": "Name a branch of mathematics",
+      "category": "maths-structures",
+      "source_hint": "Areas of mathematics; Lists of mathematics topics",
+      "judge_score": 9,
+      "clarity": 1,
+      "est_answers": 100
+    },
+    {
+      "id": "integration-technique",
+      "prompt": "Name a calculus technique or rule, like integration by parts",
+      "category": "maths-analysis",
+      "source_hint": "Integration techniques; Category:Integral calculus",
+      "judge_score": 5,
+      "judge_note": "Small set; revision-like.",
+      "clarity": 2,
+      "est_answers": 70,
+      "example": "integration by parts"
+    },
+    {
+      "id": "famous-maths-theorem-conjecture-inequality",
+      "prompt": "Name a famous maths theorem or conjecture, like Pythagoras' theorem",
+      "category": "maths-analysis",
+      "source_hint": "List of theorems; List of conjectures; List of unsolved problems in mathematics",
+      "judge_score": 9,
+      "clarity": 2,
+      "est_answers": 1000,
+      "example": "Pythagoras' theorem"
+    },
+    {
+      "id": "type-chart-graph-showing-data",
+      "prompt": "Name a type of chart or graph for showing data, like a pie chart",
+      "category": "maths-analysis",
+      "source_hint": "List of charts; Category:Statistical charts and diagrams",
+      "judge_score": 8,
+      "clarity": 2,
+      "est_answers": 80,
+      "example": "a pie chart"
+    },
+    {
+      "id": "maths-competition-exam",
+      "prompt": "Name a maths competition or exam, like the IMO",
+      "category": "maths-analysis",
+      "source_hint": "List of mathematics competitions",
+      "judge_score": 5,
+      "judge_note": "Niche and region-dependent.",
+      "clarity": 2,
+      "est_answers": 100,
+      "example": "the IMO"
+    },
+    {
+      "id": "programming-competition-practice-site",
+      "prompt": "Name a programming competition or practice site, like LeetCode",
+      "category": "maths-analysis",
+      "source_hint": "Competitive programming; List of programming competitions",
+      "judge_score": 7,
+      "clarity": 2,
+      "est_answers": 50,
+      "example": "LeetCode"
+    },
+    {
+      "id": "chemical-element",
+      "prompt": "Name a chemical element",
+      "category": "science",
+      "source_hint": "List of chemical elements",
+      "judge_score": 10,
+      "clarity": 1,
+      "est_answers": 118
+    },
+    {
+      "id": "unit-measurement-unit-data",
+      "prompt": "Name a unit of measurement that isn't a unit of data",
+      "category": "science",
+      "source_hint": "List of units of measurement; Category:Units of measurement",
+      "judge_score": 9,
+      "clarity": 1,
+      "est_answers": 1000
+    },
+    {
+      "id": "unit-data",
+      "prompt": "Name a unit of data, like a byte",
+      "category": "science",
+      "source_hint": "Units of information",
+      "judge_score": 5,
+      "judge_note": "Small closed set; overlaps prefixes.",
+      "clarity": 2,
+      "est_answers": 60,
+      "example": "a byte"
+    },
+    {
+      "id": "galaxy",
+      "prompt": "Name a galaxy, like Andromeda",
+      "category": "science",
+      "source_hint": "List of galaxies",
+      "judge_score": 5,
+      "judge_note": "Most stuck after Milky Way and Andromeda.",
+      "clarity": 2,
+      "est_answers": 200,
+      "example": "Andromeda"
+    },
+    {
+      "id": "internet-meme",
+      "prompt": "Name an internet meme",
+      "category": "culture",
+      "source_hint": "List of Internet phenomena",
+      "judge_score": 9,
+      "clarity": 1,
+      "est_answers": 500
+    },
+    {
+      "id": "emoticon-emoji",
+      "prompt": "Name an emoticon or emoji, like :)",
+      "category": "culture",
+      "source_hint": "List of emoticons; Emoji",
+      "judge_score": 7,
+      "clarity": 2,
+      "est_answers": 500,
+      "example": ":)"
+    },
+    {
+      "id": "internet-slang-term-acronym",
+      "prompt": "Name an internet slang term or acronym, like LOL",
+      "category": "culture",
+      "source_hint": "List of Internet slang",
+      "judge_score": 9,
+      "overlap_groups": [
+        "g32"
+      ],
+      "clarity": 2,
+      "est_answers": 300,
+      "example": "LOL"
+    },
+    {
+      "id": "tech-acronym",
+      "prompt": "Name a tech acronym, like CPU",
+      "category": "culture",
+      "source_hint": "List of computing and IT abbreviations",
+      "judge_score": 7,
+      "clarity": 2,
+      "est_answers": 1000,
+      "example": "CPU"
+    },
+    {
+      "id": "font-typeface",
+      "prompt": "Name a font or typeface",
+      "category": "culture",
+      "source_hint": "List of typefaces",
+      "judge_score": 8,
+      "clarity": 1,
+      "est_answers": 1000
+    },
+    {
+      "id": "film-tv-show-about-computers",
+      "prompt": "Name a film or TV show about computers, hackers or AI, like The Matrix",
+      "category": "culture",
+      "source_hint": "List of films about computers; Category:Films about artificial intelligence",
+      "judge_score": 8,
+      "overlap_groups": [
+        "g34",
+        "g35"
+      ],
+      "clarity": 2,
+      "est_answers": 100,
+      "example": "The Matrix"
+    },
+    {
+      "id": "fictional-ai-robot",
+      "prompt": "Name a fictional AI or robot",
+      "category": "fiction",
+      "source_hint": "List of fictional robots and androids; List of fictional computers",
+      "judge_score": 10,
+      "clarity": 1,
+      "est_answers": 300
+    },
+    {
+      "id": "piece-fictional-technology",
+      "prompt": "Name a piece of fictional technology, like a lightsaber",
+      "category": "fiction",
+      "source_hint": "List of fictional technology (curated); Category:Fictional technology",
+      "judge_score": 9,
+      "overlap_groups": [
+        "g37"
+      ],
+      "clarity": 2,
+      "est_answers": 200,
+      "example": "a lightsaber"
+    },
+    {
+      "id": "video-game-console",
+      "prompt": "Name a video game console",
+      "category": "gaming",
+      "source_hint": "List of home video game consoles; List of handheld game consoles",
+      "judge_score": 9,
+      "overlap_groups": [
+        "g41"
+      ],
+      "clarity": 1,
+      "est_answers": 150
+    },
+    {
+      "id": "video-game-hero-protagonist",
+      "prompt": "Name a video game hero or protagonist, like Mario",
+      "category": "gaming",
+      "source_hint": "Category:Video game protagonists",
+      "judge_score": 9,
+      "clarity": 2,
+      "est_answers": 500,
+      "example": "Mario"
+    },
+    {
+      "id": "video-game-villain-boss",
+      "prompt": "Name a video game villain or boss, like Bowser",
+      "category": "gaming",
+      "source_hint": "Category:Video game bosses; Category:Male video game villains",
+      "judge_score": 9,
+      "clarity": 2,
+      "est_answers": 500,
+      "example": "Bowser"
+    },
+    {
+      "id": "video-game-sidekick-companion",
+      "prompt": "Name a video game sidekick or companion, like Navi",
+      "category": "gaming",
+      "source_hint": "Category:Video game sidekicks (curated)",
+      "judge_score": 8,
+      "clarity": 2,
+      "est_answers": 200,
+      "example": "Navi"
+    },
+    {
+      "id": "video-game-genre",
+      "prompt": "Name a video game genre, like platformer",
+      "category": "gaming",
+      "source_hint": "List of video game genres",
+      "judge_score": 7,
+      "clarity": 2,
+      "est_answers": 100,
+      "example": "platformer"
+    },
+    {
+      "id": "video-game-mechanic",
+      "prompt": "Name a video game mechanic, like double jump",
+      "category": "gaming",
+      "source_hint": "Game mechanics; Category:Video game gameplay",
+      "judge_score": 7,
+      "clarity": 2,
+      "est_answers": 150,
+      "example": "double jump"
+    },
+    {
+      "id": "famous-video-game-weapon",
+      "prompt": "Name a famous video game weapon, like the Master Sword",
+      "category": "gaming",
+      "source_hint": "Category:Fictional weapons (video games, curated)",
+      "judge_score": 8,
+      "clarity": 2,
+      "est_answers": 200,
+      "example": "the Master Sword"
+    },
+    {
+      "id": "video-game-location-world",
+      "prompt": "Name a video game location or world, like Hyrule",
+      "category": "gaming",
+      "source_hint": "Category:Video game locations",
+      "judge_score": 8,
+      "overlap_groups": [
+        "g38"
+      ],
+      "clarity": 2,
+      "est_answers": 300,
+      "example": "Hyrule"
+    },
+    {
+      "id": "arcade-game",
+      "prompt": "Name an arcade game, like Pac-Man",
+      "category": "gaming",
+      "source_hint": "List of arcade video games",
+      "judge_score": 8,
+      "clarity": 2,
+      "est_answers": 1000,
+      "example": "Pac-Man"
+    },
+    {
+      "id": "mobile-game",
+      "prompt": "Name a mobile game, like Angry Birds",
+      "category": "gaming",
+      "source_hint": "List of most downloaded mobile games",
+      "judge_score": 8,
+      "clarity": 2,
+      "est_answers": 1000,
+      "example": "Angry Birds"
+    },
+    {
+      "id": "video-game-company",
+      "prompt": "Name a video game company (developer or publisher), like Nintendo",
+      "category": "gaming",
+      "source_hint": "List of video game developers; List of video game publishers",
+      "judge_score": 8,
+      "clarity": 2,
+      "est_answers": 500,
+      "example": "Nintendo"
+    },
+    {
+      "id": "gaming-controller-peripheral-accessory",
+      "prompt": "Name a gaming controller, peripheral or accessory, like the Wii Remote",
+      "category": "gaming",
+      "source_hint": "Category:Video game controllers; Category:Video game accessories",
+      "judge_score": 7,
+      "clarity": 2,
+      "est_answers": 100,
+      "example": "the Wii Remote"
+    },
+    {
+      "id": "piece-gamer-slang",
+      "prompt": "Name a piece of gamer slang or online gaming term, like noob or lag",
+      "category": "gaming",
+      "source_hint": "Glossary of video game terms",
+      "judge_score": 8,
+      "overlap_groups": [
+        "g32"
+      ],
+      "clarity": 2,
+      "est_answers": 250,
+      "example": "noob or lag"
+    },
+    {
+      "id": "rpg-stat-attribute",
+      "prompt": "Name an RPG stat or attribute, like HP",
+      "category": "gaming",
+      "source_hint": "Attribute (role-playing games); Glossary of video game terms",
+      "judge_score": 5,
+      "judge_note": "Small set: STR, DEX, INT and friends.",
+      "clarity": 2,
+      "est_answers": 50,
+      "example": "HP"
+    },
+    {
+      "id": "pokmon",
+      "prompt": "Name a Pokémon",
+      "category": "gaming",
+      "source_hint": "List of Pokémon",
+      "judge_score": 10,
+      "clarity": 1,
+      "est_answers": 1025
+    },
+    {
+      "id": "minecraft-block-item",
+      "prompt": "Name a Minecraft block or item",
+      "category": "gaming",
+      "source_hint": "Minecraft Wiki: Blocks; Items",
+      "judge_score": 9,
+      "clarity": 1,
+      "est_answers": 1000
+    },
+    {
+      "id": "minecraft-mob",
+      "prompt": "Name a Minecraft mob",
+      "category": "gaming",
+      "source_hint": "Minecraft Wiki: Mobs",
+      "judge_score": 8,
+      "clarity": 1,
+      "est_answers": 80
+    },
+    {
+      "id": "mario-powerup-item",
+      "prompt": "Name a Mario power-up or item, like the Super Mushroom",
+      "category": "gaming",
+      "source_hint": "List of Mario franchise items (Super Mario Wiki)",
+      "judge_score": 7,
+      "clarity": 2,
+      "est_answers": 100,
+      "example": "the Super Mushroom"
+    },
+    {
+      "id": "chess-opening",
+      "prompt": "Name a chess opening, like the Sicilian Defence",
+      "category": "gaming",
+      "source_hint": "List of chess openings",
+      "judge_score": 7,
+      "clarity": 2,
+      "est_answers": 300,
+      "example": "the Sicilian Defence"
+    },
+    {
+      "id": "accessibility-feature",
+      "prompt": "Name an accessibility feature, like a screen reader",
+      "category": "software",
+      "source_hint": "Computer accessibility; Category:Accessibility",
+      "judge_score": 7,
+      "clarity": 2,
+      "est_answers": 50,
+      "example": "a screen reader"
+    },
+    {
+      "id": "piece-maths-software-online-maths",
+      "prompt": "Name a piece of maths software or online maths tool, like Desmos",
+      "category": "software",
+      "source_hint": "Comparison of computer algebra systems; Category:Mathematical software",
+      "judge_score": 7,
+      "clarity": 2,
+      "est_answers": 80,
+      "example": "Desmos"
+    },
+    {
+      "id": "windows-system-tool-utility",
+      "prompt": "Name a Windows system tool or utility, like Task Manager",
+      "category": "systems",
+      "source_hint": "List of Microsoft Windows components",
+      "judge_score": 7,
+      "overlap_groups": [
+        "g43"
+      ],
+      "clarity": 2,
+      "est_answers": 80,
+      "example": "Task Manager"
+    },
+    {
+      "id": "smarthome-wearable-device",
+      "prompt": "Name a smart-home or wearable device, like an Amazon Echo",
+      "category": "hardware",
+      "source_hint": "Category:Smart devices; Wearable computer",
+      "judge_score": 7,
+      "clarity": 2,
+      "est_answers": 300,
+      "example": "an Amazon Echo"
+    },
+    {
+      "id": "gaming-hardware-brand",
+      "prompt": "Name a gaming hardware brand, like Razer",
+      "category": "hardware",
+      "source_hint": "Category:Computer peripheral companies; Category:Gaming hardware",
+      "judge_score": 6,
+      "judge_note": "Smallish set.",
+      "clarity": 2,
+      "est_answers": 60,
+      "example": "Razer"
+    },
+    {
+      "id": "spy-cyber-agency",
+      "prompt": "Name a spy or cyber agency, like GCHQ",
+      "category": "security",
+      "source_hint": "List of intelligence agencies",
+      "judge_score": 7,
+      "clarity": 2,
+      "est_answers": 200,
+      "example": "GCHQ"
+    },
+    {
+      "id": "task-ai-is",
+      "prompt": "Name a task AI is used for, like speech recognition",
+      "category": "ai",
+      "source_hint": "Applications of artificial intelligence",
+      "judge_score": 7,
+      "clarity": 2,
+      "est_answers": 100,
+      "example": "speech recognition"
+    },
+    {
+      "id": "obsolete-technology-storage-medium-display",
+      "prompt": "Name an obsolete technology, like the fax machine",
+      "category": "history",
+      "source_hint": "Category:Obsolete technologies",
+      "judge_score": 7,
+      "clarity": 2,
+      "est_answers": 100,
+      "example": "the fax machine"
+    },
+    {
+      "id": "computing-job-title",
+      "prompt": "Name a computing job title, like software engineer",
+      "category": "tech-industry",
+      "source_hint": "Category:Computer occupations",
+      "judge_score": 6,
+      "judge_note": "Generic; validity fuzzy.",
+      "clarity": 2,
+      "est_answers": 100,
+      "example": "software engineer"
+    },
+    {
+      "id": "it-support-fix",
+      "prompt": "Name an IT support fix, like turning it off and on again",
+      "category": "tech-industry",
+      "source_hint": "Troubleshooting (curated by LLM)",
+      "judge_score": 7,
+      "clarity": 3,
+      "est_answers": 60,
+      "example": "turning it off and on again"
+    },
+    {
+      "id": "largenumber-word",
+      "prompt": "Name a large-number word, like billion",
+      "category": "maths-numbers",
+      "source_hint": "Names of large numbers; Indian numbering system",
+      "judge_score": 7,
+      "overlap_groups": [
+        "g22"
+      ],
+      "clarity": 2,
+      "est_answers": 100,
+      "example": "billion"
+    },
+    {
+      "id": "number-with-special-meaning-computing",
+      "prompt": "Name a number with a special meaning in computing, like 255",
+      "category": "maths-numbers",
+      "source_hint": "Magic number (programming); Powers of two (curated)",
+      "judge_score": 8,
+      "clarity": 3,
+      "est_answers": 60,
+      "example": "255"
+    },
+    {
+      "id": "penandpaper-game",
+      "prompt": "Name a pen-and-paper game, like noughts and crosses",
+      "category": "maths-analysis",
+      "source_hint": "Category:Paper-and-pencil games",
+      "judge_score": 7,
+      "clarity": 2,
+      "est_answers": 80,
+      "example": "noughts and crosses"
+    },
+    {
+      "id": "geeky-hobby",
+      "prompt": "Name a geeky hobby, like coding",
+      "category": "culture",
+      "source_hint": "Category:Hobbies (curated by LLM)",
+      "judge_score": 7,
+      "clarity": 2,
+      "est_answers": 100,
+      "example": "coding"
+    },
+    {
+      "id": "computing-term-borrowed-everyday-word",
+      "prompt": "Name a computing term borrowed from an everyday word, like mouse",
+      "category": "culture",
+      "source_hint": "Category:Computer jargon; Glossary of computer terms (curated)",
+      "judge_score": 8,
+      "clarity": 3,
+      "est_answers": 100,
+      "example": "mouse"
+    },
+    {
+      "id": "number-famous-memes-pop-culture",
+      "prompt": "Name a number famous from memes or pop culture, like 42",
+      "category": "culture",
+      "source_hint": "List of Internet phenomena; Category:Numbers in popular culture",
+      "judge_score": 8,
+      "clarity": 3,
+      "est_answers": 50,
+      "example": "42"
+    },
+    {
+      "id": "film-famous-its-cgi-visual",
+      "prompt": "Name a film famous for its CGI or visual effects, like Avatar",
+      "category": "culture",
+      "source_hint": "Category:Films that won the Academy Award for Best Visual Effects; Computer-generated imagery (History)",
+      "judge_score": 7,
+      "overlap_groups": [
+        "g34"
+      ],
+      "clarity": 2,
+      "est_answers": 100,
+      "example": "Avatar"
+    },
+    {
+      "id": "film-about-mathematician-scientist",
+      "prompt": "Name a film about a mathematician or scientist, like Good Will Hunting",
+      "category": "culture",
+      "source_hint": "Category:Films about mathematicians; Category:Biographical films about scientists",
+      "judge_score": 7,
+      "overlap_groups": [
+        "g35"
+      ],
+      "clarity": 2,
+      "est_answers": 50,
+      "example": "Good Will Hunting"
+    },
+    {
+      "id": "fictional-scientist-inventor-who-superhero",
+      "prompt": "Name a fictional scientist or inventor who isn't a superhero, like Doc Brown",
+      "category": "fiction",
+      "source_hint": "Category:Fictional scientists",
+      "judge_score": 8,
+      "clarity": 2,
+      "est_answers": 300,
+      "example": "Doc Brown"
+    },
+    {
+      "id": "fictional-hacker-programmer",
+      "prompt": "Name a fictional hacker or programmer, like Neo",
+      "category": "fiction",
+      "source_hint": "Category:Fictional hackers",
+      "judge_score": 7,
+      "clarity": 2,
+      "est_answers": 100,
+      "example": "Neo"
+    },
+    {
+      "id": "scifi-trope-concept",
+      "prompt": "Name a sci-fi trope or concept, like time travel",
+      "category": "fiction",
+      "source_hint": "List of science fiction themes; TV Tropes (science fiction)",
+      "judge_score": 8,
+      "overlap_groups": [
+        "g37"
+      ],
+      "clarity": 3,
+      "est_answers": 300,
+      "example": "time travel"
+    },
+    {
+      "id": "platform-game",
+      "prompt": "Name a platform game, like Super Mario Bros.",
+      "category": "gaming",
+      "source_hint": "List of platform games",
+      "judge_score": 8,
+      "clarity": 2,
+      "est_answers": 1000,
+      "example": "Super Mario Bros."
+    },
+    {
+      "id": "firstperson-shooter",
+      "prompt": "Name a first-person shooter, like Call of Duty",
+      "category": "gaming",
+      "source_hint": "List of first-person shooters",
+      "judge_score": 8,
+      "clarity": 2,
+      "est_answers": 1000,
+      "example": "Call of Duty"
+    },
+    {
+      "id": "strategy-video-game",
+      "prompt": "Name a strategy video game, like Civilization",
+      "category": "gaming",
+      "source_hint": "List of real-time strategy video games; List of turn-based strategy video games",
+      "judge_score": 8,
+      "clarity": 2,
+      "est_answers": 1000,
+      "example": "Civilization"
+    },
+    {
+      "id": "sports-video-game",
+      "prompt": "Name a sports video game, like FIFA",
+      "category": "gaming",
+      "source_hint": "Category:Sports video games",
+      "judge_score": 6,
+      "judge_note": "FIFA and Madden dominate; shallow fun.",
+      "clarity": 2,
+      "est_answers": 500,
+      "example": "FIFA"
+    },
+    {
+      "id": "horror-video-game",
+      "prompt": "Name a horror video game, like Resident Evil",
+      "category": "gaming",
+      "source_hint": "List of survival horror video games",
+      "judge_score": 7,
+      "clarity": 2,
+      "est_answers": 500,
+      "example": "Resident Evil"
+    },
+    {
+      "id": "puzzle-video-game",
+      "prompt": "Name a puzzle video game, like Tetris",
+      "category": "gaming",
+      "source_hint": "List of puzzle video games",
+      "judge_score": 8,
+      "clarity": 2,
+      "est_answers": 1000,
+      "example": "Tetris"
+    },
+    {
+      "id": "rhythm-music-game",
+      "prompt": "Name a rhythm or music game, like Guitar Hero",
+      "category": "gaming",
+      "source_hint": "List of music video games",
+      "judge_score": 7,
+      "clarity": 2,
+      "est_answers": 300,
+      "example": "Guitar Hero"
+    },
+    {
+      "id": "video-game-currency",
+      "prompt": "Name a video game currency, like Rupees",
+      "category": "gaming",
+      "source_hint": "Category:Fictional currencies (video games); List of fictional currencies",
+      "judge_score": 8,
+      "clarity": 2,
+      "est_answers": 100,
+      "example": "Rupees"
+    },
+    {
+      "id": "healing-food-item-video-game",
+      "prompt": "Name a healing or food item from a video game, like a potion",
+      "category": "gaming",
+      "source_hint": "Health (game terminology) (curated)",
+      "judge_score": 8,
+      "clarity": 2,
+      "est_answers": 100,
+      "example": "a potion"
+    },
+    {
+      "id": "common-video-game-enemy-creature",
+      "prompt": "Name a video game enemy, like a Goomba",
+      "category": "gaming",
+      "source_hint": "Category:Video game creatures; Category:Video game monsters",
+      "judge_score": 8,
+      "clarity": 2,
+      "est_answers": 500,
+      "example": "a Goomba"
+    },
+    {
+      "id": "video-game-vehicle-mount",
+      "prompt": "Name a video game vehicle or mount, like Epona",
+      "category": "gaming",
+      "source_hint": "Category:Fictional vehicles (video games, curated)",
+      "judge_score": 8,
+      "clarity": 2,
+      "est_answers": 100,
+      "example": "Epona"
+    },
+    {
+      "id": "video-game-hud-ui-element",
+      "prompt": "Name a video game HUD or UI element, like a health bar",
+      "category": "gaming",
+      "source_hint": "HUD (video gaming)",
+      "judge_score": 6,
+      "judge_note": "Generic; validity fuzzy.",
+      "clarity": 2,
+      "est_answers": 50,
+      "example": "a health bar"
+    },
+    {
+      "id": "multiplayer-game-mode",
+      "prompt": "Name a multiplayer game mode, like capture the flag",
+      "category": "gaming",
+      "source_hint": "Game mode; Category:Multiplayer video game modes",
+      "judge_score": 8,
+      "clarity": 2,
+      "est_answers": 80,
+      "example": "capture the flag"
+    },
+    {
+      "id": "button-on-game-controller",
+      "prompt": "Name a button on a game controller, like Start",
+      "category": "gaming",
+      "source_hint": "Gamepad (Layouts); Category:Game controllers",
+      "judge_score": 5,
+      "judge_note": "Small set.",
+      "clarity": 2,
+      "est_answers": 50,
+      "example": "Start"
+    },
+    {
+      "id": "mario-character-other-than-mario",
+      "prompt": "Name a Mario character other than Mario, like Luigi",
+      "category": "gaming",
+      "source_hint": "List of Mario franchise characters",
+      "judge_score": 9,
+      "clarity": 2,
+      "est_answers": 300,
+      "example": "Luigi"
+    },
+    {
+      "id": "minecraft-biome-structure",
+      "prompt": "Name a Minecraft biome or structure, like a village",
+      "category": "gaming",
+      "source_hint": "Minecraft Wiki: Biomes; Generated structures",
+      "judge_score": 7,
+      "clarity": 2,
+      "est_answers": 100,
+      "example": "a village"
+    },
+    {
+      "id": "greek-letter",
+      "prompt": "Name a Greek letter",
+      "category": "mathematics",
+      "source_hint": "Greek alphabet",
+      "judge_score": 8,
+      "clarity": 1,
+      "est_answers": 24,
+      "example": ""
+    }
+  ],
+  "removed_v2": [
+    {
+      "id": "cache-replacement-policy",
+      "prompt": "Name a cache replacement policy",
+      "reason": "judge score 4"
+    },
+    {
+      "id": "time-complexity-words-big-o",
+      "prompt": "Name a time complexity, in words or Big O",
+      "reason": "judge score 3"
+    },
+    {
+      "id": "cpu-scheduling-algorithm",
+      "prompt": "Name a CPU scheduling algorithm",
+      "reason": "judge score 4"
+    },
+    {
+      "id": "type-keyboard-switch",
+      "prompt": "Name a type of keyboard switch",
+      "reason": "judge score 4"
+    },
+    {
+      "id": "unit-measuring-computer-performance-speed",
+      "prompt": "Name a unit for measuring computer performance or speed",
+      "reason": "judge score 4"
+    },
+    {
+      "id": "computer-cooling-method",
+      "prompt": "Name a computer cooling method",
+      "reason": "judge score 4"
+    },
+    {
+      "id": "triangle-centre",
+      "prompt": "Name a triangle centre",
+      "reason": "judge score 4"
+    },
+    {
+      "id": "differentiation-limit-rule",
+      "prompt": "Name a differentiation or limit rule",
+      "reason": "judge score 3"
+    },
+    {
+      "id": "lego-theme",
+      "prompt": "Name a Lego theme",
+      "reason": "pop culture with no tech or maths link"
+    },
+    {
+      "id": "constructed-language",
+      "prompt": "Name a constructed language",
+      "reason": "pop culture with no tech or maths link"
+    },
+    {
+      "id": "fictional-planet-world",
+      "prompt": "Name a fictional planet or world",
+      "reason": "pop culture with no tech or maths link"
+    },
+    {
+      "id": "superhero",
+      "prompt": "Name a superhero",
+      "reason": "pop culture with no tech or maths link"
+    },
+    {
+      "id": "supervillain",
+      "prompt": "Name a supervillain",
+      "reason": "pop culture with no tech or maths link"
+    },
+    {
+      "id": "star-wars-character",
+      "prompt": "Name a Star Wars character",
+      "reason": "pop culture with no tech or maths link"
+    },
+    {
+      "id": "harry-potter-spell",
+      "prompt": "Name a Harry Potter spell",
+      "reason": "pop culture with no tech or maths link"
+    },
+    {
+      "id": "mythical-fantasy-creature",
+      "prompt": "Name a mythical or fantasy creature",
+      "reason": "pop culture with no tech or maths link"
+    },
+    {
+      "id": "dystopian-novel",
+      "prompt": "Name a dystopian novel",
+      "reason": "pop culture with no tech or maths link"
+    },
+    {
+      "id": "anime-series",
+      "prompt": "Name an anime series",
+      "reason": "pop culture with no tech or maths link"
+    },
+    {
+      "id": "board-game",
+      "prompt": "Name a board game",
+      "reason": "pop culture with no tech or maths link"
+    },
+    {
+      "id": "card-game",
+      "prompt": "Name a card game",
+      "reason": "pop culture with no tech or maths link"
+    },
+    {
+      "id": "rounding-method",
+      "prompt": "Name a rounding method",
+      "reason": "judge score 3"
+    },
+    {
+      "id": "algorithm-searching-list-array",
+      "prompt": "Name an algorithm for searching a list or array",
+      "reason": "judge score 3"
+    },
+    {
+      "id": "classic-concurrency-problem",
+      "prompt": "Name a classic concurrency problem (e.g. dining philosophers)",
+      "reason": "judge score 4"
+    },
+    {
+      "id": "way-writing-comment-programming-language",
+      "prompt": "Name a way of writing a comment in some programming language",
+      "reason": "judge score 4"
+    },
+    {
+      "id": "software-engineering-metric",
+      "prompt": "Name a software engineering metric",
+      "reason": "judge score 4"
+    },
+    {
+      "id": "ascii-control-character",
+      "prompt": "Name an ASCII control character",
+      "reason": "judge score 4"
+    },
+    {
+      "id": "type-printer",
+      "prompt": "Name a type of printer",
+      "reason": "judge score 4"
+    },
+    {
+      "id": "type-computer-network-size-scope",
+      "prompt": "Name a type of computer network by size or scope (e.g. LAN)",
+      "reason": "judge score 3"
+    },
+    {
+      "id": "number-system-set-numbers",
+      "prompt": "Name a number system or set of numbers (e.g. complex numbers)",
+      "reason": "high overlap with type-number-property"
+    },
+    {
+      "id": "kind-infinity-infinite-number",
+      "prompt": "Name a kind of infinity or infinite number",
+      "reason": "judge score 4"
+    },
+    {
+      "id": "famous-formula-pi",
+      "prompt": "Name a famous formula for pi",
+      "reason": "judge score 4"
+    },
+    {
+      "id": "counting-principle-technique",
+      "prompt": "Name a counting principle or technique",
+      "reason": "judge score 4"
+    },
+    {
+      "id": "type-angle",
+      "prompt": "Name a type of angle",
+      "reason": "judge score 4"
+    },
+    {
+      "id": "geometric-transformation",
+      "prompt": "Name a geometric transformation",
+      "reason": "judge score 4"
+    },
+    {
+      "id": "famous-integral",
+      "prompt": "Name a famous integral",
+      "reason": "judge score 4"
+    },
+    {
+      "id": "convergence-test-series",
+      "prompt": "Name a convergence test for series",
+      "reason": "judge score 4"
+    },
+    {
+      "id": "tabletop-roleplaying-game",
+      "prompt": "Name a tabletop role-playing game",
+      "reason": "pop culture with no tech or maths link"
+    },
+    {
+      "id": "quiz-puzzle-tv-show",
+      "prompt": "Name a quiz or puzzle TV show",
+      "reason": "pop culture with no tech or maths link"
+    },
+    {
+      "id": "lord-rings-character",
+      "prompt": "Name a Lord of the Rings character",
+      "reason": "pop culture with no tech or maths link"
+    },
+    {
+      "id": "timetravel-film-show-story",
+      "prompt": "Name a time-travel film, show or story",
+      "reason": "pop culture with no tech or maths link"
+    },
+    {
+      "id": "scifi-fantasy-book-series-dystopian",
+      "prompt": "Name a sci-fi or fantasy book or series that isn't dystopian",
+      "reason": "pop culture with no tech or maths link"
+    },
+    {
+      "id": "fictional-sport-game",
+      "prompt": "Name a fictional sport or game (e.g. Quidditch)",
+      "reason": "pop culture with no tech or maths link"
+    },
+    {
+      "id": "fictional-element-material",
+      "prompt": "Name a fictional element or material (e.g. vibranium)",
+      "reason": "pop culture with no tech or maths link"
+    },
+    {
+      "id": "fictional-disease-virus",
+      "prompt": "Name a fictional disease or virus",
+      "reason": "pop culture with no tech or maths link"
+    },
+    {
+      "id": "harry-potter-character",
+      "prompt": "Name a Harry Potter character",
+      "reason": "pop culture with no tech or maths link"
+    },
+    {
+      "id": "magical-object-artefact",
+      "prompt": "Name a magical object or artefact (e.g. the One Ring)",
+      "reason": "pop culture with no tech or maths link"
+    },
+    {
+      "id": "fictional-school-university",
+      "prompt": "Name a fictional school or university",
+      "reason": "pop culture with no tech or maths link"
+    },
+    {
+      "id": "fictional-city-video-game",
+      "prompt": "Name a fictional city that isn't from a video game",
+      "reason": "pop culture with no tech or maths link"
+    },
+    {
+      "id": "anime-manga-character",
+      "prompt": "Name an anime or manga character",
+      "reason": "pop culture with no tech or maths link"
+    },
+    {
+      "id": "fictional-alien-species",
+      "prompt": "Name a fictional alien species",
+      "reason": "pop culture with no tech or maths link"
+    },
+    {
+      "id": "scifi-tv-series-about-computers",
+      "prompt": "Name a sci-fi TV series that isn't mainly about computers or AI",
+      "reason": "pop culture with no tech or maths link"
+    },
+    {
+      "id": "space-alien-film",
+      "prompt": "Name a space or alien film",
+      "reason": "pop culture with no tech or maths link"
+    },
+    {
+      "id": "fantasy-character-class",
+      "prompt": "Name a fantasy character class (e.g. paladin)",
+      "reason": "pop culture with no tech or maths link"
+    },
+    {
+      "id": "named-dragon-fiction",
+      "prompt": "Name a named dragon from fiction",
+      "reason": "pop culture with no tech or maths link"
+    },
+    {
+      "id": "transformer",
+      "prompt": "Name a Transformer",
+      "reason": "pop culture with no tech or maths link"
+    },
+    {
+      "id": "game-thrones-character",
+      "prompt": "Name a Game of Thrones character",
+      "reason": "pop culture with no tech or maths link"
+    },
+    {
+      "id": "superhero-team",
+      "prompt": "Name a superhero team",
+      "reason": "pop culture with no tech or maths link"
+    },
+    {
+      "id": "star-trek-character",
+      "prompt": "Name a Star Trek character",
+      "reason": "pop culture with no tech or maths link"
+    },
+    {
+      "id": "doctor-who-monster-villain",
+      "prompt": "Name a Doctor Who monster or villain",
+      "reason": "pop culture with no tech or maths link"
+    },
+    {
+      "id": "monopoly-token-square",
+      "prompt": "Name a Monopoly token or square",
+      "reason": "pop culture with no tech or maths link"
+    },
+    {
+      "id": "board-game-mechanic",
+      "prompt": "Name a board game mechanic (e.g. deck-building)",
+      "reason": "pop culture with no tech or maths link"
+    },
+    {
+      "id": "famous-ip-address",
+      "prompt": "Name a famous IP address (e.g. 127.0.0.1)",
+      "reason": "judge score 4"
+    },
+    {
+      "id": "type-home-internet-connection",
+      "prompt": "Name a type of home internet connection (e.g. fibre)",
+      "reason": "judge score 4"
+    },
+    {
+      "id": "fandom-name",
+      "prompt": "Name a fandom name (e.g. Trekkies)",
+      "reason": "pop culture with no tech or maths link"
+    },
+    {
+      "id": "famous-comic-book-graphic-novel",
+      "prompt": "Name a famous comic book or graphic novel",
+      "reason": "pop culture with no tech or maths link"
+    },
+    {
+      "id": "scifi-catchphrase",
+      "prompt": "Name a sci-fi catchphrase (e.g. \"Live long and prosper\")",
+      "reason": "pop culture with no tech or maths link"
+    },
+    {
+      "id": "fictional-book-exists-within-story",
+      "prompt": "Name a fictional book that exists within a story (e.g. the Necronomicon)",
+      "reason": "pop culture with no tech or maths link"
+    }
+  ],
+  "removed_v3": [
+    {
+      "id": "consensus-algorithm-protocol",
+      "prompt": "Name a consensus algorithm or protocol",
+      "reason": "about 30 answers; covered by the distributed systems prompt",
+      "est_answers": 30
+    },
+    {
+      "id": "parsing-algorithm-type-parser",
+      "prompt": "Name a parsing algorithm or type of parser",
+      "reason": "about 35 answers; merged into the compiler stage prompt",
+      "est_answers": 35
+    },
+    {
+      "id": "naming-convention-identifiers",
+      "prompt": "Name a naming convention for identifiers (e.g. camelCase)",
+      "reason": "only about 18 answers",
+      "est_answers": 18
+    },
+    {
+      "id": "kind-database",
+      "prompt": "Name a kind of database (e.g. relational)",
+      "reason": "about 28 answers; covered by the database concept prompt",
+      "est_answers": 28
+    },
+    {
+      "id": "way-representing-numbers-binary",
+      "prompt": "Name a way of representing numbers in binary",
+      "reason": "about 30 answers; merged into the number base prompt",
+      "est_answers": 30
+    },
+    {
+      "id": "technique-cpus-use-run-faster",
+      "prompt": "Name a technique CPUs use to run faster",
+      "reason": "about 40 answers; merged into the CPU parts prompt",
+      "est_answers": 40
+    },
+    {
+      "id": "type-malware",
+      "prompt": "Name a type of malware",
+      "reason": "about 30 answers; merged into the virus and worm prompt",
+      "est_answers": 30
+    },
+    {
+      "id": "loss-function",
+      "prompt": "Name a loss function",
+      "reason": "about 40 answers; merged into the activation function prompt",
+      "est_answers": 40
+    },
+    {
+      "id": "optimiser-train-neural-networks",
+      "prompt": "Name an optimiser used to train neural networks",
+      "reason": "about 30 answers; merged into the ML training term prompt",
+      "est_answers": 30
+    },
+    {
+      "id": "greek-letter",
+      "prompt": "Name a Greek letter",
+      "reason": "only 24 letters plus a few archaic ones",
+      "est_answers": 30
+    },
+    {
+      "id": "matrix-decomposition",
+      "prompt": "Name a matrix decomposition",
+      "reason": "about 25 answers; covered by the linear algebra prompt",
+      "est_answers": 25
+    },
+    {
+      "id": "state-matter",
+      "prompt": "Name a state of matter",
+      "reason": "about 40 answers",
+      "est_answers": 40
+    },
+    {
+      "id": "si-binary-prefix",
+      "prompt": "Name an SI or binary prefix",
+      "reason": "only about 34 prefixes",
+      "est_answers": 34
+    },
+    {
+      "id": "metasyntactic-variable",
+      "prompt": "Name a metasyntactic variable (e.g. foo)",
+      "reason": "about 30 answers",
+      "est_answers": 30
+    },
+    {
+      "id": "bytecode-intermediate-representation",
+      "prompt": "Name a bytecode or intermediate representation",
+      "reason": "about 40 answers",
+      "est_answers": 40
+    },
+    {
+      "id": "famous-test-image-3d-test",
+      "prompt": "Name a famous test image or 3D test model (e.g. Utah teapot)",
+      "reason": "about 45 answers",
+      "est_answers": 45
+    },
+    {
+      "id": "ux-dark-pattern",
+      "prompt": "Name a UX dark pattern",
+      "reason": "about 25 answers",
+      "est_answers": 25
+    },
+    {
+      "id": "type-server",
+      "prompt": "Name a type of server (e.g. mail server)",
+      "reason": "about 25 answers; web servers are covered elsewhere",
+      "est_answers": 25
+    },
+    {
+      "id": "way-people-hack-mod-their",
+      "prompt": "Name a way people hack or mod their own devices (e.g. overclocking)",
+      "reason": "about 35 answers",
+      "est_answers": 35
+    },
+    {
+      "id": "networking-concept-protocol",
+      "prompt": "Name a networking concept that isn't a protocol (e.g. subnet mask)",
+      "reason": "merged into the networking device prompt",
+      "est_answers": 40
+    },
+    {
+      "id": "dead-web-plugin-web-technology",
+      "prompt": "Name a dead web plugin or web technology (e.g. Flash)",
+      "reason": "merged into the early-web prompt",
+      "est_answers": 40
+    },
+    {
+      "id": "kids-online-world-browser-game",
+      "prompt": "Name a kids' online world or browser game from the 2000s",
+      "reason": "merged into the early-web prompt",
+      "est_answers": 40
+    },
+    {
+      "id": "ancient-maths-text-artefact",
+      "prompt": "Name an ancient maths text or artefact",
+      "reason": "about 40 answers",
+      "est_answers": 40
+    },
+    {
+      "id": "type-function",
+      "prompt": "Name a type of function (e.g. bijective)",
+      "reason": "merged into the properties prompt",
+      "est_answers": 40
+    },
+    {
+      "id": "feature-functions-graph",
+      "prompt": "Name a feature of a function's graph (e.g. asymptote)",
+      "reason": "about 30 answers",
+      "est_answers": 30
+    },
+    {
+      "id": "source-randomness",
+      "prompt": "Name a source of randomness (e.g. a coin toss)",
+      "reason": "fuzzy answers and only about 40",
+      "est_answers": 40
+    },
+    {
+      "id": "waveform-type-wave",
+      "prompt": "Name a waveform or type of wave",
+      "reason": "about 40 answers",
+      "est_answers": 40
+    },
+    {
+      "id": "overwatch-hero",
+      "prompt": "Name an Overwatch hero",
+      "reason": "about 45 heroes",
+      "est_answers": 45
+    },
+    {
+      "id": "programmer-holy-war-topic",
+      "prompt": "Name a programmer \"holy war\" topic (e.g. tabs vs spaces)",
+      "reason": "about 40 answers",
+      "est_answers": 40
+    },
+    {
+      "id": "monitor-display-spec",
+      "prompt": "Name a monitor or display spec (e.g. refresh rate)",
+      "reason": "merged into the screen resolution prompt",
+      "est_answers": 30
+    },
+    {
+      "id": "ai-prompting-technique",
+      "prompt": "Name an AI prompting technique (e.g. chain-of-thought)",
+      "reason": "about 30 answers",
+      "est_answers": 30
+    },
+    {
+      "id": "famous-space-photograph",
+      "prompt": "Name a famous space photograph (e.g. Pale Blue Dot)",
+      "reason": "about 40 answers",
+      "est_answers": 40
+    },
+    {
+      "id": "unit-length-css-typography",
+      "prompt": "Name a unit used for length in CSS or typography (e.g. em)",
+      "reason": "about 20 answers; covered by the unit of measurement prompt",
+      "est_answers": 20
+    },
+    {
+      "id": "hacking-clich-phrase-films",
+      "prompt": "Name a hacking cliché or phrase from films (e.g. \"I'm in\")",
+      "reason": "fuzzy answers and only about 40",
+      "est_answers": 40
+    },
+    {
+      "id": "cheat-hack-people-use-online",
+      "prompt": "Name a cheat or hack people use in online games (e.g. aimbot)",
+      "reason": "merged into the glitch and cheat prompt",
+      "est_answers": 35
+    },
+    {
+      "id": "online-gaming-network-term",
+      "prompt": "Name an online gaming network term (e.g. lag)",
+      "reason": "merged into the gamer slang prompt",
+      "est_answers": 40
+    }
+  ],
+  "removed_v4": [
+    {
+      "id": "npcomplete-problem",
+      "prompt": "Name an NP-complete problem, like the travelling salesman problem",
+      "removed_from_active_bank": true
+    },
+    {
+      "id": "famous-code-trick-hack",
+      "prompt": "Name a famous code trick or hack, like the fast inverse square root",
+      "removed_from_active_bank": true
+    },
+    {
+      "id": "software-development-methodology",
+      "prompt": "Name a software development methodology, like Agile",
+      "removed_from_active_bank": true
+    },
+    {
+      "id": "creative-design-application",
+      "prompt": "Name a creative or design application, like Photoshop",
+      "removed_from_active_bank": true
+    },
+    {
+      "id": "easter-egg-hidden-nongame-software",
+      "prompt": "Name an Easter egg hidden in non-game software, like Google's \"do a barrel roll\"",
+      "removed_from_active_bank": true
+    },
+    {
+      "id": "graphics-card-gpu",
+      "prompt": "Name a graphics card or GPU, like the GeForce RTX 4090",
+      "removed_from_active_bank": true
+    },
+    {
+      "id": "port-connector",
+      "prompt": "Name a port or connector, like USB",
+      "removed_from_active_bank": true
+    },
+    {
+      "id": "keyboard-layout",
+      "prompt": "Name a keyboard layout, like QWERTY",
+      "removed_from_active_bank": true
+    },
+    {
+      "id": "electronic-component",
+      "prompt": "Name an electronic component, like a resistor",
+      "removed_from_active_bank": true
+    },
+    {
+      "id": "sensor",
+      "prompt": "Name a sensor, like an accelerometer",
+      "removed_from_active_bank": true
+    },
+    {
+      "id": "search-engine",
+      "prompt": "Name a search engine",
+      "removed_from_active_bank": true
+    },
+    {
+      "id": "famous-data-breach-hack-wasnt",
+      "prompt": "Name a famous data breach or hack that wasn't a virus or worm, like the Yahoo breach",
+      "removed_from_active_bank": true
+    },
+    {
+      "id": "classical-cipher-method",
+      "prompt": "Name a classical (pre-computer) cipher, like the Caesar cipher",
+      "removed_from_active_bank": true
+    },
+    {
+      "id": "cryptocurrency",
+      "prompt": "Name a cryptocurrency",
+      "removed_from_active_bank": true
+    },
+    {
+      "id": "physicist",
+      "prompt": "Name a physicist",
+      "removed_from_active_bank": true
+    },
+    {
+      "id": "chemist-biologist",
+      "prompt": "Name a chemist or biologist",
+      "removed_from_active_bank": true
+    },
+    {
+      "id": "astronaut-cosmonaut",
+      "prompt": "Name an astronaut or cosmonaut",
+      "removed_from_active_bank": true
+    },
+    {
+      "id": "sciencefiction-fantasy-author",
+      "prompt": "Name a science-fiction author",
+      "removed_from_active_bank": true
+    },
+    {
+      "id": "space-agency-rocket-company",
+      "prompt": "Name a space agency or rocket company, like NASA",
+      "removed_from_active_bank": true
+    },
+    {
+      "id": "rocket-launch-vehicle",
+      "prompt": "Name a rocket or launch vehicle, like Saturn V",
+      "removed_from_active_bank": true
+    },
+    {
+      "id": "famous-specific-whole-number-maths",
+      "prompt": "Name a famous whole number in maths, like 1729",
+      "removed_from_active_bank": true
+    },
+    {
+      "id": "type-polynomial",
+      "prompt": "Name a type of polynomial, like quadratic",
+      "removed_from_active_bank": true
+    },
+    {
+      "id": "named-series-sum",
+      "prompt": "Name a series, like a geometric series",
+      "removed_from_active_bank": true
+    },
+    {
+      "id": "proof-technique",
+      "prompt": "Name a proof technique or problem-solving strategy, like proof by induction",
+      "removed_from_active_bank": true
+    },
+    {
+      "id": "game-theory-concept-game",
+      "prompt": "Name a game theory concept or game, like the prisoner's dilemma",
+      "removed_from_active_bank": true
+    },
+    {
+      "id": "type-puzzle",
+      "prompt": "Name a type of puzzle, like sudoku",
+      "removed_from_active_bank": true
+    },
+    {
+      "id": "moon-our-solar-system",
+      "prompt": "Name a moon in our solar system",
+      "removed_from_active_bank": true
+    },
+    {
+      "id": "spacecraft-space-probe-space-telescope",
+      "prompt": "Name a spacecraft or space probe that isn't a space telescope, like Voyager 1",
+      "removed_from_active_bank": true
+    },
+    {
+      "id": "planet-dwarf-planet-exoplanet",
+      "prompt": "Name a planet, dwarf planet or exoplanet",
+      "removed_from_active_bank": true
+    },
+    {
+      "id": "famous-programming-cs-book",
+      "prompt": "Name a famous programming or CS book, like SICP",
+      "removed_from_active_bank": true
+    },
+    {
+      "id": "webcomic",
+      "prompt": "Name a webcomic, like xkcd",
+      "removed_from_active_bank": true
+    },
+    {
+      "id": "fictional-spaceship",
+      "prompt": "Name a fictional spaceship",
+      "removed_from_active_bank": true
+    },
+    {
+      "id": "game-came-built-into-windows",
+      "prompt": "Name a game that came with Windows, like Minesweeper",
+      "removed_from_active_bank": true
+    },
+    {
+      "id": "game-engine",
+      "prompt": "Name a game engine, like Unity",
+      "removed_from_active_bank": true
+    },
+    {
+      "id": "gaming-platform-game-store",
+      "prompt": "Name a gaming platform or game store, like Steam",
+      "removed_from_active_bank": true
+    },
+    {
+      "id": "famous-website-early-web-search",
+      "prompt": "Name a website or web technology from the early web, like GeoCities or Flash",
+      "removed_from_active_bank": true
+    },
+    {
+      "id": "famous-animal-science-tech-history",
+      "prompt": "Name a famous animal in science or tech history, like Dolly the sheep",
+      "removed_from_active_bank": true
+    },
+    {
+      "id": "famous-comet-asteroid",
+      "prompt": "Name a famous comet or asteroid, like Halley's Comet",
+      "removed_from_active_bank": true
+    },
+    {
+      "id": "physical-quantity",
+      "prompt": "Name a physical quantity, like momentum",
+      "removed_from_active_bank": true
+    },
+    {
+      "id": "inventor-who-known-as-scientist",
+      "prompt": "Name an inventor who isn't mainly known as a scientist",
+      "removed_from_active_bank": true
+    }
+  ]
+}
