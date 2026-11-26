@@ -247,7 +247,7 @@ body { --barh: 84px; }
 @media (max-width: 760px), (max-height: 520px) {
   .mprompt { display: block; position: fixed; z-index: 29; left: 12px; right: 12px; top: 128px; padding: 12px 14px; font-weight: 700; font-size: 17px; }
   .mprompt:empty { display: none; }
-  .hud-tl { min-width: 0; padding: 8px 10px; }
+  .hud-tl { display: none; }
   .score { font-size: 22px; }
   .icon-btn { width: 34px; height: 34px; }
 }
