@@ -17,6 +17,13 @@ const ADMIN_PASSWORD = process.env.NIBBLE_ADMIN_PASSWORD || '';
 const ADMIN_COOKIE = 'nibble_admin';
 const adminSessions = new Map();
 const dailyConfigPath = path.join(root, 'data', 'daily_prompts.json');
+const pool = process.env.DATABASE_URL ? new (require('pg').Pool)({
+  connectionString: process.env.DATABASE_URL,
+  max: 1,
+  idleTimeoutMillis: 10000,
+  connectionTimeoutMillis: 15000
+}) : null;
+let dailyConfig = { schedules:{}, completedPromptIds:[] };
 const bank = JSON.parse(fs.readFileSync(path.join(root, 'question-bank/prompts.json'), 'utf8')).prompts;
 const data = [
   JSON.parse(fs.readFileSync(path.join(root, 'answer-pilot/answer_sets.json'), 'utf8')).prompts,
@@ -39,9 +46,8 @@ function addCalendarDays(date, days) {
   return new Date(Date.parse(date + 'T00:00:00Z') + days * 86400000).toISOString().slice(0, 10);
 }
 function londonTomorrow() { return addCalendarDays(londonToday(), 1); }
-function readDailyConfig() {
+function validateDailyConfig(config) {
   try {
-    const config = JSON.parse(fs.readFileSync(dailyConfigPath, 'utf8'));
     if (!config || typeof config !== 'object') return { schedules:{}, completedPromptIds:[] };
     const schedules = { ...(config.schedules || {}) };
     // Migrate the earlier one-day format in memory so existing schedules remain usable.
@@ -52,6 +58,35 @@ function readDailyConfig() {
     const completedPromptIds = Array.isArray(config.completedPromptIds) ? [...new Set(config.completedPromptIds.filter(id => promptIds.has(id)))] : [];
     return { schedules, completedPromptIds };
   } catch { return null; }
+}
+function readLocalDailyConfig() {
+  try { return validateDailyConfig(JSON.parse(fs.readFileSync(dailyConfigPath, 'utf8'))); }
+  catch { return null; }
+}
+async function initializeDailyConfig() {
+  dailyConfig = readLocalDailyConfig() || { schedules:{}, completedPromptIds:[] };
+  if (!pool) return;
+  const { rows } = await pool.query("SELECT config FROM nibble_app_config WHERE config_key = 'daily_prompts'");
+  if (rows.length) {
+    dailyConfig = validateDailyConfig(rows[0].config) || { schedules:{}, completedPromptIds:[] };
+    return;
+  }
+  const initial = JSON.stringify(dailyConfig);
+  await pool.query("INSERT INTO nibble_app_config (config_key, config) VALUES ('daily_prompts', $1::jsonb) ON CONFLICT (config_key) DO NOTHING", [initial]);
+  const inserted = await pool.query("SELECT config FROM nibble_app_config WHERE config_key = 'daily_prompts'");
+  dailyConfig = validateDailyConfig(inserted.rows[0]?.config) || { schedules:{}, completedPromptIds:[] };
+}
+async function saveDailyConfig(config) {
+  if (pool) {
+    const serialized = JSON.stringify(config);
+    await pool.query("INSERT INTO nibble_app_config (config_key, config, updated_at)\n      VALUES ('daily_prompts', $1::jsonb, now())\n      ON CONFLICT (config_key) DO UPDATE SET config = EXCLUDED.config, updated_at = now()", [serialized]);
+  } else {
+    fs.mkdirSync(path.dirname(dailyConfigPath), {recursive:true});
+    const tmp = dailyConfigPath + '.tmp';
+    fs.writeFileSync(tmp, JSON.stringify(config,null,2)+'\n');
+    fs.renameSync(tmp, dailyConfigPath);
+  }
+  dailyConfig = config;
 }
 function scheduledPromptIds(config, beforeDate) {
   const used = new Set();
@@ -115,7 +150,7 @@ function check(id, raw) {
   return item ? { ok: true, item } : { ok: false };
 }
 const types={'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.svg':'image/svg+xml'};
-http.createServer((req,res)=>{
+const httpServer = http.createServer((req,res)=>{
   req.res = res;
   const pathname = decodeURIComponent(new URL(req.url,'http://localhost').pathname);
   if(req.method==='POST' && pathname==='/api/admin/login'){
@@ -135,17 +170,17 @@ http.createServer((req,res)=>{
   }
   if(pathname==='/api/admin/daily' && req.method==='GET'){
     if(!isAdmin(req)) return json(res, 401, {error:'admin login required'});
-    const date = londonTomorrow(), saved = readDailyConfig() || {schedules:{}, completedPromptIds:[]};
+    const date = londonTomorrow(), saved = dailyConfig;
     return json(res, 200, {date, promptIds:saved.schedules[date]?.promptIds || null, completedPromptIds:saved.completedPromptIds, scheduledPromptIds:[...scheduledPromptIds(saved, date)], usedPromptIds:usedPromptIds(saved, date)});
   }
   if(pathname==='/api/admin/daily' && req.method==='POST'){
     if(!isAdmin(req)) return json(res, 401, {error:'admin login required'});
-    readJson(req, 8192, (err, body) => {
+    readJson(req, 8192, async (err, body) => {
       const ids = body && body.promptIds, completed = body && body.completedPromptIds, date = londonTomorrow();
       if(err) return json(res, 400, {error:'invalid JSON'});
       if(!Array.isArray(ids) || ids.length!==7 || new Set(ids).size!==7 || !ids.every(id => typeof id==='string' && promptIds.has(id))) return json(res, 400, {error:'choose exactly seven different prompts'});
       if(!Array.isArray(completed) || new Set(completed).size!==completed.length || !completed.every(id => typeof id==='string' && promptIds.has(id))) return json(res, 400, {error:'invalid completed prompts'});
-      const config = readDailyConfig() || {schedules:{}, completedPromptIds:[]};
+      const config = JSON.parse(JSON.stringify(dailyConfig));
       const previouslyScheduled = new Set();
       for (const [scheduledDate, schedule] of Object.entries(config.schedules)) if (scheduledDate < date) for (const id of schedule.promptIds) previouslyScheduled.add(id);
       if(ids.some(id => previouslyScheduled.has(id))) return json(res, 400, {error:'a selected prompt was already used in an earlier daily set'});
@@ -153,7 +188,7 @@ http.createServer((req,res)=>{
       config.schedules[date] = {promptIds:ids};
       config.completedPromptIds = completed;
       config.updatedAt = new Date().toISOString();
-      try { fs.mkdirSync(path.dirname(dailyConfigPath), {recursive:true}); const tmp=dailyConfigPath+'.tmp'; fs.writeFileSync(tmp, JSON.stringify(config,null,2)+'\n'); fs.renameSync(tmp,dailyConfigPath); }
+      try { await saveDailyConfig(config); }
       catch { return json(res, 500, {error:'could not save daily prompts'}); }
       return json(res, 200, {ok:true, date, promptIds:ids, completedPromptIds:config.completedPromptIds, scheduledPromptIds:[...scheduledPromptIds(config, date)], usedPromptIds:usedPromptIds(config, date)});
     }); return;
@@ -176,9 +211,15 @@ http.createServer((req,res)=>{
   if(!publicFiles.has(rel)){res.writeHead(404);return res.end('Not found');}
   const file=path.join(root,rel);
   if(rel==='questions.js'){
-    const saved=readDailyConfig(), ids=saved?.schedules?.[londonToday()]?.promptIds || null;
+    const ids=dailyConfig?.schedules?.[londonToday()]?.promptIds || null;
     const script=fs.readFileSync(file,'utf8')+'\nwindow.DAILY_PROMPT_IDS = '+JSON.stringify(ids)+';\n';
     res.writeHead(200,{'content-type':types['.js'],'cache-control':'no-store'});return res.end(script);
   }
   fs.readFile(file,(e,b)=>{if(e){res.writeHead(404);return res.end('Not found');}res.writeHead(200,{'content-type':types[path.extname(file)]||'application/octet-stream','cache-control':'no-store'});res.end(b);});
-}).listen(process.env.PORT||8000,()=>console.log(`nibble.io API listening on http://localhost:${process.env.PORT||8000}`));
+});
+async function start() {
+  await initializeDailyConfig();
+  const port = process.env.PORT || 8000;
+  httpServer.listen(port,()=>console.log(`nibble.io API listening on http://localhost:${port}`));
+}
+start().catch(error => { console.error('Could not initialize daily prompt storage:', error); process.exit(1); });

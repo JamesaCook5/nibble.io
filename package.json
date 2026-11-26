@@ -1,0 +1,19 @@
+{
+  "name": "nibble-io",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Node server for nibble.io daily quiz and admin tools",
+  "scripts": {
+    "build": "node --check server.js && node --check scripts/migrate.js && node --check app.js && node --check render.js && node --check questions.js",
+    "db:migrate": "node scripts/migrate.js",
+    "start": "npm run db:migrate && node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@neon/config": "^1.14.8",
+    "@neon/env": "^2.1.11",
+    "pg": "^8.23.1"
+  }
+}
