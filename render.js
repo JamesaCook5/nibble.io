@@ -15,6 +15,7 @@ const SHADOW = 'rgba(48,26,12,.30)';
 
 let STAGES = [], ROWS = [];
 let P = 1, Q = 2, CW = 0, CH = 0, OX = 0, OY = 0, vignette = null;
+let layoutVW = 0, layoutVH = 0;
 
 const S = {
   stage: 0, prev: 0, t0: -1e9, dur: 900, zapT: -1e9, enterT: -1e9,
@@ -128,7 +129,14 @@ const SCREEN_BG = { green: '#0a1d12', amber: '#1a1005', dos: '#1d2c7a', teal: '#
 
 /* ---------- layout ---------- */
 function resize() {
-  const vw = innerWidth, vh = innerHeight, bar = smallQ.matches ? 84 : 26;
+  const vw = innerWidth, actualVH = innerHeight, bar = smallQ.matches ? 84 : 26;
+  // Mobile browsers may shrink the viewport when the answer field opens the
+  // software keyboard. Keep the desk scene at its pre-keyboard size so it
+  // doesn't jump down and appear attached to that keyboard.
+  const keyboardResize = document.activeElement?.id === 'answer'
+    && layoutVW === vw && layoutVH > 0 && actualVH < layoutVH - 80;
+  const vh = keyboardResize ? layoutVH : actualVH;
+  if (!keyboardResize) { layoutVW = vw; layoutVH = vh; }
   const main = STAGES[S.stage]?.main || { x: 26.5, w: 47 };
   const mainWidth = portraitQ.matches ? RW * main.w / 100 : RW;
   const fit = Math.max(.4, Math.min((vw - (portraitQ.matches ? 24 : 0)) / mainWidth, (vh - bar) / RH));
