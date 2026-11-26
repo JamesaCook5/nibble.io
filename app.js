@@ -647,7 +647,7 @@ function renderScreen() {
     html = `<div class="t-prompt small">${esc(pp.prompt)}</div>
       <div class="t-line">&gt; ${r.answer ? esc(r.answer) : '<span class="dim">(no answer)</span>'}</div>
       <div class="t-tier" style="--tc:${TIERS[r.tier].color}">${r.tier === 'miss' ? 'NO SIGNAL' : TIERS[r.tier].name.toUpperCase()} <b>+${r.score}</b></div>
-      ${ex.length ? `<div class="t-hint">${r.tier === 'miss' ? 'could have said' : 'rarer'}: ${ex.map(i => esc(i.display)).join(' · ')}</div>` : '<div class="t-hint">top tier. nothing rarer.</div>'}
+      ${ex.length ? `<div class="t-hint">${r.tier === 'miss' ? 'could have said' : 'rarer'}: ${ex.map(i => esc(i.display)).join(' · ')}</div>` : ''}
       <div class="t-cta blink">${setDone() ? 'PRESS ENTER ▸ SEE ALL ANSWERS' : 'PRESS ENTER WHEN READY ▸ NEXT'}</div>
       `;
   } else if (S.phase === 'done') {
