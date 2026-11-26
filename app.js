@@ -181,6 +181,7 @@ if (!unlimited && !restoreSession) { S.results = daily.results.slice(); S.score 
 if (restoreSession) { S.score = S.results.reduce((a, r) => a + r.score, 0); S.resumed = S.results.length > 0 && S.phase !== 'done'; S.dailyDone = !unlimited && S.phase === 'done'; S.previewEndsAt = performance.now() + Math.max(0, savedSession.previewRemaining || 0); S.answerEndsAt = performance.now() + Math.max(0, savedSession.answerRemaining || 0); }
 S.stage = Math.max(stageFor(S.score), forcedStage ?? 0);
 const save = () => {
+  if (adminTestMode) return;
   if (!unlimited) {
     store.set(SAVE_KEY, { results: S.results, done: S.phase === 'done' });
     if (S.phase === 'done' || S.results.length >= ROUNDS) { syncDailyStreak(true); renderStreakBadge(); }
@@ -188,7 +189,7 @@ const save = () => {
   saveSession();
 };
 function saveSession() {
-  if (!prompts?.length) return;
+  if (adminTestMode || !prompts?.length) return;
   store.set(SESSION_KEY, { date: today, mode: unlimited ? 'random' : 'daily', phase: S.phase, results: S.results, promptIds: prompts.map(p => p.id), input: input?.value || '', previewRemaining: Math.max(0, S.previewEndsAt - performance.now()), answerRemaining: Math.max(0, S.answerEndsAt - performance.now()) });
 }
 const curPrompt = () => prompts[Math.min(S.results.length, ROUNDS - 1)];
@@ -223,8 +224,9 @@ const adminOverlay = $('#adminOverlay'), adminLoginPanel = $('#adminLoginPanel')
 const adminLoginForm = $('#adminLoginForm'), adminPassword = $('#adminPassword'), adminLoginStatus = $('#adminLoginStatus');
 const adminPromptList = $('#adminPromptList'), adminSearch = $('#adminSearch'), adminDate = $('#adminDate');
 const adminSelectionCount = $('#adminSelectionCount'), adminSaveStatus = $('#adminSaveStatus'), adminSave = $('#adminSave');
+const adminTest = $('#adminTest'), adminTestExit = $('#adminTestExit');
 const streakBadge = $('#streakBadge'), streakCount = $('#streakCount');
-let adminSequence = '', adminSequenceAt = 0, adminAuthenticated = false;
+let adminSequence = '', adminSequenceAt = 0, adminAuthenticated = false, adminTestMode = false;
 const adminAnswerCache = new Map();
 if (restoreSession) { input.value = savedSession.input || ''; input.readOnly = !['answering','preview'].includes(S.phase); }
 
@@ -237,7 +239,7 @@ function renderStreakBadge() {
 }
 renderStreakBadge();
 
-const syncModeLabel = () => { $('#dayLabel').textContent = unlimited ? 'RANDOM' : '#' + day; };
+const syncModeLabel = () => { $('#dayLabel').textContent = adminTestMode ? 'TEST' : unlimited ? 'RANDOM' : '#' + day; };
 syncModeLabel();
 
 /* ---------- admin prompt editor ---------- */
@@ -262,6 +264,22 @@ function updateAdminSelection() {
   const completed = adminPromptList.querySelectorAll('.admin-prompt-complete:checked').length;
   adminSelectionCount.textContent = `${count} / 7 selected · ${completed} complete`;
   adminSave.disabled = count !== 7;
+  adminTest.disabled = count !== 7;
+}
+function startAdminTest() {
+  const selectedIds = [...adminPromptList.querySelectorAll('.admin-prompt-select:checked')].map(input => input.value);
+  const selectedPrompts = selectedIds.map(id => window.PROMPTS.find(prompt => String(prompt.id) === id));
+  if (selectedPrompts.length !== ROUNDS || selectedPrompts.some(prompt => !prompt)) return;
+  prompts = selectedPrompts;
+  adminTestMode = true;
+  adminOverlay.hidden = true;
+  adminPassword.value = '';
+  if (adminAuthenticated) fetch('/api/admin/logout', {method:'POST'}).catch(() => {});
+  adminAuthenticated = false;
+  S.phase = 'intro'; S.menu = 0; S.results = []; S.score = 0; S.resumed = false; S.dailyDone = false;
+  S.stage = forcedStage ?? 0; applyStage(S.stage, false); syncModeLabel();
+  adminTestExit.hidden = false;
+  startRound();
 }
 function renderAdminPromptChoices(selectedIds, completedIds, scheduledIds) {
   const selected = new Set(selectedIds || []), completed = new Set(completedIds || []), scheduled = new Set(scheduledIds || []), fragment = document.createDocumentFragment();
@@ -528,7 +546,8 @@ function scoreCurveHTML(animateHistogram = false) {
   }).join('');
   const activeX=left+(active+.5)*step, labelX=clamp(activeX,left+31,right-31);
   const ticks=[0,115,250,425,700].map(v=>{const x=left+span*v/700;return `<line class="curve-grid" x1="${x}" y1="26" x2="${x}" y2="${base}"/><text class="curve-tick" x="${x}" y="164" text-anchor="middle">${v}</text>`}).join('');
-  return `<section class="score-curve"><div class="curve-heading"><div><strong>ESTIMATED SCORE DISTRIBUTION</strong><small>100 score blocks · 0–700</small></div><div class="curve-rank">BETTER THAN <b>${percentile}%</b></div></div><svg viewBox="0 0 800 184" role="img" aria-label="Estimated score distribution shown as 100 blocks. Your score ${score} is in the highlighted block and is better than ${percentile} percent of players.">${ticks}${bars}<line class="curve-axis" x1="${left}" y1="${base}" x2="${right}" y2="${base}"/><text class="curve-you" x="${labelX}" y="18" text-anchor="middle">YOU · ${score}</text><text class="curve-axis-label" x="${(left+right)/2}" y="181" text-anchor="middle">TOTAL DAILY SCORE</text></svg><div class="curve-note">${animateHistogram?'SHUFFLED INPUT · INSERTION SORT STARTING':'Illustrative estimated score density · no player data yet'}</div></section>`;
+  const scoreLabel = adminTestMode ? 'TOTAL TEST SCORE' : 'TOTAL DAILY SCORE';
+  return `<section class="score-curve"><div class="curve-heading"><div><strong>ESTIMATED SCORE DISTRIBUTION</strong><small>100 score blocks · 0–700</small></div><div class="curve-rank">BETTER THAN <b>${percentile}%</b></div></div><svg viewBox="0 0 800 184" role="img" aria-label="Estimated score distribution shown as 100 blocks. Your score ${score} is in the highlighted block and is better than ${percentile} percent of players.">${ticks}${bars}<line class="curve-axis" x1="${left}" y1="${base}" x2="${right}" y2="${base}"/><text class="curve-you" x="${labelX}" y="18" text-anchor="middle">YOU · ${score}</text><text class="curve-axis-label" x="${(left+right)/2}" y="181" text-anchor="middle">${scoreLabel}</text></svg><div class="curve-note">${animateHistogram?'SHUFFLED INPUT · INSERTION SORT STARTING':'Illustrative estimated score density · no player data yet'}</div></section>`;
 }
 function animateHistogramSort(svg) {
   const bars=Array.from(svg.querySelectorAll('.curve-bar'));
@@ -577,7 +596,7 @@ function reviewHTML(animateHistogram = false) {
   }).join('');
   return `${scoreCurveHTML(animateHistogram)}<div class="rv-top"><div class="answer-list-label">Your seven answers</div><div class="t-sub">${esc(STAGES[S.stage].label)} · tap a question to browse its answer set</div></div>
     <ol class="rv-list">${rows}</ol>
-    <div class="rv-foot">new daily set at midnight (UK time) · <span class="locked-label" aria-disabled="true">Random locked</span></div>`;
+    <div class="rv-foot">${adminTestMode ? 'ADMIN TEST · score, daily progress and streak are not saved' : 'new daily set at midnight (UK time) · Random locked'}</div>`;
 }
 function reviewDetailHTML(p, r) {
   return `<div class="rv-detail">${chipsHTML(p)}<input class="rv-search" type="text" spellcheck="false" autocomplete="off" placeholder="search every answer…" value="${esc(reviewQuery)}" aria-label="Search answers"><ul class="rv-answers">${answersHTML(p, r)}</ul></div>`;
@@ -623,6 +642,7 @@ scrBody.addEventListener('input', e => {
 });
 
 function renderScreen() {
+  adminTestExit.hidden = !adminTestMode;
   document.body.classList.toggle('ipad-results', S.phase === 'done');
   const p = curPrompt(), round = Math.min(S.results.length + 1, ROUNDS), of = '/7';
   screenScore.textContent = S.phase === 'intro' ? '' : String(S.score).padStart(3, '0');
@@ -715,7 +735,7 @@ function renderResults() {
   resultsEl.hidden = false;
   const animateHistogram=!histogramSortPlayed;
   resultsEl.innerHTML = `<div class="ipad-shell${animateIpadOnNextRender ? ' ipad-enter' : ''}"><div class="ipad-screen">
-    <header class="ipad-header"><div><div class="ipad-kicker">NIBBLE.IO · ${unlimited ? 'RANDOM SET' : 'DAILY SET #' + day}</div><h1>Answer review</h1></div>
+    <header class="ipad-header"><div><div class="ipad-kicker">NIBBLE.IO · ${adminTestMode ? 'ADMIN TEST' : unlimited ? 'RANDOM SET' : 'DAILY SET #' + day}</div><h1>Answer review</h1></div>
       <div class="ipad-score"><strong>${S.score}</strong><span>points</span></div></header>
     <div class="ipad-body">${reviewHTML(animateHistogram)}</div>
     <footer class="ipad-footer"><button class="btn locked-action" type="button" disabled>Random locked</button><a class="btn ghost" href="?home=1">Home</a></footer>
@@ -923,6 +943,8 @@ $('#passBtn').addEventListener('click', () => { if (S.phase === 'answering') end
 $('#helpBtn').addEventListener('click', e => { const h = $('#help'); h.hidden = !h.hidden; e.currentTarget.blur(); });
 $('#resultsBtn').addEventListener('click', () => { resultsEl.hidden = false; });
 $('#adminClose').addEventListener('click', closeAdmin);
+adminTest.addEventListener('click', startAdminTest);
+adminTestExit.addEventListener('click', () => { location.href = '?home=1'; });
 adminOverlay.addEventListener('click', e => { if (e.target === adminOverlay) closeAdmin(); });
 adminLoginForm.addEventListener('submit', async e => {
   e.preventDefault(); adminLoginStatus.textContent = 'Checking password…';

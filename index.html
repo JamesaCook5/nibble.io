@@ -76,6 +76,7 @@
   <input id="answer" class="answer panel-ish" type="text" maxlength="64" spellcheck="false" autocapitalize="off" autocorrect="off" enterkeyhint="go" aria-label="Your answer" placeholder="Press Enter to start">
   <button type="submit" class="go panel-ish" id="goBtn" aria-label="Submit">→</button>
 </form>
+<button id="adminTestExit" class="admin-test-exit" type="button" hidden>Exit test</button>
 
 <section id="adminOverlay" class="admin-overlay" hidden aria-label="Admin access">
   <div class="admin-card" role="dialog" aria-modal="true" aria-labelledby="adminTitle">
@@ -101,6 +102,8 @@
         <strong id="adminSelectionCount">0 / 7 selected · 0 complete</strong>
       </div>
       <div id="adminPromptList" class="admin-prompt-list"></div>
+      <p class="admin-test-note">Test the selected seven prompts in a private round. Your daily score and streak will not change.</p>
+      <button id="adminTest" class="admin-button admin-test-button" type="button" disabled>Test selected 7</button>
       <div id="adminSaveStatus" class="admin-status" role="status" aria-live="polite"></div>
       <button id="adminSave" class="admin-button" type="button" disabled>Save tomorrow's set</button>
     </div>
