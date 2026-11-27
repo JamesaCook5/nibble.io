@@ -1,4 +1,4 @@
-# nibble.io (working name)
+# megabytle.io
 
 A daily computer-science quiz in plain HTML, CSS and JavaScript, with no build step and no framework. Better answers upgrade the computer on the desk.
 
@@ -7,7 +7,7 @@ The quiz checker and admin editor need the Node server. From this folder, run `n
 
 - `?practice=1` plays a random set that isn't saved.
 - `?stage=0`…`?stage=7` previews a rig without earning it (for testing).
-- In the console, `nibble.upgrade(n)` jumps the rig to stage n.
+- In the console, `megabytle.upgrade(n)` jumps the rig to stage n.
 
 ## Files
 - `index.html`: the page, the canvas, the screen overlays and the pixel-computer logo.
@@ -25,7 +25,7 @@ The quiz checker and admin editor need the Node server. From this folder, run `n
 - Rig stage = floor(score / 75), capped at 7 (UPGRADE_EVERY in app.js). Scores are shown as plain points with no maximum, so the game never shows a ceiling.
 
 ## Guesses to confirm
-- Name "nibble.io" (for now).
+- Name "megabytle.io".
 - The scene fills the whole window. You type on the monitor; a bottom answer bar only appears on phone-sized screens.
 - The daily reset is at UK midnight, and the counter starts at #0 on 26 Nov 2026.
 - All rarity tiers are placeholders.
