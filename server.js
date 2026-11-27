@@ -42,33 +42,6 @@ function norm(s) {
     .replace(/\bvs\.?\b/g,' v ').replace(/\bversus\b/g,' v ').replace(/^\s*the\s+/,'')
     .replace(/[^\p{L}\p{N}-]+/gu,'');
 }
-function typoDistance(a, b, max) {
-  if (Math.abs(a.length - b.length) > max) return max + 1;
-  const inf = max + 1;
-  let previous2 = null;
-  let previous = Array.from({length:b.length + 1}, (_, j) => j);
-  for (let i = 1; i <= a.length; i++) {
-    const current = Array(b.length + 1).fill(inf);
-    current[0] = i;
-    let rowMin = inf;
-    for (let j = Math.max(1, i - max); j <= Math.min(b.length, i + max); j++) {
-      current[j] = Math.min(
-        previous[j] + 1,
-        current[j - 1] + 1,
-        previous[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1)
-      );
-      if (i > 1 && j > 1 && a[i - 1] === b[j - 2] && a[i - 2] === b[j - 1]) {
-        current[j] = Math.min(current[j], previous2[j - 2] + 1);
-      }
-      rowMin = Math.min(rowMin, current[j]);
-    }
-    if (rowMin > max) return max + 1;
-    previous2 = previous;
-    previous = current;
-  }
-  return previous[b.length] <= max ? previous[b.length] : max + 1;
-}
-
 const promptById = new Map(bank.map(p => [p.id, p]));
 const promptIds = new Set(promptById.keys());
 function londonToday() {
@@ -186,14 +159,53 @@ for (const source of data) for (const [id, set] of Object.entries(source)) {
 }
 const fuzzyAnswerIndex = new Map();
 for (const [id, index] of answerIndex) {
-  const byLength = new Map();
+  const root = { children:new Map(), items:[] };
   for (const [key, item] of index) {
-    const candidate = key.replace(/-/g, '');
+    const candidate = Array.from(key.replace(/-/g, ''));
     if (candidate.length < 4) continue;
-    if (!byLength.has(candidate.length)) byLength.set(candidate.length, []);
-    byLength.get(candidate.length).push([candidate, item]);
+    let node = root;
+    for (const character of candidate) {
+      if (!node.children.has(character)) node.children.set(character, { children:new Map(), items:[] });
+      node = node.children.get(character);
+    }
+    if (!node.items.includes(item)) node.items.push(item);
   }
-  fuzzyAnswerIndex.set(id, byLength);
+  fuzzyAnswerIndex.set(id, root);
+}
+function fuzzyMatch(root, input, maxDistance) {
+  if (!root) return null;
+  const chars = Array.from(input);
+  const initialRow = Array.from({length:chars.length + 1}, (_, i) => i);
+  let bestItem = null, bestDistance = maxDistance + 1, ambiguous = false;
+  function visit(node, row, rowBefore, previousCharacter, depth) {
+    const distance = row[chars.length];
+    if (distance <= maxDistance) {
+      for (const item of node.items) {
+        if (distance < bestDistance) { bestDistance = distance; bestItem = item; ambiguous = false; }
+        else if (distance === bestDistance && item !== bestItem) ambiguous = true;
+      }
+    }
+    if (depth >= chars.length + maxDistance) return;
+    for (const [character, child] of node.children) {
+      const current = Array(chars.length + 1).fill(maxDistance + 1);
+      current[0] = depth + 1;
+      let rowMin = current[0];
+      for (let j = 1; j <= chars.length; j++) {
+        current[j] = Math.min(
+          row[j] + 1,
+          current[j - 1] + 1,
+          row[j - 1] + (character === chars[j - 1] ? 0 : 1)
+        );
+        if (rowBefore && j > 1 && character === chars[j - 2] && previousCharacter === chars[j - 1]) {
+          current[j] = Math.min(current[j], rowBefore[j - 2] + 1);
+        }
+        rowMin = Math.min(rowMin, current[j]);
+      }
+      if (rowMin <= maxDistance) visit(child, current, row, character, depth + 1);
+    }
+  }
+  visit(root, initialRow, null, '', 0);
+  return bestItem && !ambiguous ? {item:bestItem, distance:bestDistance} : null;
 }
 function check(id, raw) {
   if (!promptById.has(id)) return null;
@@ -204,23 +216,11 @@ function check(id, raw) {
   if (item) return { ok:true, item };
 
   const input = key.replace(/-/g, '');
-  if (input.length < 4) return { ok:false };
-  const maxDistance = input.length >= 9 ? 2 : 1;
-  const buckets = fuzzyAnswerIndex.get(id);
-  let bestItem = null, bestDistance = maxDistance + 1, ambiguous = false;
-  for (let length = Math.max(4, input.length - maxDistance); length <= input.length + maxDistance; length++) {
-    for (const [candidate, candidateItem] of buckets?.get(length) || []) {
-      const distance = typoDistance(input, candidate, maxDistance);
-      if (distance < bestDistance) {
-        bestDistance = distance; bestItem = candidateItem; ambiguous = false;
-      } else if (distance === bestDistance && distance <= maxDistance && candidateItem !== bestItem) {
-        ambiguous = true;
-      }
-    }
-  }
-  return bestItem && bestDistance <= maxDistance && !ambiguous
-    ? { ok:true, item:bestItem, corrected:true }
-    : { ok:false };
+  const length = Array.from(input).length;
+  if (length < 4) return { ok:false };
+  const maxDistance = length >= 9 ? 2 : 1;
+  const match = fuzzyMatch(fuzzyAnswerIndex.get(id), input, maxDistance);
+  return match ? { ok:true, item:match.item, corrected:true } : { ok:false };
 }
 const types={'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.svg':'image/svg+xml'};
 const httpServer = http.createServer((req,res)=>{
