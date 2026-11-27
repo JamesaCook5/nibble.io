@@ -87,17 +87,21 @@ function buildIndex(p) {
 }
 function lev(a, b, max) {
   if (Math.abs(a.length - b.length) > max) return max + 1;
-  let prev = Array.from({ length: b.length + 1 }, (_, i) => i);
+  const inf = max + 1;
+  let previous2 = null;
+  let previous = Array.from({ length: b.length + 1 }, (_, j) => j);
   for (let i = 1; i <= a.length; i++) {
-    const cur = [i]; let rowMin = i;
-    for (let j = 1; j <= b.length; j++) {
-      cur[j] = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
-      rowMin = Math.min(rowMin, cur[j]);
+    const current = Array(b.length + 1).fill(inf); current[0] = i;
+    let rowMin = inf;
+    for (let j = Math.max(1, i - max); j <= Math.min(b.length, i + max); j++) {
+      current[j] = Math.min(previous[j] + 1, current[j - 1] + 1, previous[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+      if (i > 1 && j > 1 && a[i - 1] === b[j - 2] && a[i - 2] === b[j - 1]) current[j] = Math.min(current[j], previous2[j - 2] + 1);
+      rowMin = Math.min(rowMin, current[j]);
     }
     if (rowMin > max) return max + 1;
-    prev = cur;
+    previous2 = previous; previous = current;
   }
-  return prev[b.length];
+  return previous[b.length] <= max ? previous[b.length] : max + 1;
 }
 function judge(p, raw) {
   const { map } = buildIndex(p);
@@ -105,16 +109,17 @@ function judge(p, raw) {
   if (!k) return { ok: false };
   const hit = map.get(k);
   if (hit) return { ok: true, item: hit };
-  if (k.length >= 5) {
-    const maxD = k.length >= 9 ? 2 : 1;
-    let best = null, bd = 99, tie = false;
-    for (const [key, item] of map) {
-      const d = lev(k, key, maxD);
-      if (d < bd) { bd = d; best = item; tie = false; } else if (d === bd && item !== best) tie = true;
-    }
-    if (best && bd <= maxD && !tie) return { ok: false, suggest: best.display };
+  const input = k.replace(/-/g, '');
+  if (input.length < 4) return { ok: false };
+  const maxD = input.length >= 9 ? 2 : 1;
+  let best = null, bd = maxD + 1, tie = false;
+  for (const [key, item] of map) {
+    const candidate = key.replace(/-/g, '');
+    if (candidate.length < 4 || Math.abs(input.length - candidate.length) > maxD) continue;
+    const d = lev(input, candidate, maxD);
+    if (d < bd) { bd = d; best = item; tie = false; } else if (d === bd && item !== best) tie = true;
   }
-  return { ok: false };
+  return best && bd <= maxD && !tie ? { ok:true, item:best, corrected:true } : { ok:false };
 }
 
 function hashStr(s) { let h = 2166136261 >>> 0; for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 16777619); } return h >>> 0; }
