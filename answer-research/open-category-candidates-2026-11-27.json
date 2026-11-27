@@ -1,0 +1,268 @@
+{
+  "generated": "2026-11-27",
+  "description": "Candidate manifests harvested from Wikidata structured data and Know Your Meme confirmed sitemap. Company and title candidates remain source-backed candidates; per-record scope notes and provenance retained. See checkpoint for tiering limitations.",
+  "company_metadata": {
+    "source": "Wikidata Query Service; P452 selected technology sectors + direct company/business class; excluded P452 industry ancestry Q941594 and P31 ancestry Q112042224; English label/description, P856 homepage.",
+    "query_source": "https://qlever.cs.uni-freiburg.de/api/wikidata",
+    "industry_classes": {
+      "Q110702998": "information technology industry",
+      "Q880371": "software industry",
+      "Q2986369": "semiconductor industry",
+      "Q132898730": "computer hardware industry",
+      "Q73768396": "consumer electronics industry",
+      "Q2401742": "telecommunications industry",
+      "Q56611700": "internet industry",
+      "Q5358497": "electronics industry"
+    },
+    "company_type_qids": [
+      "Q783794",
+      "Q4830453",
+      "Q891723",
+      "Q210167",
+      "Q167037",
+      "Q155076"
+    ],
+    "excluded_video_game_industry_qid": "Q941594",
+    "excluded_video_game_company_qid": "Q112042224",
+    "raw_qid_count": 5241,
+    "existing_bank_count": 2649,
+    "addition_count": 4610,
+    "dedup_count": 400,
+    "game_desc_excluded_count": 231,
+    "boundary_notes": [
+      "Explicit game-industry company classifications are filtered out. A company with a separate unmodeled gaming division may slip through; only primary business data plus game-industry flags can be assessed at this scale.",
+      "Wikidata item links and P452/P31 statements are item-level provenance; P856 values link to official company pages where recorded. The official page links were not individually opened for all 5k+ records.",
+      "This is a structured dataset harvest and should be spot-checked in country/industry batches before any central-bank import.",
+      "Additional name/description screen excludes 239 candidates whose English item descriptions identify video game publishing/development, gaming companies, console/Pong-console manufacturers, or iGaming. Ambiguous short labels that collide with major game-company names (for example EA, Supercell) are excluded even when the matched Wikidata item has a different local-company identity."
+    ]
+  },
+  "meme_metadata": {
+    "prompt_id": "internet-meme",
+    "source": "Know Your Meme confirmed-entry sitemap",
+    "sitemap_url": "https://knowyourmeme.com/memes/confirmed/sitemap.xml",
+    "robots_txt_url": "https://knowyourmeme.com/robots.txt",
+    "method": "Stream-downloaded the robots.txt-listed XML sitemap; extracted only URL paths, excluded /sensitive/ entries, derived a readable answer label from the final URL slug, and deduplicated normalized labels against the current full answer set and /tmp/megabytle_large_memes.json. Used each sitemap URL as the source link. No article descriptions, images, or post content copied. Slug-derived titles are candidates; verify human casing where needed.",
+    "counts": {
+      "raw_urls": 23632,
+      "sensitive_excluded": 2298,
+      "duplicate_current_or_manifest": 541,
+      "duplicate_sitemap_label": 0,
+      "accepted": 20792
+    },
+    "required_answers_preserved": [
+      "67",
+      "69",
+      "Don't Touch My Spaghet"
+    ],
+    "notes": "Sitemap itself lists 23,632 unique URLs, including 2,298 under /sensitive/; imported candidates are the remaining non-sensitive /memes/ records that were not already in the current bank or candidate manifest."
+  },
+  "imported_prompts": {
+    "tech-company-games-company": {
+      "before": 2649,
+      "added": 4590,
+      "after": 7239,
+      "tiers_added": {
+        "Nibble": 804,
+        "Byte": 3097,
+        "Kilobyte": 689
+      },
+      "method": "Ranked by Wikidata sitelink count descending; 15% deep-cut allocation among final set; source limitations retained in each answer."
+    },
+    "internet-meme": {
+      "before": 397,
+      "added": 20790,
+      "after": 21187,
+      "tiers_added": {
+        "Nibble": 3533,
+        "Byte": 14137,
+        "Kilobyte": 3120
+      },
+      "method": "Know Your Meme robots-listed confirmed sitemap; labels slug-derived; tier allocation balanced, not popularity-ranked."
+    },
+    "platform-game": {
+      "before": 293,
+      "added": 3243,
+      "after": 3536,
+      "tiers_added": {
+        "Nibble": 552,
+        "Byte": 2205,
+        "Kilobyte": 486
+      },
+      "deduped": 10
+    },
+    "firstperson-shooter": {
+      "before": 280,
+      "added": 1654,
+      "after": 1934,
+      "tiers_added": {
+        "Nibble": 281,
+        "Byte": 1126,
+        "Kilobyte": 247
+      },
+      "deduped": 8
+    },
+    "strategy-video-game": {
+      "before": 252,
+      "added": 4836,
+      "after": 5088,
+      "tiers_added": {
+        "Nibble": 821,
+        "Byte": 3290,
+        "Kilobyte": 725
+      },
+      "deduped": 3
+    },
+    "sports-video-game": {
+      "before": 198,
+      "added": 5179,
+      "after": 5377,
+      "tiers_added": {
+        "Nibble": 880,
+        "Byte": 3522,
+        "Kilobyte": 777
+      },
+      "deduped": 13
+    },
+    "lang": {
+      "before": 8509,
+      "added": 62,
+      "after": 8571,
+      "tiers_added": {
+        "Nibble": 52,
+        "Kilobyte": 10
+      },
+      "deduped": 0
+    },
+    "mobile-game": {
+      "before": 310,
+      "added": 6286,
+      "after": 6596,
+      "tiers_added": {
+        "Nibble": 1069,
+        "Byte": 4275,
+        "Kilobyte": 942
+      },
+      "deduped": 4
+    },
+    "arcade-game": {
+      "before": 331,
+      "added": 1735,
+      "after": 2066,
+      "tiers_added": {
+        "Nibble": 295,
+        "Byte": 1180,
+        "Kilobyte": 260
+      },
+      "deduped": 2
+    },
+    "tech-founder-ceo": {
+      "before": 344,
+      "added": 1403,
+      "after": 1747,
+      "tiers_added": {
+        "Nibble": 238,
+        "Byte": 955,
+        "Kilobyte": 210
+      },
+      "deduped_against_prompt": 58,
+      "distinct_people_from_company_links": 1461,
+      "related_companies": 1132
+    },
+    "fictional-hacker-programmer": {
+      "before": 86,
+      "added": 8,
+      "after": 94,
+      "tiers_added": {
+        "Nibble": 1,
+        "Byte": 6,
+        "Kilobyte": 1
+      },
+      "deduped": 0,
+      "held_borderline": 2
+    },
+    "fictional-scientist-inventor-who-superhero": {
+      "before": 164,
+      "added": 9,
+      "after": 173,
+      "tiers_added": {
+        "Nibble": 2,
+        "Byte": 6,
+        "Kilobyte": 1
+      },
+      "deduped": 0,
+      "held_borderline": 2
+    }
+  },
+  "additional_candidate_batches": [
+    {
+      "source_file": "megabytle_large_strategy-video-game.json",
+      "prompt_id": "strategy-video-game",
+      "candidate_count": 4839,
+      "query_method": "Wikidata video-game instance with explicit genre or documented genre-subclass relation; future dated releases filtered; title/name and scope notes retained in central answer/research records."
+    },
+    {
+      "source_file": "megabytle_large_sports-video-game.json",
+      "prompt_id": "sports-video-game",
+      "candidate_count": 5192,
+      "query_method": "Wikidata video-game instance with explicit genre or documented genre-subclass relation; future dated releases filtered; title/name and scope notes retained in central answer/research records."
+    },
+    {
+      "source_file": "megabytle_large_languages_companies.json#language",
+      "prompt_id": "lang",
+      "candidate_count": 62,
+      "method": "Wikidata class path P31/P279* Q9143 plus item-description review; 25 borderline candidates held out."
+    },
+    {
+      "source_file": "megabytle_large_mobile-game.json",
+      "prompt_id": "mobile-game",
+      "candidate_count": 6290,
+      "query_method": "Wikidata video-game instance with explicit genre or documented genre-subclass relation; future dated releases filtered; title/name and scope notes retained in central answer/research records."
+    },
+    {
+      "source_file": "megabytle_large_platform-game.json",
+      "prompt_id": "platform-game",
+      "candidate_count": 3253,
+      "query_method": "Wikidata video-game entity with explicit genre/subgenre relation; future-dated releases filtered."
+    },
+    {
+      "source_file": "megabytle_large_firstperson-shooter.json",
+      "prompt_id": "firstperson-shooter",
+      "candidate_count": 1662,
+      "query_method": "Wikidata video-game entity with explicit genre/subgenre relation; future-dated releases filtered."
+    },
+    {
+      "source_file": "megabytle_large_arcade-game.json",
+      "prompt_id": "arcade-game",
+      "candidate_count": 1737,
+      "query_method": "Wikidata video-game instance with explicit genre or documented genre-subclass relation; future dated releases filtered; title/name and scope notes retained in central answer/research records."
+    },
+    {
+      "source_file": "Wikidata company P112/P169 joins",
+      "prompt_id": "tech-founder-ceo",
+      "candidate_count": 1461,
+      "source_rule": "Human entities linked as founder (P112) or chief executive (P169) from the tech-company candidate set; role and company QID retained per record."
+    },
+    {
+      "source_file": "fictional_hacker_programmer_candidates.json",
+      "prompt_id": "fictional-hacker-programmer",
+      "candidate_count": 8,
+      "method": "Started from Wikipedia’s public “List of fictional hackers” and “List of fictional scientists and engineers” lists, then checked candidate-specific Wikidata items for fictional-character identity and relevant occupations/aliases and compared against the app bank. This is broader than direct occupation-only retrieval and admits documented roles from the curated list while holding weak fits as borderline.",
+      "limitations": [
+        "The Wikipedia lists are explicitly dynamic/incomplete and some entries are weakly sourced; inclusion there alone was not treated as sufficient. Each accepted row also has an item page and an explicit role/occupation statement or list-plus-character-page evidence.",
+        "Wikidata statements are uneven in sourcing; this candidate harvest is not a popularity ranking and leaves obscure/ambiguous characters out or in borderline.",
+        "No central answer-bank files were changed."
+      ]
+    },
+    {
+      "source_file": "fictional_scientist_inventor_candidates.json",
+      "prompt_id": "fictional-scientist-inventor-who-superhero",
+      "candidate_count": 9,
+      "method": "Started from Wikipedia’s public “List of fictional hackers” and “List of fictional scientists and engineers” lists, then checked candidate-specific Wikidata items for fictional-character identity and relevant occupations/aliases and compared against the app bank. This is broader than direct occupation-only retrieval and admits documented roles from the curated list while holding weak fits as borderline.",
+      "limitations": [
+        "The Wikipedia lists are explicitly dynamic/incomplete and some entries are weakly sourced; inclusion there alone was not treated as sufficient. Each accepted row also has an item page and an explicit role/occupation statement or list-plus-character-page evidence.",
+        "Wikidata statements are uneven in sourcing; this candidate harvest is not a popularity ranking and leaves obscure/ambiguous characters out or in borderline.",
+        "No central answer-bank files were changed."
+      ]
+    }
+  ]
+}

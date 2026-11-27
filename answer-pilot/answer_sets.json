@@ -89300,6 +89300,776 @@
           "method": "Esolangs.org Category:Languages; rare-language candidate; rarity estimated from Wikidata sitelink count and target tier mix",
           "sitelinks": 0,
           "tier": "Kilobyte"
+        },
+        {
+          "answer": "XPath",
+          "aliases": [],
+          "tier": "Nibble",
+          "sources": [
+            "https://www.wikidata.org/wiki/Q16340",
+            "https://www.w3.org/TR/xpath/"
+          ],
+          "method": "Wikidata programming-language class path and candidate-specific description review; tier estimated using Wikidata sitelink count and balanced to target rarity mix.",
+          "scope_note": "Wikidata Query Service class path P31/P279* Q9143 classifies this item as a programming language or language subtype. Description: query language for selecting nodes from an XML document. A separately modeled named dialect/fork is retained; ordinary numbered versions/releases should remain aliases unless they have an independently established language identity. Candidate was independently checked against its item description and retained as a separately named executable language, dialect, or domain-specific programming language; not merely an implementation/version label. Boundary: valid domain-specific/assembly/query/shading language, but the prompt may be interpreted by players as general-purpose languages; accept only if this niche breadth is intended.",
+          "qid": "Q16340",
+          "confidence": 0.9
+        },
+        {
+          "answer": "x86 assembly language",
+          "aliases": [],
+          "tier": "Nibble",
+          "sources": [
+            "https://www.wikidata.org/wiki/Q297868"
+          ],
+          "method": "Wikidata programming-language class path and candidate-specific description review; tier estimated using Wikidata sitelink count and balanced to target rarity mix.",
+          "scope_note": "Wikidata Query Service class path P31/P279* Q9143 classifies this item as a programming language or language subtype. Description: assembly language used in x86 architecture. A separately modeled named dialect/fork is retained; ordinary numbered versions/releases should remain aliases unless they have an independently established language identity. Candidate was independently checked against its item description and retained as a separately named executable language, dialect, or domain-specific programming language; not merely an implementation/version label. Boundary: valid domain-specific/assembly/query/shading language, but the prompt may be interpreted by players as general-purpose languages; accept only if this niche breadth is intended.",
+          "qid": "Q297868",
+          "confidence": 0.9
+        },
+        {
+          "answer": "Microsoft Small Basic",
+          "aliases": [],
+          "tier": "Nibble",
+          "sources": [
+            "https://www.wikidata.org/wiki/Q767018",
+            "http://www.smallbasic.com/"
+          ],
+          "method": "Wikidata programming-language class path and candidate-specific description review; tier estimated using Wikidata sitelink count and balanced to target rarity mix.",
+          "scope_note": "Wikidata Query Service class path P31/P279* Q9143 classifies this item as a programming language or language subtype. Description: programming language dialect and development environment. A separately modeled named dialect/fork is retained; ordinary numbered versions/releases should remain aliases unless they have an independently established language identity. Candidate was independently checked against its item description and retained as a separately named executable language, dialect, or domain-specific programming language; not merely an implementation/version label.",
+          "qid": "Q767018",
+          "confidence": 0.97
+        },
+        {
+          "answer": "DarkBASIC",
+          "aliases": [],
+          "tier": "Nibble",
+          "sources": [
+            "https://www.wikidata.org/wiki/Q278791",
+            "http://darkbasic.thegamecreators.com/"
+          ],
+          "method": "Wikidata programming-language class path and candidate-specific description review; tier estimated using Wikidata sitelink count and balanced to target rarity mix.",
+          "scope_note": "Wikidata Query Service class path P31/P279* Q9143 classifies this item as a programming language or language subtype. Description: BASIC dialect. A separately modeled named dialect/fork is retained; ordinary numbered versions/releases should remain aliases unless they have an independently established language identity. Candidate was independently checked against its item description and retained as a separately named executable language, dialect, or domain-specific programming language; not merely an implementation/version label.",
+          "qid": "Q278791",
+          "confidence": 0.97
+        },
+        {
+          "answer": "PureBasic",
+          "aliases": [],
+          "tier": "Nibble",
+          "sources": [
+            "https://www.wikidata.org/wiki/Q2118858",
+            "https://www.purebasic.com/"
+          ],
+          "method": "Wikidata programming-language class path and candidate-specific description review; tier estimated using Wikidata sitelink count and balanced to target rarity mix.",
+          "scope_note": "Wikidata Query Service class path P31/P279* Q9143 classifies this item as a programming language or language subtype. Description: commercially distributed procedural computer programming language and integrated development environment. A separately modeled named dialect/fork is retained; ordinary numbered versions/releases should remain aliases unless they have an independently established language identity. Candidate was independently checked against its item description and retained as a separately named executable language, dialect, or domain-specific programming language; not merely an implementation/version label.",
+          "qid": "Q2118858",
+          "confidence": 0.97
+        },
+        {
+          "answer": "PL/pgSQL",
+          "aliases": [],
+          "tier": "Nibble",
+          "sources": [
+            "https://www.wikidata.org/wiki/Q2044345"
+          ],
+          "method": "Wikidata programming-language class path and candidate-specific description review; tier estimated using Wikidata sitelink count and balanced to target rarity mix.",
+          "scope_note": "Wikidata Query Service class path P31/P279* Q9143 classifies this item as a programming language or language subtype. Description: procedural programming language for PostgreSQL database systems. A separately modeled named dialect/fork is retained; ordinary numbered versions/releases should remain aliases unless they have an independently established language identity. Candidate was independently checked against its item description and retained as a separately named executable language, dialect, or domain-specific programming language; not merely an implementation/version label.",
+          "qid": "Q2044345",
+          "confidence": 0.97
+        },
+        {
+          "answer": "SystemVerilog",
+          "aliases": [],
+          "tier": "Nibble",
+          "sources": [
+            "https://www.wikidata.org/wiki/Q1387402"
+          ],
+          "method": "Wikidata programming-language class path and candidate-specific description review; tier estimated using Wikidata sitelink count and balanced to target rarity mix.",
+          "scope_note": "Wikidata Query Service class path P31/P279* Q9143 classifies this item as a programming language or language subtype. Description: hardware description and hardware verification language. A separately modeled named dialect/fork is retained; ordinary numbered versions/releases should remain aliases unless they have an independently established language identity. Candidate was independently checked against its item description and retained as a separately named executable language, dialect, or domain-specific programming language; not merely an implementation/version label.",
+          "qid": "Q1387402",
+          "confidence": 0.97
+        },
+        {
+          "answer": "Altera Hardware Description Language",
+          "aliases": [],
+          "tier": "Nibble",
+          "sources": [
+            "https://www.wikidata.org/wiki/Q292803"
+          ],
+          "method": "Wikidata programming-language class path and candidate-specific description review; tier estimated using Wikidata sitelink count and balanced to target rarity mix.",
+          "scope_note": "Wikidata Query Service class path P31/P279* Q9143 classifies this item as a programming language or language subtype. Description: proprietary hardware description language (HDL). A separately modeled named dialect/fork is retained; ordinary numbered versions/releases should remain aliases unless they have an independently established language identity. Candidate was independently checked against its item description and retained as a separately named executable language, dialect, or domain-specific programming language; not merely an implementation/version label.",
+          "qid": "Q292803",
+          "confidence": 0.97
+        },
+        {
+          "answer": "C++/CX",
+          "aliases": [],
+          "tier": "Nibble",
+          "sources": [
+            "https://www.wikidata.org/wiki/Q197708",
+            "https://docs.microsoft.com/en-us/cpp/cppcx/visual-c-language-reference-c-cx"
+          ],
+          "method": "Wikidata programming-language class path and candidate-specific description review; tier estimated using Wikidata sitelink count and balanced to target rarity mix.",
+          "scope_note": "Wikidata Query Service class path P31/P279* Q9143 classifies this item as a programming language or language subtype. Description: language extension for C++ compilers. A separately modeled named dialect/fork is retained; ordinary numbered versions/releases should remain aliases unless they have an independently established language identity. Candidate was independently checked against its item description and retained as a separately named executable language, dialect, or domain-specific programming language; not merely an implementation/version label.",
+          "qid": "Q197708",
+          "confidence": 0.97
+        },
+        {
+          "answer": "XACML",
+          "aliases": [],
+          "tier": "Nibble",
+          "sources": [
+            "https://www.wikidata.org/wiki/Q288682",
+            "https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=xacml"
+          ],
+          "method": "Wikidata programming-language class path and candidate-specific description review; tier estimated using Wikidata sitelink count and balanced to target rarity mix.",
+          "scope_note": "Wikidata Query Service class path P31/P279* Q9143 classifies this item as a programming language or language subtype. Description: standard language for evaluating access requests according to rules defined in attribute-based access control policies. A separately modeled named dialect/fork is retained; ordinary numbered versions/releases should remain aliases unless they have an independently established language identity. Candidate was independently checked against its item description and retained as a separately named executable language, dialect, or domain-specific programming language; not merely an implementation/version label. Boundary: valid domain-specific/assembly/query/shading language, but the prompt may be interpreted by players as general-purpose languages; accept only if this niche breadth is intended.",
+          "qid": "Q288682",
+          "confidence": 0.9
+        },
+        {
+          "answer": "4th Dimension",
+          "aliases": [],
+          "tier": "Nibble",
+          "sources": [
+            "https://www.wikidata.org/wiki/Q238349",
+            "https://doc.4d.com",
+            "http://www.4d.com/"
+          ],
+          "method": "Wikidata programming-language class path and candidate-specific description review; tier estimated using Wikidata sitelink count and balanced to target rarity mix.",
+          "scope_note": "Wikidata Query Service class path P31/P279* Q9143 classifies this item as a programming language or language subtype. Description: relational database and programming language. A separately modeled named dialect/fork is retained; ordinary numbered versions/releases should remain aliases unless they have an independently established language identity. Candidate was independently checked against its item description and retained as a separately named executable language, dialect, or domain-specific programming language; not merely an implementation/version label.",
+          "qid": "Q238349",
+          "confidence": 0.97
+        },
+        {
+          "answer": "Harbour",
+          "aliases": [],
+          "tier": "Nibble",
+          "sources": [
+            "https://www.wikidata.org/wiki/Q2544816",
+            "https://harbour.github.io/"
+          ],
+          "method": "Wikidata programming-language class path and candidate-specific description review; tier estimated using Wikidata sitelink count and balanced to target rarity mix.",
+          "scope_note": "Wikidata Query Service class path P31/P279* Q9143 classifies this item as a programming language or language subtype. Description: programming language, primarily used to create database/business programs. A separately modeled named dialect/fork is retained; ordinary numbered versions/releases should remain aliases unless they have an independently established language identity. Candidate was independently checked against its item description and retained as a separately named executable language, dialect, or domain-specific programming language; not merely an implementation/version label.",
+          "qid": "Q2544816",
+          "confidence": 0.97
+        },
+        {
+          "answer": "High Performance Fortran",
+          "aliases": [],
+          "tier": "Nibble",
+          "sources": [
+            "https://www.wikidata.org/wiki/Q3091025",
+            "http://hpff.rice.edu/"
+          ],
+          "method": "Wikidata programming-language class path and candidate-specific description review; tier estimated using Wikidata sitelink count and balanced to target rarity mix.",
+          "scope_note": "Wikidata Query Service class path P31/P279* Q9143 classifies this item as a programming language or language subtype. Description: extension of Fortran 90 with constructs that support parallel computing. A separately modeled named dialect/fork is retained; ordinary numbered versions/releases should remain aliases unless they have an independently established language identity. Candidate was independently checked against its item description and retained as a separately named executable language, dialect, or domain-specific programming language; not merely an implementation/version label.",
+          "qid": "Q3091025",
+          "confidence": 0.97
+        },
+        {
+          "answer": "Objective-J",
+          "aliases": [],
+          "tier": "Nibble",
+          "sources": [
+            "https://www.wikidata.org/wiki/Q1443431",
+            "http://www.cappuccino-project.org/"
+          ],
+          "method": "Wikidata programming-language class path and candidate-specific description review; tier estimated using Wikidata sitelink count and balanced to target rarity mix.",
+          "scope_note": "Wikidata Query Service class path P31/P279* Q9143 classifies this item as a programming language or language subtype. Description: programming language developed as part of the Cappuccino web development framework. A separately modeled named dialect/fork is retained; ordinary numbered versions/releases should remain aliases unless they have an independently established language identity. Candidate was independently checked against its item description and retained as a separately named executable language, dialect, or domain-specific programming language; not merely an implementation/version label.",
+          "qid": "Q1443431",
+          "confidence": 0.97
+        },
+        {
+          "answer": "JAL",
+          "aliases": [],
+          "tier": "Nibble",
+          "sources": [
+            "https://www.wikidata.org/wiki/Q2005972"
+          ],
+          "method": "Wikidata programming-language class path and candidate-specific description review; tier estimated using Wikidata sitelink count and balanced to target rarity mix.",
+          "scope_note": "Wikidata Query Service class path P31/P279* Q9143 classifies this item as a programming language or language subtype. Description: Pascal-like programming language and compiler that generates executable code for PIC microcontrollers. A separately modeled named dialect/fork is retained; ordinary numbered versions/releases should remain aliases unless they have an independently established language identity. Candidate was independently checked against its item description and retained as a separately named executable language, dialect, or domain-specific programming language; not merely an implementation/version label.",
+          "qid": "Q2005972",
+          "confidence": 0.97
+        },
+        {
+          "answer": "WordBASIC",
+          "aliases": [],
+          "tier": "Nibble",
+          "sources": [
+            "https://www.wikidata.org/wiki/Q2593394"
+          ],
+          "method": "Wikidata programming-language class path and candidate-specific description review; tier estimated using Wikidata sitelink count and balanced to target rarity mix.",
+          "scope_note": "Wikidata Query Service class path P31/P279* Q9143 classifies this item as a programming language or language subtype. Description: subset of Microsoft QuickBASIC customized for word-processing. A separately modeled named dialect/fork is retained; ordinary numbered versions/releases should remain aliases unless they have an independently established language identity. Candidate was independently checked against its item description and retained as a separately named executable language, dialect, or domain-specific programming language; not merely an implementation/version label.",
+          "qid": "Q2593394",
+          "confidence": 0.97
+        },
+        {
+          "answer": "Open Shading Language",
+          "aliases": [],
+          "tier": "Nibble",
+          "sources": [
+            "https://www.wikidata.org/wiki/Q18357621"
+          ],
+          "method": "Wikidata programming-language class path and candidate-specific description review; tier estimated using Wikidata sitelink count and balanced to target rarity mix.",
+          "scope_note": "Wikidata Query Service class path P31/P279* Q9143 classifies this item as a programming language or language subtype. Description: shading language developed by Sony Pictures Imageworks. A separately modeled named dialect/fork is retained; ordinary numbered versions/releases should remain aliases unless they have an independently established language identity. Candidate was independently checked against its item description and retained as a separately named executable language, dialect, or domain-specific programming language; not merely an implementation/version label. Boundary: valid domain-specific/assembly/query/shading language, but the prompt may be interpreted by players as general-purpose languages; accept only if this niche breadth is intended.",
+          "qid": "Q18357621",
+          "confidence": 0.9
+        },
+        {
+          "answer": "Basic For Qt",
+          "aliases": [],
+          "tier": "Nibble",
+          "sources": [
+            "https://www.wikidata.org/wiki/Q1167341",
+            "https://www.kbasic.org/",
+            "http://www.q7basic.org"
+          ],
+          "method": "Wikidata programming-language class path and candidate-specific description review; tier estimated using Wikidata sitelink count and balanced to target rarity mix.",
+          "scope_note": "Wikidata Query Service class path P31/P279* Q9143 classifies this item as a programming language or language subtype. Description: object-oriented version of the BASIC programming language, as well as an integrated development environment. A separately modeled named dialect/fork is retained; ordinary numbered versions/releases should remain aliases unless they have an independently established language identity. Candidate was independently checked against its item description and retained as a separately named executable language, dialect, or domain-specific programming language; not merely an implementation/version label.",
+          "qid": "Q1167341",
+          "confidence": 0.97
+        },
+        {
+          "answer": "ObjectPAL",
+          "aliases": [],
+          "tier": "Nibble",
+          "sources": [
+            "https://www.wikidata.org/wiki/Q2791660"
+          ],
+          "method": "Wikidata programming-language class path and candidate-specific description review; tier estimated using Wikidata sitelink count and balanced to target rarity mix.",
+          "scope_note": "Wikidata Query Service class path P31/P279* Q9143 classifies this item as a programming language or language subtype. Description: programming language used by the Borland Paradox database application. A separately modeled named dialect/fork is retained; ordinary numbered versions/releases should remain aliases unless they have an independently established language identity. Candidate was independently checked against its item description and retained as a separately named executable language, dialect, or domain-specific programming language; not merely an implementation/version label.",
+          "qid": "Q2791660",
+          "confidence": 0.97
+        },
+        {
+          "answer": "SmallBASIC",
+          "aliases": [],
+          "tier": "Nibble",
+          "sources": [
+            "https://www.wikidata.org/wiki/Q5095896"
+          ],
+          "method": "Wikidata programming-language class path and candidate-specific description review; tier estimated using Wikidata sitelink count and balanced to target rarity mix.",
+          "scope_note": "Wikidata Query Service class path P31/P279* Q9143 classifies this item as a programming language or language subtype. Description: BASIC programming language dialect with interpreters released as free software. A separately modeled named dialect/fork is retained; ordinary numbered versions/releases should remain aliases unless they have an independently established language identity. Candidate was independently checked against its item description and retained as a separately named executable language, dialect, or domain-specific programming language; not merely an implementation/version label.",
+          "qid": "Q5095896",
+          "confidence": 0.97
+        },
+        {
+          "answer": "SQL/PSM",
+          "aliases": [],
+          "tier": "Nibble",
+          "sources": [
+            "https://www.wikidata.org/wiki/Q4048876"
+          ],
+          "method": "Wikidata programming-language class path and candidate-specific description review; tier estimated using Wikidata sitelink count and balanced to target rarity mix.",
+          "scope_note": "Wikidata Query Service class path P31/P279* Q9143 classifies this item as a programming language or language subtype. Description: ISO standard mainly defining an extension of SQL with a procedural language for use in stored procedures. A separately modeled named dialect/fork is retained; ordinary numbered versions/releases should remain aliases unless they have an independently established language identity. Candidate was independently checked against its item description and retained as a separately named executable language, dialect, or domain-specific programming language; not merely an implementation/version label.",
+          "qid": "Q4048876",
+          "confidence": 0.97
+        },
+        {
+          "answer": "Ur/Web",
+          "aliases": [],
+          "tier": "Nibble",
+          "sources": [
+            "https://www.wikidata.org/wiki/Q18711761",
+            "http://impredicative.com/ur"
+          ],
+          "method": "Wikidata programming-language class path and candidate-specific description review; tier estimated using Wikidata sitelink count and balanced to target rarity mix.",
+          "scope_note": "Wikidata Query Service class path P31/P279* Q9143 classifies this item as a programming language or language subtype. Description: functional programming language tailored for web development. A separately modeled named dialect/fork is retained; ordinary numbered versions/releases should remain aliases unless they have an independently established language identity. Candidate was independently checked against its item description and retained as a separately named executable language, dialect, or domain-specific programming language; not merely an implementation/version label.",
+          "qid": "Q18711761",
+          "confidence": 0.97
+        },
+        {
+          "answer": "Embedded Visual Basic",
+          "aliases": [],
+          "tier": "Nibble",
+          "sources": [
+            "https://www.wikidata.org/wiki/Q25103654"
+          ],
+          "method": "Wikidata programming-language class path and candidate-specific description review; tier estimated using Wikidata sitelink count and balanced to target rarity mix.",
+          "scope_note": "Wikidata Query Service class path P31/P279* Q9143 classifies this item as a programming language or language subtype. Description: Integrated Development Environment and programming language based on Visual Basic (Classic). A separately modeled named dialect/fork is retained; ordinary numbered versions/releases should remain aliases unless they have an independently established language identity. Candidate was independently checked against its item description and retained as a separately named executable language, dialect, or domain-specific programming language; not merely an implementation/version label.",
+          "qid": "Q25103654",
+          "confidence": 0.97
+        },
+        {
+          "answer": "Spice Lisp",
+          "aliases": [],
+          "tier": "Nibble",
+          "sources": [
+            "https://www.wikidata.org/wiki/Q3493421"
+          ],
+          "method": "Wikidata programming-language class path and candidate-specific description review; tier estimated using Wikidata sitelink count and balanced to target rarity mix.",
+          "scope_note": "Wikidata Query Service class path P31/P279* Q9143 classifies this item as a programming language or language subtype. Description: Lisp dialect. A separately modeled named dialect/fork is retained; ordinary numbered versions/releases should remain aliases unless they have an independently established language identity. Candidate was independently checked against its item description and retained as a separately named executable language, dialect, or domain-specific programming language; not merely an implementation/version label.",
+          "qid": "Q3493421",
+          "confidence": 0.97
+        },
+        {
+          "answer": "XBLite",
+          "aliases": [],
+          "tier": "Nibble",
+          "sources": [
+            "https://www.wikidata.org/wiki/Q3570345",
+            "http://www.xblite.com"
+          ],
+          "method": "Wikidata programming-language class path and candidate-specific description review; tier estimated using Wikidata sitelink count and balanced to target rarity mix.",
+          "scope_note": "Wikidata Query Service class path P31/P279* Q9143 classifies this item as a programming language or language subtype. Description: free Open Source BASIC programming language compiler and development system. A separately modeled named dialect/fork is retained; ordinary numbered versions/releases should remain aliases unless they have an independently established language identity. Candidate was independently checked against its item description and retained as a separately named executable language, dialect, or domain-specific programming language; not merely an implementation/version label.",
+          "qid": "Q3570345",
+          "confidence": 0.97
+        },
+        {
+          "answer": "Impulse C",
+          "aliases": [],
+          "tier": "Nibble",
+          "sources": [
+            "https://www.wikidata.org/wiki/Q6007984",
+            "http://www.ImpulseC.com"
+          ],
+          "method": "Wikidata programming-language class path and candidate-specific description review; tier estimated using Wikidata sitelink count and balanced to target rarity mix.",
+          "scope_note": "Wikidata Query Service class path P31/P279* Q9143 classifies this item as a programming language or language subtype. Description: subset of the C programming language combined with a C-compatible function library supporting parallel programming. A separately modeled named dialect/fork is retained; ordinary numbered versions/releases should remain aliases unless they have an independently established language identity. Candidate was independently checked against its item description and retained as a separately named executable language, dialect, or domain-specific programming language; not merely an implementation/version label.",
+          "qid": "Q6007984",
+          "confidence": 0.97
+        },
+        {
+          "answer": "LFE",
+          "aliases": [],
+          "tier": "Nibble",
+          "sources": [
+            "https://www.wikidata.org/wiki/Q17097207",
+            "https://lfe.io"
+          ],
+          "method": "Wikidata programming-language class path and candidate-specific description review; tier estimated using Wikidata sitelink count and balanced to target rarity mix.",
+          "scope_note": "Wikidata Query Service class path P31/P279* Q9143 classifies this item as a programming language or language subtype. Description: Lisp Flavored Erlang. A separately modeled named dialect/fork is retained; ordinary numbered versions/releases should remain aliases unless they have an independently established language identity. Candidate was independently checked against its item description and retained as a separately named executable language, dialect, or domain-specific programming language; not merely an implementation/version label.",
+          "qid": "Q17097207",
+          "confidence": 0.97
+        },
+        {
+          "answer": "MACRO-11",
+          "aliases": [],
+          "tier": "Nibble",
+          "sources": [
+            "https://www.wikidata.org/wiki/Q4043371"
+          ],
+          "method": "Wikidata programming-language class path and candidate-specific description review; tier estimated using Wikidata sitelink count and balanced to target rarity mix.",
+          "scope_note": "Wikidata Query Service class path P31/P279* Q9143 classifies this item as a programming language or language subtype. Description: assembly language with macro facilities. A separately modeled named dialect/fork is retained; ordinary numbered versions/releases should remain aliases unless they have an independently established language identity. Candidate was independently checked against its item description and retained as a separately named executable language, dialect, or domain-specific programming language; not merely an implementation/version label.",
+          "qid": "Q4043371",
+          "confidence": 0.97
+        },
+        {
+          "answer": "ProvideX",
+          "aliases": [],
+          "tier": "Nibble",
+          "sources": [
+            "https://www.wikidata.org/wiki/Q3408297",
+            "https://home.pvxplus.com/pgsrvr.pvp?pg=downloads"
+          ],
+          "method": "Wikidata programming-language class path and candidate-specific description review; tier estimated using Wikidata sitelink count and balanced to target rarity mix.",
+          "scope_note": "Wikidata Query Service class path P31/P279* Q9143 classifies this item as a programming language or language subtype. Description: computer language and development environment derived from Business Basic. A separately modeled named dialect/fork is retained; ordinary numbered versions/releases should remain aliases unless they have an independently established language identity. Candidate was independently checked against its item description and retained as a separately named executable language, dialect, or domain-specific programming language; not merely an implementation/version label.",
+          "qid": "Q3408297",
+          "confidence": 0.97
+        },
+        {
+          "answer": "THINK C",
+          "aliases": [],
+          "tier": "Nibble",
+          "sources": [
+            "https://www.wikidata.org/wiki/Q4050584"
+          ],
+          "method": "Wikidata programming-language class path and candidate-specific description review; tier estimated using Wikidata sitelink count and balanced to target rarity mix.",
+          "scope_note": "Wikidata Query Service class path P31/P279* Q9143 classifies this item as a programming language or language subtype. Description: extension of ANSI C for the classic Mac OS. A separately modeled named dialect/fork is retained; ordinary numbered versions/releases should remain aliases unless they have an independently established language identity. Candidate was independently checked against its item description and retained as a separately named executable language, dialect, or domain-specific programming language; not merely an implementation/version label.",
+          "qid": "Q4050584",
+          "confidence": 0.97
+        },
+        {
+          "answer": "XUpdate",
+          "aliases": [],
+          "tier": "Nibble",
+          "sources": [
+            "https://www.wikidata.org/wiki/Q177873"
+          ],
+          "method": "Wikidata programming-language class path and candidate-specific description review; tier estimated using Wikidata sitelink count and balanced to target rarity mix.",
+          "scope_note": "Wikidata Query Service class path P31/P279* Q9143 classifies this item as a programming language or language subtype. Description: lightweight XML query language for modifying XML data. A separately modeled named dialect/fork is retained; ordinary numbered versions/releases should remain aliases unless they have an independently established language identity. Candidate was independently checked against its item description and retained as a separately named executable language, dialect, or domain-specific programming language; not merely an implementation/version label. Boundary: valid domain-specific/assembly/query/shading language, but the prompt may be interpreted by players as general-purpose languages; accept only if this niche breadth is intended.",
+          "qid": "Q177873",
+          "confidence": 0.9
+        },
+        {
+          "answer": "Z80 Assembly",
+          "aliases": [],
+          "tier": "Nibble",
+          "sources": [
+            "https://www.wikidata.org/wiki/Q115309010"
+          ],
+          "method": "Wikidata programming-language class path and candidate-specific description review; tier estimated using Wikidata sitelink count and balanced to target rarity mix.",
+          "scope_note": "Wikidata Query Service class path P31/P279* Q9143 classifies this item as a programming language or language subtype. Description: assembly language. A separately modeled named dialect/fork is retained; ordinary numbered versions/releases should remain aliases unless they have an independently established language identity. Candidate was independently checked against its item description and retained as a separately named executable language, dialect, or domain-specific programming language; not merely an implementation/version label. Boundary: valid domain-specific/assembly/query/shading language, but the prompt may be interpreted by players as general-purpose languages; accept only if this niche breadth is intended.",
+          "qid": "Q115309010",
+          "confidence": 0.9
+        },
+        {
+          "answer": "C with Classes",
+          "aliases": [],
+          "tier": "Nibble",
+          "sources": [
+            "https://www.wikidata.org/wiki/Q140812338"
+          ],
+          "method": "Wikidata programming-language class path and candidate-specific description review; tier estimated using Wikidata sitelink count and balanced to target rarity mix.",
+          "scope_note": "Wikidata Query Service class path P31/P279* Q9143 classifies this item as a programming language or language subtype. Description: precursor language to C++. A separately modeled named dialect/fork is retained; ordinary numbered versions/releases should remain aliases unless they have an independently established language identity. Candidate was independently checked against its item description and retained as a separately named executable language, dialect, or domain-specific programming language; not merely an implementation/version label.",
+          "qid": "Q140812338",
+          "confidence": 0.97
+        },
+        {
+          "answer": "DatalogZ",
+          "aliases": [],
+          "tier": "Nibble",
+          "sources": [
+            "https://www.wikidata.org/wiki/Q117219474"
+          ],
+          "method": "Wikidata programming-language class path and candidate-specific description review; tier estimated using Wikidata sitelink count and balanced to target rarity mix.",
+          "scope_note": "Wikidata Query Service class path P31/P279* Q9143 classifies this item as a programming language or language subtype. Description: extension of Datalog with integer arithmetic and comparisons. A separately modeled named dialect/fork is retained; ordinary numbered versions/releases should remain aliases unless they have an independently established language identity. Candidate was independently checked against its item description and retained as a separately named executable language, dialect, or domain-specific programming language; not merely an implementation/version label.",
+          "qid": "Q117219474",
+          "confidence": 0.97
+        },
+        {
+          "answer": "DG/L",
+          "aliases": [],
+          "tier": "Nibble",
+          "sources": [
+            "https://www.wikidata.org/wiki/Q5204944"
+          ],
+          "method": "Wikidata programming-language class path and candidate-specific description review; tier estimated using Wikidata sitelink count and balanced to target rarity mix.",
+          "scope_note": "Wikidata Query Service class path P31/P279* Q9143 classifies this item as a programming language or language subtype. Description: programming language for the Nova, Eclipse and Eclipse/MV families of minicomputers. A separately modeled named dialect/fork is retained; ordinary numbered versions/releases should remain aliases unless they have an independently established language identity. Candidate was independently checked against its item description and retained as a separately named executable language, dialect, or domain-specific programming language; not merely an implementation/version label.",
+          "qid": "Q5204944",
+          "confidence": 0.97
+        },
+        {
+          "answer": "GNU MathProg",
+          "aliases": [],
+          "tier": "Nibble",
+          "sources": [
+            "https://www.wikidata.org/wiki/Q110952622"
+          ],
+          "method": "Wikidata programming-language class path and candidate-specific description review; tier estimated using Wikidata sitelink count and balanced to target rarity mix.",
+          "scope_note": "Wikidata Query Service class path P31/P279* Q9143 classifies this item as a programming language or language subtype. Description: algebraic modeling language. A separately modeled named dialect/fork is retained; ordinary numbered versions/releases should remain aliases unless they have an independently established language identity. Candidate was independently checked against its item description and retained as a separately named executable language, dialect, or domain-specific programming language; not merely an implementation/version label. Boundary: valid domain-specific/assembly/query/shading language, but the prompt may be interpreted by players as general-purpose languages; accept only if this niche breadth is intended.",
+          "qid": "Q110952622",
+          "confidence": 0.9
+        },
+        {
+          "answer": "Lava",
+          "aliases": [],
+          "tier": "Nibble",
+          "sources": [
+            "https://www.wikidata.org/wiki/Q6502171",
+            "http://lavape.sourceforge.net/"
+          ],
+          "method": "Wikidata programming-language class path and candidate-specific description review; tier estimated using Wikidata sitelink count and balanced to target rarity mix.",
+          "scope_note": "Wikidata Query Service class path P31/P279* Q9143 classifies this item as a programming language or language subtype. Description: experimental, visual object-oriented, interpreter-based programming language. A separately modeled named dialect/fork is retained; ordinary numbered versions/releases should remain aliases unless they have an independently established language identity. Candidate was independently checked against its item description and retained as a separately named executable language, dialect, or domain-specific programming language; not merely an implementation/version label.",
+          "qid": "Q6502171",
+          "confidence": 0.97
+        },
+        {
+          "answer": "MIXAL",
+          "aliases": [],
+          "tier": "Nibble",
+          "sources": [
+            "https://www.wikidata.org/wiki/Q1881539"
+          ],
+          "method": "Wikidata programming-language class path and candidate-specific description review; tier estimated using Wikidata sitelink count and balanced to target rarity mix.",
+          "scope_note": "Wikidata Query Service class path P31/P279* Q9143 classifies this item as a programming language or language subtype. Description: assembly language. A separately modeled named dialect/fork is retained; ordinary numbered versions/releases should remain aliases unless they have an independently established language identity. Candidate was independently checked against its item description and retained as a separately named executable language, dialect, or domain-specific programming language; not merely an implementation/version label.",
+          "qid": "Q1881539",
+          "confidence": 0.97
+        },
+        {
+          "answer": "MOTIS",
+          "aliases": [],
+          "tier": "Nibble",
+          "sources": [
+            "https://www.wikidata.org/wiki/Q11765013"
+          ],
+          "method": "Wikidata programming-language class path and candidate-specific description review; tier estimated using Wikidata sitelink count and balanced to target rarity mix.",
+          "scope_note": "Wikidata Query Service class path P31/P279* Q9143 classifies this item as a programming language or language subtype. Description: Assembler language (MERA 300 mini-computer). A separately modeled named dialect/fork is retained; ordinary numbered versions/releases should remain aliases unless they have an independently established language identity. Candidate was independently checked against its item description and retained as a separately named executable language, dialect, or domain-specific programming language; not merely an implementation/version label.",
+          "qid": "Q11765013",
+          "confidence": 0.97
+        },
+        {
+          "answer": "OpenGL ES Shading Language",
+          "aliases": [],
+          "tier": "Nibble",
+          "sources": [
+            "https://www.wikidata.org/wiki/Q1547213",
+            "http://www.khronos.org/opengles/"
+          ],
+          "method": "Wikidata programming-language class path and candidate-specific description review; tier estimated using Wikidata sitelink count and balanced to target rarity mix.",
+          "scope_note": "Wikidata Query Service class path P31/P279* Q9143 classifies this item as a programming language or language subtype. Description: shading language. A separately modeled named dialect/fork is retained; ordinary numbered versions/releases should remain aliases unless they have an independently established language identity. Candidate was independently checked against its item description and retained as a separately named executable language, dialect, or domain-specific programming language; not merely an implementation/version label. Boundary: valid domain-specific/assembly/query/shading language, but the prompt may be interpreted by players as general-purpose languages; accept only if this niche breadth is intended.",
+          "qid": "Q1547213",
+          "confidence": 0.9
+        },
+        {
+          "answer": "PL/8",
+          "aliases": [],
+          "tier": "Nibble",
+          "sources": [
+            "https://www.wikidata.org/wiki/Q23378244"
+          ],
+          "method": "Wikidata programming-language class path and candidate-specific description review; tier estimated using Wikidata sitelink count and balanced to target rarity mix.",
+          "scope_note": "Wikidata Query Service class path P31/P279* Q9143 classifies this item as a programming language or language subtype. Description: PL/I dialect developed by IBM Research, used internally to write several IBM products. A separately modeled named dialect/fork is retained; ordinary numbered versions/releases should remain aliases unless they have an independently established language identity. Candidate was independently checked against its item description and retained as a separately named executable language, dialect, or domain-specific programming language; not merely an implementation/version label.",
+          "qid": "Q23378244",
+          "confidence": 0.97
+        },
+        {
+          "answer": "Realtime Programming Language",
+          "aliases": [],
+          "tier": "Nibble",
+          "sources": [
+            "https://www.wikidata.org/wiki/Q7301377"
+          ],
+          "method": "Wikidata programming-language class path and candidate-specific description review; tier estimated using Wikidata sitelink count and balanced to target rarity mix.",
+          "scope_note": "Wikidata Query Service class path P31/P279* Q9143 classifies this item as a programming language or language subtype. Description: compiled database programming language. A separately modeled named dialect/fork is retained; ordinary numbered versions/releases should remain aliases unless they have an independently established language identity. Candidate was independently checked against its item description and retained as a separately named executable language, dialect, or domain-specific programming language; not merely an implementation/version label. Boundary: valid domain-specific/assembly/query/shading language, but the prompt may be interpreted by players as general-purpose languages; accept only if this niche breadth is intended.",
+          "qid": "Q7301377",
+          "confidence": 0.9
+        },
+        {
+          "answer": "RISC-V assembly language",
+          "aliases": [],
+          "tier": "Nibble",
+          "sources": [
+            "https://www.wikidata.org/wiki/Q132555173"
+          ],
+          "method": "Wikidata programming-language class path and candidate-specific description review; tier estimated using Wikidata sitelink count and balanced to target rarity mix.",
+          "scope_note": "Wikidata Query Service class path P31/P279* Q9143 classifies this item as a programming language or language subtype. Description: assembly languages for the RISC-V computer architecture. A separately modeled named dialect/fork is retained; ordinary numbered versions/releases should remain aliases unless they have an independently established language identity. Candidate was independently checked against its item description and retained as a separately named executable language, dialect, or domain-specific programming language; not merely an implementation/version label. Boundary: valid domain-specific/assembly/query/shading language, but the prompt may be interpreted by players as general-purpose languages; accept only if this niche breadth is intended.",
+          "qid": "Q132555173",
+          "confidence": 0.9
+        },
+        {
+          "answer": "SAMPL",
+          "aliases": [],
+          "tier": "Nibble",
+          "sources": [
+            "https://www.wikidata.org/wiki/Q16002899",
+            "http://www.optirisk-systems.com"
+          ],
+          "method": "Wikidata programming-language class path and candidate-specific description review; tier estimated using Wikidata sitelink count and balanced to target rarity mix.",
+          "scope_note": "Wikidata Query Service class path P31/P279* Q9143 classifies this item as a programming language or language subtype. Description: algebraic modeling language. A separately modeled named dialect/fork is retained; ordinary numbered versions/releases should remain aliases unless they have an independently established language identity. Candidate was independently checked against its item description and retained as a separately named executable language, dialect, or domain-specific programming language; not merely an implementation/version label. Boundary: valid domain-specific/assembly/query/shading language, but the prompt may be interpreted by players as general-purpose languages; accept only if this niche breadth is intended.",
+          "qid": "Q16002899",
+          "confidence": 0.9
+        },
+        {
+          "answer": "WebGPU Shading Language",
+          "aliases": [],
+          "tier": "Nibble",
+          "sources": [
+            "https://www.wikidata.org/wiki/Q117769352",
+            "https://www.w3.org/TR/WGSL/"
+          ],
+          "method": "Wikidata programming-language class path and candidate-specific description review; tier estimated using Wikidata sitelink count and balanced to target rarity mix.",
+          "scope_note": "Wikidata Query Service class path P31/P279* Q9143 classifies this item as a programming language or language subtype. Description: shading language. A separately modeled named dialect/fork is retained; ordinary numbered versions/releases should remain aliases unless they have an independently established language identity. Candidate was independently checked against its item description and retained as a separately named executable language, dialect, or domain-specific programming language; not merely an implementation/version label. Boundary: valid domain-specific/assembly/query/shading language, but the prompt may be interpreted by players as general-purpose languages; accept only if this niche breadth is intended.",
+          "qid": "Q117769352",
+          "confidence": 0.9
+        },
+        {
+          "answer": "XcalableMP",
+          "aliases": [],
+          "tier": "Nibble",
+          "sources": [
+            "https://www.wikidata.org/wiki/Q18700335"
+          ],
+          "method": "Wikidata programming-language class path and candidate-specific description review; tier estimated using Wikidata sitelink count and balanced to target rarity mix.",
+          "scope_note": "Wikidata Query Service class path P31/P279* Q9143 classifies this item as a programming language or language subtype. Description: directive-based language extension. A separately modeled named dialect/fork is retained; ordinary numbered versions/releases should remain aliases unless they have an independently established language identity. Candidate was independently checked against its item description and retained as a separately named executable language, dialect, or domain-specific programming language; not merely an implementation/version label.",
+          "qid": "Q18700335",
+          "confidence": 0.97
+        },
+        {
+          "answer": "Access BASIC",
+          "aliases": [],
+          "tier": "Nibble",
+          "sources": [
+            "https://www.wikidata.org/wiki/Q140766123"
+          ],
+          "method": "Wikidata programming-language class path and candidate-specific description review; tier estimated using Wikidata sitelink count and balanced to target rarity mix.",
+          "scope_note": "Wikidata Query Service class path P31/P279* Q9143 classifies this item as a programming language or language subtype. Description: subset of Microsoft QuickBASIC customized for database handling. A separately modeled named dialect/fork is retained; ordinary numbered versions/releases should remain aliases unless they have an independently established language identity. Candidate was independently checked against its item description and retained as a separately named executable language, dialect, or domain-specific programming language; not merely an implementation/version label.",
+          "qid": "Q140766123",
+          "confidence": 0.97
+        },
+        {
+          "answer": "Azure Bicep",
+          "aliases": [],
+          "tier": "Nibble",
+          "sources": [
+            "https://www.wikidata.org/wiki/Q123193699"
+          ],
+          "method": "Wikidata programming-language class path and candidate-specific description review; tier estimated using Wikidata sitelink count and balanced to target rarity mix.",
+          "scope_note": "Wikidata Query Service class path P31/P279* Q9143 classifies this item as a programming language or language subtype. Description: domain-specific declarative language for defining Azure resources. A separately modeled named dialect/fork is retained; ordinary numbered versions/releases should remain aliases unless they have an independently established language identity. Candidate was independently checked against its item description and retained as a separately named executable language, dialect, or domain-specific programming language; not merely an implementation/version label. Boundary: valid domain-specific/assembly/query/shading language, but the prompt may be interpreted by players as general-purpose languages; accept only if this niche breadth is intended.",
+          "qid": "Q123193699",
+          "confidence": 0.9
+        },
+        {
+          "answer": "CALM",
+          "aliases": [],
+          "tier": "Nibble",
+          "sources": [
+            "https://www.wikidata.org/wiki/Q124515492"
+          ],
+          "method": "Wikidata programming-language class path and candidate-specific description review; tier estimated using Wikidata sitelink count and balanced to target rarity mix.",
+          "scope_note": "Wikidata Query Service class path P31/P279* Q9143 classifies this item as a programming language or language subtype. Description: common assembly language for microprocessors. A separately modeled named dialect/fork is retained; ordinary numbered versions/releases should remain aliases unless they have an independently established language identity. Candidate was independently checked against its item description and retained as a separately named executable language, dialect, or domain-specific programming language; not merely an implementation/version label.",
+          "qid": "Q124515492",
+          "confidence": 0.97
+        },
+        {
+          "answer": "EdgeQL",
+          "aliases": [],
+          "tier": "Nibble",
+          "sources": [
+            "https://www.wikidata.org/wiki/Q107477574"
+          ],
+          "method": "Wikidata programming-language class path and candidate-specific description review; tier estimated using Wikidata sitelink count and balanced to target rarity mix.",
+          "scope_note": "Wikidata Query Service class path P31/P279* Q9143 classifies this item as a programming language or language subtype. Description: programming language for management and use of relational databases. A separately modeled named dialect/fork is retained; ordinary numbered versions/releases should remain aliases unless they have an independently established language identity. Candidate was independently checked against its item description and retained as a separately named executable language, dialect, or domain-specific programming language; not merely an implementation/version label.",
+          "qid": "Q107477574",
+          "confidence": 0.97
+        },
+        {
+          "answer": "guarded Datalog",
+          "aliases": [],
+          "tier": "Nibble",
+          "sources": [
+            "https://www.wikidata.org/wiki/Q113366400"
+          ],
+          "method": "Wikidata programming-language class path and candidate-specific description review; tier estimated using Wikidata sitelink count and balanced to target rarity mix.",
+          "scope_note": "Wikidata Query Service class path P31/P279* Q9143 classifies this item as a programming language or language subtype. Description: fragment of Datalog query language. A separately modeled named dialect/fork is retained; ordinary numbered versions/releases should remain aliases unless they have an independently established language identity. Candidate was independently checked against its item description and retained as a separately named executable language, dialect, or domain-specific programming language; not merely an implementation/version label.",
+          "qid": "Q113366400",
+          "confidence": 0.97
+        },
+        {
+          "answer": "Mosel language",
+          "aliases": [],
+          "tier": "Nibble",
+          "sources": [
+            "https://www.wikidata.org/wiki/Q110952656",
+            "https://www.fico.com/fico-xpress-optimization/docs/latest/mosel/mosel_lang/dhtml/moselreflang.html"
+          ],
+          "method": "Wikidata programming-language class path and candidate-specific description review; tier estimated using Wikidata sitelink count and balanced to target rarity mix.",
+          "scope_note": "Wikidata Query Service class path P31/P279* Q9143 classifies this item as a programming language or language subtype. Description: algebraic modeling language. A separately modeled named dialect/fork is retained; ordinary numbered versions/releases should remain aliases unless they have an independently established language identity. Candidate was independently checked against its item description and retained as a separately named executable language, dialect, or domain-specific programming language; not merely an implementation/version label. Boundary: valid domain-specific/assembly/query/shading language, but the prompt may be interpreted by players as general-purpose languages; accept only if this niche breadth is intended.",
+          "qid": "Q110952656",
+          "confidence": 0.9
+        },
+        {
+          "answer": "Otus Lisp",
+          "aliases": [],
+          "tier": "Kilobyte",
+          "sources": [
+            "https://www.wikidata.org/wiki/Q111274793"
+          ],
+          "method": "Wikidata programming-language class path and candidate-specific description review; tier estimated using Wikidata sitelink count and balanced to target rarity mix.",
+          "scope_note": "Wikidata Query Service class path P31/P279* Q9143 classifies this item as a programming language or language subtype. Description: purely functional dialect of Scheme. A separately modeled named dialect/fork is retained; ordinary numbered versions/releases should remain aliases unless they have an independently established language identity. Candidate was independently checked against its item description and retained as a separately named executable language, dialect, or domain-specific programming language; not merely an implementation/version label.",
+          "qid": "Q111274793",
+          "confidence": 0.97
+        },
+        {
+          "answer": "Overpass QL",
+          "aliases": [],
+          "tier": "Kilobyte",
+          "sources": [
+            "https://www.wikidata.org/wiki/Q106847581"
+          ],
+          "method": "Wikidata programming-language class path and candidate-specific description review; tier estimated using Wikidata sitelink count and balanced to target rarity mix.",
+          "scope_note": "Wikidata Query Service class path P31/P279* Q9143 classifies this item as a programming language or language subtype. Description: procedural, imperative language loosely based on C syntax for querying OpenStreetMap data through the Overpass API. A separately modeled named dialect/fork is retained; ordinary numbered versions/releases should remain aliases unless they have an independently established language identity. Candidate was independently checked against its item description and retained as a separately named executable language, dialect, or domain-specific programming language; not merely an implementation/version label.",
+          "qid": "Q106847581",
+          "confidence": 0.97
+        },
+        {
+          "answer": "Overpass XML",
+          "aliases": [],
+          "tier": "Kilobyte",
+          "sources": [
+            "https://www.wikidata.org/wiki/Q110064130"
+          ],
+          "method": "Wikidata programming-language class path and candidate-specific description review; tier estimated using Wikidata sitelink count and balanced to target rarity mix.",
+          "scope_note": "Wikidata Query Service class path P31/P279* Q9143 classifies this item as a programming language or language subtype. Description: procedural, imperative XML language for querying OpenStreetMap data through the Overpass API. A separately modeled named dialect/fork is retained; ordinary numbered versions/releases should remain aliases unless they have an independently established language identity. Candidate was independently checked against its item description and retained as a separately named executable language, dialect, or domain-specific programming language; not merely an implementation/version label. Boundary: valid domain-specific/assembly/query/shading language, but the prompt may be interpreted by players as general-purpose languages; accept only if this niche breadth is intended.",
+          "qid": "Q110064130",
+          "confidence": 0.9
+        },
+        {
+          "answer": "Prismio",
+          "aliases": [],
+          "tier": "Kilobyte",
+          "sources": [
+            "https://www.wikidata.org/wiki/Q141648085",
+            "https://prismio.org/"
+          ],
+          "method": "Wikidata programming-language class path and candidate-specific description review; tier estimated using Wikidata sitelink count and balanced to target rarity mix.",
+          "scope_note": "Wikidata Query Service class path P31/P279* Q9143 classifies this item as a programming language or language subtype. Description: Systems programming language and LLVM-based compiler. A separately modeled named dialect/fork is retained; ordinary numbered versions/releases should remain aliases unless they have an independently established language identity. Candidate was independently checked against its item description and retained as a separately named executable language, dialect, or domain-specific programming language; not merely an implementation/version label.",
+          "qid": "Q141648085",
+          "confidence": 0.97
+        },
+        {
+          "answer": "Publicodes",
+          "aliases": [],
+          "tier": "Kilobyte",
+          "sources": [
+            "https://www.wikidata.org/wiki/Q111974596"
+          ],
+          "method": "Wikidata programming-language class path and candidate-specific description review; tier estimated using Wikidata sitelink count and balanced to target rarity mix.",
+          "scope_note": "Wikidata Query Service class path P31/P279* Q9143 classifies this item as a programming language or language subtype. Description: Declarative language for modeling complex business domains. A separately modeled named dialect/fork is retained; ordinary numbered versions/releases should remain aliases unless they have an independently established language identity. Candidate was independently checked against its item description and retained as a separately named executable language, dialect, or domain-specific programming language; not merely an implementation/version label. Boundary: valid domain-specific/assembly/query/shading language, but the prompt may be interpreted by players as general-purpose languages; accept only if this niche breadth is intended.",
+          "qid": "Q111974596",
+          "confidence": 0.9
+        },
+        {
+          "answer": "thinBasic",
+          "aliases": [],
+          "tier": "Kilobyte",
+          "sources": [
+            "https://www.wikidata.org/wiki/Q7784246"
+          ],
+          "method": "Wikidata programming-language class path and candidate-specific description review; tier estimated using Wikidata sitelink count and balanced to target rarity mix.",
+          "scope_note": "Wikidata Query Service class path P31/P279* Q9143 classifies this item as a programming language or language subtype. Description: BASIC-like computer programming language interpreter. A separately modeled named dialect/fork is retained; ordinary numbered versions/releases should remain aliases unless they have an independently established language identity. Candidate was independently checked against its item description and retained as a separately named executable language, dialect, or domain-specific programming language; not merely an implementation/version label.",
+          "qid": "Q7784246",
+          "confidence": 0.97
+        },
+        {
+          "answer": "Unilang",
+          "aliases": [],
+          "tier": "Kilobyte",
+          "sources": [
+            "https://www.wikidata.org/wiki/Q114051229",
+            "https://github.com/linuxdeepin/unilang/blob/master/README.zh-CN.md"
+          ],
+          "method": "Wikidata programming-language class path and candidate-specific description review; tier estimated using Wikidata sitelink count and balanced to target rarity mix.",
+          "scope_note": "Wikidata Query Service class path P31/P279* Q9143 classifies this item as a programming language or language subtype. Description: computer program language. A separately modeled named dialect/fork is retained; ordinary numbered versions/releases should remain aliases unless they have an independently established language identity. Candidate was independently checked against its item description and retained as a separately named executable language, dialect, or domain-specific programming language; not merely an implementation/version label. Boundary: valid domain-specific/assembly/query/shading language, but the prompt may be interpreted by players as general-purpose languages; accept only if this niche breadth is intended.",
+          "qid": "Q114051229",
+          "confidence": 0.9
+        },
+        {
+          "answer": "Vedic Programming Language",
+          "aliases": [],
+          "tier": "Kilobyte",
+          "sources": [
+            "https://www.wikidata.org/wiki/Q140469935",
+            "https://vedic-lang.github.io"
+          ],
+          "method": "Wikidata programming-language class path and candidate-specific description review; tier estimated using Wikidata sitelink count and balanced to target rarity mix.",
+          "scope_note": "Wikidata Query Service class path P31/P279* Q9143 classifies this item as a programming language or language subtype. Description: a Sanskrit programming language interpreter written in Rust. A separately modeled named dialect/fork is retained; ordinary numbered versions/releases should remain aliases unless they have an independently established language identity. Candidate was independently checked against its item description and retained as a separately named executable language, dialect, or domain-specific programming language; not merely an implementation/version label. Boundary: valid domain-specific/assembly/query/shading language, but the prompt may be interpreted by players as general-purpose languages; accept only if this niche breadth is intended.",
+          "qid": "Q140469935",
+          "confidence": 0.9
+        },
+        {
+          "answer": "XDL",
+          "aliases": [],
+          "tier": "Kilobyte",
+          "sources": [
+            "https://www.wikidata.org/wiki/Q111269677"
+          ],
+          "method": "Wikidata programming-language class path and candidate-specific description review; tier estimated using Wikidata sitelink count and balanced to target rarity mix.",
+          "scope_note": "Wikidata Query Service class path P31/P279* Q9143 classifies this item as a programming language or language subtype. Description: executable standard language for programming chemical synthesis. A separately modeled named dialect/fork is retained; ordinary numbered versions/releases should remain aliases unless they have an independently established language identity. Candidate was independently checked against its item description and retained as a separately named executable language, dialect, or domain-specific programming language; not merely an implementation/version label.",
+          "qid": "Q111269677",
+          "confidence": 0.97
+        },
+        {
+          "answer": "XGQL",
+          "aliases": [],
+          "tier": "Kilobyte",
+          "sources": [
+            "https://www.wikidata.org/wiki/Q3570358"
+          ],
+          "method": "Wikidata programming-language class path and candidate-specific description review; tier estimated using Wikidata sitelink count and balanced to target rarity mix.",
+          "scope_note": "Wikidata Query Service class path P31/P279* Q9143 classifies this item as a programming language or language subtype. Description: language to generate XML and XHTML from relational databases. A separately modeled named dialect/fork is retained; ordinary numbered versions/releases should remain aliases unless they have an independently established language identity. Candidate was independently checked against its item description and retained as a separately named executable language, dialect, or domain-specific programming language; not merely an implementation/version label.",
+          "qid": "Q3570358",
+          "confidence": 0.97
         }
       ]
     },
