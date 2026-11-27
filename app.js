@@ -153,11 +153,17 @@ const defaultDailyPrompts = shuffled(window.PROMPTS, mulberry32(hashStr(today)))
 const configuredDailyIds = Array.isArray(window.DAILY_PROMPT_IDS) ? window.DAILY_PROMPT_IDS : null;
 let dailyPrompts = configuredDailyIds?.length === ROUNDS && new Set(configuredDailyIds).size === ROUNDS && configuredDailyIds.every(id => byPromptId.has(id))
   ? configuredDailyIds.map(id => byPromptId.get(id)) : defaultDailyPrompts;
-function makeUnlimited() { return shuffled(window.PROMPTS, mulberry32(hashStr('random-' + Date.now()))).slice(0, ROUNDS); }
+const dailyPromptIds = new Set(dailyPrompts.map(p => p.id));
+const randomPromptPool = window.PROMPTS.filter(p => !dailyPromptIds.has(p.id));
+function makeUnlimited() { return shuffled(randomPromptPool, mulberry32(hashStr('random-' + Date.now()))).slice(0, ROUNDS); }
 const restoredRun = Array.isArray(savedSession?.promptIds) ? savedSession.promptIds.map(id => byPromptId.get(id)) : [];
 const restoredResults = Array.isArray(savedSession?.results) ? savedSession.results : [];
 const resultsMatchRun = restoredResults.length <= ROUNDS && restoredResults.every((r,i) => r.id === restoredRun[i]?.id);
-const restoredPromptsMatchMode = savedSession?.mode !== 'daily' || restoredRun.every((p,i) => p?.id === dailyPrompts[i]?.id);
+const restoredPromptsMatchMode = savedSession?.mode === 'daily'
+  ? restoredRun.every((p,i) => p?.id === dailyPrompts[i]?.id)
+  : savedSession?.mode === 'random'
+    ? restoredRun.every(p => p && !dailyPromptIds.has(p.id))
+    : true;
 const validPhases = new Set(['intro','preview','answering','feedback','done']);
 const restoreSession = !params.has('home') && !!savedSession && savedSession.mode === (unlimited ? 'random' : 'daily') && savedSession.date === today && validPhases.has(savedSession.phase) && restoredRun.length === ROUNDS && restoredRun.every(Boolean) && resultsMatchRun && restoredPromptsMatchMode;
 let prompts = restoreSession ? restoredRun : unlimited ? makeUnlimited() : dailyPrompts;

@@ -1,0 +1,3372 @@
+{
+  "date": "2026-11-27",
+  "description": "Agent-vetted answer candidates from public APIs, structured datasets, and direct references. Only direct, source-bearing candidates were included; category-level leads and uncertain answers were excluded. Boundary interpretations are recorded per item.",
+  "records": [
+    {
+      "prompt_id": "text-editor-ide",
+      "answer": "GNOME Builder",
+      "aliases": [],
+      "source_urls": [
+        "https://apps.gnome.org/en/app/org.gnome.Builder/"
+      ],
+      "scope_note": "Direct fit to prompt. Official GNOME page identifies it as an IDE.",
+      "confidence": 0.98
+    },
+    {
+      "prompt_id": "linux-distribution",
+      "answer": "Nobara Linux",
+      "aliases": [],
+      "source_urls": [
+        "https://nobaraproject.org/"
+      ],
+      "scope_note": "Direct fit to prompt. Official Nobara Project site identifies the distribution.",
+      "confidence": 0.97
+    },
+    {
+      "prompt_id": "part",
+      "answer": "memory controller",
+      "aliases": [],
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Memory_controller"
+      ],
+      "scope_note": "Direct fit to prompt. A computer component/circuit managing data flow to main memory.",
+      "confidence": 0.9
+    },
+    {
+      "prompt_id": "type-computer-memory",
+      "answer": "GDDR memory",
+      "aliases": [],
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/GDDR_SDRAM"
+      ],
+      "scope_note": "Direct fit to prompt. Graphics double-data-rate SDRAM is a type of computer memory.",
+      "confidence": 0.98
+    },
+    {
+      "prompt_id": "type-computer-memory",
+      "answer": "LPDDR memory",
+      "aliases": [],
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/LPDDR"
+      ],
+      "scope_note": "Direct fit to prompt. Low-power DDR is a computer memory standard.",
+      "confidence": 0.98
+    },
+    {
+      "prompt_id": "storage-medium",
+      "answer": "Jaz disk",
+      "aliases": [],
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Jaz_drive"
+      ],
+      "scope_note": "Direct fit to prompt. Removable hard-disk cartridge/media; safer canonical answer is “Jaz disk”.",
+      "confidence": 0.92
+    },
+    {
+      "prompt_id": "computer-peripheral",
+      "answer": "document scanner",
+      "aliases": [],
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Image_scanner"
+      ],
+      "scope_note": "Direct fit to prompt. A scanner is a computer peripheral; generic but valid.",
+      "confidence": 0.9
+    },
+    {
+      "prompt_id": "key",
+      "answer": "SysRq key",
+      "aliases": [],
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/System_request"
+      ],
+      "scope_note": "Direct fit to prompt. Alias of System Request/SysRq key.",
+      "confidence": 0.98
+    },
+    {
+      "prompt_id": "key",
+      "answer": "Break key",
+      "aliases": [],
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Break_key"
+      ],
+      "scope_note": "Direct fit to prompt. Named keyboard key.",
+      "confidence": 0.98
+    },
+    {
+      "prompt_id": "machine",
+      "answer": "ILLIAC II",
+      "aliases": [],
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/ILLIAC_II"
+      ],
+      "scope_note": "Direct fit to prompt. A pre-1975 electronic computer.",
+      "confidence": 0.99
+    },
+    {
+      "prompt_id": "real-robot",
+      "answer": "Robear",
+      "aliases": [],
+      "source_urls": [
+        "https://www.riken.jp/en/news_pubs/research_news/pr/2015/20150223_2/index.html"
+      ],
+      "scope_note": "Physical, real-world robot; exclude fictional robots and software agents. RIKEN describes ROBEAR as an experimental nursing-care robot.",
+      "confidence": 0.99
+    },
+    {
+      "prompt_id": "tech-founder-ceo",
+      "answer": "Tobi Lütke",
+      "aliases": [],
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Tobi_L%C3%BCtke"
+      ],
+      "scope_note": "A person with a documented technology-company founder or CEO role; former CEOs remain valid for this name-the-person prompt. Shopify founder and CEO; article heading uses “Tobias Lütke”, Tobi is a common name variant.",
+      "confidence": 0.9
+    },
+    {
+      "prompt_id": "famous-tech-flop-games-console",
+      "answer": "Betamax",
+      "aliases": [
+        "Sony Betamax"
+      ],
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Sony_Betamax"
+      ],
+      "scope_note": "Famous failed or commercially unsuccessful technology product/service; exclude video-game consoles. Canonical entity is Betamax; “Sony Betamax” is a format/product line, well-known commercial failure. Do not file under video-game consoles.",
+      "confidence": 0.9
+    },
+    {
+      "prompt_id": "famous-error-message-error-screen",
+      "answer": "HTTP 418 I’m a teapot",
+      "aliases": [],
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/HTTP_418"
+      ],
+      "scope_note": "Recognizable error text or error screen; generic HTTP status numbers need a named error context. Recognizable named protocol error (“I’m a teapot”).",
+      "confidence": 0.98
+    },
+    {
+      "prompt_id": "famous-error-message-error-screen",
+      "answer": "Guru Meditation error",
+      "aliases": [],
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Guru_Meditation"
+      ],
+      "scope_note": "Recognizable error text or error screen; generic HTTP status numbers need a named error context. Named Amiga error screen/message.",
+      "confidence": 0.99
+    },
+    {
+      "prompt_id": "famous-error-message-error-screen",
+      "answer": "Blue Screen of Death",
+      "aliases": [
+        "Windows 95 Blue Screen of Death",
+        "BSOD"
+      ],
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Blue_Screen_of_Death"
+      ],
+      "scope_note": "Recognizable error text or error screen; generic HTTP status numbers need a named error context. Valid named error screen; alias to Blue Screen of Death.",
+      "confidence": 0.98
+    },
+    {
+      "prompt_id": "electronic-toy-gadget-1970s-2000s",
+      "answer": "Sony AIBO",
+      "aliases": [],
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Sony_AIBO"
+      ],
+      "scope_note": "Electronic consumer toy/gadget introduced in 1970–2009; include handhelds, PDAs and digital pets. Robotic pet released in 1999; fits both electronic toy and gadget.",
+      "confidence": 0.94
+    },
+    {
+      "prompt_id": "tech-company-games-company",
+      "answer": "Mercado Libre",
+      "aliases": [],
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Mercado_Libre"
+      ],
+      "scope_note": "Technology company outside the video-game business; exclude firms primarily known as game developers/publishers. Latin American e-commerce/technology company, not primarily a games company.",
+      "confidence": 0.95
+    },
+    {
+      "prompt_id": "tech-company-games-company",
+      "answer": "Jio Platforms",
+      "aliases": [],
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Jio_Platforms"
+      ],
+      "scope_note": "Technology company outside the video-game business; exclude firms primarily known as game developers/publishers. Indian digital-services/technology company, not primarily a games company.",
+      "confidence": 0.93
+    },
+    {
+      "prompt_id": "apple-product",
+      "answer": "Apple Cinema Display",
+      "aliases": [],
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Apple_Cinema_Display"
+      ],
+      "scope_note": "Named product or service from the company; include discontinued products when identity is clear. Apple display product family.",
+      "confidence": 0.99
+    },
+    {
+      "prompt_id": "mobile-phone-brand-model",
+      "answer": "Fairphone 5",
+      "aliases": [],
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Fairphone_5"
+      ],
+      "scope_note": "A specific mobile phone model (not a tablet or generic phone brand alone). Specific mobile phone model.",
+      "confidence": 0.99
+    },
+    {
+      "prompt_id": "mobile-phone-brand-model",
+      "answer": "Oppo Find X7",
+      "aliases": [],
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Oppo_Find_X7"
+      ],
+      "scope_note": "A specific mobile phone model (not a tablet or generic phone brand alone). Specific mobile phone model.",
+      "confidence": 0.99
+    },
+    {
+      "prompt_id": "mobile-phone-brand-model",
+      "answer": "Vivo X100",
+      "aliases": [],
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Vivo_X100"
+      ],
+      "scope_note": "A specific mobile phone model (not a tablet or generic phone brand alone). Specific mobile phone model.",
+      "confidence": 0.99
+    },
+    {
+      "prompt_id": "mobile-phone-brand-model",
+      "answer": "Honor Magic6 Pro",
+      "aliases": [],
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Honor_Magic6_Pro"
+      ],
+      "scope_note": "A specific mobile phone model (not a tablet or generic phone brand alone). Specific mobile phone model; Wikipedia page title displays “Honor Magic 6 Pro”.",
+      "confidence": 0.98
+    },
+    {
+      "prompt_id": "mobile-phone-brand-model",
+      "answer": "Sony Xperia 1 VI",
+      "aliases": [],
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Sony_Xperia_1_VI"
+      ],
+      "scope_note": "A specific mobile phone model (not a tablet or generic phone brand alone). Specific mobile phone model.",
+      "confidence": 0.99
+    },
+    {
+      "prompt_id": "mobile-phone-brand-model",
+      "answer": "Nokia 3210 (2024)",
+      "aliases": [],
+      "source_urls": [
+        "https://www.hmd.com/en_int/nokia-3210"
+      ],
+      "scope_note": "A specific mobile phone model (not a tablet or generic phone brand alone). HMD’s product page validates the 2024 Nokia 3210; it is a feature phone, and prompt says mobile phone, so valid.",
+      "confidence": 0.98
+    },
+    {
+      "prompt_id": "mobile-phone-brand-model",
+      "answer": "Motorola Razr 50",
+      "aliases": [],
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Motorola_Razr_50"
+      ],
+      "scope_note": "A specific mobile phone model (not a tablet or generic phone brand alone). Specific smartphone model.",
+      "confidence": 0.99
+    },
+    {
+      "prompt_id": "laptop-pc-brand",
+      "answer": "Framework Computer",
+      "aliases": [],
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Framework_Computer"
+      ],
+      "scope_note": "Manufacturer/brand of laptops or personal computers; ODM names only when sold under that brand. Computer maker that sells laptops and desktop PCs; answer could be shortened to “Framework”.",
+      "confidence": 0.98
+    },
+    {
+      "prompt_id": "streaming-service",
+      "answer": "Kocowa",
+      "aliases": [],
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Kocowa"
+      ],
+      "scope_note": "On-demand video/music or live-streaming platform; distinguish hardware, broadcasters, and services. On-demand Korean television streaming service.",
+      "confidence": 0.95
+    },
+    {
+      "prompt_id": "graph",
+      "answer": "DAG shortest paths",
+      "aliases": [
+        "shortest paths in a directed acyclic graph",
+        "shortest path in DAG"
+      ],
+      "source_urls": [
+        "https://xlinux.nist.gov/dads/HTML/dagShortPath.html"
+      ],
+      "scope_note": "A specific single-source shortest-path algorithm for weighted directed acyclic graphs; niche but unambiguously a graph algorithm.",
+      "confidence": 0.99
+    },
+    {
+      "prompt_id": "part",
+      "answer": "PCIe retimer",
+      "aliases": [
+        "PCI Express retimer"
+      ],
+      "source_urls": [
+        "https://www.microchip.com/en-us/products/storage/xpressconnect-pcie-gen-6-and-cxl-retimer-family",
+        "https://www.ti.com/lit/ta/sszt816/sszt816.pdf?ts=1794304141233"
+      ],
+      "scope_note": "An active signal-conditioning integrated circuit used in PCIe links; valid internal computer/system component, though more often found on add-in cards or servers than ordinary desktops.",
+      "confidence": 0.97
+    },
+    {
+      "prompt_id": "part",
+      "answer": "M.2 connector",
+      "aliases": [
+        "M.2 socket"
+      ],
+      "source_urls": [
+        "https://pcisig.com/specification-overview/pci-express-m2",
+        "https://pcisig.com/specifications"
+      ],
+      "scope_note": "A motherboard connector/form factor interface used for internal expansion modules, commonly SSDs and wireless cards.",
+      "confidence": 0.98
+    },
+    {
+      "prompt_id": "mobile-phone-brand-model",
+      "answer": "HMD Barbie Phone",
+      "aliases": [
+        "Barbie Phone",
+        "HMD Barbie Phone 4G"
+      ],
+      "source_urls": [
+        "https://www.hmd.com/en_int/hmd-barbie-phone",
+        "https://www.hmd.com/en_int/press/your-barbie-dream-phone-is-now-a-reality-press-release/www.hmd.com"
+      ],
+      "scope_note": "A specific feature flip phone, not a smartphone; prompt says mobile phone by brand or model, so include it.",
+      "confidence": 0.99
+    },
+    {
+      "prompt_id": "mobile-phone-brand-model",
+      "answer": "Xiaomi MIX Flip",
+      "aliases": [
+        "Xiaomi Mix Flip"
+      ],
+      "source_urls": [
+        "https://www.mi.com/global/product/xiaomi-mix-flip/",
+        "https://www.mi.com/global/support/faq/details/KA-257028/"
+      ],
+      "scope_note": "A specific foldable smartphone model; official Xiaomi page categorizes it as a phone.",
+      "confidence": 0.99
+    },
+    {
+      "prompt_id": "mathematical-symbol-greek-letter",
+      "answer": "Not identical to",
+      "aliases": [
+        "≢",
+        "not identical sign"
+      ],
+      "source_urls": [
+        "https://www.unicode.org/Public/18.0.0/charts/PDF/U2200.pdf"
+      ],
+      "scope_note": "Unicode U+2262, NOT IDENTICAL TO. Direct official Unicode 18 character chart evidence; specialized symbol names may be accepted under the prompt’s broad mathematical-symbol wording.",
+      "confidence": "high"
+    },
+    {
+      "prompt_id": "3d-shape-solid",
+      "answer": "Geodesic dome",
+      "aliases": [
+        "geodesic sphere"
+      ],
+      "source_urls": [
+        "https://mathworld.wolfram.com/Solid.html"
+      ],
+      "scope_note": "Listed in MathWorld’s enumeration of solids. MathWorld explicitly lists this under “Solid”; retain as a broad or niche answer.",
+      "confidence": "medium"
+    },
+    {
+      "prompt_id": "3d-shape-solid",
+      "answer": "Barrel",
+      "aliases": [
+        "barrel solid"
+      ],
+      "source_urls": [
+        "https://mathworld.wolfram.com/Solid.html"
+      ],
+      "scope_note": "Listed by MathWorld as a geometric solid; uncommon name. MathWorld explicitly lists this under “Solid”; retain as a broad or niche answer.",
+      "confidence": "medium"
+    },
+    {
+      "prompt_id": "3d-shape-solid",
+      "answer": "Cork plug",
+      "aliases": [
+        "cork-plug solid"
+      ],
+      "source_urls": [
+        "https://mathworld.wolfram.com/Solid.html"
+      ],
+      "scope_note": "Listed by MathWorld as a geometric solid; uncommon name. MathWorld explicitly lists this under “Solid”; retain as a broad or niche answer.",
+      "confidence": "medium"
+    },
+    {
+      "prompt_id": "3d-shape-solid",
+      "answer": "Cylindrical hoof",
+      "aliases": [
+        "cylindrical ungula"
+      ],
+      "source_urls": [
+        "https://mathworld.wolfram.com/Solid.html"
+      ],
+      "scope_note": "Listed by MathWorld as a geometric solid; an ungula cut from a cylinder. MathWorld explicitly lists this under “Solid”; retain as a broad or niche answer.",
+      "confidence": "medium"
+    },
+    {
+      "prompt_id": "3d-shape-solid",
+      "answer": "Cylindrical wedge",
+      "aliases": [
+        "cylinder wedge"
+      ],
+      "source_urls": [
+        "https://mathworld.wolfram.com/Solid.html"
+      ],
+      "scope_note": "Listed by MathWorld as a geometric solid; a wedge-shaped cylindrical segment. MathWorld explicitly lists this under “Solid”; retain as a broad or niche answer.",
+      "confidence": "medium"
+    },
+    {
+      "prompt_id": "3d-shape-solid",
+      "answer": "Lemon surface",
+      "aliases": [
+        "lemon-shaped solid"
+      ],
+      "source_urls": [
+        "https://mathworld.wolfram.com/Solid.html"
+      ],
+      "scope_note": "Listed by MathWorld as a named solid/surface; uncommon specialized answer. MathWorld explicitly lists this under “Solid”; retain as a broad or niche answer.",
+      "confidence": "medium"
+    },
+    {
+      "prompt_id": "3d-shape-solid",
+      "answer": "Pseudosphere",
+      "aliases": [
+        "tractricoid"
+      ],
+      "source_urls": [
+        "https://mathworld.wolfram.com/Solid.html"
+      ],
+      "scope_note": "Listed by MathWorld as a solid/surface; this is a surface of revolution and is a borderline everyday “solid” answer. MathWorld explicitly lists this under “Solid”; retain as a broad or niche answer.",
+      "confidence": "medium"
+    },
+    {
+      "prompt_id": "3d-shape-solid",
+      "answer": "Wulff shape",
+      "aliases": [
+        "Wulff construction shape"
+      ],
+      "source_urls": [
+        "https://mathworld.wolfram.com/Solid.html"
+      ],
+      "scope_note": "Listed by MathWorld as a named solid; specialized crystallographic shape. MathWorld explicitly lists this under “Solid”; retain as a broad or niche answer.",
+      "confidence": "medium"
+    },
+    {
+      "prompt_id": "3d-shape-solid",
+      "answer": "Apple surface",
+      "aliases": [
+        "apple-shaped solid"
+      ],
+      "source_urls": [
+        "https://mathworld.wolfram.com/Solid.html"
+      ],
+      "scope_note": "Listed by MathWorld as a named solid/surface; uncommon specialized answer. MathWorld explicitly lists this under “Solid”; retain as a broad or niche answer.",
+      "confidence": "medium"
+    },
+    {
+      "prompt_id": "3d-shape-solid",
+      "answer": "Goursat surface",
+      "aliases": [
+        "Goursat surface solid"
+      ],
+      "source_urls": [
+        "https://mathworld.wolfram.com/Solid.html"
+      ],
+      "scope_note": "Listed by MathWorld under solids; technically a surface, so borderline if “solid” is interpreted as a filled volume. MathWorld explicitly lists this under “Solid”; retain as a broad or niche answer.",
+      "confidence": "medium"
+    },
+    {
+      "prompt_id": "pokmon",
+      "answer": "Pikachu",
+      "aliases": [
+        "ピカチュウ"
+      ],
+      "source_urls": [
+        "https://pokeapi.co/api/v2/pokemon-species/pikachu/"
+      ],
+      "scope_note": "Species-name list; regional/localized names should be aliases only when verified. Include forms only if current bank treats each form as a distinct answer.",
+      "confidence": "high",
+      "vetting_status": "verified",
+      "vetting_note": "Direct PokeAPI species endpoint confirms the canonical English species name. Localized aliases are only acceptable when explicitly shown by that species record; the punctuation-stripped form is a normalization alias."
+    },
+    {
+      "prompt_id": "pokmon",
+      "answer": "Bulbasaur",
+      "aliases": [
+        "フシギダネ"
+      ],
+      "source_urls": [
+        "https://pokeapi.co/api/v2/pokemon-species/bulbasaur/"
+      ],
+      "scope_note": "Species-name list; regional/localized names should be aliases only when verified. Include forms only if current bank treats each form as a distinct answer.",
+      "confidence": "high",
+      "vetting_status": "verified",
+      "vetting_note": "Direct PokeAPI species endpoint confirms the canonical English species name. Localized aliases are only acceptable when explicitly shown by that species record; the punctuation-stripped form is a normalization alias."
+    },
+    {
+      "prompt_id": "pokmon",
+      "answer": "Mimikyu",
+      "aliases": [
+        "ミミッキュ"
+      ],
+      "source_urls": [
+        "https://pokeapi.co/api/v2/pokemon-species/mimikyu/"
+      ],
+      "scope_note": "Species-name list; regional/localized names should be aliases only when verified. Include forms only if current bank treats each form as a distinct answer.",
+      "confidence": "high",
+      "vetting_status": "verified",
+      "vetting_note": "Direct PokeAPI species endpoint confirms the canonical English species name. Localized aliases are only acceptable when explicitly shown by that species record; the punctuation-stripped form is a normalization alias."
+    },
+    {
+      "prompt_id": "pokmon",
+      "answer": "Farfetch’d",
+      "aliases": [
+        "Farfetchd"
+      ],
+      "source_urls": [
+        "https://pokeapi.co/api/v2/pokemon-species/farfetchd/"
+      ],
+      "scope_note": "Species-name list; regional/localized names should be aliases only when verified. Include forms only if current bank treats each form as a distinct answer.",
+      "confidence": "high",
+      "vetting_status": "verified",
+      "vetting_note": "Direct PokeAPI species endpoint confirms the canonical English species name. Localized aliases are only acceptable when explicitly shown by that species record; the punctuation-stripped form is a normalization alias."
+    },
+    {
+      "prompt_id": "pokmon",
+      "answer": "Mr. Mime",
+      "aliases": [
+        "Mr Mime"
+      ],
+      "source_urls": [
+        "https://pokeapi.co/api/v2/pokemon-species/mr-mime/"
+      ],
+      "scope_note": "Species-name list; regional/localized names should be aliases only when verified. Include forms only if current bank treats each form as a distinct answer.",
+      "confidence": "high",
+      "vetting_status": "verified",
+      "vetting_note": "Direct PokeAPI species endpoint confirms the canonical English species name. Localized aliases are only acceptable when explicitly shown by that species record; the punctuation-stripped form is a normalization alias."
+    },
+    {
+      "prompt_id": "minecraft-block-item",
+      "answer": "Air",
+      "aliases": [],
+      "source_urls": [
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/blocks.json",
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/items.json"
+      ],
+      "scope_note": "Technically valid blocks/items that are creative-only or unobtainable are still in-game items; distinguish these from block states and internal IDs.",
+      "confidence": "high",
+      "vetting_status": "verified",
+      "vetting_note": "Exact display name appears in PrismarineJS Minecraft Java 1.21.4 blocks/items data. Cave Air and Barrier are technical/non-obtainable blocks; accepted because the prompt explicitly says block OR item."
+    },
+    {
+      "prompt_id": "minecraft-block-item",
+      "answer": "Cave Air",
+      "aliases": [],
+      "source_urls": [
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/blocks.json",
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/items.json"
+      ],
+      "scope_note": "Technically valid blocks/items that are creative-only or unobtainable are still in-game items; distinguish these from block states and internal IDs.",
+      "confidence": "high",
+      "vetting_status": "verified",
+      "vetting_note": "Exact display name appears in PrismarineJS Minecraft Java 1.21.4 blocks/items data. Cave Air and Barrier are technical/non-obtainable blocks; accepted because the prompt explicitly says block OR item."
+    },
+    {
+      "prompt_id": "minecraft-block-item",
+      "answer": "Barrier",
+      "aliases": [],
+      "source_urls": [
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/blocks.json",
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/items.json"
+      ],
+      "scope_note": "Technically valid blocks/items that are creative-only or unobtainable are still in-game items; distinguish these from block states and internal IDs.",
+      "confidence": "high",
+      "vetting_status": "verified",
+      "vetting_note": "Exact display name appears in PrismarineJS Minecraft Java 1.21.4 blocks/items data. Cave Air and Barrier are technical/non-obtainable blocks; accepted because the prompt explicitly says block OR item."
+    },
+    {
+      "prompt_id": "minecraft-block-item",
+      "answer": "Knowledge Book",
+      "aliases": [],
+      "source_urls": [
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/blocks.json",
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/items.json"
+      ],
+      "scope_note": "Technically valid blocks/items that are creative-only or unobtainable are still in-game items; distinguish these from block states and internal IDs.",
+      "confidence": "high",
+      "vetting_status": "verified",
+      "vetting_note": "Exact display name appears in the 1.21.4 items dataset; these are restricted/creative-command items, still valid under the prompt’s broad “item” wording."
+    },
+    {
+      "prompt_id": "minecraft-block-item",
+      "answer": "Debug Stick",
+      "aliases": [],
+      "source_urls": [
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/blocks.json",
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/items.json"
+      ],
+      "scope_note": "Technically valid blocks/items that are creative-only or unobtainable are still in-game items; distinguish these from block states and internal IDs.",
+      "confidence": "high",
+      "vetting_status": "verified",
+      "vetting_note": "Exact display name appears in the 1.21.4 items dataset; these are restricted/creative-command items, still valid under the prompt’s broad “item” wording."
+    },
+    {
+      "prompt_id": "minecraft-mob",
+      "answer": "Allay",
+      "aliases": [],
+      "source_urls": [
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/entities.json"
+      ],
+      "scope_note": "Include hostile, neutral, passive and utility mobs; “mob” is the in-game entity category, not only enemies. Version-tag newer mobs.",
+      "confidence": "high",
+      "vetting_status": "verified",
+      "vetting_note": "Exact entity display name appears in PrismarineJS Minecraft Java 1.21.4 entities data. Mob category supports the prompt."
+    },
+    {
+      "prompt_id": "minecraft-mob",
+      "answer": "Bogged",
+      "aliases": [],
+      "source_urls": [
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/entities.json"
+      ],
+      "scope_note": "Include hostile, neutral, passive and utility mobs; “mob” is the in-game entity category, not only enemies. Version-tag newer mobs.",
+      "confidence": "high",
+      "vetting_status": "verified",
+      "vetting_note": "Exact entity display name appears in PrismarineJS Minecraft Java 1.21.4 entities data. Mob category supports the prompt."
+    },
+    {
+      "prompt_id": "minecraft-mob",
+      "answer": "Endermite",
+      "aliases": [],
+      "source_urls": [
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/entities.json"
+      ],
+      "scope_note": "Include hostile, neutral, passive and utility mobs; “mob” is the in-game entity category, not only enemies. Version-tag newer mobs.",
+      "confidence": "high",
+      "vetting_status": "verified",
+      "vetting_note": "Exact entity display name appears in PrismarineJS Minecraft Java 1.21.4 entities data. Mob category supports the prompt."
+    },
+    {
+      "prompt_id": "minecraft-mob",
+      "answer": "Hoglin",
+      "aliases": [],
+      "source_urls": [
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/entities.json"
+      ],
+      "scope_note": "Include hostile, neutral, passive and utility mobs; “mob” is the in-game entity category, not only enemies. Version-tag newer mobs.",
+      "confidence": "high",
+      "vetting_status": "verified",
+      "vetting_note": "Exact entity display name appears in PrismarineJS Minecraft Java 1.21.4 entities data. Mob category supports the prompt."
+    },
+    {
+      "prompt_id": "minecraft-mob",
+      "answer": "Zoglin",
+      "aliases": [],
+      "source_urls": [
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/entities.json"
+      ],
+      "scope_note": "Include hostile, neutral, passive and utility mobs; “mob” is the in-game entity category, not only enemies. Version-tag newer mobs.",
+      "confidence": "high",
+      "vetting_status": "verified",
+      "vetting_note": "Exact entity display name appears in PrismarineJS Minecraft Java 1.21.4 entities data. Mob category supports the prompt."
+    },
+    {
+      "prompt_id": "piece-maths-software-online-maths",
+      "answer": "SageMath",
+      "aliases": [
+        "Sage"
+      ],
+      "source_urls": [
+        "https://www.sagemath.org/"
+      ],
+      "scope_note": "Allow online math tools and installed software; borderline general-purpose spreadsheets/programming systems only when used as a math tool.",
+      "confidence": "high",
+      "vetting_status": "verified",
+      "vetting_note": "Official SageMath site confirms it is mathematics software."
+    },
+    {
+      "prompt_id": "healing-food-item-video-game",
+      "answer": "Campfire stew",
+      "aliases": [],
+      "source_urls": [
+        "https://wiki.play.eco/en/Campfire_Stew"
+      ],
+      "scope_note": "Prompt includes healing or food item; include consumables and persistent health-up items only when the game uses them to restore health. Cross-title interpretation: Campfire Stew is a named food item in Eco; it is a valid game food item but not a famous universal item.",
+      "confidence": "medium",
+      "vetting_status": "verified",
+      "vetting_note": "Eco wiki search result documents an item named Campfire Stew; item-specific primary developer source was not located, so keep medium confidence and verify in-game."
+    },
+    {
+      "prompt_id": "common-video-game-enemy-creature",
+      "answer": "Creeper",
+      "aliases": [],
+      "source_urls": [
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/entities.json"
+      ],
+      "scope_note": "Broader interpretation: Minecraft hostile mob is a video-game enemy creature; the prompt example Goomba permits named enemies across franchises.",
+      "confidence": "high",
+      "vetting_status": "verified",
+      "vetting_note": "Exact entity display name and hostile-mob category are in the Minecraft Java 1.21.4 structured entities dataset."
+    },
+    {
+      "prompt_id": "minecraft-biome-structure",
+      "answer": "Deep Dark",
+      "aliases": [],
+      "source_urls": [
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/biomes.json"
+      ],
+      "scope_note": "Prompt explicitly accepts either biomes or structures. Include generated structures and distinct biome names; exclude individual rooms/variants unless their own named structure exists.",
+      "confidence": "high",
+      "vetting_status": "verified",
+      "vetting_note": "Exact display name appears in the 1.21.4 biome dataset."
+    },
+    {
+      "prompt_id": "minecraft-biome-structure",
+      "answer": "Mushroom Fields",
+      "aliases": [
+        "Mushroom Field"
+      ],
+      "source_urls": [
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/biomes.json"
+      ],
+      "scope_note": "Prompt explicitly accepts either biomes or structures. Include generated structures and distinct biome names; exclude individual rooms/variants unless their own named structure exists.",
+      "confidence": "high",
+      "vetting_status": "verified",
+      "vetting_note": "Exact display name appears in the 1.21.4 biome dataset."
+    },
+    {
+      "prompt_id": "minecraft-biome-structure",
+      "answer": "Bastion Remnant",
+      "aliases": [],
+      "source_urls": [
+        "https://www.minecraft.net/en-us/article/bastion-remnant"
+      ],
+      "scope_note": "Prompt explicitly accepts either biomes or structures. Include generated structures and distinct biome names; exclude individual rooms/variants unless their own named structure exists.",
+      "confidence": "high",
+      "vetting_status": "verified",
+      "vetting_note": "Official Minecraft article identifies bastion remnants as Nether structures."
+    },
+    {
+      "prompt_id": "minecraft-biome-structure",
+      "answer": "Trial Chamber",
+      "aliases": [],
+      "source_urls": [
+        "https://www.minecraft.net/en-us/updates/tricky-trials"
+      ],
+      "scope_note": "Prompt explicitly accepts either biomes or structures. Include generated structures and distinct biome names; exclude individual rooms/variants unless their own named structure exists.",
+      "confidence": "high",
+      "vetting_status": "verified",
+      "vetting_note": "Official Minecraft update page identifies Trial Chambers as an underground structure. Singular “Trial Chamber” is a common normalized name for the plural in the page title."
+    },
+    {
+      "prompt_id": "greek-letter",
+      "answer": "Digamma",
+      "aliases": [
+        "Wau"
+      ],
+      "source_urls": [
+        "https://www.unicode.org/charts/PDF/U0370.pdf"
+      ],
+      "scope_note": "Archaic/historical Greek letters are defensible because prompt does not say modern alphabet; distinguish Greek letters from Greek numeral marks and Latin lookalikes.",
+      "confidence": "high",
+      "vetting_status": "verified",
+      "vetting_note": "Unicode Greek and Coptic chart includes the historic/archaic Greek characters in this answer set. They are valid historical Greek letters, though less familiar than the modern alphabet."
+    },
+    {
+      "prompt_id": "greek-letter",
+      "answer": "Koppa",
+      "aliases": [
+        "Qoppa"
+      ],
+      "source_urls": [
+        "https://www.unicode.org/charts/PDF/U0370.pdf"
+      ],
+      "scope_note": "Archaic/historical Greek letters are defensible because prompt does not say modern alphabet; distinguish Greek letters from Greek numeral marks and Latin lookalikes.",
+      "confidence": "high",
+      "vetting_status": "verified",
+      "vetting_note": "Unicode Greek and Coptic chart includes the historic/archaic Greek characters in this answer set. They are valid historical Greek letters, though less familiar than the modern alphabet."
+    },
+    {
+      "prompt_id": "greek-letter",
+      "answer": "Sampi",
+      "aliases": [],
+      "source_urls": [
+        "https://www.unicode.org/charts/PDF/U0370.pdf"
+      ],
+      "scope_note": "Archaic/historical Greek letters are defensible because prompt does not say modern alphabet; distinguish Greek letters from Greek numeral marks and Latin lookalikes.",
+      "confidence": "high",
+      "vetting_status": "verified",
+      "vetting_note": "Unicode Greek and Coptic chart includes the historic/archaic Greek characters in this answer set. They are valid historical Greek letters, though less familiar than the modern alphabet."
+    },
+    {
+      "prompt_id": "greek-letter",
+      "answer": "San",
+      "aliases": [],
+      "source_urls": [
+        "https://www.unicode.org/charts/PDF/U0370.pdf"
+      ],
+      "scope_note": "Archaic/historical Greek letters are defensible because prompt does not say modern alphabet; distinguish Greek letters from Greek numeral marks and Latin lookalikes.",
+      "confidence": "high",
+      "vetting_status": "verified",
+      "vetting_note": "Unicode Greek and Coptic chart includes the historic/archaic Greek characters in this answer set. They are valid historical Greek letters, though less familiar than the modern alphabet."
+    },
+    {
+      "prompt_id": "greek-letter",
+      "answer": "Sho",
+      "aliases": [],
+      "source_urls": [
+        "https://www.unicode.org/charts/PDF/U0370.pdf"
+      ],
+      "scope_note": "Archaic/historical Greek letters are defensible because prompt does not say modern alphabet; distinguish Greek letters from Greek numeral marks and Latin lookalikes.",
+      "confidence": "high",
+      "vetting_status": "verified",
+      "vetting_note": "Unicode Greek and Coptic chart includes the historic/archaic Greek characters in this answer set. They are valid historical Greek letters, though less familiar than the modern alphabet."
+    },
+    {
+      "prompt_id": "greek-letter",
+      "answer": "Alpha",
+      "aliases": [],
+      "source_urls": [
+        "https://www.unicode.org/charts/PDF/U0370.pdf"
+      ],
+      "scope_note": "Modern Greek alphabet name; valid under the prompt. Case-insensitive normalization is sufficient.",
+      "confidence": "high",
+      "vetting_status": "verified",
+      "vetting_note": "Unicode Greek and Coptic chart defines the corresponding Greek letter code point; standard English letter name."
+    },
+    {
+      "prompt_id": "greek-letter",
+      "answer": "Beta",
+      "aliases": [],
+      "source_urls": [
+        "https://www.unicode.org/charts/PDF/U0370.pdf"
+      ],
+      "scope_note": "Modern Greek alphabet name; valid under the prompt. Case-insensitive normalization is sufficient.",
+      "confidence": "high",
+      "vetting_status": "verified",
+      "vetting_note": "Unicode Greek and Coptic chart defines the corresponding Greek letter code point; standard English letter name."
+    },
+    {
+      "prompt_id": "greek-letter",
+      "answer": "Gamma",
+      "aliases": [],
+      "source_urls": [
+        "https://www.unicode.org/charts/PDF/U0370.pdf"
+      ],
+      "scope_note": "Modern Greek alphabet name; valid under the prompt. Case-insensitive normalization is sufficient.",
+      "confidence": "high",
+      "vetting_status": "verified",
+      "vetting_note": "Unicode Greek and Coptic chart defines the corresponding Greek letter code point; standard English letter name."
+    },
+    {
+      "prompt_id": "greek-letter",
+      "answer": "Delta",
+      "aliases": [],
+      "source_urls": [
+        "https://www.unicode.org/charts/PDF/U0370.pdf"
+      ],
+      "scope_note": "Modern Greek alphabet name; valid under the prompt. Case-insensitive normalization is sufficient.",
+      "confidence": "high",
+      "vetting_status": "verified",
+      "vetting_note": "Unicode Greek and Coptic chart defines the corresponding Greek letter code point; standard English letter name."
+    },
+    {
+      "prompt_id": "greek-letter",
+      "answer": "Epsilon",
+      "aliases": [],
+      "source_urls": [
+        "https://www.unicode.org/charts/PDF/U0370.pdf"
+      ],
+      "scope_note": "Modern Greek alphabet name; valid under the prompt. Case-insensitive normalization is sufficient.",
+      "confidence": "high",
+      "vetting_status": "verified",
+      "vetting_note": "Unicode Greek and Coptic chart defines the corresponding Greek letter code point; standard English letter name."
+    },
+    {
+      "prompt_id": "greek-letter",
+      "answer": "Zeta",
+      "aliases": [],
+      "source_urls": [
+        "https://www.unicode.org/charts/PDF/U0370.pdf"
+      ],
+      "scope_note": "Modern Greek alphabet name; valid under the prompt. Case-insensitive normalization is sufficient.",
+      "confidence": "high",
+      "vetting_status": "verified",
+      "vetting_note": "Unicode Greek and Coptic chart defines the corresponding Greek letter code point; standard English letter name."
+    },
+    {
+      "prompt_id": "greek-letter",
+      "answer": "Eta",
+      "aliases": [],
+      "source_urls": [
+        "https://www.unicode.org/charts/PDF/U0370.pdf"
+      ],
+      "scope_note": "Modern Greek alphabet name; valid under the prompt. Case-insensitive normalization is sufficient.",
+      "confidence": "high",
+      "vetting_status": "verified",
+      "vetting_note": "Unicode Greek and Coptic chart defines the corresponding Greek letter code point; standard English letter name."
+    },
+    {
+      "prompt_id": "greek-letter",
+      "answer": "Theta",
+      "aliases": [],
+      "source_urls": [
+        "https://www.unicode.org/charts/PDF/U0370.pdf"
+      ],
+      "scope_note": "Modern Greek alphabet name; valid under the prompt. Case-insensitive normalization is sufficient.",
+      "confidence": "high",
+      "vetting_status": "verified",
+      "vetting_note": "Unicode Greek and Coptic chart defines the corresponding Greek letter code point; standard English letter name."
+    },
+    {
+      "prompt_id": "greek-letter",
+      "answer": "Iota",
+      "aliases": [],
+      "source_urls": [
+        "https://www.unicode.org/charts/PDF/U0370.pdf"
+      ],
+      "scope_note": "Modern Greek alphabet name; valid under the prompt. Case-insensitive normalization is sufficient.",
+      "confidence": "high",
+      "vetting_status": "verified",
+      "vetting_note": "Unicode Greek and Coptic chart defines the corresponding Greek letter code point; standard English letter name."
+    },
+    {
+      "prompt_id": "greek-letter",
+      "answer": "Kappa",
+      "aliases": [],
+      "source_urls": [
+        "https://www.unicode.org/charts/PDF/U0370.pdf"
+      ],
+      "scope_note": "Modern Greek alphabet name; valid under the prompt. Case-insensitive normalization is sufficient.",
+      "confidence": "high",
+      "vetting_status": "verified",
+      "vetting_note": "Unicode Greek and Coptic chart defines the corresponding Greek letter code point; standard English letter name."
+    },
+    {
+      "prompt_id": "greek-letter",
+      "answer": "Lambda",
+      "aliases": [],
+      "source_urls": [
+        "https://www.unicode.org/charts/PDF/U0370.pdf"
+      ],
+      "scope_note": "Modern Greek alphabet name; valid under the prompt. Case-insensitive normalization is sufficient.",
+      "confidence": "high",
+      "vetting_status": "verified",
+      "vetting_note": "Unicode Greek and Coptic chart defines the corresponding Greek letter code point; standard English letter name."
+    },
+    {
+      "prompt_id": "greek-letter",
+      "answer": "Mu",
+      "aliases": [],
+      "source_urls": [
+        "https://www.unicode.org/charts/PDF/U0370.pdf"
+      ],
+      "scope_note": "Modern Greek alphabet name; valid under the prompt. Case-insensitive normalization is sufficient.",
+      "confidence": "high",
+      "vetting_status": "verified",
+      "vetting_note": "Unicode Greek and Coptic chart defines the corresponding Greek letter code point; standard English letter name."
+    },
+    {
+      "prompt_id": "greek-letter",
+      "answer": "Nu",
+      "aliases": [],
+      "source_urls": [
+        "https://www.unicode.org/charts/PDF/U0370.pdf"
+      ],
+      "scope_note": "Modern Greek alphabet name; valid under the prompt. Case-insensitive normalization is sufficient.",
+      "confidence": "high",
+      "vetting_status": "verified",
+      "vetting_note": "Unicode Greek and Coptic chart defines the corresponding Greek letter code point; standard English letter name."
+    },
+    {
+      "prompt_id": "greek-letter",
+      "answer": "Xi",
+      "aliases": [],
+      "source_urls": [
+        "https://www.unicode.org/charts/PDF/U0370.pdf"
+      ],
+      "scope_note": "Modern Greek alphabet name; valid under the prompt. Case-insensitive normalization is sufficient.",
+      "confidence": "high",
+      "vetting_status": "verified",
+      "vetting_note": "Unicode Greek and Coptic chart defines the corresponding Greek letter code point; standard English letter name."
+    },
+    {
+      "prompt_id": "greek-letter",
+      "answer": "Omicron",
+      "aliases": [],
+      "source_urls": [
+        "https://www.unicode.org/charts/PDF/U0370.pdf"
+      ],
+      "scope_note": "Modern Greek alphabet name; valid under the prompt. Case-insensitive normalization is sufficient.",
+      "confidence": "high",
+      "vetting_status": "verified",
+      "vetting_note": "Unicode Greek and Coptic chart defines the corresponding Greek letter code point; standard English letter name."
+    },
+    {
+      "prompt_id": "greek-letter",
+      "answer": "Pi",
+      "aliases": [],
+      "source_urls": [
+        "https://www.unicode.org/charts/PDF/U0370.pdf"
+      ],
+      "scope_note": "Modern Greek alphabet name; valid under the prompt. Case-insensitive normalization is sufficient.",
+      "confidence": "high",
+      "vetting_status": "verified",
+      "vetting_note": "Unicode Greek and Coptic chart defines the corresponding Greek letter code point; standard English letter name."
+    },
+    {
+      "prompt_id": "greek-letter",
+      "answer": "Rho",
+      "aliases": [],
+      "source_urls": [
+        "https://www.unicode.org/charts/PDF/U0370.pdf"
+      ],
+      "scope_note": "Modern Greek alphabet name; valid under the prompt. Case-insensitive normalization is sufficient.",
+      "confidence": "high",
+      "vetting_status": "verified",
+      "vetting_note": "Unicode Greek and Coptic chart defines the corresponding Greek letter code point; standard English letter name."
+    },
+    {
+      "prompt_id": "greek-letter",
+      "answer": "Sigma",
+      "aliases": [],
+      "source_urls": [
+        "https://www.unicode.org/charts/PDF/U0370.pdf"
+      ],
+      "scope_note": "Modern Greek alphabet name; valid under the prompt. Case-insensitive normalization is sufficient.",
+      "confidence": "high",
+      "vetting_status": "verified",
+      "vetting_note": "Unicode Greek and Coptic chart defines the corresponding Greek letter code point; standard English letter name."
+    },
+    {
+      "prompt_id": "greek-letter",
+      "answer": "Tau",
+      "aliases": [],
+      "source_urls": [
+        "https://www.unicode.org/charts/PDF/U0370.pdf"
+      ],
+      "scope_note": "Modern Greek alphabet name; valid under the prompt. Case-insensitive normalization is sufficient.",
+      "confidence": "high",
+      "vetting_status": "verified",
+      "vetting_note": "Unicode Greek and Coptic chart defines the corresponding Greek letter code point; standard English letter name."
+    },
+    {
+      "prompt_id": "greek-letter",
+      "answer": "Upsilon",
+      "aliases": [],
+      "source_urls": [
+        "https://www.unicode.org/charts/PDF/U0370.pdf"
+      ],
+      "scope_note": "Modern Greek alphabet name; valid under the prompt. Case-insensitive normalization is sufficient.",
+      "confidence": "high",
+      "vetting_status": "verified",
+      "vetting_note": "Unicode Greek and Coptic chart defines the corresponding Greek letter code point; standard English letter name."
+    },
+    {
+      "prompt_id": "greek-letter",
+      "answer": "Phi",
+      "aliases": [],
+      "source_urls": [
+        "https://www.unicode.org/charts/PDF/U0370.pdf"
+      ],
+      "scope_note": "Modern Greek alphabet name; valid under the prompt. Case-insensitive normalization is sufficient.",
+      "confidence": "high",
+      "vetting_status": "verified",
+      "vetting_note": "Unicode Greek and Coptic chart defines the corresponding Greek letter code point; standard English letter name."
+    },
+    {
+      "prompt_id": "greek-letter",
+      "answer": "Chi",
+      "aliases": [],
+      "source_urls": [
+        "https://www.unicode.org/charts/PDF/U0370.pdf"
+      ],
+      "scope_note": "Modern Greek alphabet name; valid under the prompt. Case-insensitive normalization is sufficient.",
+      "confidence": "high",
+      "vetting_status": "verified",
+      "vetting_note": "Unicode Greek and Coptic chart defines the corresponding Greek letter code point; standard English letter name."
+    },
+    {
+      "prompt_id": "greek-letter",
+      "answer": "Psi",
+      "aliases": [],
+      "source_urls": [
+        "https://www.unicode.org/charts/PDF/U0370.pdf"
+      ],
+      "scope_note": "Modern Greek alphabet name; valid under the prompt. Case-insensitive normalization is sufficient.",
+      "confidence": "high",
+      "vetting_status": "verified",
+      "vetting_note": "Unicode Greek and Coptic chart defines the corresponding Greek letter code point; standard English letter name."
+    },
+    {
+      "prompt_id": "greek-letter",
+      "answer": "Omega",
+      "aliases": [],
+      "source_urls": [
+        "https://www.unicode.org/charts/PDF/U0370.pdf"
+      ],
+      "scope_note": "Modern Greek alphabet name; valid under the prompt. Case-insensitive normalization is sufficient.",
+      "confidence": "high",
+      "vetting_status": "verified",
+      "vetting_note": "Unicode Greek and Coptic chart defines the corresponding Greek letter code point; standard English letter name."
+    },
+    {
+      "prompt_id": "common-video-game-enemy-creature",
+      "answer": "Skeleton",
+      "aliases": [],
+      "source_urls": [
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/entities.json"
+      ],
+      "scope_note": "Broader interpretation: Minecraft hostile mob is a video-game enemy creature; the prompt example Goomba permits named enemies across franchises.",
+      "confidence": "high",
+      "vetting_status": "verified",
+      "vetting_note": "Exact entity display name and hostile-mob category are in the Minecraft Java 1.21.4 structured entities dataset."
+    },
+    {
+      "prompt_id": "common-video-game-enemy-creature",
+      "answer": "Zombie",
+      "aliases": [],
+      "source_urls": [
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/entities.json"
+      ],
+      "scope_note": "Broader interpretation: Minecraft hostile mob is a video-game enemy creature; the prompt example Goomba permits named enemies across franchises.",
+      "confidence": "high",
+      "vetting_status": "verified",
+      "vetting_note": "Exact entity display name and hostile-mob category are in the Minecraft Java 1.21.4 structured entities dataset."
+    },
+    {
+      "prompt_id": "common-video-game-enemy-creature",
+      "answer": "Enderman",
+      "aliases": [],
+      "source_urls": [
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/entities.json"
+      ],
+      "scope_note": "Broader interpretation: Minecraft hostile mob is a video-game enemy creature; the prompt example Goomba permits named enemies across franchises.",
+      "confidence": "high",
+      "vetting_status": "verified",
+      "vetting_note": "Exact entity display name and hostile-mob category are in the Minecraft Java 1.21.4 structured entities dataset."
+    },
+    {
+      "prompt_id": "minecraft-biome-structure",
+      "answer": "Badlands",
+      "aliases": [],
+      "source_urls": [
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/biomes.json"
+      ],
+      "scope_note": "Valid Minecraft biome, included by the prompt’s explicit “biome or structure” wording.",
+      "confidence": "high",
+      "vetting_status": "verified",
+      "vetting_note": "Exact biome display name appears in PrismarineJS Minecraft Java 1.21.4 biome data."
+    },
+    {
+      "prompt_id": "minecraft-biome-structure",
+      "answer": "Cherry Grove",
+      "aliases": [],
+      "source_urls": [
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/biomes.json"
+      ],
+      "scope_note": "Valid Minecraft biome, included by the prompt’s explicit “biome or structure” wording.",
+      "confidence": "high",
+      "vetting_status": "verified",
+      "vetting_note": "Exact biome display name appears in PrismarineJS Minecraft Java 1.21.4 biome data."
+    },
+    {
+      "prompt_id": "minecraft-biome-structure",
+      "answer": "Pale Garden",
+      "aliases": [],
+      "source_urls": [
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/biomes.json"
+      ],
+      "scope_note": "Valid Minecraft biome, included by the prompt’s explicit “biome or structure” wording.",
+      "confidence": "high",
+      "vetting_status": "verified",
+      "vetting_note": "Exact biome display name appears in PrismarineJS Minecraft Java 1.21.4 biome data."
+    },
+    {
+      "prompt_id": "minecraft-biome-structure",
+      "answer": "Dripstone Caves",
+      "aliases": [],
+      "source_urls": [
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/biomes.json"
+      ],
+      "scope_note": "Valid Minecraft biome, included by the prompt’s explicit “biome or structure” wording.",
+      "confidence": "high",
+      "vetting_status": "verified",
+      "vetting_note": "Exact biome display name appears in PrismarineJS Minecraft Java 1.21.4 biome data."
+    },
+    {
+      "prompt_id": "minecraft-biome-structure",
+      "answer": "Basalt Deltas",
+      "aliases": [],
+      "source_urls": [
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/biomes.json"
+      ],
+      "scope_note": "Valid Minecraft biome, included by the prompt’s explicit “biome or structure” wording.",
+      "confidence": "high",
+      "vetting_status": "verified",
+      "vetting_note": "Exact biome display name appears in PrismarineJS Minecraft Java 1.21.4 biome data."
+    },
+    {
+      "prompt_id": "minecraft-biome-structure",
+      "answer": "Bamboo Jungle",
+      "aliases": [],
+      "source_urls": [
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/biomes.json"
+      ],
+      "scope_note": "Valid Minecraft biome, included by the prompt’s explicit “biome or structure” wording.",
+      "confidence": "high",
+      "vetting_status": "verified",
+      "vetting_note": "Exact biome display name appears in PrismarineJS Minecraft Java 1.21.4 biome data."
+    },
+    {
+      "prompt_id": "chess-opening",
+      "answer": "Sicilian Defense",
+      "aliases": [
+        "Sicilian Defence"
+      ],
+      "source_urls": [
+        "https://raw.githubusercontent.com/lichess-org/chess-openings/master/a.tsv",
+        "https://raw.githubusercontent.com/lichess-org/chess-openings/master/b.tsv",
+        "https://raw.githubusercontent.com/lichess-org/chess-openings/master/e.tsv"
+      ],
+      "scope_note": "Opening dataset contains many Sicilian Defense variants; keep the base name canonical.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "chess-opening",
+      "answer": "King’s Indian Defense",
+      "aliases": [
+        "King’s Indian Defence",
+        "King's Indian Defense",
+        "King's Indian Defence"
+      ],
+      "source_urls": [
+        "https://raw.githubusercontent.com/lichess-org/chess-openings/master/a.tsv",
+        "https://raw.githubusercontent.com/lichess-org/chess-openings/master/b.tsv",
+        "https://raw.githubusercontent.com/lichess-org/chess-openings/master/e.tsv"
+      ],
+      "scope_note": "Opening dataset contains King’s Indian Defense variations.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "chess-opening",
+      "answer": "Caro-Kann Defense",
+      "aliases": [
+        "Caro-Kann Defence"
+      ],
+      "source_urls": [
+        "https://raw.githubusercontent.com/lichess-org/chess-openings/master/a.tsv",
+        "https://raw.githubusercontent.com/lichess-org/chess-openings/master/b.tsv",
+        "https://raw.githubusercontent.com/lichess-org/chess-openings/master/e.tsv"
+      ],
+      "scope_note": "Opening dataset contains the Caro-Kann Defense and multiple named variations.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "chess-opening",
+      "answer": "Réti Opening",
+      "aliases": [
+        "Reti Opening"
+      ],
+      "source_urls": [
+        "https://raw.githubusercontent.com/lichess-org/chess-openings/master/a.tsv",
+        "https://raw.githubusercontent.com/lichess-org/chess-openings/master/b.tsv",
+        "https://raw.githubusercontent.com/lichess-org/chess-openings/master/e.tsv"
+      ],
+      "scope_note": "Opening dataset contains Réti Opening variations; accept the accented canonical form.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "chess-opening",
+      "answer": "Englund Gambit",
+      "aliases": [],
+      "source_urls": [
+        "https://raw.githubusercontent.com/lichess-org/chess-openings/master/a.tsv",
+        "https://raw.githubusercontent.com/lichess-org/chess-openings/master/b.tsv",
+        "https://raw.githubusercontent.com/lichess-org/chess-openings/master/e.tsv"
+      ],
+      "scope_note": "Exact base opening name is present in Lichess a.tsv.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "piece-maths-software-online-maths",
+      "answer": "GeoGebra",
+      "aliases": [],
+      "source_urls": [
+        "https://www.geogebra.org/about"
+      ],
+      "scope_note": "Official site describes GeoGebra as dynamic mathematics software.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "piece-maths-software-online-maths",
+      "answer": "Desmos",
+      "aliases": [],
+      "source_urls": [
+        "https://help.desmos.com/hc/en-us/articles/4406040715149-Getting-Started-Desmos-Graphing-Calculator"
+      ],
+      "scope_note": "Official calculator help describes graphing equations, functions and points; valid maths tool.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "piece-maths-software-online-maths",
+      "answer": "Wolfram Alpha",
+      "aliases": [],
+      "source_urls": [
+        "https://www.wolframalpha.com/"
+      ],
+      "scope_note": "Official site lists mathematics topics and computational answer functionality.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "piece-maths-software-online-maths",
+      "answer": "GNU Octave",
+      "aliases": [],
+      "source_urls": [
+        "https://octave.org/"
+      ],
+      "scope_note": "Official site describes Octave as a scientific programming language with mathematics-oriented syntax and plotting.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "gaming-hardware-brand",
+      "answer": "8BitDo",
+      "aliases": [],
+      "source_urls": [
+        "https://www.8bitdo.com/"
+      ],
+      "scope_note": "Official home page advertises gamepads and gaming accessories.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "gaming-hardware-brand",
+      "answer": "Hyperkin",
+      "aliases": [],
+      "source_urls": [
+        "https://www.hyperkin.com/"
+      ],
+      "scope_note": "Official catalog sells controllers, consoles, cables and accessories for Nintendo, Sony, Microsoft and Sega platforms.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "gaming-hardware-brand",
+      "answer": "Thrustmaster",
+      "aliases": [],
+      "source_urls": [
+        "https://www.thrustmaster.com/en-us/homepage/"
+      ],
+      "scope_note": "Official site lists game controllers, racing wheels, joysticks and gaming audio.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "gaming-hardware-brand",
+      "answer": "SteelSeries",
+      "aliases": [],
+      "source_urls": [
+        "https://steelseries.com/"
+      ],
+      "scope_note": "Official site lists gaming headsets, mice, keyboards and controllers.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "accessibility-feature",
+      "answer": "Switch Access",
+      "aliases": [],
+      "source_urls": [
+        "https://support.google.com/accessibility/android/answer/6301490?hl=en"
+      ],
+      "scope_note": "Android Accessibility Help gives Switch Access setup instructions; direct OS accessibility feature.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "accessibility-feature",
+      "answer": "Live Captions",
+      "aliases": [],
+      "source_urls": [
+        "https://support.apple.com/en-ae/guide/iphone/iphe0990f7bb/ios"
+      ],
+      "scope_note": "Apple Support describes real-time transcription and groups Live Captions under Accessibility settings.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "accessibility-feature",
+      "answer": "Screen magnifier",
+      "aliases": [],
+      "source_urls": [
+        "https://support.microsoft.com/en-us/windows/apps/phonelink/setting-up-and-using-magnifier"
+      ],
+      "scope_note": "Microsoft Support describes Magnifier as a zoom feature; accessibility tool. “Screen magnifier” is generic category wording.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "smarthome-wearable-device",
+      "answer": "Smart thermostat",
+      "aliases": [],
+      "source_urls": [
+        "https://store.google.com/us/product/nest_thermostat_specs?hl=en-US"
+      ],
+      "scope_note": "Google Store identifies Nest Thermostat and compatibility with Google Home and smart-home platforms.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "smarthome-wearable-device",
+      "answer": "Smart doorbell",
+      "aliases": [],
+      "source_urls": [
+        "https://ring.com/video-doorbell-cameras"
+      ],
+      "scope_note": "Ring official catalog identifies video doorbells as connected home security devices.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "smarthome-wearable-device",
+      "answer": "Smartwatch",
+      "aliases": [],
+      "source_urls": [
+        "https://www.apple.com/watch/"
+      ],
+      "scope_note": "Apple product page identifies Apple Watch as a watch with connected health and phone features.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "minecraft-block-item",
+      "answer": "Campfire",
+      "aliases": [],
+      "source_urls": [
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/blocks.json"
+      ],
+      "scope_note": "Exact block display name in the Minecraft Java 1.21.4 structured blocks dataset.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "minecraft-block-item",
+      "answer": "Sea Lantern",
+      "aliases": [],
+      "source_urls": [
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/blocks.json"
+      ],
+      "scope_note": "Exact block display name in the Minecraft Java 1.21.4 structured blocks dataset.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "minecraft-block-item",
+      "answer": "Redstone Lamp",
+      "aliases": [],
+      "source_urls": [
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/blocks.json"
+      ],
+      "scope_note": "Exact block display name in the Minecraft Java 1.21.4 structured blocks dataset.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "minecraft-block-item",
+      "answer": "Slime Block",
+      "aliases": [],
+      "source_urls": [
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/blocks.json"
+      ],
+      "scope_note": "Exact block display name in the Minecraft Java 1.21.4 structured blocks dataset.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "minecraft-block-item",
+      "answer": "Honey Block",
+      "aliases": [],
+      "source_urls": [
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/blocks.json"
+      ],
+      "scope_note": "Exact block display name in the Minecraft Java 1.21.4 structured blocks dataset.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "common-video-game-enemy-creature",
+      "answer": "Breeze",
+      "aliases": [],
+      "source_urls": [
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/entities.json"
+      ],
+      "scope_note": "Minecraft hostile mob; the dataset explicitly identifies it as a hostile entity, which fits “video game enemy.”",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "common-video-game-enemy-creature",
+      "answer": "Warden",
+      "aliases": [],
+      "source_urls": [
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/entities.json"
+      ],
+      "scope_note": "Minecraft hostile mob; the dataset explicitly identifies it as a hostile entity, which fits “video game enemy.”",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "common-video-game-enemy-creature",
+      "answer": "Wither",
+      "aliases": [],
+      "source_urls": [
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/entities.json"
+      ],
+      "scope_note": "Minecraft hostile mob; the dataset explicitly identifies it as a hostile entity, which fits “video game enemy.”",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "common-video-game-enemy-creature",
+      "answer": "Wither Skeleton",
+      "aliases": [],
+      "source_urls": [
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/entities.json"
+      ],
+      "scope_note": "Minecraft hostile mob; the dataset explicitly identifies it as a hostile entity, which fits “video game enemy.”",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "minecraft-biome-structure",
+      "answer": "Badlands",
+      "aliases": [],
+      "source_urls": [
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/biomes.json"
+      ],
+      "scope_note": "Exact Minecraft biome display name in the 1.21.4 biome dataset; included because the prompt explicitly accepts biomes.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "minecraft-biome-structure",
+      "answer": "Bamboo Jungle",
+      "aliases": [],
+      "source_urls": [
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/biomes.json"
+      ],
+      "scope_note": "Exact Minecraft biome display name in the 1.21.4 biome dataset; included because the prompt explicitly accepts biomes.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "minecraft-biome-structure",
+      "answer": "Basalt Deltas",
+      "aliases": [],
+      "source_urls": [
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/biomes.json"
+      ],
+      "scope_note": "Exact Minecraft biome display name in the 1.21.4 biome dataset; included because the prompt explicitly accepts biomes.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "minecraft-biome-structure",
+      "answer": "Cherry Grove",
+      "aliases": [],
+      "source_urls": [
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/biomes.json"
+      ],
+      "scope_note": "Exact Minecraft biome display name in the 1.21.4 biome dataset; included because the prompt explicitly accepts biomes.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "minecraft-biome-structure",
+      "answer": "Pale Garden",
+      "aliases": [],
+      "source_urls": [
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/biomes.json"
+      ],
+      "scope_note": "Exact Minecraft biome display name in the 1.21.4 biome dataset; included because the prompt explicitly accepts biomes.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "minecraft-biome-structure",
+      "answer": "Dripstone Caves",
+      "aliases": [],
+      "source_urls": [
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/biomes.json"
+      ],
+      "scope_note": "Exact Minecraft biome display name in the 1.21.4 biome dataset; included because the prompt explicitly accepts biomes.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "greek-letter",
+      "answer": "Digamma",
+      "aliases": [],
+      "source_urls": [
+        "https://www.unicode.org/charts/PDF/U0370.pdf"
+      ],
+      "scope_note": "Historical/archaic Greek letter name represented in Unicode Greek and Coptic chart; accept as historical rather than common modern alphabet letters.",
+      "confidence": "medium",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "greek-letter",
+      "answer": "Koppa",
+      "aliases": [],
+      "source_urls": [
+        "https://www.unicode.org/charts/PDF/U0370.pdf"
+      ],
+      "scope_note": "Historical/archaic Greek letter name represented in Unicode Greek and Coptic chart; accept as historical rather than common modern alphabet letters.",
+      "confidence": "medium",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "greek-letter",
+      "answer": "Sampi",
+      "aliases": [],
+      "source_urls": [
+        "https://www.unicode.org/charts/PDF/U0370.pdf"
+      ],
+      "scope_note": "Historical/archaic Greek letter name represented in Unicode Greek and Coptic chart; accept as historical rather than common modern alphabet letters.",
+      "confidence": "medium",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "greek-letter",
+      "answer": "San",
+      "aliases": [],
+      "source_urls": [
+        "https://www.unicode.org/charts/PDF/U0370.pdf"
+      ],
+      "scope_note": "Historical/archaic Greek letter name represented in Unicode Greek and Coptic chart; accept as historical rather than common modern alphabet letters.",
+      "confidence": "medium",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "greek-letter",
+      "answer": "Sho",
+      "aliases": [],
+      "source_urls": [
+        "https://www.unicode.org/charts/PDF/U0370.pdf"
+      ],
+      "scope_note": "Historical/archaic Greek letter name represented in Unicode Greek and Coptic chart; accept as historical rather than common modern alphabet letters.",
+      "confidence": "medium",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "tech-company-games-company",
+      "answer": "Yangtze Memory Technologies",
+      "aliases": [
+        "YMTC",
+        "Yangtze Memory Technologies Co., Ltd."
+      ],
+      "source_urls": [
+        "https://www.ymtc.com/en/aboutus.html"
+      ],
+      "scope_note": "Chinese semiconductor company; its official profile says it designs and manufactures 3D NAND flash memory and sells memory products/SSDs. Clear non-game technology company by primary business.",
+      "confidence": 0.99
+    },
+    {
+      "prompt_id": "tech-company-games-company",
+      "answer": "Kioxia",
+      "aliases": [
+        "Kioxia Corporation"
+      ],
+      "source_urls": [
+        "https://www.kioxia.com/en-jp/about/about-us.html",
+        "https://www.kioxia.com/en-jp/about.html"
+      ],
+      "scope_note": "Japanese memory and flash-storage manufacturer. Official company profile defines its business as memory and related products; its business overview focuses on NAND flash and SSDs. Clear non-game technology company.",
+      "confidence": 0.99
+    },
+    {
+      "prompt_id": "tech-company-games-company",
+      "answer": "Renesas Electronics",
+      "aliases": [
+        "Renesas Electronics Corporation",
+        "Renesas"
+      ],
+      "source_urls": [
+        "https://www.renesas.com/en/about/profile"
+      ],
+      "scope_note": "Japanese semiconductor company. Official corporate outline lists semiconductor R&D, design, manufacture, sales, and servicing as its major operations, across automotive, industrial, infrastructure, and IoT markets.",
+      "confidence": 0.99
+    },
+    {
+      "prompt_id": "tech-company-games-company",
+      "answer": "GlobalFoundries",
+      "aliases": [
+        "GlobalFoundries (GF)",
+        "GF"
+      ],
+      "source_urls": [
+        "https://gf.com/about-gf/"
+      ],
+      "scope_note": "Global semiconductor foundry/manufacturer. Official company page identifies essential chip manufacturing and semiconductor foundry operations as its business; not a games company by primary industry.",
+      "confidence": 0.99
+    },
+    {
+      "prompt_id": "tech-company-games-company",
+      "answer": "ASE Technology Holding",
+      "aliases": [
+        "ASE Technology Holding Co., Ltd.",
+        "ASEH"
+      ],
+      "source_urls": [
+        "https://www.aseglobal.com/about/"
+      ],
+      "scope_note": "Taiwanese semiconductor packaging, testing, and system-integration company. Official profile describes semiconductor value-chain activity as its core business; not a games company by primary industry.",
+      "confidence": 0.98
+    },
+    {
+      "prompt_id": "tech-company-games-company",
+      "answer": "Tokyo Electron",
+      "aliases": [
+        "Tokyo Electron Ltd.",
+        "TEL"
+      ],
+      "source_urls": [
+        "https://www.tel.com/about/summary/",
+        "https://www.tel.com/corporatesummary/"
+      ],
+      "scope_note": "Japanese maker of semiconductor production equipment. The official company info lists semiconductor production equipment as its major products and services.",
+      "confidence": 0.99
+    },
+    {
+      "prompt_id": "tech-company-games-company",
+      "answer": "Advantest",
+      "aliases": [
+        "Advantest Corporation"
+      ],
+      "source_urls": [
+        "https://www.advantest.com/en/about/why-advantest/",
+        "https://www.advantest.com/en/about/business/"
+      ],
+      "scope_note": "Japanese semiconductor test-equipment and test-solutions company. Its official profile says semiconductor testing is its core business; not a games company by primary industry.",
+      "confidence": 0.99
+    },
+    {
+      "prompt_id": "tech-company-games-company",
+      "answer": "Compal Electronics",
+      "aliases": [
+        "Compal Electronics, Inc.",
+        "Compal"
+      ],
+      "source_urls": [
+        "https://www.compal.com/en-us/investor-relations/company-info/"
+      ],
+      "scope_note": "Taiwanese ICT/electronics manufacturer. Official investor relations profile classifies its industry as computer and peripheral equipment and describes notebook PCs, smart devices, and server products.",
+      "confidence": 0.99
+    },
+    {
+      "prompt_id": "tech-company-games-company",
+      "answer": "Murata Manufacturing",
+      "aliases": [
+        "Murata Manufacturing Co., Ltd.",
+        "Murata"
+      ],
+      "source_urls": [
+        "https://corporate.murata.com/en-us/company/business"
+      ],
+      "scope_note": "Japanese electronics-component manufacturer; official profile lists capacitors, inductors, communications modules, batteries, and sensors. Not a games company by primary business.",
+      "confidence": 0.99
+    },
+    {
+      "prompt_id": "tech-company-games-company",
+      "answer": "Zoho",
+      "aliases": [
+        "Zoho Corporation",
+        "Zoho Corporation Pvt. Ltd."
+      ],
+      "source_urls": [
+        "https://www.zoho.com/aboutus.html",
+        "https://www.zoho.com/sites/zweb/images/enterprise/business-pulse/zoho-business-pulse-custom-development.pdf"
+      ],
+      "scope_note": "Indian-founded global software company; its official material describes its portfolio of business software and cloud applications. Its separate Zoho Mail product already belongs under the email-service prompt; this entry is the company name under the company prompt.",
+      "confidence": 0.98
+    },
+    {
+      "prompt_id": "tech-company-games-company",
+      "answer": "TOTVS",
+      "aliases": [
+        "TOTVS S.A."
+      ],
+      "source_urls": [
+        "https://en.totvs.com/about-us.html"
+      ],
+      "scope_note": "Brazilian technology company focused on business software, platforms, services, and consulting. The official English company page explicitly describes its enterprise-software business.",
+      "confidence": 0.99
+    },
+    {
+      "prompt_id": "email-client-email-service",
+      "answer": "Mailo",
+      "aliases": [
+        "Mailo Mail"
+      ],
+      "source_urls": [
+        "https://www.mailo.com/mailo/en/terms-of-use.php",
+        "https://www.mailo.com/mailo/en/who-are-we.php"
+      ],
+      "scope_note": "European email service. Mailo's terms describe its email service as sending and receiving email with a dedicated address; official page says it offers personal and professional email accounts.",
+      "confidence": 0.99
+    },
+    {
+      "prompt_id": "email-client-email-service",
+      "answer": "Migadu",
+      "aliases": [
+        "Migadu Mail"
+      ],
+      "source_urls": [
+        "https://admin.migadu.com/public/terms_of_use",
+        "https://www.migadu.com/pricing/"
+      ],
+      "scope_note": "Swiss-hosted email service for custom domains. Official terms call it an email hosting service; the provider's own pricing page documents mailbox/email hosting plans.",
+      "confidence": 0.99
+    },
+    {
+      "prompt_id": "email-client-email-service",
+      "answer": "Soverin",
+      "aliases": [
+        "Soverin Mail"
+      ],
+      "source_urls": [
+        "https://soverin.com/about/general-terms-and-conditions",
+        "https://soverin.com/"
+      ],
+      "scope_note": "Dutch privacy-focused email provider. Its official terms describe Soverin Mail as an email service; provider's site advertises email and workplace services.",
+      "confidence": 0.99
+    },
+    {
+      "prompt_id": "cloud-storage-filehosting-service",
+      "answer": "InfiniCLOUD",
+      "aliases": [
+        "InfiniCloud",
+        "TeraCLOUD",
+        "TeraCloud"
+      ],
+      "source_urls": [
+        "https://infinicloud.com/en_information_2023040302.html",
+        "https://infinicloud.com/en_company_bg.html"
+      ],
+      "scope_note": "Japanese consumer online-storage service. The provider says its cloud-storage service TeraCLOUD was rebranded InfiniCLOUD in April 2023; retain TeraCLOUD as a historical alias, not a separate current product.",
+      "confidence": 0.99
+    },
+    {
+      "prompt_id": "font-typeface",
+      "answer": "IBM Plex Serif",
+      "aliases": [],
+      "source_urls": [
+        "https://fonts.google.com/specimen/IBM+Plex+Serif"
+      ],
+      "scope_note": "Google Fonts specimen page identifies this exact family name; a current Google Fonts family/typeface.",
+      "confidence": "high"
+    },
+    {
+      "prompt_id": "font-typeface",
+      "answer": "Red Hat Mono",
+      "aliases": [],
+      "source_urls": [
+        "https://fonts.google.com/specimen/Red+Hat+Mono"
+      ],
+      "scope_note": "Google Fonts specimen page identifies this exact family name; a current Google Fonts family/typeface.",
+      "confidence": "high"
+    },
+    {
+      "prompt_id": "font-typeface",
+      "answer": "Bricolage Grotesque",
+      "aliases": [],
+      "source_urls": [
+        "https://fonts.google.com/specimen/Bricolage+Grotesque"
+      ],
+      "scope_note": "Google Fonts specimen page identifies this exact family name; a current Google Fonts family/typeface.",
+      "confidence": "high"
+    },
+    {
+      "prompt_id": "font-typeface",
+      "answer": "Alegreya Sans",
+      "aliases": [],
+      "source_urls": [
+        "https://fonts.google.com/specimen/Alegreya+Sans"
+      ],
+      "scope_note": "Google Fonts specimen page identifies this exact family name; a current Google Fonts family/typeface.",
+      "confidence": "high"
+    },
+    {
+      "prompt_id": "font-typeface",
+      "answer": "Archivo",
+      "aliases": [],
+      "source_urls": [
+        "https://fonts.google.com/specimen/Archivo"
+      ],
+      "scope_note": "Google Fonts specimen page identifies this exact family name; a current Google Fonts family/typeface.",
+      "confidence": "high"
+    },
+    {
+      "prompt_id": "font-typeface",
+      "answer": "Barlow",
+      "aliases": [],
+      "source_urls": [
+        "https://fonts.google.com/specimen/Barlow"
+      ],
+      "scope_note": "Google Fonts specimen page identifies this exact family name; a current Google Fonts family/typeface.",
+      "confidence": "high"
+    },
+    {
+      "prompt_id": "font-typeface",
+      "answer": "Barlow Condensed",
+      "aliases": [],
+      "source_urls": [
+        "https://fonts.google.com/specimen/Barlow+Condensed"
+      ],
+      "scope_note": "Google Fonts specimen page identifies this exact family name; a current Google Fonts family/typeface.",
+      "confidence": "high"
+    },
+    {
+      "prompt_id": "font-typeface",
+      "answer": "Chivo",
+      "aliases": [],
+      "source_urls": [
+        "https://fonts.google.com/specimen/Chivo"
+      ],
+      "scope_note": "Google Fonts specimen page identifies this exact family name; a current Google Fonts family/typeface.",
+      "confidence": "high"
+    },
+    {
+      "prompt_id": "font-typeface",
+      "answer": "Crimson Pro",
+      "aliases": [],
+      "source_urls": [
+        "https://fonts.google.com/specimen/Crimson+Pro"
+      ],
+      "scope_note": "Google Fonts specimen page identifies this exact family name; a current Google Fonts family/typeface.",
+      "confidence": "high"
+    },
+    {
+      "prompt_id": "font-typeface",
+      "answer": "Epilogue",
+      "aliases": [],
+      "source_urls": [
+        "https://fonts.google.com/specimen/Epilogue"
+      ],
+      "scope_note": "Google Fonts specimen page identifies this exact family name; a current Google Fonts family/typeface.",
+      "confidence": "high"
+    },
+    {
+      "prompt_id": "font-typeface",
+      "answer": "Gabarito",
+      "aliases": [],
+      "source_urls": [
+        "https://fonts.google.com/specimen/Gabarito"
+      ],
+      "scope_note": "Google Fonts specimen page identifies this exact family name; a current Google Fonts family/typeface.",
+      "confidence": "high"
+    },
+    {
+      "prompt_id": "font-typeface",
+      "answer": "Geist",
+      "aliases": [],
+      "source_urls": [
+        "https://fonts.google.com/specimen/Geist"
+      ],
+      "scope_note": "Google Fonts specimen page identifies this exact family name; a current Google Fonts family/typeface.",
+      "confidence": "high"
+    },
+    {
+      "prompt_id": "font-typeface",
+      "answer": "Geist Mono",
+      "aliases": [],
+      "source_urls": [
+        "https://fonts.google.com/specimen/Geist+Mono"
+      ],
+      "scope_note": "Google Fonts specimen page identifies this exact family name; a current Google Fonts family/typeface.",
+      "confidence": "high"
+    },
+    {
+      "prompt_id": "font-typeface",
+      "answer": "Instrument Sans",
+      "aliases": [],
+      "source_urls": [
+        "https://fonts.google.com/specimen/Instrument+Sans"
+      ],
+      "scope_note": "Google Fonts specimen page identifies this exact family name; a current Google Fonts family/typeface.",
+      "confidence": "high"
+    },
+    {
+      "prompt_id": "font-typeface",
+      "answer": "Instrument Serif",
+      "aliases": [],
+      "source_urls": [
+        "https://fonts.google.com/specimen/Instrument+Serif"
+      ],
+      "scope_note": "Google Fonts specimen page identifies this exact family name; a current Google Fonts family/typeface.",
+      "confidence": "high"
+    },
+    {
+      "prompt_id": "font-typeface",
+      "answer": "Plus Jakarta Sans",
+      "aliases": [],
+      "source_urls": [
+        "https://fonts.google.com/specimen/Plus+Jakarta+Sans"
+      ],
+      "scope_note": "Google Fonts specimen page identifies this exact family name; a current Google Fonts family/typeface.",
+      "confidence": "high"
+    },
+    {
+      "prompt_id": "font-typeface",
+      "answer": "Sora",
+      "aliases": [],
+      "source_urls": [
+        "https://fonts.google.com/specimen/Sora"
+      ],
+      "scope_note": "Google Fonts specimen page identifies this exact family name; a current Google Fonts family/typeface.",
+      "confidence": "high"
+    },
+    {
+      "prompt_id": "font-typeface",
+      "answer": "Urbanist",
+      "aliases": [],
+      "source_urls": [
+        "https://fonts.google.com/specimen/Urbanist"
+      ],
+      "scope_note": "Google Fonts specimen page identifies this exact family name; a current Google Fonts family/typeface.",
+      "confidence": "high"
+    },
+    {
+      "prompt_id": "font-typeface",
+      "answer": "Onest",
+      "aliases": [],
+      "source_urls": [
+        "https://fonts.google.com/specimen/Onest"
+      ],
+      "scope_note": "Google Fonts specimen page identifies this exact family name; a current Google Fonts family/typeface.",
+      "confidence": "high"
+    },
+    {
+      "prompt_id": "font-typeface",
+      "answer": "Outfit",
+      "aliases": [],
+      "source_urls": [
+        "https://fonts.google.com/specimen/Outfit"
+      ],
+      "scope_note": "Google Fonts specimen page identifies this exact family name; a current Google Fonts family/typeface.",
+      "confidence": "high"
+    },
+    {
+      "prompt_id": "font-typeface",
+      "answer": "Roboto Serif",
+      "aliases": [],
+      "source_urls": [
+        "https://fonts.google.com/specimen/Roboto+Serif"
+      ],
+      "scope_note": "Google Fonts specimen page identifies this exact family name; a current Google Fonts family/typeface.",
+      "confidence": "high"
+    },
+    {
+      "prompt_id": "maths-competition-exam",
+      "answer": "Mathematical Contest in Modeling (MCM)",
+      "aliases": [
+        "MCM"
+      ],
+      "source_urls": [
+        "https://comap.org/contests/mcm-icm"
+      ],
+      "scope_note": "Official COMAP contest page names MCM as an international mathematical modeling contest.",
+      "confidence": "high"
+    },
+    {
+      "prompt_id": "maths-competition-exam",
+      "answer": "Interdisciplinary Contest in Modeling (ICM)",
+      "aliases": [
+        "ICM"
+      ],
+      "source_urls": [
+        "https://comap.org/contests/mcm-icm"
+      ],
+      "scope_note": "Official COMAP contest page names ICM as an international mathematical modeling contest.",
+      "confidence": "high"
+    },
+    {
+      "prompt_id": "maths-competition-exam",
+      "answer": "International Mathematical Modeling Challenge (IM²C)",
+      "aliases": [
+        "IM2C",
+        "IMMC"
+      ],
+      "source_urls": [
+        "https://immchallenge.org/"
+      ],
+      "scope_note": "Official challenge page identifies IM²C as an international mathematical modeling competition.",
+      "confidence": "high"
+    },
+    {
+      "prompt_id": "galaxy",
+      "answer": "NGC 4236",
+      "aliases": [
+        "Caldwell 3",
+        "C3"
+      ],
+      "source_urls": [
+        "https://tuniverso.com/en/catalog/caldwell",
+        "https://github.com/mattiaverga/OpenNGC/blob/master/database_files/NGC.csv"
+      ],
+      "scope_note": "Caldwell catalog lists this designation/name and explicitly classifies the object as a galaxy. Alternate Caldwell identifiers are aliases, not separate answers.",
+      "confidence": "high"
+    },
+    {
+      "prompt_id": "galaxy",
+      "answer": "Cassiopeia II Dwarf Galaxy",
+      "aliases": [
+        "Caldwell 17",
+        "C17"
+      ],
+      "source_urls": [
+        "https://tuniverso.com/en/catalog/caldwell"
+      ],
+      "scope_note": "Caldwell catalog lists this designation/name and explicitly classifies the object as a galaxy. Alternate Caldwell identifiers are aliases, not separate answers.",
+      "confidence": "high"
+    },
+    {
+      "prompt_id": "galaxy",
+      "answer": "Cassiopeia Dwarf Galaxy",
+      "aliases": [
+        "Caldwell 18",
+        "C18"
+      ],
+      "source_urls": [
+        "https://tuniverso.com/en/catalog/caldwell"
+      ],
+      "scope_note": "Caldwell catalog lists this designation/name and explicitly classifies the object as a galaxy. Alternate Caldwell identifiers are aliases, not separate answers.",
+      "confidence": "high"
+    },
+    {
+      "prompt_id": "galaxy",
+      "answer": "Silver Needle Galaxy",
+      "aliases": [
+        "Caldwell 26",
+        "C26"
+      ],
+      "source_urls": [
+        "https://tuniverso.com/en/catalog/caldwell"
+      ],
+      "scope_note": "Caldwell catalog lists this designation/name and explicitly classifies the object as a galaxy. Alternate Caldwell identifiers are aliases, not separate answers.",
+      "confidence": "high"
+    },
+    {
+      "prompt_id": "galaxy",
+      "answer": "NGC 5005",
+      "aliases": [
+        "Caldwell 29",
+        "C29"
+      ],
+      "source_urls": [
+        "https://tuniverso.com/en/catalog/caldwell",
+        "https://github.com/mattiaverga/OpenNGC/blob/master/database_files/NGC.csv"
+      ],
+      "scope_note": "Caldwell catalog lists this designation/name and explicitly classifies the object as a galaxy. Alternate Caldwell identifiers are aliases, not separate answers.",
+      "confidence": "high"
+    },
+    {
+      "prompt_id": "galaxy",
+      "answer": "Deer Lick Galaxy",
+      "aliases": [
+        "Caldwell 30",
+        "C30"
+      ],
+      "source_urls": [
+        "https://tuniverso.com/en/catalog/caldwell"
+      ],
+      "scope_note": "Caldwell catalog lists this designation/name and explicitly classifies the object as a galaxy. Alternate Caldwell identifiers are aliases, not separate answers.",
+      "confidence": "high"
+    },
+    {
+      "prompt_id": "galaxy",
+      "answer": "Whale Galaxy",
+      "aliases": [
+        "Caldwell 32",
+        "C32"
+      ],
+      "source_urls": [
+        "https://tuniverso.com/en/catalog/caldwell"
+      ],
+      "scope_note": "Caldwell catalog lists this designation/name and explicitly classifies the object as a galaxy. Alternate Caldwell identifiers are aliases, not separate answers.",
+      "confidence": "high"
+    },
+    {
+      "prompt_id": "galaxy",
+      "answer": "Koi Fish Galaxy",
+      "aliases": [
+        "NGC 4559",
+        "Caldwell 36",
+        "C36"
+      ],
+      "source_urls": [
+        "https://tuniverso.com/en/catalog/caldwell",
+        "https://github.com/mattiaverga/OpenNGC/blob/master/database_files/NGC.csv"
+      ],
+      "scope_note": "Caldwell catalog lists this designation/name and explicitly classifies the object as a galaxy. Alternate Caldwell identifiers are aliases, not separate answers.",
+      "confidence": "high"
+    },
+    {
+      "prompt_id": "galaxy",
+      "answer": "Leo Galaxy",
+      "aliases": [
+        "NGC 3632",
+        "Caldwell 40",
+        "C40"
+      ],
+      "source_urls": [
+        "https://tuniverso.com/en/catalog/caldwell",
+        "https://github.com/mattiaverga/OpenNGC/blob/master/database_files/NGC.csv"
+      ],
+      "scope_note": "Caldwell catalog lists this designation/name and explicitly classifies the object as a galaxy. Alternate Caldwell identifiers are aliases, not separate answers.",
+      "confidence": "high"
+    },
+    {
+      "prompt_id": "galaxy",
+      "answer": "Little Sombrero Galaxy",
+      "aliases": [
+        "Caldwell 43",
+        "C43"
+      ],
+      "source_urls": [
+        "https://tuniverso.com/en/catalog/caldwell"
+      ],
+      "scope_note": "Caldwell catalog lists this designation/name and explicitly classifies the object as a galaxy. Alternate Caldwell identifiers are aliases, not separate answers.",
+      "confidence": "high"
+    },
+    {
+      "prompt_id": "galaxy",
+      "answer": "Superman Galaxy",
+      "aliases": [
+        "Caldwell 44",
+        "C44"
+      ],
+      "source_urls": [
+        "https://tuniverso.com/en/catalog/caldwell"
+      ],
+      "scope_note": "Caldwell catalog lists this designation/name and explicitly classifies the object as a galaxy. Alternate Caldwell identifiers are aliases, not separate answers.",
+      "confidence": "high"
+    },
+    {
+      "prompt_id": "galaxy",
+      "answer": "Boötes Spiral Galaxy",
+      "aliases": [
+        "Caldwell 45",
+        "C45"
+      ],
+      "source_urls": [
+        "https://tuniverso.com/en/catalog/caldwell"
+      ],
+      "scope_note": "Caldwell catalog lists this designation/name and explicitly classifies the object as a galaxy. Alternate Caldwell identifiers are aliases, not separate answers.",
+      "confidence": "high"
+    },
+    {
+      "prompt_id": "galaxy",
+      "answer": "Crown of Jewels Galaxy",
+      "aliases": [
+        "Caldwell 48",
+        "C48"
+      ],
+      "source_urls": [
+        "https://tuniverso.com/en/catalog/caldwell"
+      ],
+      "scope_note": "Caldwell catalog lists this designation/name and explicitly classifies the object as a galaxy. Alternate Caldwell identifiers are aliases, not separate answers.",
+      "confidence": "high"
+    },
+    {
+      "prompt_id": "galaxy",
+      "answer": "Cetus Dwarf Galaxy",
+      "aliases": [
+        "Caldwell 51",
+        "C51"
+      ],
+      "source_urls": [
+        "https://tuniverso.com/en/catalog/caldwell"
+      ],
+      "scope_note": "Caldwell catalog lists this designation/name and explicitly classifies the object as a galaxy. Alternate Caldwell identifiers are aliases, not separate answers.",
+      "confidence": "high"
+    },
+    {
+      "prompt_id": "galaxy",
+      "answer": "Egg Galaxy",
+      "aliases": [
+        "Caldwell 52",
+        "C52"
+      ],
+      "source_urls": [
+        "https://tuniverso.com/en/catalog/caldwell"
+      ],
+      "scope_note": "Caldwell catalog lists this designation/name and explicitly classifies the object as a galaxy. Alternate Caldwell identifiers are aliases, not separate answers.",
+      "confidence": "high"
+    },
+    {
+      "prompt_id": "galaxy",
+      "answer": "Spindle Galaxy",
+      "aliases": [
+        "Caldwell 53",
+        "C53"
+      ],
+      "source_urls": [
+        "https://tuniverso.com/en/catalog/caldwell"
+      ],
+      "scope_note": "Caldwell catalog lists this designation/name and explicitly classifies the object as a galaxy. Alternate Caldwell identifiers are aliases, not separate answers.",
+      "confidence": "high"
+    },
+    {
+      "prompt_id": "galaxy",
+      "answer": "Eye Needle Galaxy",
+      "aliases": [
+        "Caldwell 62",
+        "C62"
+      ],
+      "source_urls": [
+        "https://tuniverso.com/en/catalog/caldwell"
+      ],
+      "scope_note": "Caldwell catalog lists this designation/name and explicitly classifies the object as a galaxy. Alternate Caldwell identifiers are aliases, not separate answers.",
+      "confidence": "high"
+    },
+    {
+      "prompt_id": "unit-measurement-unit-data",
+      "answer": "Statampere",
+      "aliases": [
+        "statA",
+        "esu current unit"
+      ],
+      "source_urls": [
+        "https://nvlpubs.nist.gov/nistpubs/jres/66C/jresv66Cn2p137_A1b.pdf"
+      ],
+      "scope_note": "NIST reference discusses statampere as a CGS-ESU electromagnetic current unit; highly specialized CGS unit.",
+      "confidence": "medium"
+    },
+    {
+      "prompt_id": "platform-game",
+      "answer": "Rayman Legends",
+      "aliases": [],
+      "source_urls": [
+        "https://www.wikidata.org/wiki/Q2255492",
+        "https://www.wikidata.org/wiki/Wikidata:Licensing"
+      ],
+      "source_license": "Wikidata structured data: CC0 1.0; candidate name/genre statement checked on linked item.",
+      "scope_note": "Explicit 2D platform game genre; also adventure game.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "platform-game",
+      "answer": "Rayman",
+      "aliases": [],
+      "source_urls": [
+        "https://www.wikidata.org/wiki/Q13219473",
+        "https://www.wikidata.org/wiki/Wikidata:Licensing"
+      ],
+      "source_license": "Wikidata structured data: CC0 1.0; candidate name/genre statement checked on linked item.",
+      "scope_note": "Explicit 2D platform game genre; distinguish the original 1995 game from the franchise.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "platform-game",
+      "answer": "Oddworld: Abe’s Oddysee",
+      "aliases": [],
+      "source_urls": [
+        "https://www.wikidata.org/wiki/Q4349193",
+        "https://www.wikidata.org/wiki/Wikidata:Licensing"
+      ],
+      "source_license": "Wikidata structured data: CC0 1.0; candidate name/genre statement checked on linked item.",
+      "scope_note": "Wikidata gives 2D platform game; hybrid puzzle/adventure elements do not disqualify.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "platform-game",
+      "answer": "Pandemonium!",
+      "aliases": [],
+      "source_urls": [
+        "https://www.wikidata.org/wiki/Q427198",
+        "https://www.wikidata.org/wiki/Wikidata:Licensing"
+      ],
+      "source_license": "Wikidata structured data: CC0 1.0; candidate name/genre statement checked on linked item.",
+      "scope_note": "Explicit platform video game and 2D platform game.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "platform-game",
+      "answer": "Celeste",
+      "aliases": [],
+      "source_urls": [
+        "https://www.wikidata.org/wiki/Wikidata:WikiProject_Video_games/Reports/Year/2018",
+        "https://www.wikidata.org/wiki/Wikidata:Licensing"
+      ],
+      "source_license": "Wikidata structured data: CC0 1.0; the report is generated from Wikidata items.",
+      "scope_note": "Report row classifies the 2018 title as a platform game.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "platform-game",
+      "answer": "Sonic Mania",
+      "aliases": [],
+      "source_urls": [
+        "https://www.wikidata.org/wiki/Wikidata:WikiProject_Video_games/Reports/Language/Chinese",
+        "https://www.wikidata.org/wiki/Wikidata:Licensing"
+      ],
+      "source_license": "Wikidata structured data: CC0 1.0; the report is generated from Wikidata items.",
+      "scope_note": "Report row classifies title as a platform game.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "platform-game",
+      "answer": "Donkey Kong Country",
+      "aliases": [],
+      "source_urls": [
+        "https://www.wikidata.org/wiki/Wikidata:WikiProject_Video_games/Reports/Platform/Super_Nintendo_Entertainment_System",
+        "https://www.wikidata.org/wiki/Wikidata:Licensing"
+      ],
+      "source_license": "Wikidata structured data: CC0 1.0; the report is generated from Wikidata items.",
+      "scope_note": "Report row classifies title as a 2D platform game.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "firstperson-shooter",
+      "answer": "Wolfenstein 3D",
+      "aliases": [],
+      "source_urls": [
+        "https://www.wikidata.org/wiki/Q18940",
+        "https://www.wikidata.org/wiki/Wikidata:Licensing"
+      ],
+      "source_license": "Wikidata structured data: CC0 1.0; candidate name/genre statement checked on linked item.",
+      "scope_note": "Genre explicitly first-person shooter.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "firstperson-shooter",
+      "answer": "Quake",
+      "aliases": [],
+      "source_urls": [
+        "https://www.wikidata.org/wiki/Q217423",
+        "https://www.wikidata.org/wiki/Wikidata:Licensing"
+      ],
+      "source_license": "Wikidata structured data: CC0 1.0; candidate name/genre statement checked on linked item.",
+      "scope_note": "Genre explicitly first-person shooter; Quake I / Quake 1 are title aliases.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "firstperson-shooter",
+      "answer": "Unreal Tournament",
+      "aliases": [],
+      "source_urls": [
+        "https://www.wikidata.org/wiki/Q627877",
+        "https://www.wikidata.org/wiki/Wikidata:Licensing"
+      ],
+      "source_license": "Wikidata structured data: CC0 1.0; candidate name/genre statement checked on linked item.",
+      "scope_note": "Genre explicitly first-person shooter; UT and UT99 are aliases.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "firstperson-shooter",
+      "answer": "Project I.G.I.",
+      "aliases": [],
+      "source_urls": [
+        "https://www.wikidata.org/wiki/Q2323444",
+        "https://www.wikidata.org/wiki/Wikidata:Licensing"
+      ],
+      "source_license": "Wikidata structured data: CC0 1.0; candidate name/genre statement checked on linked item.",
+      "scope_note": "Genre explicitly first-person shooter; also known as Project I.G.I.: I’m Going In.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "firstperson-shooter",
+      "answer": "Descent",
+      "aliases": [],
+      "source_urls": [
+        "https://www.wikidata.org/wiki/Q1200546",
+        "https://www.wikidata.org/wiki/Wikidata:Licensing"
+      ],
+      "source_license": "Wikidata structured data: CC0 1.0; candidate name/genre statement checked on linked item.",
+      "scope_note": "Genre includes first-person shooter and shoot ’em up; unusual six-degree movement may make it a boundary answer, but first-person perspective qualifies.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "firstperson-shooter",
+      "answer": "Borderlands 2",
+      "aliases": [],
+      "source_urls": [
+        "https://www.wikidata.org/wiki/Q893422",
+        "https://www.wikidata.org/wiki/Wikidata:Licensing"
+      ],
+      "source_license": "Wikidata structured data: CC0 1.0; candidate name/genre statement checked on linked item.",
+      "scope_note": "Genre explicitly includes first-person shooter and action RPG; hybrid game qualifies.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "firstperson-shooter",
+      "answer": "Apex Legends",
+      "aliases": [],
+      "source_urls": [
+        "https://www.wikidata.org/wiki/Q61478103",
+        "https://www.wikidata.org/wiki/Wikidata:Licensing"
+      ],
+      "source_license": "Wikidata structured data: CC0 1.0; candidate name/genre statement checked on linked item.",
+      "scope_note": "Genre includes first-person shooter, battle royale, tactical shooter, and hero shooter.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "strategy-video-game",
+      "answer": "Age of Wonders",
+      "aliases": [],
+      "source_urls": [
+        "https://www.wikidata.org/wiki/Q392321",
+        "https://www.wikidata.org/wiki/Wikidata:Licensing"
+      ],
+      "source_license": "Wikidata structured data: CC0 1.0; candidate name/genre statement checked on linked item.",
+      "scope_note": "Explicit turn-based strategy video game; also strategy video game.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "strategy-video-game",
+      "answer": "Crusader Kings III",
+      "aliases": [],
+      "source_urls": [
+        "https://www.wikidata.org/wiki/Q71701894",
+        "https://www.wikidata.org/wiki/Wikidata:Licensing"
+      ],
+      "source_license": "Wikidata structured data: CC0 1.0; candidate name/genre statement checked on linked item.",
+      "scope_note": "Grand strategy / strategy wargame; a strong strategy fit.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "strategy-video-game",
+      "answer": "Into the Breach",
+      "aliases": [],
+      "source_urls": [
+        "https://www.wikidata.org/wiki/Q30591391",
+        "https://www.wikidata.org/wiki/Wikidata:Licensing"
+      ],
+      "source_license": "Wikidata structured data: CC0 1.0; candidate name/genre statement checked on linked item.",
+      "scope_note": "Explicit turn-based strategy video game.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "strategy-video-game",
+      "answer": "Age of Empires II: The Age of Kings",
+      "aliases": [],
+      "source_urls": [
+        "https://www.wikidata.org/wiki/Q34852",
+        "https://www.wikidata.org/wiki/Wikidata:Licensing"
+      ],
+      "source_license": "Wikidata structured data: CC0 1.0; candidate name/genre statement checked on linked item.",
+      "scope_note": "Explicit real-time strategy video game.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "strategy-video-game",
+      "answer": "Daisenryaku",
+      "aliases": [],
+      "source_urls": [
+        "https://www.wikidata.org/wiki/Q17229001",
+        "https://www.wikidata.org/wiki/Wikidata:Licensing"
+      ],
+      "source_license": "Wikidata structured data: CC0 1.0; candidate name/genre statement checked on linked item.",
+      "scope_note": "Explicit turn-based strategy video game; title is also a series, so accept exact title as game/series label.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "strategy-video-game",
+      "answer": "Primitive Wars",
+      "aliases": [],
+      "source_urls": [
+        "https://www.wikidata.org/wiki/Q3921808",
+        "https://www.wikidata.org/wiki/Wikidata:Licensing"
+      ],
+      "source_license": "Wikidata structured data: CC0 1.0; candidate name/genre statement checked on linked item.",
+      "scope_note": "Explicit strategy video game.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "strategy-video-game",
+      "answer": "Tom Clancy’s Politika",
+      "aliases": [],
+      "source_urls": [
+        "https://www.wikidata.org/wiki/Q7815318",
+        "https://www.wikidata.org/wiki/Wikidata:Licensing"
+      ],
+      "source_license": "Wikidata structured data: CC0 1.0; candidate name/genre statement checked on linked item.",
+      "scope_note": "Explicit strategy video game.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "sports-video-game",
+      "answer": "Mario Tennis Aces",
+      "aliases": [],
+      "source_urls": [
+        "https://www.wikidata.org/wiki/Q47208788",
+        "https://www.wikidata.org/wiki/Wikidata:Licensing"
+      ],
+      "source_license": "Wikidata structured data: CC0 1.0; candidate name/genre statement checked on linked item.",
+      "scope_note": "Explicit sports video game; tennis game.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "sports-video-game",
+      "answer": "Mario Sports Mix",
+      "aliases": [],
+      "source_urls": [
+        "https://www.wikidata.org/wiki/Q2706730",
+        "https://www.wikidata.org/wiki/Wikidata:Licensing"
+      ],
+      "source_license": "Wikidata structured data: CC0 1.0; candidate name/genre statement checked on linked item.",
+      "scope_note": "Explicit sports video game; spans hockey, volleyball, dodgeball and basketball.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "sports-video-game",
+      "answer": "World Sports Competition",
+      "aliases": [],
+      "source_urls": [
+        "https://www.wikidata.org/wiki/Q16267077",
+        "https://www.wikidata.org/wiki/Wikidata:Licensing"
+      ],
+      "source_license": "Wikidata structured data: CC0 1.0; candidate name/genre statement checked on linked item.",
+      "scope_note": "Wikidata classifies as sports video game.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "sports-video-game",
+      "answer": "Major Title",
+      "aliases": [],
+      "source_urls": [
+        "https://www.wikidata.org/wiki/Q13218405",
+        "https://www.wikidata.org/wiki/Wikidata:Licensing"
+      ],
+      "source_license": "Wikidata structured data: CC0 1.0; candidate name/genre statement checked on linked item.",
+      "scope_note": "Wikidata identifies it as a sports video game; title may be unfamiliar but category is explicit.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "sports-video-game",
+      "answer": "Mario Tennis",
+      "aliases": [],
+      "source_urls": [
+        "https://www.wikidata.org/wiki/Q2397985",
+        "https://www.wikidata.org/wiki/Wikidata:Licensing"
+      ],
+      "source_license": "Wikidata structured data: CC0 1.0; candidate name/genre statement checked on linked item.",
+      "scope_note": "Sports video game for Nintendo 64; also known as Mario Tennis 64.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "horror-video-game",
+      "answer": "SOMA",
+      "aliases": [],
+      "source_urls": [
+        "https://www.wikidata.org/wiki/Q15121353",
+        "https://www.wikidata.org/wiki/Wikidata:Licensing"
+      ],
+      "source_license": "Wikidata structured data: CC0 1.0; candidate name/genre statement checked on linked item.",
+      "scope_note": "Explicit survival horror genre, with science-fiction and post-apocalyptic genres too.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "horror-video-game",
+      "answer": "Fatal Frame II: Crimson Butterfly",
+      "aliases": [],
+      "source_urls": [
+        "https://www.wikidata.org/wiki/Q2289776",
+        "https://www.wikidata.org/wiki/Wikidata:Licensing"
+      ],
+      "source_license": "Wikidata structured data: CC0 1.0; candidate name/genre statement checked on linked item.",
+      "scope_note": "Explicit survival horror video game.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "horror-video-game",
+      "answer": "Outlast",
+      "aliases": [],
+      "source_urls": [
+        "https://www.wikidata.org/wiki/Q14838050",
+        "https://www.wikidata.org/wiki/Wikidata:Licensing"
+      ],
+      "source_license": "Wikidata structured data: CC0 1.0; candidate name/genre statement checked on linked item.",
+      "scope_note": "Described as first-person survival horror video game; both genres fit.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "horror-video-game",
+      "answer": "Silent Hill f",
+      "aliases": [],
+      "source_urls": [
+        "https://www.wikidata.org/wiki/Q114772020",
+        "https://www.wikidata.org/wiki/Wikidata:Licensing"
+      ],
+      "source_license": "Wikidata structured data: CC0 1.0; candidate name/genre statement checked on linked item.",
+      "scope_note": "Described as 2025 survival horror video game.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "horror-video-game",
+      "answer": "Amnesia: The Dark Descent",
+      "aliases": [],
+      "source_urls": [
+        "https://www.wikidata.org/wiki/Q22986",
+        "https://www.wikidata.org/wiki/Wikidata:Licensing"
+      ],
+      "source_license": "Wikidata structured data: CC0 1.0; candidate name/genre statement checked on linked item.",
+      "scope_note": "Wikidata genre is not explicitly exposed as horror in current summary; treat as broader fit based on its well-established survival-horror classification, confidence reduced.",
+      "confidence": "medium",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "puzzle-video-game",
+      "answer": "The Witness",
+      "aliases": [],
+      "source_urls": [
+        "https://www.wikidata.org/wiki/Q1711359",
+        "https://www.wikidata.org/wiki/Wikidata:Licensing"
+      ],
+      "source_license": "Wikidata structured data: CC0 1.0; candidate name/genre statement checked on linked item.",
+      "scope_note": "Explicit puzzle video game.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "puzzle-video-game",
+      "answer": "Tetris (Game Boy)",
+      "aliases": [],
+      "source_urls": [
+        "https://www.wikidata.org/wiki/Q3519191",
+        "https://www.wikidata.org/wiki/Wikidata:Licensing"
+      ],
+      "source_license": "Wikidata structured data: CC0 1.0; candidate name/genre statement checked on linked item.",
+      "scope_note": "This QID is the 1989 Game Boy version; don’t merge with the unrelated 2006 mobile Tetris record.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "puzzle-video-game",
+      "answer": "Tetris Effect",
+      "aliases": [],
+      "source_urls": [
+        "https://www.wikidata.org/wiki/Q55381938",
+        "https://www.wikidata.org/wiki/Wikidata:Licensing"
+      ],
+      "source_license": "Wikidata structured data: CC0 1.0; candidate name/genre statement checked on linked item.",
+      "scope_note": "Explicit puzzle video game.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "puzzle-video-game",
+      "answer": "Tetris Ultimate",
+      "aliases": [],
+      "source_urls": [
+        "https://www.wikidata.org/wiki/Q18754086",
+        "https://www.wikidata.org/wiki/Wikidata:Licensing"
+      ],
+      "source_license": "Wikidata structured data: CC0 1.0; candidate name/genre statement checked on linked item.",
+      "scope_note": "Explicit puzzle video game.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "puzzle-video-game",
+      "answer": "TIS-100",
+      "aliases": [],
+      "source_urls": [
+        "https://www.wikidata.org/wiki/Q20538681",
+        "https://www.wikidata.org/wiki/Wikidata:Licensing"
+      ],
+      "source_license": "Wikidata structured data: CC0 1.0; candidate name/genre statement checked on linked item.",
+      "scope_note": "Explicit puzzle video game; programming puzzle is a broader interpretation that still fits.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "puzzle-video-game",
+      "answer": "Tetris (2006 mobile game)",
+      "aliases": [],
+      "source_urls": [
+        "https://www.wikidata.org/wiki/Q7706791",
+        "https://www.wikidata.org/wiki/Wikidata:Licensing"
+      ],
+      "source_license": "Wikidata structured data: CC0 1.0; candidate name/genre statement checked on linked item.",
+      "scope_note": "Explicit puzzle video game; title collides with the wider Tetris franchise, so retain edition qualifier in the bank.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "rhythm-music-game",
+      "answer": "Hatsune Miku: Project Mirai 2",
+      "aliases": [],
+      "source_urls": [
+        "https://www.wikidata.org/wiki/Q16259623",
+        "https://www.wikidata.org/wiki/Wikidata:Licensing"
+      ],
+      "source_license": "Wikidata structured data: CC0 1.0; candidate name/genre statement checked on linked item.",
+      "scope_note": "Explicit rhythm game; also known as Project Mirai DX, but that alias can denote a later localized release.",
+      "confidence": "medium",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "rhythm-music-game",
+      "answer": "Beat Hazard",
+      "aliases": [],
+      "source_urls": [
+        "https://www.wikidata.org/wiki/Q2892925",
+        "https://www.wikidata.org/wiki/Wikidata:Licensing"
+      ],
+      "source_license": "Wikidata structured data: CC0 1.0; candidate name/genre statement checked on linked item.",
+      "scope_note": "Explicit rhythm game.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "rhythm-music-game",
+      "answer": "Friday Night Funkin’",
+      "aliases": [],
+      "source_urls": [
+        "https://www.wikidata.org/wiki/Q105731119",
+        "https://www.wikidata.org/wiki/Wikidata:Licensing"
+      ],
+      "source_license": "Wikidata structured data: CC0 1.0; candidate name/genre statement checked on linked item.",
+      "scope_note": "Explicit rhythm game; punctuation-normalized aliases can be handled by matching rules.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "rhythm-music-game",
+      "answer": "Robobeat",
+      "aliases": [],
+      "source_urls": [
+        "https://www.wikidata.org/wiki/Q122241510",
+        "https://www.wikidata.org/wiki/Wikidata:Licensing"
+      ],
+      "source_license": "Wikidata structured data: CC0 1.0; candidate name/genre statement checked on linked item.",
+      "scope_note": "Explicit rhythm game.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "rhythm-music-game",
+      "answer": "Ongaku",
+      "aliases": [],
+      "source_urls": [
+        "https://www.wikidata.org/wiki/Q124068541",
+        "https://www.wikidata.org/wiki/Wikidata:Licensing"
+      ],
+      "source_license": "Wikidata structured data: CC0 1.0; candidate name/genre statement checked on linked item.",
+      "scope_note": "Wikidata identifies a 2015 rhythm video game; title is short and may collide with unrelated uses.",
+      "confidence": "medium",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "gaming-hardware-brand",
+      "answer": "Razer",
+      "aliases": [],
+      "source_urls": [
+        "https://www.wikidata.org/wiki/Q367412",
+        "https://www.wikidata.org/wiki/Wikidata:Licensing"
+      ],
+      "source_license": "Wikidata structured data: CC0 1.0; candidate name/genre statement checked on linked item.",
+      "scope_note": "Wikidata describes Razer as a technology company specializing in gaming products; answer is the familiar brand name of Razer Inc.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "gaming-hardware-brand",
+      "answer": "SteelSeries",
+      "aliases": [],
+      "source_urls": [
+        "https://www.wikidata.org/wiki/Q2629769",
+        "https://www.wikidata.org/wiki/Wikidata:Licensing"
+      ],
+      "source_license": "Wikidata structured data: CC0 1.0; candidate name/genre statement checked on linked item.",
+      "scope_note": "Wikidata describes the firm as a gaming peripherals and accessories manufacturer.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "gaming-hardware-brand",
+      "answer": "Thrustmaster",
+      "aliases": [],
+      "source_urls": [
+        "https://www.wikidata.org/wiki/Q382742",
+        "https://www.wikidata.org/wiki/Wikidata:Licensing"
+      ],
+      "source_license": "Wikidata structured data: CC0 1.0; candidate name/genre statement checked on linked item.",
+      "scope_note": "Hardware manufacturer known for gaming controllers/wheels; broader brand fit, not all its products are gaming hardware.",
+      "confidence": "medium",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "gaming-hardware-brand",
+      "answer": "ZOTAC",
+      "aliases": [],
+      "source_urls": [
+        "https://www.wikidata.org/wiki/Q226897",
+        "https://www.wikidata.org/wiki/Wikidata:Licensing"
+      ],
+      "source_license": "Wikidata structured data: CC0 1.0; candidate name/genre statement checked on linked item.",
+      "scope_note": "Computer hardware company with gaming product lines; broader interpretation than a dedicated gaming peripherals maker.",
+      "confidence": "medium",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "gaming-hardware-brand",
+      "answer": "Cooler Master",
+      "aliases": [],
+      "source_urls": [
+        "https://www.wikidata.org/wiki/Q619227",
+        "https://www.wikidata.org/wiki/Wikidata:Licensing"
+      ],
+      "source_license": "Wikidata structured data: CC0 1.0; candidate name/genre statement checked on linked item.",
+      "scope_note": "Computer hardware company with gaming peripherals/products; broad boundary fit.",
+      "confidence": "medium",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "gaming-hardware-brand",
+      "answer": "Sapphire Technology",
+      "aliases": [],
+      "source_urls": [
+        "https://www.wikidata.org/wiki/Q745428",
+        "https://www.wikidata.org/wiki/Wikidata:Licensing"
+      ],
+      "source_license": "Wikidata structured data: CC0 1.0; candidate name/genre statement checked on linked item.",
+      "scope_note": "Computer hardware company known for graphics cards; GPUs are gaming hardware components, though brand also serves non-gaming uses.",
+      "confidence": "medium",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "accessibility-feature",
+      "answer": "Screen magnification",
+      "aliases": [],
+      "source_urls": [
+        "https://www.w3.org/WAI/people-use-web/tools-techniques/presentation/",
+        "https://www.w3.org/copyright/document-license/"
+      ],
+      "source_license": "W3C Document License; W3C technical reports grant reuse under the published document license.",
+      "scope_note": "Direct W3C WAI example of an accessibility feature; matches assistive software/device feature.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "accessibility-feature",
+      "answer": "Volume control",
+      "aliases": [],
+      "source_urls": [
+        "https://www.w3.org/WAI/people-use-web/tools-techniques/presentation/",
+        "https://www.w3.org/copyright/document-license/"
+      ],
+      "source_license": "W3C Document License; W3C technical reports grant reuse under the published document license.",
+      "scope_note": "Direct W3C WAI example; feature controls audio content independently.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "accessibility-feature",
+      "answer": "Captions toggle",
+      "aliases": [],
+      "source_urls": [
+        "https://www.w3.org/TR/media-accessibility-reqs/",
+        "https://www.w3.org/copyright/document-license/"
+      ],
+      "source_license": "W3C Document License; W3C technical reports grant reuse under the published document license.",
+      "scope_note": "W3C media accessibility requirements explicitly list a closed-caption toggle as an accessibility control.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "accessibility-feature",
+      "answer": "Text resizing",
+      "aliases": [],
+      "source_urls": [
+        "https://www.w3.org/TR/WCAG21/",
+        "https://www.w3.org/copyright/document-license/"
+      ],
+      "source_license": "W3C Document License; W3C technical reports grant reuse under the published document license.",
+      "scope_note": "W3C WCAG success criterion and WAI mobile guidance identify text resizing as an accessibility support feature.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "accessibility-feature",
+      "answer": "Closed captions",
+      "aliases": [],
+      "source_urls": [
+        "https://www.w3.org/TR/WCAG21/",
+        "https://www.w3.org/copyright/document-license/"
+      ],
+      "source_license": "W3C Document License; W3C technical reports grant reuse under the published document license.",
+      "scope_note": "W3C WCAG treats captions as an accessibility provision for synchronized media.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "minecraft-block-item",
+      "answer": "Air",
+      "aliases": [],
+      "source_urls": [
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/blocks.json",
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/items.json",
+        "https://github.com/PrismarineJS/minecraft-data/blob/master/LICENSE"
+      ],
+      "source_license": "MIT License (minecraft-data repository).",
+      "scope_note": "Technically valid blocks/items that are creative-only or unobtainable are still in-game items; distinguish these from block states and internal IDs.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "minecraft-block-item",
+      "answer": "Cave Air",
+      "aliases": [],
+      "source_urls": [
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/blocks.json",
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/items.json",
+        "https://github.com/PrismarineJS/minecraft-data/blob/master/LICENSE"
+      ],
+      "source_license": "MIT License (minecraft-data repository).",
+      "scope_note": "Technically valid blocks/items that are creative-only or unobtainable are still in-game items; distinguish these from block states and internal IDs.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "minecraft-block-item",
+      "answer": "Barrier",
+      "aliases": [],
+      "source_urls": [
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/blocks.json",
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/items.json",
+        "https://github.com/PrismarineJS/minecraft-data/blob/master/LICENSE"
+      ],
+      "source_license": "MIT License (minecraft-data repository).",
+      "scope_note": "Technically valid blocks/items that are creative-only or unobtainable are still in-game items; distinguish these from block states and internal IDs.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "minecraft-block-item",
+      "answer": "Knowledge Book",
+      "aliases": [],
+      "source_urls": [
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/blocks.json",
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/items.json",
+        "https://github.com/PrismarineJS/minecraft-data/blob/master/LICENSE"
+      ],
+      "source_license": "MIT License (minecraft-data repository).",
+      "scope_note": "Technically valid blocks/items that are creative-only or unobtainable are still in-game items; distinguish these from block states and internal IDs.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "minecraft-block-item",
+      "answer": "Debug Stick",
+      "aliases": [],
+      "source_urls": [
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/blocks.json",
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/items.json",
+        "https://github.com/PrismarineJS/minecraft-data/blob/master/LICENSE"
+      ],
+      "source_license": "MIT License (minecraft-data repository).",
+      "scope_note": "Technically valid blocks/items that are creative-only or unobtainable are still in-game items; distinguish these from block states and internal IDs.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "minecraft-mob",
+      "answer": "Allay",
+      "aliases": [],
+      "source_urls": [
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/entities.json",
+        "https://github.com/PrismarineJS/minecraft-data/blob/master/LICENSE"
+      ],
+      "source_license": "MIT License (minecraft-data repository).",
+      "scope_note": "Include hostile, neutral, passive and utility mobs; “mob” is the in-game entity category, not only enemies. Version-tag newer mobs.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "minecraft-mob",
+      "answer": "Bogged",
+      "aliases": [],
+      "source_urls": [
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/entities.json",
+        "https://github.com/PrismarineJS/minecraft-data/blob/master/LICENSE"
+      ],
+      "source_license": "MIT License (minecraft-data repository).",
+      "scope_note": "Include hostile, neutral, passive and utility mobs; “mob” is the in-game entity category, not only enemies. Version-tag newer mobs.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "minecraft-mob",
+      "answer": "Endermite",
+      "aliases": [],
+      "source_urls": [
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/entities.json",
+        "https://github.com/PrismarineJS/minecraft-data/blob/master/LICENSE"
+      ],
+      "source_license": "MIT License (minecraft-data repository).",
+      "scope_note": "Include hostile, neutral, passive and utility mobs; “mob” is the in-game entity category, not only enemies. Version-tag newer mobs.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "minecraft-mob",
+      "answer": "Hoglin",
+      "aliases": [],
+      "source_urls": [
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/entities.json",
+        "https://github.com/PrismarineJS/minecraft-data/blob/master/LICENSE"
+      ],
+      "source_license": "MIT License (minecraft-data repository).",
+      "scope_note": "Include hostile, neutral, passive and utility mobs; “mob” is the in-game entity category, not only enemies. Version-tag newer mobs.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "minecraft-mob",
+      "answer": "Zoglin",
+      "aliases": [],
+      "source_urls": [
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/entities.json",
+        "https://github.com/PrismarineJS/minecraft-data/blob/master/LICENSE"
+      ],
+      "source_license": "MIT License (minecraft-data repository).",
+      "scope_note": "Include hostile, neutral, passive and utility mobs; “mob” is the in-game entity category, not only enemies. Version-tag newer mobs.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "minecraft-biome-structure",
+      "answer": "Deep Dark",
+      "aliases": [],
+      "source_urls": [
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/biomes.json",
+        "https://github.com/PrismarineJS/minecraft-data/blob/master/LICENSE"
+      ],
+      "source_license": "MIT License (minecraft-data repository).",
+      "scope_note": "Prompt explicitly accepts either biomes or structures. Include generated structures and distinct biome names; exclude individual rooms/variants unless their own named structure exists.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "minecraft-biome-structure",
+      "answer": "Mushroom Fields",
+      "aliases": [
+        "Mushroom Field"
+      ],
+      "source_urls": [
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/biomes.json",
+        "https://github.com/PrismarineJS/minecraft-data/blob/master/LICENSE"
+      ],
+      "source_license": "MIT License (minecraft-data repository).",
+      "scope_note": "Prompt explicitly accepts either biomes or structures. Include generated structures and distinct biome names; exclude individual rooms/variants unless their own named structure exists.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "minecraft-biome-structure",
+      "answer": "Badlands",
+      "aliases": [],
+      "source_urls": [
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/biomes.json",
+        "https://github.com/PrismarineJS/minecraft-data/blob/master/LICENSE"
+      ],
+      "source_license": "MIT License (minecraft-data repository).",
+      "scope_note": "Valid Minecraft biome, included by the prompt’s explicit “biome or structure” wording.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "minecraft-biome-structure",
+      "answer": "Cherry Grove",
+      "aliases": [],
+      "source_urls": [
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/biomes.json",
+        "https://github.com/PrismarineJS/minecraft-data/blob/master/LICENSE"
+      ],
+      "source_license": "MIT License (minecraft-data repository).",
+      "scope_note": "Valid Minecraft biome, included by the prompt’s explicit “biome or structure” wording.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "minecraft-biome-structure",
+      "answer": "Pale Garden",
+      "aliases": [],
+      "source_urls": [
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/biomes.json",
+        "https://github.com/PrismarineJS/minecraft-data/blob/master/LICENSE"
+      ],
+      "source_license": "MIT License (minecraft-data repository).",
+      "scope_note": "Valid Minecraft biome, included by the prompt’s explicit “biome or structure” wording.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "minecraft-biome-structure",
+      "answer": "Dripstone Caves",
+      "aliases": [],
+      "source_urls": [
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/biomes.json",
+        "https://github.com/PrismarineJS/minecraft-data/blob/master/LICENSE"
+      ],
+      "source_license": "MIT License (minecraft-data repository).",
+      "scope_note": "Valid Minecraft biome, included by the prompt’s explicit “biome or structure” wording.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "minecraft-biome-structure",
+      "answer": "Basalt Deltas",
+      "aliases": [],
+      "source_urls": [
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/biomes.json",
+        "https://github.com/PrismarineJS/minecraft-data/blob/master/LICENSE"
+      ],
+      "source_license": "MIT License (minecraft-data repository).",
+      "scope_note": "Valid Minecraft biome, included by the prompt’s explicit “biome or structure” wording.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "minecraft-biome-structure",
+      "answer": "Bamboo Jungle",
+      "aliases": [],
+      "source_urls": [
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/biomes.json",
+        "https://github.com/PrismarineJS/minecraft-data/blob/master/LICENSE"
+      ],
+      "source_license": "MIT License (minecraft-data repository).",
+      "scope_note": "Valid Minecraft biome, included by the prompt’s explicit “biome or structure” wording.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "minecraft-block-item",
+      "answer": "Campfire",
+      "aliases": [],
+      "source_urls": [
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/blocks.json",
+        "https://github.com/PrismarineJS/minecraft-data/blob/master/LICENSE"
+      ],
+      "source_license": "MIT License (minecraft-data repository).",
+      "scope_note": "Exact block display name in the Minecraft Java 1.21.4 structured blocks dataset.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "minecraft-block-item",
+      "answer": "Sea Lantern",
+      "aliases": [],
+      "source_urls": [
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/blocks.json",
+        "https://github.com/PrismarineJS/minecraft-data/blob/master/LICENSE"
+      ],
+      "source_license": "MIT License (minecraft-data repository).",
+      "scope_note": "Exact block display name in the Minecraft Java 1.21.4 structured blocks dataset.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "minecraft-block-item",
+      "answer": "Redstone Lamp",
+      "aliases": [],
+      "source_urls": [
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/blocks.json",
+        "https://github.com/PrismarineJS/minecraft-data/blob/master/LICENSE"
+      ],
+      "source_license": "MIT License (minecraft-data repository).",
+      "scope_note": "Exact block display name in the Minecraft Java 1.21.4 structured blocks dataset.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "minecraft-block-item",
+      "answer": "Slime Block",
+      "aliases": [],
+      "source_urls": [
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/blocks.json",
+        "https://github.com/PrismarineJS/minecraft-data/blob/master/LICENSE"
+      ],
+      "source_license": "MIT License (minecraft-data repository).",
+      "scope_note": "Exact block display name in the Minecraft Java 1.21.4 structured blocks dataset.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    },
+    {
+      "prompt_id": "minecraft-block-item",
+      "answer": "Honey Block",
+      "aliases": [],
+      "source_urls": [
+        "https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/1.21.4/blocks.json",
+        "https://github.com/PrismarineJS/minecraft-data/blob/master/LICENSE"
+      ],
+      "source_license": "MIT License (minecraft-data repository).",
+      "scope_note": "Exact block display name in the Minecraft Java 1.21.4 structured blocks dataset.",
+      "confidence": "high",
+      "vetting_status": "verified"
+    }
+  ]
+}

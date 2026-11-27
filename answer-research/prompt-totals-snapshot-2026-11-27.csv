@@ -1,0 +1,128 @@
+prompt_id,question,current_total,Bit,Nibble,Byte,Kilobyte,Megabyte,baseline_e68faf6_total,net_change_vs_baseline,current_pass_source_checked_additions
+2d-shape,Name a 2D shape,127,6,20,80,19,2,127,0,0
+3d-shape-solid,Name a 3D shape or solid,158,7,25,100,24,2,149,9,9
+accessibility-feature,"Name an accessibility feature, like a screen reader",126,6,20,81,17,2,122,4,4
+ai-chatbot-language-model-voice,"Name an AI chatbot, language model or voice assistant, like ChatGPT",226,6,37,147,34,2,226,0,0
+ai-image-video-music-generator,"Name an AI image, video or music generator, like Midjourney",131,5,21,83,20,2,131,0,0
+algorithmic-technique-trick,"Name an algorithmic technique or trick, like two pointers",151,7,24,95,23,2,151,0,0
+apple-product,Name an Apple product,226,6,37,147,34,2,225,1,1
+arcade-game,"Name an arcade game, like Pac-Man",331,6,55,218,50,2,331,0,0
+attack,"Name a type of cyber attack that isn't a type of malware, like phishing",215,7,36,139,31,2,215,0,0
+authentication-method,"Name an authentication method, like a fingerprint scan",98,6,15,61,14,2,98,0,0
+branch-mathematics,Name a branch of mathematics,169,7,27,108,25,2,169,0,0
+button-on-game-controller,"Name a button on a game controller, like Start",75,7,12,46,8,2,75,0,0
+chemical-element,Name a chemical element,118,6,18,74,18,2,118,0,0
+chess-opening,"Name a chess opening, like the Sicilian Defence",283,7,46,186,42,2,283,0,0
+cloud-storage-filehosting-service,"Name a cloud storage or file-hosting service, like Dropbox",121,7,19,75,18,2,120,1,1
+common-video-game-enemy-creature,"Name a video game enemy, like a Goomba",501,7,83,334,75,2,500,1,1
+computer-peripheral,"Name a computer peripheral, like a mouse",98,6,15,60,15,2,97,1,1
+computing-job-title,"Name a computing job title, like software engineer",254,6,41,167,38,2,254,0,0
+computing-term-borrowed-everyday-word,"Name a computing term borrowed from an everyday word, like mouse",320,7,53,210,48,2,320,0,0
+ds,Name a data structure,345,5,55,231,52,2,345,0,0
+electronic-toy-gadget-1970s-2000s,"Name an electronic toy or gadget from the 1970s to 2000s, like a Tamagotchi",221,6,37,142,34,2,220,1,1
+email-client-email-service,"Name an email client or email service, like Gmail",162,7,26,103,24,2,159,3,3
+emoticon-emoji,"Name an emoticon or emoji, like :)",4008,7,645,2752,602,2,517,3491,0
+famous-error-message-error-screen,"Name a famous error message or error screen, like the Blue Screen of Death",130,5,21,83,19,2,128,2,2
+famous-gamer-streamer-speedrunner,"Name a famous gamer, streamer or speedrunner, like PewDiePie",282,6,46,186,42,2,282,0,0
+famous-mathematician,Name a famous mathematician,9511,5,1615,6462,1427,2,9511,0,0
+famous-maths-theorem-conjecture-inequality,"Name a famous maths theorem or conjecture, like Pythagoras' theorem",455,7,71,306,69,2,455,0,0
+famous-tech-flop-games-console,"Name a famous tech flop that isn't a games console, like Google Glass",140,6,22,90,20,2,140,0,0
+famous-video-game-weapon,"Name a famous video game weapon, like the Master Sword",348,6,58,230,52,2,348,0,0
+fictional-ai-robot,Name a fictional AI or robot,193,5,32,125,29,2,193,0,0
+fictional-hacker-programmer,"Name a fictional hacker or programmer, like Neo",86,6,13,52,13,2,86,0,0
+fictional-scientist-inventor-who-superhero,"Name a fictional scientist or inventor who isn't a superhero, like Doc Brown",164,6,26,106,25,1,164,0,0
+film-about-mathematician-scientist,"Name a film about a mathematician or scientist, like Good Will Hunting",103,6,16,63,16,2,103,0,0
+film-famous-its-cgi-visual,"Name a film famous for its CGI or visual effects, like Avatar",171,6,27,110,26,2,171,0,0
+film-tv-show-about-computers,"Name a film or TV show about computers, hackers or AI, like The Matrix",159,6,25,102,24,2,159,0,0
+firstperson-shooter,"Name a first-person shooter, like Call of Duty",280,7,46,182,43,2,279,1,1
+font-typeface,Name a font or typeface,363,6,60,241,54,2,342,21,21
+galaxy,"Name a galaxy, like Andromeda",181,5,29,118,27,2,164,17,17
+gaming-controller-peripheral-accessory,"Name a gaming controller, peripheral or accessory, like the Wii Remote",249,6,41,163,37,2,249,0,0
+gaming-hardware-brand,"Name a gaming hardware brand, like Razer",183,7,29,118,27,2,182,1,1
+geeky-hobby,"Name a geeky hobby, like coding",194,6,31,126,29,2,194,0,0
+google-product-service,Name a Google product or service,253,6,41,166,38,2,253,0,0
+graph,"Name a graph algorithm, like Dijkstra's algorithm",196,6,32,126,30,2,195,1,1
+greek-letter,Name a Greek letter,31,6,5,13,5,2,31,0,0
+hacker-group,"Name a hacker group, like Anonymous",167,6,27,107,25,2,167,0,0
+healing-food-item-video-game,"Name a healing or food item from a video game, like a potion",192,7,31,123,29,2,191,1,1
+horror-video-game,"Name a horror video game, like Resident Evil",169,6,27,109,25,2,169,0,0
+integration-technique,"Name a calculus technique or rule, like integration by parts",140,5,23,91,20,1,140,0,0
+internet-meme,Name an internet meme,395,7,65,262,59,2,395,0,0
+internet-slang-term-acronym,"Name an internet slang term or acronym, like LOL",281,7,46,184,42,2,281,0,0
+it-support-fix,"Name an IT support fix, like turning it off and on again",123,7,19,77,18,2,123,0,0
+key,Name a key on a keyboard,180,7,28,116,27,2,178,2,2
+lang,Name a programming language,8509,5,1361,5865,1276,2,8509,0,0
+laptop-pc-brand,"Name a laptop or PC brand, like Dell",186,6,30,120,28,2,185,1,1
+largenumber-word,"Name a large-number word, like billion",90,5,14,55,14,2,90,0,0
+linux-distribution,Name a Linux distribution,325,5,56,213,49,2,324,1,1
+lossless-lossy-compression-algorithm,"Name a compression algorithm or format, like ZIP",308,7,51,202,46,2,308,0,0
+machine,"Name an electronic computer from before 1975, like ENIAC",211,6,34,137,32,2,210,1,1
+mario-character-other-than-mario,"Name a Mario character other than Mario, like Luigi",305,7,50,200,46,2,305,0,0
+mario-powerup-item,"Name a Mario power-up or item, like the Super Mushroom",138,6,22,87,21,2,138,0,0
+mathematical-constant,Name a mathematical constant,85,5,13,52,13,2,85,0,0
+mathematical-notation-system,"Name a mathematical notation, like Big O notation",83,6,13,50,12,2,83,0,0
+mathematical-operation,"Name a mathematical operation, like addition",114,5,18,72,17,2,114,0,0
+mathematical-symbol-greek-letter,"Name a mathematical symbol that isn't a Greek letter, like the infinity symbol",109,7,17,68,15,2,108,1,1
+maths-competition-exam,"Name a maths competition or exam, like the IMO",118,7,18,73,18,2,115,3,3
+messaging-chat-app,"Name a messaging or chat app, like WhatsApp",260,7,42,170,39,2,260,0,0
+microsoft-product,Name a Microsoft product,213,6,35,138,32,2,213,0,0
+minecraft-biome-structure,"Name a Minecraft biome or structure, like a village",127,7,20,79,19,2,126,1,1
+minecraft-block-item,Name a Minecraft block or item,598,7,100,399,90,2,597,1,1
+minecraft-mob,Name a Minecraft mob,102,6,17,69,8,2,102,0,0
+mobile-game,"Name a mobile game, like Angry Birds",310,7,51,203,47,2,310,0,0
+mobile-phone-brand-model,"Name a mobile phone, by brand or model",369,6,61,245,55,2,360,9,9
+multiplayer-game-mode,"Name a multiplayer game mode, like capture the flag",230,6,37,150,35,2,230,0,0
+named-mathematical-function,"Name a mathematical function, like sine",210,7,34,135,32,2,210,0,0
+number-base-numeral-system,"Name a number base, numeral system or binary number format, like hexadecimal",105,5,17,65,16,2,105,0,0
+number-famous-memes-pop-culture,"Name a number famous from memes or pop culture, like 42",76,6,11,46,11,2,76,0,0
+number-with-special-meaning-computing,"Name a number with a special meaning in computing, like 255",100,6,15,62,15,2,100,0,0
+obsolete-technology-storage-medium-display,"Name an obsolete technology, like the fax machine",200,7,33,131,27,2,200,0,0
+online-learning-website,"Name an online learning website, like Khan Academy",176,6,28,114,26,2,176,0,0
+part,Name a component inside a computer,100,7,15,61,15,2,97,3,3
+penandpaper-game,"Name a pen-and-paper game, like noughts and crosses",79,5,12,48,12,2,79,0,0
+people,Name a famous computer scientist,487,7,81,323,74,2,487,0,0
+piece-fictional-technology,"Name a piece of fictional technology, like a lightsaber",200,6,32,129,31,2,200,0,0
+piece-gamer-slang,"Name a piece of gamer slang or online gaming term, like noob or lag",888,5,154,590,137,2,888,0,0
+piece-maths-software-online-maths,"Name a piece of maths software or online maths tool, like Desmos",122,7,19,76,18,2,122,0,0
+platform-game,"Name a platform game, like Super Mario Bros.",293,6,48,193,44,2,293,0,0
+pokmon,Name a Pokémon,1388,7,170,1055,154,2,1025,363,0
+programming-competition-practice-site,"Name a programming competition or practice site, like LeetCode",100,7,15,61,15,2,100,0,0
+puzzle-video-game,"Name a puzzle video game, like Tetris",227,6,36,149,34,2,224,3,3
+real-robot,"Name a real robot, like a Roomba",223,6,37,146,32,2,222,1,1
+really-common-password,"Name a really common (bad) password, like 123456",538,7,90,358,81,2,538,0,0
+rhythm-music-game,"Name a rhythm or music game, like Guitar Hero",252,6,41,165,38,2,249,3,3
+rpg-stat-attribute,"Name an RPG stat or attribute, like HP",141,6,22,90,21,2,141,0,0
+science-maths-tech-youtube-channel,"Name a science, maths or tech YouTube channel, like Numberphile",233,6,38,152,35,2,233,0,0
+scifi-trope-concept,"Name a sci-fi trope or concept, like time travel",258,7,42,168,39,2,258,0,0
+smarthome-wearable-device,"Name a smart-home or wearable device, like an Amazon Echo",375,7,62,246,58,2,375,0,0
+social-media-platform,Name a social media platform,486,7,78,326,73,2,486,0,0
+sports-video-game,"Name a sports video game, like FIFA",198,6,32,128,30,2,196,2,2
+spy-cyber-agency,"Name a spy or cyber agency, like GCHQ",179,7,30,114,26,2,179,0,0
+storage-medium,"Name a storage medium, like a floppy disk",122,6,16,79,19,2,121,1,1
+strategy-video-game,"Name a strategy video game, like Civilization",252,6,42,164,38,2,248,4,4
+streaming-service,Name a streaming service,193,6,31,125,29,2,192,1,1
+task-ai-is,"Name a task AI is used for, like speech recognition",230,7,37,149,35,2,230,0,0
+tech-acronym,"Name a tech acronym, like CPU",446,7,74,296,67,2,446,0,0
+tech-company-games-company,Name a tech company that isn't a games company,2649,7,425,1818,397,2,2638,11,11
+tech-founder-ceo,Name a tech founder or CEO,344,6,57,227,52,2,344,0,0
+text-editor-ide,Name a text editor or IDE,204,7,33,132,30,2,203,1,1
+type-chart-graph-showing-data,"Name a type of chart or graph for showing data, like a pie chart",119,6,19,75,17,2,119,0,0
+type-computer-memory,"Name a type of computer memory, like RAM",128,6,17,81,22,2,108,20,2
+type-number-property,"Name a type of number, like prime",223,7,36,146,32,2,223,0,0
+unit-data,"Name a unit of data, like a byte",80,6,13,46,13,2,80,0,0
+unit-measurement-unit-data,Name a unit of measurement that isn't a unit of data,416,7,69,275,63,2,415,1,1
+university-known-computer-science-maths,Name a university known for computer science or maths,207,6,34,134,31,2,207,0,0
+video-game-company,"Name a video game company (developer or publisher), like Nintendo",392,7,65,259,59,2,392,0,0
+video-game-console,Name a video game console,176,5,30,113,26,2,176,0,0
+video-game-currency,"Name a video game currency, like Rupees",138,6,22,87,21,2,138,0,0
+video-game-genre,"Name a video game genre, like platformer",140,6,22,89,21,2,140,0,0
+video-game-hero-protagonist,"Name a video game hero or protagonist, like Mario",381,7,63,253,56,2,381,0,0
+video-game-hud-ui-element,"Name a video game HUD or UI element, like a health bar",115,6,18,72,17,2,115,0,0
+video-game-location-world,"Name a video game location or world, like Hyrule",521,6,87,348,78,2,521,0,0
+video-game-mechanic,"Name a video game mechanic, like double jump",234,6,38,153,35,2,234,0,0
+video-game-sidekick-companion,"Name a video game sidekick or companion, like Navi",521,7,87,347,78,2,521,0,0
+video-game-vehicle-mount,"Name a video game vehicle or mount, like Epona",219,6,36,142,33,2,219,0,0
+video-game-villain-boss,"Name a video game villain or boss, like Bowser",512,6,85,342,77,2,512,0,0
+web-browser,Name a web browser,162,7,26,103,24,2,162,0,0
+windows-system-tool-utility,"Name a Windows system tool or utility, like Task Manager",222,7,36,144,33,2,222,0,0
+word-ending-ware-type-malware,"Name a word ending in ""-ware"", like freeware",106,6,16,66,16,2,106,0,0

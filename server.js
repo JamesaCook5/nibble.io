@@ -36,6 +36,15 @@ const greekGlyphNames = {
   'Α':'alpha','α':'alpha','Β':'beta','β':'beta','Γ':'gamma','γ':'gamma','Δ':'delta','δ':'delta','Ε':'epsilon','ε':'epsilon','Ζ':'zeta','ζ':'zeta','Η':'eta','η':'eta','Θ':'theta','θ':'theta','Ι':'iota','ι':'iota','Κ':'kappa','κ':'kappa','Λ':'lambda','λ':'lambda','Μ':'mu','μ':'mu','Ν':'nu','ν':'nu','Ξ':'xi','ξ':'xi','Ο':'omicron','ο':'omicron','Π':'pi','π':'pi','Ρ':'rho','ρ':'rho','Σ':'sigma','σ':'sigma','ς':'sigma','Τ':'tau','τ':'tau','Υ':'upsilon','υ':'upsilon','Φ':'phi','φ':'phi','Χ':'chi','χ':'chi','Ψ':'psi','ψ':'psi','Ω':'omega','ω':'omega',
   'Ϝ':'digamma','ϝ':'digamma','Ϙ':'koppa','ϙ':'koppa','Ϟ':'koppa','ϟ':'koppa','Ϛ':'stigma','ϛ':'stigma','Ϡ':'sampi','ϡ':'sampi','Ϻ':'san','ϻ':'san','Ϸ':'sho','ϸ':'sho','Ͳ':'sampi','ͳ':'sampi','Ϲ':'sigma','ϲ':'sigma'
 };
+function emojiSymbolKey(value) {
+  const raw = String(value).normalize('NFC').trim();
+  const pictograph = /[\p{Extended_Pictographic}\u{1F1E6}-\u{1F1FF}]/u.test(raw);
+  const emoticon = raw.length <= 12 && /^[\s:;=<>8xXoODpP/\\()[\]{}|_^~'\-+*]+$/u.test(raw) && /[^\s]/u.test(raw);
+  return pictograph || emoticon ? 'emoji:' + raw.replace(/\s/gu, '') : '';
+}
+function answerKey(id, value) {
+  return id === 'emoticon-emoji' ? (emojiSymbolKey(value) || norm(value)) : norm(value);
+}
 function norm(s) {
   return String(s).normalize('NFKD').replace(/\p{M}/gu,'').replace(/[Α-Ωα-ωςϜϝϘϙϞϟϚϛϠϡϺϻϷϸͲͳϹϲ]/g, ch => greekGlyphNames[ch] || ch).toLowerCase()
     .replace(/&/g,' and ').replace(/\+/g,' plus ').replace(/#/g,' sharp ').replace(/\*/g,' star ').replace(/\^/g,' pow ')
@@ -149,7 +158,7 @@ for (const source of data) for (const [id, set] of Object.entries(source)) {
   for (const answer of set.answers || []) {
     const item = { display: answer.answer, tier: tierKey[answer.tier] || 'stock' };
     for (const name of [answer.answer, ...(answer.aliases || [])]) {
-      const key = norm(name);
+      const key = answerKey(id, name);
       const variants = [key, ...stripWords.map(word => key.endsWith(word) ? key.slice(0, -word.length) : '')].filter(Boolean);
       for (const variant of variants) index.set(variant, item);
       for (const prefix of set.prefix || []) for (const variant of variants) index.set(norm(prefix) + variant, item);
@@ -161,6 +170,7 @@ const fuzzyAnswerIndex = new Map();
 for (const [id, index] of answerIndex) {
   const root = { children:new Map(), items:[] };
   for (const [key, item] of index) {
+    if (key.startsWith('emoji:')) continue;
     const candidate = Array.from(key.replace(/-/g, ''));
     if (candidate.length < 4) continue;
     let node = root;
@@ -209,11 +219,13 @@ function fuzzyMatch(root, input, maxDistance) {
 }
 function check(id, raw) {
   if (!promptById.has(id)) return null;
-  const key = norm(raw);
+  const symbolKey = id === 'emoticon-emoji' ? emojiSymbolKey(raw) : '';
+  const key = symbolKey || norm(raw);
   const singular = key.endsWith('ies') ? key.slice(0, -3) + 'y' : key.endsWith('s') && !key.endsWith('ss') ? key.slice(0, -1) : key;
   const index = answerIndex.get(id);
   const item = index && (index.get(key) || index.get(singular));
   if (item) return { ok:true, item };
+  if (symbolKey) return { ok:false };
 
   const input = key.replace(/-/g, '');
   const length = Array.from(input).length;

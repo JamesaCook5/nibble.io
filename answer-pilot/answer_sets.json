@@ -93578,12 +93578,14 @@
           "answer": "Bulbasaur",
           "aliases": [],
           "sources": [
-            "pokeapi"
+            "pokeapi",
+            "https://pokeapi.co/api/v2/pokemon-species/bulbasaur/"
           ],
           "method": "generation (0.6) + wordfreq (0.4); tier hand-picked",
           "zipf": 2.29,
           "fam": 0.7832,
-          "tier": "Bit"
+          "tier": "Bit",
+          "scope_note": "Species-name list; regional/localized names should be aliases only when verified. Include forms only if current bank treats each form as a distinct answer."
         },
         {
           "answer": "Charmander",
@@ -93622,12 +93624,14 @@
           "answer": "Pikachu",
           "aliases": [],
           "sources": [
-            "pokeapi"
+            "pokeapi",
+            "https://pokeapi.co/api/v2/pokemon-species/pikachu/"
           ],
           "method": "generation (0.6) + wordfreq (0.4); tier hand-picked",
           "zipf": 3.18,
           "fam": 0.8544,
-          "tier": "Bit"
+          "tier": "Bit",
+          "scope_note": "Species-name list; regional/localized names should be aliases only when verified. Include forms only if current bank treats each form as a distinct answer."
         },
         {
           "answer": "Eevee",
@@ -94169,27 +94173,33 @@
         },
         {
           "answer": "Farfetch'd",
-          "aliases": [],
+          "aliases": [
+            "Farfetchd"
+          ],
           "sources": [
             "llm",
-            "pokeapi"
+            "pokeapi",
+            "https://pokeapi.co/api/v2/pokemon-species/farfetchd/"
           ],
           "method": "generation (0.6) + wordfreq (0.4)",
           "zipf": 1.3,
           "fam": 0.704,
-          "tier": "Nibble"
+          "tier": "Nibble",
+          "scope_note": "Species-name list; regional/localized names should be aliases only when verified. Include forms only if current bank treats each form as a distinct answer."
         },
         {
           "answer": "Mr. Mime",
           "aliases": [],
           "sources": [
             "llm",
-            "pokeapi"
+            "pokeapi",
+            "https://pokeapi.co/api/v2/pokemon-species/mr-mime/"
           ],
           "method": "generation (0.6) + wordfreq (0.4)",
           "zipf": 3.06,
           "fam": 0.6,
-          "tier": "Byte"
+          "tier": "Byte",
+          "scope_note": "Species-name list; regional/localized names should be aliases only when verified. Include forms only if current bank treats each form as a distinct answer."
         },
         {
           "answer": "Mime Jr.",
@@ -102178,12 +102188,14 @@
           "answer": "Mimikyu",
           "aliases": [],
           "sources": [
-            "pokeapi"
+            "pokeapi",
+            "https://pokeapi.co/api/v2/pokemon-species/mimikyu/"
           ],
           "method": "generation (0.6) + wordfreq (0.4)",
           "zipf": 1.41,
           "fam": 0.3128,
-          "tier": "Byte"
+          "tier": "Byte",
+          "scope_note": "Species-name list; regional/localized names should be aliases only when verified. Include forms only if current bank treats each form as a distinct answer."
         },
         {
           "answer": "Bruxish",
@@ -104868,6 +104880,4362 @@
           "zipf": 0.0,
           "fam": 0.2,
           "tier": "Byte"
+        },
+        {
+          "answer": "Deoxys Normal",
+          "aliases": [
+            "deoxys-normal"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Wormadam Plant",
+          "aliases": [
+            "wormadam-plant"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Giratina Altered",
+          "aliases": [
+            "giratina-altered"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Shaymin Land",
+          "aliases": [
+            "shaymin-land"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Basculin Red Striped",
+          "aliases": [
+            "basculin-red-striped"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Darmanitan Standard",
+          "aliases": [
+            "darmanitan-standard"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Frillish Male",
+          "aliases": [
+            "frillish-male"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Jellicent Male",
+          "aliases": [
+            "jellicent-male"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Tornadus Incarnate",
+          "aliases": [
+            "tornadus-incarnate"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Thundurus Incarnate",
+          "aliases": [
+            "thundurus-incarnate"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Landorus Incarnate",
+          "aliases": [
+            "landorus-incarnate"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Keldeo Ordinary",
+          "aliases": [
+            "keldeo-ordinary"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Meloetta Aria",
+          "aliases": [
+            "meloetta-aria"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Pyroar Male",
+          "aliases": [
+            "pyroar-male"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Meowstic Male",
+          "aliases": [
+            "meowstic-male"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Aegislash Shield",
+          "aliases": [
+            "aegislash-shield"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Pumpkaboo Average",
+          "aliases": [
+            "pumpkaboo-average"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Gourgeist Average",
+          "aliases": [
+            "gourgeist-average"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Zygarde 50",
+          "aliases": [
+            "zygarde-50"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Oricorio Baile",
+          "aliases": [
+            "oricorio-baile"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Lycanroc Midday",
+          "aliases": [
+            "lycanroc-midday"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Wishiwashi Solo",
+          "aliases": [
+            "wishiwashi-solo"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Minior Red Meteor",
+          "aliases": [
+            "minior-red-meteor"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Mimikyu Disguised",
+          "aliases": [
+            "mimikyu-disguised"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Toxtricity Amped",
+          "aliases": [
+            "toxtricity-amped"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Eiscue Ice",
+          "aliases": [
+            "eiscue-ice"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Indeedee Male",
+          "aliases": [
+            "indeedee-male"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Morpeko Full Belly",
+          "aliases": [
+            "morpeko-full-belly"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Urshifu Single Strike",
+          "aliases": [
+            "urshifu-single-strike"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Basculegion Male",
+          "aliases": [
+            "basculegion-male"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Enamorus Incarnate",
+          "aliases": [
+            "enamorus-incarnate"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Oinkologne Male",
+          "aliases": [
+            "oinkologne-male"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Maushold Family Of Four",
+          "aliases": [
+            "maushold-family-of-four"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Squawkabilly Green Plumage",
+          "aliases": [
+            "squawkabilly-green-plumage"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Palafin Zero",
+          "aliases": [
+            "palafin-zero"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Tatsugiri Curly",
+          "aliases": [
+            "tatsugiri-curly"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Dudunsparce Two Segment",
+          "aliases": [
+            "dudunsparce-two-segment"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Deoxys Attack",
+          "aliases": [
+            "deoxys-attack"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Deoxys Defense",
+          "aliases": [
+            "deoxys-defense"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Deoxys Speed",
+          "aliases": [
+            "deoxys-speed"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Wormadam Sandy",
+          "aliases": [
+            "wormadam-sandy"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Wormadam Trash",
+          "aliases": [
+            "wormadam-trash"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Shaymin Sky",
+          "aliases": [
+            "shaymin-sky"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Giratina Origin",
+          "aliases": [
+            "giratina-origin"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Rotom Heat",
+          "aliases": [
+            "rotom-heat"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Rotom Wash",
+          "aliases": [
+            "rotom-wash"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Rotom Frost",
+          "aliases": [
+            "rotom-frost"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Rotom Fan",
+          "aliases": [
+            "rotom-fan"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Rotom Mow",
+          "aliases": [
+            "rotom-mow"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Castform Sunny",
+          "aliases": [
+            "castform-sunny"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Castform Rainy",
+          "aliases": [
+            "castform-rainy"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Castform Snowy",
+          "aliases": [
+            "castform-snowy"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Basculin Blue Striped",
+          "aliases": [
+            "basculin-blue-striped"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Darmanitan Zen",
+          "aliases": [
+            "darmanitan-zen"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Meloetta Pirouette",
+          "aliases": [
+            "meloetta-pirouette"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Tornadus Therian",
+          "aliases": [
+            "tornadus-therian"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Thundurus Therian",
+          "aliases": [
+            "thundurus-therian"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Landorus Therian",
+          "aliases": [
+            "landorus-therian"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Kyurem Black",
+          "aliases": [
+            "kyurem-black"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Kyurem White",
+          "aliases": [
+            "kyurem-white"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Keldeo Resolute",
+          "aliases": [
+            "keldeo-resolute"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Meowstic Female",
+          "aliases": [
+            "meowstic-female"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Aegislash Blade",
+          "aliases": [
+            "aegislash-blade"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Pumpkaboo Small",
+          "aliases": [
+            "pumpkaboo-small"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Pumpkaboo Large",
+          "aliases": [
+            "pumpkaboo-large"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Pumpkaboo Super",
+          "aliases": [
+            "pumpkaboo-super"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Gourgeist Small",
+          "aliases": [
+            "gourgeist-small"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Gourgeist Large",
+          "aliases": [
+            "gourgeist-large"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Gourgeist Super",
+          "aliases": [
+            "gourgeist-super"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Venusaur Mega",
+          "aliases": [
+            "venusaur-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Charizard Mega X",
+          "aliases": [
+            "charizard-mega-x"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Charizard Mega Y",
+          "aliases": [
+            "charizard-mega-y"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Blastoise Mega",
+          "aliases": [
+            "blastoise-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Alakazam Mega",
+          "aliases": [
+            "alakazam-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Gengar Mega",
+          "aliases": [
+            "gengar-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Kangaskhan Mega",
+          "aliases": [
+            "kangaskhan-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Pinsir Mega",
+          "aliases": [
+            "pinsir-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Gyarados Mega",
+          "aliases": [
+            "gyarados-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Aerodactyl Mega",
+          "aliases": [
+            "aerodactyl-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Mewtwo Mega X",
+          "aliases": [
+            "mewtwo-mega-x"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Mewtwo Mega Y",
+          "aliases": [
+            "mewtwo-mega-y"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Ampharos Mega",
+          "aliases": [
+            "ampharos-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Scizor Mega",
+          "aliases": [
+            "scizor-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Heracross Mega",
+          "aliases": [
+            "heracross-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Houndoom Mega",
+          "aliases": [
+            "houndoom-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Tyranitar Mega",
+          "aliases": [
+            "tyranitar-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Blaziken Mega",
+          "aliases": [
+            "blaziken-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Gardevoir Mega",
+          "aliases": [
+            "gardevoir-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Mawile Mega",
+          "aliases": [
+            "mawile-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Aggron Mega",
+          "aliases": [
+            "aggron-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Medicham Mega",
+          "aliases": [
+            "medicham-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Manectric Mega",
+          "aliases": [
+            "manectric-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Banette Mega",
+          "aliases": [
+            "banette-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Absol Mega",
+          "aliases": [
+            "absol-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Garchomp Mega",
+          "aliases": [
+            "garchomp-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Lucario Mega",
+          "aliases": [
+            "lucario-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Abomasnow Mega",
+          "aliases": [
+            "abomasnow-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Floette Eternal",
+          "aliases": [
+            "floette-eternal"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Latias Mega",
+          "aliases": [
+            "latias-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Latios Mega",
+          "aliases": [
+            "latios-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Swampert Mega",
+          "aliases": [
+            "swampert-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Sceptile Mega",
+          "aliases": [
+            "sceptile-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Sableye Mega",
+          "aliases": [
+            "sableye-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Altaria Mega",
+          "aliases": [
+            "altaria-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Gallade Mega",
+          "aliases": [
+            "gallade-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Audino Mega",
+          "aliases": [
+            "audino-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Sharpedo Mega",
+          "aliases": [
+            "sharpedo-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Slowbro Mega",
+          "aliases": [
+            "slowbro-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Steelix Mega",
+          "aliases": [
+            "steelix-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Pidgeot Mega",
+          "aliases": [
+            "pidgeot-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Glalie Mega",
+          "aliases": [
+            "glalie-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Diancie Mega",
+          "aliases": [
+            "diancie-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Metagross Mega",
+          "aliases": [
+            "metagross-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Kyogre Primal",
+          "aliases": [
+            "kyogre-primal"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Groudon Primal",
+          "aliases": [
+            "groudon-primal"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Rayquaza Mega",
+          "aliases": [
+            "rayquaza-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Pikachu Rock Star",
+          "aliases": [
+            "pikachu-rock-star"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Pikachu Belle",
+          "aliases": [
+            "pikachu-belle"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Pikachu Pop Star",
+          "aliases": [
+            "pikachu-pop-star"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Pikachu Phd",
+          "aliases": [
+            "pikachu-phd"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Pikachu Libre",
+          "aliases": [
+            "pikachu-libre"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Pikachu Cosplay",
+          "aliases": [
+            "pikachu-cosplay"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Hoopa Unbound",
+          "aliases": [
+            "hoopa-unbound"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Camerupt Mega",
+          "aliases": [
+            "camerupt-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Lopunny Mega",
+          "aliases": [
+            "lopunny-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Salamence Mega",
+          "aliases": [
+            "salamence-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Beedrill Mega",
+          "aliases": [
+            "beedrill-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Rattata Alola",
+          "aliases": [
+            "rattata-alola"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Raticate Alola",
+          "aliases": [
+            "raticate-alola"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Raticate Totem Alola",
+          "aliases": [
+            "raticate-totem-alola"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Pikachu Original Cap",
+          "aliases": [
+            "pikachu-original-cap"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Pikachu Hoenn Cap",
+          "aliases": [
+            "pikachu-hoenn-cap"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Pikachu Sinnoh Cap",
+          "aliases": [
+            "pikachu-sinnoh-cap"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Pikachu Unova Cap",
+          "aliases": [
+            "pikachu-unova-cap"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Pikachu Kalos Cap",
+          "aliases": [
+            "pikachu-kalos-cap"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Pikachu Alola Cap",
+          "aliases": [
+            "pikachu-alola-cap"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Raichu Alola",
+          "aliases": [
+            "raichu-alola"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Sandshrew Alola",
+          "aliases": [
+            "sandshrew-alola"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Sandslash Alola",
+          "aliases": [
+            "sandslash-alola"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Vulpix Alola",
+          "aliases": [
+            "vulpix-alola"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Ninetales Alola",
+          "aliases": [
+            "ninetales-alola"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Diglett Alola",
+          "aliases": [
+            "diglett-alola"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Dugtrio Alola",
+          "aliases": [
+            "dugtrio-alola"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Meowth Alola",
+          "aliases": [
+            "meowth-alola"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Persian Alola",
+          "aliases": [
+            "persian-alola"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Geodude Alola",
+          "aliases": [
+            "geodude-alola"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Graveler Alola",
+          "aliases": [
+            "graveler-alola"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Golem Alola",
+          "aliases": [
+            "golem-alola"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Grimer Alola",
+          "aliases": [
+            "grimer-alola"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Muk Alola",
+          "aliases": [
+            "muk-alola"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Exeggutor Alola",
+          "aliases": [
+            "exeggutor-alola"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Marowak Alola",
+          "aliases": [
+            "marowak-alola"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Greninja Battle Bond",
+          "aliases": [
+            "greninja-battle-bond"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Greninja Ash",
+          "aliases": [
+            "greninja-ash"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Zygarde 10 Power Construct",
+          "aliases": [
+            "zygarde-10-power-construct"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Zygarde 50 Power Construct",
+          "aliases": [
+            "zygarde-50-power-construct"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Zygarde Complete",
+          "aliases": [
+            "zygarde-complete"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Gumshoos Totem",
+          "aliases": [
+            "gumshoos-totem"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Vikavolt Totem",
+          "aliases": [
+            "vikavolt-totem"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Oricorio Pom Pom",
+          "aliases": [
+            "oricorio-pom-pom"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Oricorio Pau",
+          "aliases": [
+            "oricorio-pau"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Oricorio Sensu",
+          "aliases": [
+            "oricorio-sensu"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Lycanroc Midnight",
+          "aliases": [
+            "lycanroc-midnight"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Wishiwashi School",
+          "aliases": [
+            "wishiwashi-school"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Lurantis Totem",
+          "aliases": [
+            "lurantis-totem"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Salazzle Totem",
+          "aliases": [
+            "salazzle-totem"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Minior Orange Meteor",
+          "aliases": [
+            "minior-orange-meteor"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Minior Yellow Meteor",
+          "aliases": [
+            "minior-yellow-meteor"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Minior Green Meteor",
+          "aliases": [
+            "minior-green-meteor"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Minior Blue Meteor",
+          "aliases": [
+            "minior-blue-meteor"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Minior Indigo Meteor",
+          "aliases": [
+            "minior-indigo-meteor"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Minior Violet Meteor",
+          "aliases": [
+            "minior-violet-meteor"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Minior Red",
+          "aliases": [
+            "minior-red"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Minior Orange",
+          "aliases": [
+            "minior-orange"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Minior Yellow",
+          "aliases": [
+            "minior-yellow"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Minior Green",
+          "aliases": [
+            "minior-green"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Minior Blue",
+          "aliases": [
+            "minior-blue"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Minior Indigo",
+          "aliases": [
+            "minior-indigo"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Minior Violet",
+          "aliases": [
+            "minior-violet"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Mimikyu Busted",
+          "aliases": [
+            "mimikyu-busted"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Mimikyu Totem Disguised",
+          "aliases": [
+            "mimikyu-totem-disguised"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Mimikyu Totem Busted",
+          "aliases": [
+            "mimikyu-totem-busted"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Kommo O Totem",
+          "aliases": [
+            "kommo-o-totem"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Magearna Original",
+          "aliases": [
+            "magearna-original"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Pikachu Partner Cap",
+          "aliases": [
+            "pikachu-partner-cap"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Marowak Totem",
+          "aliases": [
+            "marowak-totem"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Ribombee Totem",
+          "aliases": [
+            "ribombee-totem"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Rockruff Own Tempo",
+          "aliases": [
+            "rockruff-own-tempo"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Lycanroc Dusk",
+          "aliases": [
+            "lycanroc-dusk"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Araquanid Totem",
+          "aliases": [
+            "araquanid-totem"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Togedemaru Totem",
+          "aliases": [
+            "togedemaru-totem"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Necrozma Dusk",
+          "aliases": [
+            "necrozma-dusk"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Necrozma Dawn",
+          "aliases": [
+            "necrozma-dawn"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Necrozma Ultra",
+          "aliases": [
+            "necrozma-ultra"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Pikachu Starter",
+          "aliases": [
+            "pikachu-starter"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Eevee Starter",
+          "aliases": [
+            "eevee-starter"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Pikachu World Cap",
+          "aliases": [
+            "pikachu-world-cap"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Meowth Galar",
+          "aliases": [
+            "meowth-galar"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Ponyta Galar",
+          "aliases": [
+            "ponyta-galar"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Rapidash Galar",
+          "aliases": [
+            "rapidash-galar"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Slowpoke Galar",
+          "aliases": [
+            "slowpoke-galar"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Slowbro Galar",
+          "aliases": [
+            "slowbro-galar"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Farfetchd Galar",
+          "aliases": [
+            "farfetchd-galar"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Weezing Galar",
+          "aliases": [
+            "weezing-galar"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Mr Mime Galar",
+          "aliases": [
+            "mr-mime-galar"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Articuno Galar",
+          "aliases": [
+            "articuno-galar"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Zapdos Galar",
+          "aliases": [
+            "zapdos-galar"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Moltres Galar",
+          "aliases": [
+            "moltres-galar"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Slowking Galar",
+          "aliases": [
+            "slowking-galar"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Corsola Galar",
+          "aliases": [
+            "corsola-galar"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Zigzagoon Galar",
+          "aliases": [
+            "zigzagoon-galar"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Linoone Galar",
+          "aliases": [
+            "linoone-galar"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Darumaka Galar",
+          "aliases": [
+            "darumaka-galar"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Darmanitan Galar Standard",
+          "aliases": [
+            "darmanitan-galar-standard"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Darmanitan Galar Zen",
+          "aliases": [
+            "darmanitan-galar-zen"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Yamask Galar",
+          "aliases": [
+            "yamask-galar"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Stunfisk Galar",
+          "aliases": [
+            "stunfisk-galar"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Zygarde 10",
+          "aliases": [
+            "zygarde-10"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Cramorant Gulping",
+          "aliases": [
+            "cramorant-gulping"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Cramorant Gorging",
+          "aliases": [
+            "cramorant-gorging"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Toxtricity Low Key",
+          "aliases": [
+            "toxtricity-low-key"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Eiscue Noice",
+          "aliases": [
+            "eiscue-noice"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Indeedee Female",
+          "aliases": [
+            "indeedee-female"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Morpeko Hangry",
+          "aliases": [
+            "morpeko-hangry"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Zacian Crowned",
+          "aliases": [
+            "zacian-crowned"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Zamazenta Crowned",
+          "aliases": [
+            "zamazenta-crowned"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Eternatus Eternamax",
+          "aliases": [
+            "eternatus-eternamax"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Urshifu Rapid Strike",
+          "aliases": [
+            "urshifu-rapid-strike"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Zarude Dada",
+          "aliases": [
+            "zarude-dada"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Calyrex Ice",
+          "aliases": [
+            "calyrex-ice"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Calyrex Shadow",
+          "aliases": [
+            "calyrex-shadow"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Venusaur Gmax",
+          "aliases": [
+            "venusaur-gmax"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Charizard Gmax",
+          "aliases": [
+            "charizard-gmax"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Blastoise Gmax",
+          "aliases": [
+            "blastoise-gmax"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Butterfree Gmax",
+          "aliases": [
+            "butterfree-gmax"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Pikachu Gmax",
+          "aliases": [
+            "pikachu-gmax"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Meowth Gmax",
+          "aliases": [
+            "meowth-gmax"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Machamp Gmax",
+          "aliases": [
+            "machamp-gmax"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Gengar Gmax",
+          "aliases": [
+            "gengar-gmax"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Kingler Gmax",
+          "aliases": [
+            "kingler-gmax"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Lapras Gmax",
+          "aliases": [
+            "lapras-gmax"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Eevee Gmax",
+          "aliases": [
+            "eevee-gmax"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Snorlax Gmax",
+          "aliases": [
+            "snorlax-gmax"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Garbodor Gmax",
+          "aliases": [
+            "garbodor-gmax"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Melmetal Gmax",
+          "aliases": [
+            "melmetal-gmax"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Rillaboom Gmax",
+          "aliases": [
+            "rillaboom-gmax"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Cinderace Gmax",
+          "aliases": [
+            "cinderace-gmax"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Inteleon Gmax",
+          "aliases": [
+            "inteleon-gmax"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Corviknight Gmax",
+          "aliases": [
+            "corviknight-gmax"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Orbeetle Gmax",
+          "aliases": [
+            "orbeetle-gmax"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Drednaw Gmax",
+          "aliases": [
+            "drednaw-gmax"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Coalossal Gmax",
+          "aliases": [
+            "coalossal-gmax"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Flapple Gmax",
+          "aliases": [
+            "flapple-gmax"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Appletun Gmax",
+          "aliases": [
+            "appletun-gmax"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Sandaconda Gmax",
+          "aliases": [
+            "sandaconda-gmax"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Toxtricity Amped Gmax",
+          "aliases": [
+            "toxtricity-amped-gmax"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Centiskorch Gmax",
+          "aliases": [
+            "centiskorch-gmax"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Hatterene Gmax",
+          "aliases": [
+            "hatterene-gmax"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Grimmsnarl Gmax",
+          "aliases": [
+            "grimmsnarl-gmax"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Alcremie Gmax",
+          "aliases": [
+            "alcremie-gmax"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Copperajah Gmax",
+          "aliases": [
+            "copperajah-gmax"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Duraludon Gmax",
+          "aliases": [
+            "duraludon-gmax"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Urshifu Single Strike Gmax",
+          "aliases": [
+            "urshifu-single-strike-gmax"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Urshifu Rapid Strike Gmax",
+          "aliases": [
+            "urshifu-rapid-strike-gmax"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Toxtricity Low Key Gmax",
+          "aliases": [
+            "toxtricity-low-key-gmax"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Growlithe Hisui",
+          "aliases": [
+            "growlithe-hisui"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Arcanine Hisui",
+          "aliases": [
+            "arcanine-hisui"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Voltorb Hisui",
+          "aliases": [
+            "voltorb-hisui"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Electrode Hisui",
+          "aliases": [
+            "electrode-hisui"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Typhlosion Hisui",
+          "aliases": [
+            "typhlosion-hisui"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Qwilfish Hisui",
+          "aliases": [
+            "qwilfish-hisui"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Sneasel Hisui",
+          "aliases": [
+            "sneasel-hisui"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Samurott Hisui",
+          "aliases": [
+            "samurott-hisui"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Lilligant Hisui",
+          "aliases": [
+            "lilligant-hisui"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Zorua Hisui",
+          "aliases": [
+            "zorua-hisui"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Zoroark Hisui",
+          "aliases": [
+            "zoroark-hisui"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Braviary Hisui",
+          "aliases": [
+            "braviary-hisui"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Sliggoo Hisui",
+          "aliases": [
+            "sliggoo-hisui"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Goodra Hisui",
+          "aliases": [
+            "goodra-hisui"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Avalugg Hisui",
+          "aliases": [
+            "avalugg-hisui"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Decidueye Hisui",
+          "aliases": [
+            "decidueye-hisui"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Dialga Origin",
+          "aliases": [
+            "dialga-origin"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Palkia Origin",
+          "aliases": [
+            "palkia-origin"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Basculin White Striped",
+          "aliases": [
+            "basculin-white-striped"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Basculegion Female",
+          "aliases": [
+            "basculegion-female"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Enamorus Therian",
+          "aliases": [
+            "enamorus-therian"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Tauros Paldea Combat Breed",
+          "aliases": [
+            "tauros-paldea-combat-breed"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Tauros Paldea Blaze Breed",
+          "aliases": [
+            "tauros-paldea-blaze-breed"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Tauros Paldea Aqua Breed",
+          "aliases": [
+            "tauros-paldea-aqua-breed"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Wooper Paldea",
+          "aliases": [
+            "wooper-paldea"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Oinkologne Female",
+          "aliases": [
+            "oinkologne-female"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Dudunsparce Three Segment",
+          "aliases": [
+            "dudunsparce-three-segment"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Palafin Hero",
+          "aliases": [
+            "palafin-hero"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Maushold Family Of Three",
+          "aliases": [
+            "maushold-family-of-three"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Tatsugiri Droopy",
+          "aliases": [
+            "tatsugiri-droopy"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Tatsugiri Stretchy",
+          "aliases": [
+            "tatsugiri-stretchy"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Squawkabilly Blue Plumage",
+          "aliases": [
+            "squawkabilly-blue-plumage"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Squawkabilly Yellow Plumage",
+          "aliases": [
+            "squawkabilly-yellow-plumage"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Squawkabilly White Plumage",
+          "aliases": [
+            "squawkabilly-white-plumage"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Gimmighoul Roaming",
+          "aliases": [
+            "gimmighoul-roaming"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Koraidon Limited Build",
+          "aliases": [
+            "koraidon-limited-build"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Koraidon Sprinting Build",
+          "aliases": [
+            "koraidon-sprinting-build"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Koraidon Swimming Build",
+          "aliases": [
+            "koraidon-swimming-build"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Koraidon Gliding Build",
+          "aliases": [
+            "koraidon-gliding-build"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Miraidon Low Power Mode",
+          "aliases": [
+            "miraidon-low-power-mode"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Miraidon Drive Mode",
+          "aliases": [
+            "miraidon-drive-mode"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Miraidon Aquatic Mode",
+          "aliases": [
+            "miraidon-aquatic-mode"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Miraidon Glide Mode",
+          "aliases": [
+            "miraidon-glide-mode"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Ursaluna Bloodmoon",
+          "aliases": [
+            "ursaluna-bloodmoon"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Ogerpon Wellspring Mask",
+          "aliases": [
+            "ogerpon-wellspring-mask"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Ogerpon Hearthflame Mask",
+          "aliases": [
+            "ogerpon-hearthflame-mask"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Ogerpon Cornerstone Mask",
+          "aliases": [
+            "ogerpon-cornerstone-mask"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Terapagos Terastal",
+          "aliases": [
+            "terapagos-terastal"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Terapagos Stellar",
+          "aliases": [
+            "terapagos-stellar"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Clefable Mega",
+          "aliases": [
+            "clefable-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Victreebel Mega",
+          "aliases": [
+            "victreebel-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Starmie Mega",
+          "aliases": [
+            "starmie-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Dragonite Mega",
+          "aliases": [
+            "dragonite-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Meganium Mega",
+          "aliases": [
+            "meganium-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Feraligatr Mega",
+          "aliases": [
+            "feraligatr-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Skarmory Mega",
+          "aliases": [
+            "skarmory-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Froslass Mega",
+          "aliases": [
+            "froslass-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Emboar Mega",
+          "aliases": [
+            "emboar-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Excadrill Mega",
+          "aliases": [
+            "excadrill-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Scolipede Mega",
+          "aliases": [
+            "scolipede-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Scrafty Mega",
+          "aliases": [
+            "scrafty-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Eelektross Mega",
+          "aliases": [
+            "eelektross-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Chandelure Mega",
+          "aliases": [
+            "chandelure-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Chesnaught Mega",
+          "aliases": [
+            "chesnaught-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Delphox Mega",
+          "aliases": [
+            "delphox-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Greninja Mega",
+          "aliases": [
+            "greninja-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Pyroar Mega",
+          "aliases": [
+            "pyroar-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Floette Mega",
+          "aliases": [
+            "floette-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Malamar Mega",
+          "aliases": [
+            "malamar-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Barbaracle Mega",
+          "aliases": [
+            "barbaracle-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Dragalge Mega",
+          "aliases": [
+            "dragalge-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Hawlucha Mega",
+          "aliases": [
+            "hawlucha-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Zygarde Mega",
+          "aliases": [
+            "zygarde-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Drampa Mega",
+          "aliases": [
+            "drampa-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Falinks Mega",
+          "aliases": [
+            "falinks-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Raichu Mega X",
+          "aliases": [
+            "raichu-mega-x"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Raichu Mega Y",
+          "aliases": [
+            "raichu-mega-y"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Chimecho Mega",
+          "aliases": [
+            "chimecho-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Absol Mega Z",
+          "aliases": [
+            "absol-mega-z"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Staraptor Mega",
+          "aliases": [
+            "staraptor-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Garchomp Mega Z",
+          "aliases": [
+            "garchomp-mega-z"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Lucario Mega Z",
+          "aliases": [
+            "lucario-mega-z"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Heatran Mega",
+          "aliases": [
+            "heatran-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Darkrai Mega",
+          "aliases": [
+            "darkrai-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Golurk Mega",
+          "aliases": [
+            "golurk-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Meowstic Male Mega",
+          "aliases": [
+            "meowstic-male-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Crabominable Mega",
+          "aliases": [
+            "crabominable-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Golisopod Mega",
+          "aliases": [
+            "golisopod-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Magearna Mega",
+          "aliases": [
+            "magearna-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Magearna Original Mega",
+          "aliases": [
+            "magearna-original-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Zeraora Mega",
+          "aliases": [
+            "zeraora-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Scovillain Mega",
+          "aliases": [
+            "scovillain-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Glimmora Mega",
+          "aliases": [
+            "glimmora-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Tatsugiri Curly Mega",
+          "aliases": [
+            "tatsugiri-curly-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Tatsugiri Droopy Mega",
+          "aliases": [
+            "tatsugiri-droopy-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Tatsugiri Stretchy Mega",
+          "aliases": [
+            "tatsugiri-stretchy-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Baxcalibur Mega",
+          "aliases": [
+            "baxcalibur-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
+        },
+        {
+          "answer": "Meowstic Female Mega",
+          "aliases": [
+            "meowstic-female-mega"
+          ],
+          "tier": "Byte",
+          "sources": [
+            "https://pokeapi.co/api/v2/pokemon?limit=2000"
+          ],
+          "method": "PokeAPI named Pokémon/form record",
+          "scope_note": "Broad form interpretation: distinct named Pokémon forms count as Pokémon; base species remain separate entries."
         }
       ]
     },
@@ -239294,6 +243662,16 @@
           "zipf": 4.04,
           "fam": 0.2146,
           "tier": "Byte"
+        },
+        {
+          "answer": "Nobara Linux",
+          "aliases": [],
+          "tier": "Byte",
+          "sources": [
+            "https://nobaraproject.org/"
+          ],
+          "method": "Individually checked against a public structured dataset, official source, or reference entry; rarity tier to be reviewed with prompt distribution.",
+          "scope_note": "Direct fit to prompt. Official Nobara Project site identifies the distribution."
         }
       ]
     },
