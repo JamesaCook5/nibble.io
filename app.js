@@ -62,9 +62,10 @@ const store = {
 };
 
 function norm(s) {
-  return String(s).normalize('NFKD').replace(/[̀-ͯ]/g, '').toLowerCase()
+  const greekGlyphNames = {'Α':'alpha','α':'alpha','Β':'beta','β':'beta','Γ':'gamma','γ':'gamma','Δ':'delta','δ':'delta','Ε':'epsilon','ε':'epsilon','Ζ':'zeta','ζ':'zeta','Η':'eta','η':'eta','Θ':'theta','θ':'theta','Ι':'iota','ι':'iota','Κ':'kappa','κ':'kappa','Λ':'lambda','λ':'lambda','Μ':'mu','μ':'mu','Ν':'nu','ν':'nu','Ξ':'xi','ξ':'xi','Ο':'omicron','ο':'omicron','Π':'pi','π':'pi','Ρ':'rho','ρ':'rho','Σ':'sigma','σ':'sigma','ς':'sigma','Τ':'tau','τ':'tau','Υ':'upsilon','υ':'upsilon','Φ':'phi','φ':'phi','Χ':'chi','χ':'chi','Ψ':'psi','ψ':'psi','Ω':'omega','ω':'omega','Ϝ':'digamma','ϝ':'digamma','Ϙ':'koppa','ϙ':'koppa','Ϟ':'koppa','ϟ':'koppa','Ϛ':'stigma','ϛ':'stigma','Ϡ':'sampi','ϡ':'sampi','Ϻ':'san','ϻ':'san','Ϸ':'sho','ϸ':'sho','Ͳ':'sampi','ͳ':'sampi','Ϲ':'sigma','ϲ':'sigma'};
+  return String(s).normalize('NFKD').replace(/\p{M}/gu, '').replace(/[Α-Ωα-ωςϜϝϘϙϞϟϚϛϠϡϺϻϷϸͲͳϹϲ]/g, ch => greekGlyphNames[ch] || ch).toLowerCase()
     .replace(/['’]s\b/g, '').replace(/\*/g, ' star ').replace(/&/g, ' and ')
-    .replace(/[^a-z0-9+#]+/g, ' ').trim()
+    .replace(/[^\p{L}\p{N}+#-]+/gu, ' ').trim()
     .replace(/^(the|an|a) (?=\S)/, '').replace(/\s+/g, '');
 }
 function keyFor(p, s) {

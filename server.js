@@ -32,12 +32,15 @@ const data = [
   JSON.parse(fs.readFileSync(path.join(root, 'overclock/answer-full/answer_sets_full.json'), 'utf8')).prompts
 ];
 const tierKey = { Bit:'stock', Nibble:'tuned', Byte:'overclocked', Kilobyte:'liquid', Megabyte:'quantum' };
-const greekGlyphNames = {'Α':'alpha','α':'alpha','Β':'beta','β':'beta','Γ':'gamma','γ':'gamma','Δ':'delta','δ':'delta','Ε':'epsilon','ε':'epsilon','Ζ':'zeta','ζ':'zeta','Η':'eta','η':'eta','Θ':'theta','θ':'theta','Ι':'iota','ι':'iota','Κ':'kappa','κ':'kappa','Λ':'lambda','λ':'lambda','Μ':'mu','μ':'mu','Ν':'nu','ν':'nu','Ξ':'xi','ξ':'xi','Ο':'omicron','ο':'omicron','Π':'pi','π':'pi','Ρ':'rho','ρ':'rho','Σ':'sigma','σ':'sigma','ς':'sigma','Τ':'tau','τ':'tau','Υ':'upsilon','υ':'upsilon','Φ':'phi','φ':'phi','Χ':'chi','χ':'chi','Ψ':'psi','ψ':'psi','Ω':'omega','ω':'omega'};
+const greekGlyphNames = {
+  'Α':'alpha','α':'alpha','Β':'beta','β':'beta','Γ':'gamma','γ':'gamma','Δ':'delta','δ':'delta','Ε':'epsilon','ε':'epsilon','Ζ':'zeta','ζ':'zeta','Η':'eta','η':'eta','Θ':'theta','θ':'theta','Ι':'iota','ι':'iota','Κ':'kappa','κ':'kappa','Λ':'lambda','λ':'lambda','Μ':'mu','μ':'mu','Ν':'nu','ν':'nu','Ξ':'xi','ξ':'xi','Ο':'omicron','ο':'omicron','Π':'pi','π':'pi','Ρ':'rho','ρ':'rho','Σ':'sigma','σ':'sigma','ς':'sigma','Τ':'tau','τ':'tau','Υ':'upsilon','υ':'upsilon','Φ':'phi','φ':'phi','Χ':'chi','χ':'chi','Ψ':'psi','ψ':'psi','Ω':'omega','ω':'omega',
+  'Ϝ':'digamma','ϝ':'digamma','Ϙ':'koppa','ϙ':'koppa','Ϟ':'koppa','ϟ':'koppa','Ϛ':'stigma','ϛ':'stigma','Ϡ':'sampi','ϡ':'sampi','Ϻ':'san','ϻ':'san','Ϸ':'sho','ϸ':'sho','Ͳ':'sampi','ͳ':'sampi','Ϲ':'sigma','ϲ':'sigma'
+};
 function norm(s) {
-  return String(s).replace(/[Α-Ωα-ως]/g, ch => greekGlyphNames[ch] || ch).normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase()
+  return String(s).normalize('NFKD').replace(/\p{M}/gu,'').replace(/[Α-Ωα-ωςϜϝϘϙϞϟϚϛϠϡϺϻϷϸͲͳϹϲ]/g, ch => greekGlyphNames[ch] || ch).toLowerCase()
     .replace(/&/g,' and ').replace(/\+/g,' plus ').replace(/#/g,' sharp ').replace(/\*/g,' star ').replace(/\^/g,' pow ')
     .replace(/\bvs\.?\b/g,' v ').replace(/\bversus\b/g,' v ').replace(/^\s*the\s+/,'')
-    .replace(/[^a-z0-9-]+/g,'');
+    .replace(/[^\p{L}\p{N}-]+/gu,'');
 }
 const promptById = new Map(bank.map(p => [p.id, p]));
 const promptIds = new Set(promptById.keys());
