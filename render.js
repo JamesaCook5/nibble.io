@@ -21,8 +21,10 @@ let sceneAnchorX = 0, sceneAnchorY = 0;
 
 function syncSceneAnchor() {
   const vv = window.visualViewport;
-  const currentX = window.scrollX + (vv?.offsetLeft || 0);
-  const currentY = window.scrollY + (vv?.offsetTop || 0);
+  // The scene is fixed to the viewport, so compensate only for visual-viewport
+  // panning (for example when a mobile keyboard opens), never document scrolling.
+  const currentX = vv?.offsetLeft || 0;
+  const currentY = vv?.offsetTop || 0;
   const panX = layoutLocked ? currentX - sceneAnchorX : 0;
   const panY = layoutLocked ? currentY - sceneAnchorY : 0;
   document.documentElement.style.setProperty('--scene-anchor-x', `${panX}px`);
@@ -31,8 +33,8 @@ function syncSceneAnchor() {
 
 function captureSceneAnchor() {
   const vv = window.visualViewport;
-  sceneAnchorX = window.scrollX + (vv?.offsetLeft || 0);
-  sceneAnchorY = window.scrollY + (vv?.offsetTop || 0);
+  sceneAnchorX = vv?.offsetLeft || 0;
+  sceneAnchorY = vv?.offsetTop || 0;
   syncSceneAnchor();
 }
 

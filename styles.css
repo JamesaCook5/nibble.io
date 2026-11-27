@@ -20,6 +20,9 @@ html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; overflow-an
 body { position: fixed; inset: 0; background: #2a211c; color: var(--ink); font-family: var(--ui); }
 button, input { font: inherit; }
 input { scroll-margin: 0; }
+@media (max-width: 760px), (max-height: 520px) {
+  html.round-active, body.round-active { overscroll-behavior: none; touch-action: none; }
+}
 
 /* the whole scene is one low-res canvas, scaled up without smoothing */
 .rig { position: fixed; left: 0; top: 0; image-rendering: pixelated; image-rendering: crisp-edges; z-index: 0; touch-action: manipulation; transform: translate3d(var(--scene-anchor-x, 0px), var(--scene-anchor-y, 0px), 0); }

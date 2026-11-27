@@ -684,6 +684,9 @@ scrBody.addEventListener('input', e => {
 function renderScreen() {
   adminTestExit.hidden = !adminTestMode;
   document.body.classList.toggle('ipad-results', S.phase === 'done');
+  const roundActive = S.phase === 'preview' || S.phase === 'answering';
+  document.documentElement.classList.toggle('round-active', roundActive);
+  document.body.classList.toggle('round-active', roundActive);
   const p = curPrompt(), round = Math.min(S.results.length + 1, ROUNDS), of = '/7';
   screenScore.textContent = S.phase === 'intro' ? '' : String(S.score).padStart(3, '0');
   let html = '';
@@ -877,9 +880,17 @@ input.addEventListener('blur', () => {
   clearTimeout(viewportUnlockTimer);
   viewportUnlockTimer = setTimeout(() => Rig.lockViewport(false), 350);
 });
-input.addEventListener('pointerdown', () => Rig.captureViewportAnchor(), { capture: true });
+input.addEventListener('pointerdown', () => {
+  Rig.captureViewportAnchor();
+  if (mobileInputQuery.matches && (S.phase === 'preview' || S.phase === 'answering')) focusInput(true);
+}, { capture: true });
 function focusInput(force = false) {
-  if (force || document.activeElement !== input) input.focus({ preventScroll: true });
+  if (force && document.activeElement === input) {
+    const start = input.selectionStart, end = input.selectionEnd, direction = input.selectionDirection;
+    input.blur();
+    input.focus({ preventScroll: true });
+    if (start !== null && end !== null) input.setSelectionRange(start, end, direction || 'none');
+  } else if (document.activeElement !== input) input.focus({ preventScroll: true });
 }
 
 /* ---------- loop ---------- */
@@ -948,7 +959,7 @@ dock.addEventListener('submit', e => { e.preventDefault(); if (S.phase === 'answ
 let virtShift = false;
 rigCanvas.addEventListener('pointerdown', e => {
   const code = Rig.keyAt(e.clientX, e.clientY);
-  if (!code) { if (S.phase === 'answering' || S.phase === 'preview') { e.preventDefault(); focusInput(); } return; }
+  if (!code) { if (S.phase === 'answering' || S.phase === 'preview') { e.preventDefault(); focusInput(true); } return; }
   e.preventDefault();
   tapKey(code, 140); keySound(code);
   if (code === 'Enter') {
@@ -977,7 +988,7 @@ screenEl.addEventListener('click', e => {
   if (S.phase === 'done') return;
   if (S.phase === 'feedback' && e.target.closest('[data-finish]')) { finish(); return; }
   if (S.phase === 'intro') { const o = e.target.closest('[data-mode]'); if (o?.dataset.mode === '1' || o?.disabled) return; if (o) S.menu = 0; begin(); return; }
-  if (S.phase === 'feedback' && performance.now() - S.feedbackAt > 600) next(); else focusInput();
+  if (S.phase === 'feedback' && performance.now() - S.feedbackAt > 600) next(); else if (S.phase === 'answering' || S.phase === 'preview') focusInput(true);
 });
 
 // The desk mouse follows your real pointer a little and clicks when you click.
