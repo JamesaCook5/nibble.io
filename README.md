@@ -1,4 +1,4 @@
-# megabytle.io
+# Megabytle
 
 A daily computer-science quiz in plain HTML, CSS and JavaScript, with no build step and no framework. Better answers upgrade the computer on the desk.
 
@@ -25,7 +25,7 @@ The quiz checker and admin editor need the Node server. From this folder, run `n
 - Rig stage = floor(score / 75), capped at 7 (UPGRADE_EVERY in app.js). Scores are shown as plain points with no maximum, so the game never shows a ceiling.
 
 ## Guesses to confirm
-- Name "megabytle.io".
+- Name "Megabytle".
 - The scene fills the whole window. You type on the monitor; a bottom answer bar only appears on phone-sized screens.
 - The daily reset is at UK midnight, and the counter starts at #0 on 26 Nov 2026.
 - All rarity tiers are placeholders.

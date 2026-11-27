@@ -690,7 +690,7 @@ function renderScreen() {
   if (S.phase === 'intro') {
     scrLeft.textContent = 'HOME';
     const dDesc = daily.done ? `done · ${daily.score} pts · see answers` : daily.results.length ? `resume round ${daily.results.length + 1}/7` : '111<sub>2</sub> prompts, same for everyone';
-    html = `<div class="t-title t-home">megabytle.io</div>
+    html = `<div class="t-title t-home">megabytle</div>
       <div class="menu" role="listbox" aria-label="Mode">
         <button type="button" class="mopt${S.menu === 0 ? ' on' : ''}" data-mode="0" role="option" aria-selected="${S.menu === 0}"><span class="mk">▸</span><span class="mt">DAILY #${day}<small>${dDesc}</small></span></button>
         <button type="button" class="mopt locked" data-mode="1" role="option" aria-disabled="true" disabled><span class="mk">▸</span><span class="mt">RANDOM · LOCKED<small>Currently unavailable</small></span></button>
@@ -775,7 +775,7 @@ function renderResults() {
   resultsEl.hidden = false;
   const animateHistogram=!histogramSortPlayed;
   resultsEl.innerHTML = `<div class="ipad-shell${animateIpadOnNextRender ? ' ipad-enter' : ''}"><div class="ipad-screen">
-    <header class="ipad-header"><div><div class="ipad-kicker">MEGABYTLE.IO · ${adminTestMode ? 'ADMIN TEST' : unlimited ? 'RANDOM SET' : 'DAILY SET #' + day}</div><h1>Answer review</h1></div>
+    <header class="ipad-header"><div><div class="ipad-kicker">MEGABYTLE · ${adminTestMode ? 'ADMIN TEST' : unlimited ? 'RANDOM SET' : 'DAILY SET #' + day}</div><h1>Answer review</h1></div>
       <div class="ipad-score"><strong>${S.score}</strong><span>points</span></div></header>
     <div class="ipad-body">${reviewHTML(animateHistogram)}</div>
     <footer class="ipad-footer"><button class="btn locked-action" type="button" disabled>Random locked</button><a class="btn ghost" href="?home=1">Home</a></footer>

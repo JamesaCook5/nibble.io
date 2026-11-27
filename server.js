@@ -283,6 +283,6 @@ const httpServer = http.createServer((req,res)=>{
 async function start() {
   await initializeDailyConfig();
   const port = process.env.PORT || 8000;
-  httpServer.listen(port,()=>console.log(`megabytle.io API listening on http://localhost:${port}`));
+  httpServer.listen(port,()=>console.log(`Megabytle API listening on http://localhost:${port}`));
 }
 start().catch(error => { console.error('Could not initialize daily prompt storage:', error); process.exit(1); });
