@@ -21,6 +21,7 @@ Expand and prune the answer sets across the 127 prompts using multiple review ro
 - Current global tier counts: Bit 796, Nibble 8,694, Byte 35,870, Kilobyte 7,975, Megabyte 252.
 - `answer-research/verified-expansion-2026-11-27.json` retains candidate sources, direct evidence, source/license notes, and boundary interpretations. `answer-research/README.md` records the source-selection method.
 - Import helpers: `scripts/import_unicode_emoji.py` and `scripts/import_pokemon_forms.py`.
+- Checkpoint commit `6dbd0b0` was pushed to `origin/main`. Hosting deployment was not checked.
 
 ## Research passes completed
 
@@ -37,7 +38,7 @@ The requested pruning/audit phase is not complete. Three agents were paused befo
 - Span 43–84: suspected theorem/conjecture prompt category errors (`Langlands program`, `Church–Turing thesis`, some named problems) and `ASCII` / `EBCDIC` in the numeral-system prompt. These were not yet source-verified.
 - Span 85–127: flagged possible issues around Herobrine, Minecraft block/entity distinctions, accessibility services vs features, spy networks vs agencies, smart-home/wearable products, and duplicates. These were not yet source-verified.
 - No audit artifacts exist yet at `/tmp/megabytle_audit_001.json`, `/tmp/megabytle_audit_002.json`, or `/tmp/megabytle_audit_003.json`.
-- The daily-exclusion change is in the working tree, not yet deployed. A user-approved push was attempted at this checkpoint only after commit.
+- The daily-exclusion change is in commit `6dbd0b0`; the code is pushed, but hosting deployment status is unverified.
 
 ## Resume instructions
 
