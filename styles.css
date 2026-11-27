@@ -477,10 +477,11 @@ body.ipad-results .results[hidden] { display:none; }
 .admin-prompt-option[hidden] { display:none; }
 @media(max-width:600px) {
   .admin-overlay { padding:0; }
-  .admin-card { width:100%; max-height:100dvh; height:100dvh; padding:calc(22px + env(safe-area-inset-top)) 18px calc(18px + env(safe-area-inset-bottom)); border-radius:0; }
+  .admin-card { align-self:stretch; width:100%; min-height:0; max-height:100dvh; height:100dvh; overflow-x:hidden; overflow-y:auto; overscroll-behavior:contain; -webkit-overflow-scrolling:touch; touch-action:pan-y; padding:calc(22px + env(safe-area-inset-top)) 18px calc(18px + env(safe-area-inset-bottom)); border-radius:0; }
+  #adminPanel { flex:0 0 auto; min-height:auto; }
   .admin-toolbar { align-items:stretch; flex-direction:column; gap:8px; }
   .admin-target-date { align-items:stretch; flex-direction:column; gap:6px; }
   .admin-target-date .admin-input { width:100%; }
   .admin-analytics-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
-  .admin-prompt-list { max-height:none; }
+  .admin-prompt-list { flex:none; min-height:140px; max-height:42dvh; overflow-y:auto; -webkit-overflow-scrolling:touch; touch-action:pan-y; }
 }
