@@ -218,6 +218,7 @@ function estimatedDailyPercentile(score) {
 const screensEl = $('#screens'), screenEl = $('#screen'), scrBody = $('#scrBody');
 const scrLeft = $('#scrLeft'), screenScore = $('#screenScore'), fuse = $('#fuse'), sideWrap = $('#sideScreens');
 const input = $('#answer'), dock = $('#dock'), dockPrompt = $('#dockPrompt'), dockMsg = $('#dockMsg');
+const mobileInputQuery = matchMedia('(max-width: 760px), (max-height: 520px)');
 input.inputMode = 'text';
 const resultsEl = $('#results'), rigCanvas = $('#rig');
 const adminOverlay = $('#adminOverlay'), adminLoginPanel = $('#adminLoginPanel'), adminPanel = $('#adminPanel');
@@ -814,7 +815,12 @@ function startRound() {
   S.phase = 'preview'; S.msg = ''; S.msgKind = '';
   const now = performance.now();
   S.previewEndsAt = now + PREVIEW_MS; S.answerEndsAt = S.previewEndsAt + ANSWER_MS;
-  input.value = ''; input.readOnly = true; focusInput();
+  input.value = '';
+  // Focus an editable field during the round-start gesture so mobile browsers
+  // can open their native keyboard immediately. Text entered during the preview
+  // is kept; answer submission is still disabled until the answer phase begins.
+  input.readOnly = !mobileInputQuery.matches;
+  focusInput(true);
   saveSession(); renderAll();
   tones([660], 'square', 0, 0.06, 0.05);
 }
@@ -872,7 +878,9 @@ input.addEventListener('blur', () => {
   viewportUnlockTimer = setTimeout(() => Rig.lockViewport(false), 350);
 });
 input.addEventListener('pointerdown', () => Rig.captureViewportAnchor(), { capture: true });
-function focusInput() { if (document.activeElement !== input) input.focus({ preventScroll: true }); }
+function focusInput(force = false) {
+  if (force || document.activeElement !== input) input.focus({ preventScroll: true });
+}
 
 /* ---------- loop ---------- */
 const ringEl = $('#ring'), ringProg = $('#ringProg'), ringNum = $('#ringNum');
