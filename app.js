@@ -136,9 +136,9 @@ const params = new URLSearchParams(location.search);
 const SESSION_KEY = 'nibble:session:v3';
 const savedSession = store.get(SESSION_KEY);
 const randomRequested = params.has('random') || params.has('unlimited') || params.has('practice');
-if (randomRequested) history.replaceState(null, '', '?home=1');
+// Keep the random query in the URL so refreshes restore the random run.
 const hasModeParam = params.has('home') || params.has('daily') || randomRequested;
-let unlimited = false; // Random is currently locked.
+let unlimited = randomRequested;
 const forcedStage = params.has('stage') ? clamp(parseInt(params.get('stage'), 10) || 0, 0, 7) : null;
 const today = londonDate();
 const day = dayNumber(today);
@@ -637,7 +637,7 @@ function reviewHTML(animateHistogram = false) {
   }).join('');
   return `${scoreCurveHTML(animateHistogram)}<div class="rv-top"><div class="answer-list-label">Your seven answers</div><div class="t-sub">${esc(STAGES[S.stage].label)} · tap a question to browse its answer set</div></div>
     <ol class="rv-list">${rows}</ol>
-    <div class="rv-foot">${adminTestMode ? 'ADMIN TEST · score, daily progress and streak are not saved' : 'new daily set at midnight (UK time) · Random locked'}</div>`;
+    <div class="rv-foot">${adminTestMode ? 'ADMIN TEST · score, daily progress and streak are not saved' : 'new daily set at midnight (UK time) · Random is always available'}</div>`;
 }
 function reviewDetailHTML(p, r) {
   return `<div class="rv-detail">${chipsHTML(p)}<input class="rv-search" type="text" spellcheck="false" autocomplete="off" placeholder="search every answer…" value="${esc(reviewQuery)}" aria-label="Search answers"><ul class="rv-answers">${answersHTML(p, r)}</ul></div>`;
@@ -697,7 +697,7 @@ function renderScreen() {
     html = `<div class="t-title t-home">megabytle</div>
       <div class="menu" role="listbox" aria-label="Mode">
         <button type="button" class="mopt${S.menu === 0 ? ' on' : ''}" data-mode="0" role="option" aria-selected="${S.menu === 0}"><span class="mk">▸</span><span class="mt">DAILY #${day}<small>${dDesc}</small></span></button>
-        <button type="button" class="mopt locked" data-mode="1" role="option" aria-disabled="true" disabled><span class="mk">▸</span><span class="mt">RANDOM · LOCKED<small>Currently unavailable</small></span></button>
+        <button type="button" class="mopt${S.menu === 1 ? ' on' : ''}" data-mode="1" role="option" aria-selected="${S.menu === 1}"><span class="mk">▸</span><span class="mt">RANDOM<small>7 prompts picked at random · see answers after the set</small></span></button>
       </div>
       <div class="t-cta blink">↑ ↓ CHOOSE · ENTER BOOT</div>`;
   } else if (S.phase === 'preview') {
@@ -782,7 +782,7 @@ function renderResults() {
     <header class="ipad-header"><div><div class="ipad-kicker">MEGABYTLE · ${adminTestMode ? 'ADMIN TEST' : unlimited ? 'RANDOM SET' : 'DAILY SET #' + day}</div><h1>Answer review</h1></div>
       <div class="ipad-score"><strong>${S.score}</strong><span>points</span></div></header>
     <div class="ipad-body">${reviewHTML(animateHistogram)}</div>
-    <footer class="ipad-footer"><button class="btn locked-action" type="button" disabled>Random locked</button><a class="btn ghost" href="?home=1">Home</a></footer>
+    <footer class="ipad-footer"><button class="btn" type="button" data-play-random>Play random</button><a class="btn ghost" href="?home=1">Home</a></footer>
   </div><div class="ipad-camera"></div><button class="ipad-side-button" type="button" aria-label="Tablet side button" tabindex="-1"></button></div>`;
   resultsEl.querySelector('.ipad-body').scrollTop = answerScrollTop;
   if (animateHistogram) {
@@ -797,7 +797,7 @@ function renderAll() { renderScreen(); renderHud(); renderResults(); }
 
 /* ---------- game flow ---------- */
 function begin() {
-  if (S.phase !== 'intro' || S.menu === 1) return;
+  if (S.phase !== 'intro') return;
   audio();
   if (S.menu === 1 && !unlimited) {
     // switch to random mode: choose a fresh set of seven prompts
@@ -810,7 +810,7 @@ function begin() {
   if (!unlimited && S.dailyDone) { animateIpadOnNextRender = true; S.phase = 'done'; reviewOpen = -1; saveSession(); applyStage(7, false); loadReviewAnswers(); renderAll(); scrBody.scrollTop = 0; return; }
   startRound();
 }
-function pickMode(m) { if (S.phase !== 'intro' || m === 1) return; S.menu = 0; renderScreen(); }
+function pickMode(m) { if (S.phase !== 'intro') return; S.menu = m === 1 ? 1 : 0; renderScreen(); }
 function finish() {
   if (S.phase !== 'feedback') return;
   animateIpadOnNextRender = true; S.phase = 'done'; reviewOpen = -1; save(); applyStage(7, false); loadReviewAnswers(); renderAll(); scrBody.scrollTop = 0;
@@ -933,7 +933,7 @@ document.addEventListener('keydown', e => {
   const code = codeAlias[e.code] || e.code;
   if (code) { lastPhysicalAt = performance.now(); if (!e.repeat) { pressKey(code); physicalDown.add(code); if (Rig.hasKey(code)) keySound(code); } }
   if (S.phase === 'intro' && /^[a-z]$/i.test(e.key) && !e.ctrlKey && !e.metaKey && !e.altKey) { e.preventDefault(); trackAdminCharacter(e.key); return; }
-  if (S.phase === 'intro' && /^(ArrowUp|ArrowDown|ArrowLeft|ArrowRight)$/.test(e.key)) { e.preventDefault(); pickMode(0); return; }
+  if (S.phase === 'intro' && /^(ArrowUp|ArrowDown|ArrowLeft|ArrowRight)$/.test(e.key)) { e.preventDefault(); pickMode(S.menu === 0 ? 1 : 0); return; }
   
   if (e.key === 'Enter') {
     if (S.phase === 'intro') { e.preventDefault(); begin(); }
@@ -969,6 +969,7 @@ rigCanvas.addEventListener('pointerdown', e => {
   }
   if (code === 'ShiftLeft' || code === 'ShiftRight') { virtShift = !virtShift; Rig.setShift(virtShift); return; }
   if (S.phase === 'intro' && code === 'KeyD') { S.menu = 0; begin(); return; }
+  if (S.phase === 'intro' && code === 'KeyR') { S.menu = 1; begin(); return; }
   const tgt = S.phase === 'answering' ? input : S.phase === 'done' ? scrBody.querySelector('.rv-search') : null;
   if (!tgt) return;
   if (tgt === input) focusInput(); else tgt.focus({ preventScroll: true });
@@ -988,7 +989,7 @@ rigCanvas.addEventListener('mousemove', e => { rigCanvas.style.cursor = Rig.keyA
 screenEl.addEventListener('click', e => {
   if (S.phase === 'done') return;
   if (S.phase === 'feedback' && e.target.closest('[data-finish]')) { finish(); return; }
-  if (S.phase === 'intro') { const o = e.target.closest('[data-mode]'); if (o?.dataset.mode === '1' || o?.disabled) return; if (o) S.menu = 0; begin(); return; }
+  if (S.phase === 'intro') { const o = e.target.closest('[data-mode]'); if (!o) return; S.menu = Number(o.dataset.mode) === 1 ? 1 : 0; begin(); return; }
   if (S.phase === 'feedback' && performance.now() - S.feedbackAt > 600) next(); else if (S.phase === 'answering' || S.phase === 'preview') focusInput(true);
 });
 
@@ -1062,6 +1063,12 @@ resultsEl.addEventListener('pointerdown', e => {
   }
 }, true);
 resultsEl.addEventListener('click', e => {
+  const randomButton=e.target.closest('[data-play-random]');
+  if(randomButton){
+    unlimited=true; prompts=makeUnlimited(); history.replaceState(null,'','?random=1'); syncModeLabel();
+    S.phase='intro'; S.menu=1; S.results=[]; S.score=0; S.resumed=false; S.dailyDone=false; S.stage=forcedStage ?? 0;
+    applyStage(S.stage,false); begin(); return;
+  }
   const toggle=e.target.closest('[data-toggle]'), filter=e.target.closest('[data-filter]');
   if(toggle){
     const i=+toggle.dataset.toggle, previous=reviewOpen;
