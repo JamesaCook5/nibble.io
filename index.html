@@ -93,8 +93,12 @@
       </form>
     </div>
     <div id="adminPanel" hidden>
-      <div class="admin-kicker">NEXT DAILY SET · <span id="adminDate"></span></div>
+      <div class="admin-kicker"><span id="adminDateLabel">NEXT DAILY SET</span> · <span id="adminDate"></span></div>
       <h2 id="adminTitlePanel">Choose tomorrow's prompts</h2>
+      <label class="admin-target-date">Editing
+        <select id="adminTargetDate" class="admin-input" aria-label="Daily set date"></select>
+      </label>
+      <p id="adminTargetNotice" class="admin-target-notice" hidden></p>
       <p>Select exactly seven prompts for this date. The saved set is shared with everyone visiting this site.</p>
       <section class="admin-analytics" aria-labelledby="adminAnalyticsTitle">
         <div class="admin-analytics-heading">

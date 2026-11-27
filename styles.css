@@ -428,6 +428,10 @@ body.ipad-results .results[hidden] { display:none; }
 .admin-card h2 { margin:0 40px 12px 0; color:#f0c778; font-family:var(--px8); font-size:clamp(13px,2vw,18px); line-height:1.7; }
 .admin-card p { margin:0 0 18px; color:#aab6c6; line-height:1.5; }
 .admin-card .admin-complete-note { margin-top:-12px; color:#8595a8; font-size:14px; }
+.admin-target-date { display:flex; align-items:center; gap:12px; margin:0 0 10px; color:#aab6c6; font-size:13px; }
+.admin-target-date .admin-input { width:auto; min-width:230px; padding:8px 10px; }
+.admin-card .admin-target-notice { margin:0 0 12px; padding:9px 11px; border-left:3px solid #f0c778; background:#2b2619; color:#e2c982; font-size:12px; }
+.admin-target-notice[hidden] { display:none; }
 .admin-label { display:block; margin:0 0 6px; color:#c4cfdd; font-weight:700; }
 .admin-input { min-width:0; width:100%; padding:11px 13px; border:1px solid #3b4b60; border-radius:8px; background:#080d14; color:#eef3fa; font:inherit; outline:none; }
 .admin-input:focus { border-color:#d3aa60; box-shadow:0 0 0 2px #d3aa6033; }
@@ -474,6 +478,8 @@ body.ipad-results .results[hidden] { display:none; }
   .admin-overlay { padding:0; }
   .admin-card { width:100%; max-height:100dvh; height:100dvh; padding:calc(22px + env(safe-area-inset-top)) 18px calc(18px + env(safe-area-inset-bottom)); border-radius:0; }
   .admin-toolbar { align-items:stretch; flex-direction:column; gap:8px; }
+  .admin-target-date { align-items:stretch; flex-direction:column; gap:6px; }
+  .admin-target-date .admin-input { width:100%; }
   .admin-analytics-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
   .admin-prompt-list { max-height:none; }
 }

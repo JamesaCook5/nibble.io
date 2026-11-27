@@ -222,7 +222,8 @@ input.inputMode = 'text';
 const resultsEl = $('#results'), rigCanvas = $('#rig');
 const adminOverlay = $('#adminOverlay'), adminLoginPanel = $('#adminLoginPanel'), adminPanel = $('#adminPanel');
 const adminLoginForm = $('#adminLoginForm'), adminPassword = $('#adminPassword'), adminLoginStatus = $('#adminLoginStatus');
-const adminPromptList = $('#adminPromptList'), adminSearch = $('#adminSearch'), adminDate = $('#adminDate');
+const adminPromptList = $('#adminPromptList'), adminSearch = $('#adminSearch'), adminDate = $('#adminDate'), adminDateLabel = $('#adminDateLabel');
+const adminTargetDate = $('#adminTargetDate'), adminTargetNotice = $('#adminTargetNotice'), adminTitlePanel = $('#adminTitlePanel');
 const adminSelectionCount = $('#adminSelectionCount'), adminSaveStatus = $('#adminSaveStatus'), adminSave = $('#adminSave');
 const adminTest = $('#adminTest'), adminTestExit = $('#adminTestExit');
 const adminAnalyticsStatus = $('#adminAnalyticsStatus');
@@ -313,10 +314,24 @@ function renderAdminPromptChoices(selectedIds, completedIds, scheduledIds) {
   }
   adminPromptList.replaceChildren(fragment); updateAdminSelection();
 }
-async function loadAdminPromptChoices() {
-  const response = await fetch('/api/admin/daily');
+async function loadAdminPromptChoices(targetDate = '') {
+  const query = targetDate ? `?date=${encodeURIComponent(targetDate)}` : '';
+  const response = await fetch(`/api/admin/daily${query}`);
   if (!response.ok) throw new Error('Admin session expired. Unlock again.');
-  const data = await response.json(); adminDate.textContent = data.date;
+  const data = await response.json();
+  adminTargetDate.replaceChildren(
+    new Option(`Today · ${data.todayDate} (override)`, data.todayDate),
+    new Option(`Tomorrow · ${data.tomorrowDate}`, data.tomorrowDate)
+  );
+  adminTargetDate.value = data.date;
+  adminDate.textContent = data.date;
+  adminDateLabel.textContent = data.overridingToday ? "TODAY'S SET OVERRIDE" : 'NEXT DAILY SET';
+  adminTitlePanel.textContent = data.overridingToday ? "Override today's prompts" : "Choose tomorrow's prompts";
+  adminTargetNotice.hidden = !data.overridingToday;
+  adminTargetNotice.textContent = data.overridingToday
+    ? 'This replaces the shared set today and clears all Complete flags. People with progress on the old set may need to refresh.'
+    : '';
+  adminSave.textContent = data.overridingToday ? "Override today's set" : "Save tomorrow's set";
   const completed = data.completedPromptIds || [], scheduled = data.scheduledPromptIds || [], used = new Set([...completed,...scheduled]);
   const available = window.PROMPTS.filter(prompt => !used.has(prompt.id));
   const selected = data.promptIds || available.slice(0, ROUNDS).map(prompt => prompt.id);
@@ -1001,15 +1016,22 @@ adminSave.addEventListener('click', async () => {
   const promptIds = [...adminPromptList.querySelectorAll('.admin-prompt-select:checked')].map(input => input.value);
   const completedPromptIds = [...adminPromptList.querySelectorAll('.admin-prompt-complete:checked:not(:disabled)')].map(input => input.value);
   if (promptIds.length !== 7) return;
-  adminSave.disabled = true; adminSaveStatus.textContent = 'Saving tomorrow’s set…';
+  const date = adminTargetDate.value, overridingToday = date === adminTargetDate.options[0]?.value;
+  adminSave.disabled = true; adminSaveStatus.textContent = overridingToday ? 'Overriding today’s set…' : 'Saving tomorrow’s set…';
   try {
-    const response = await fetch('/api/admin/daily',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({promptIds,completedPromptIds})});
+    const response = await fetch('/api/admin/daily',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({date,promptIds,completedPromptIds})});
     const data = await response.json();
     if (!response.ok) throw new Error(data.error || 'Could not save daily set.');
     adminDate.textContent = data.date;
-    adminSaveStatus.textContent = `Saved for ${data.date}. This set and its completed prompts are shared across the site.`;
+    adminSaveStatus.textContent = data.overridingToday
+      ? `Overrode today’s set for ${data.date} and cleared all Complete flags. The new set is shared across the site.`
+      : `Saved for ${data.date}. This set and its completed prompts are shared across the site.`;
   } catch (err) { adminSaveStatus.textContent = err.message || 'Could not save daily set.'; }
   updateAdminSelection();
+});
+adminTargetDate.addEventListener('change', () => {
+  adminSaveStatus.textContent = '';
+  loadAdminPromptChoices(adminTargetDate.value).catch(err => { adminSaveStatus.textContent = err.message || 'Could not load this daily set.'; });
 });
 let answerReviewScrollBeforeClick = null;
 resultsEl.addEventListener('pointerdown', e => {

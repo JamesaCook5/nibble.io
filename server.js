@@ -222,27 +222,38 @@ const httpServer = http.createServer((req,res)=>{
   }
   if(pathname==='/api/admin/daily' && req.method==='GET'){
     if(!isAdmin(req)) return json(res, 401, {error:'admin login required'});
-    const date = londonTomorrow(), saved = dailyConfig;
-    return json(res, 200, {date, promptIds:saved.schedules[date]?.promptIds || null, completedPromptIds:saved.completedPromptIds, scheduledPromptIds:[...scheduledPromptIds(saved, date)], usedPromptIds:usedPromptIds(saved, date)});
+    const today = londonToday(), tomorrow = londonTomorrow(), requested = new URL(req.url,'http://localhost').searchParams.get('date');
+    const date = requested === today ? today : tomorrow, saved = dailyConfig, overridingToday = date === today;
+    return json(res, 200, {
+      date, todayDate:today, tomorrowDate:tomorrow, overridingToday,
+      promptIds:saved.schedules[date]?.promptIds || null,
+      completedPromptIds:overridingToday ? [] : saved.completedPromptIds,
+      scheduledPromptIds:overridingToday ? [] : [...scheduledPromptIds(saved, date)],
+      usedPromptIds:overridingToday ? [] : usedPromptIds(saved, date)
+    });
   }
   if(pathname==='/api/admin/daily' && req.method==='POST'){
     if(!isAdmin(req)) return json(res, 401, {error:'admin login required'});
     readJson(req, 8192, async (err, body) => {
-      const ids = body && body.promptIds, completed = body && body.completedPromptIds, date = londonTomorrow();
+      const ids = body && body.promptIds, today = londonToday(), tomorrow = londonTomorrow();
+      const date = body?.date === today ? today : body?.date === tomorrow ? tomorrow : null;
+      const overridingToday = date === today;
+      const completed = overridingToday ? [] : body && body.completedPromptIds;
       if(err) return json(res, 400, {error:'invalid JSON'});
+      if(!date) return json(res, 400, {error:'choose today or tomorrow as the daily set date'});
       if(!Array.isArray(ids) || ids.length!==7 || new Set(ids).size!==7 || !ids.every(id => typeof id==='string' && promptIds.has(id))) return json(res, 400, {error:'choose exactly seven different prompts'});
-      if(!Array.isArray(completed) || new Set(completed).size!==completed.length || !completed.every(id => typeof id==='string' && promptIds.has(id))) return json(res, 400, {error:'invalid completed prompts'});
+      if(!overridingToday && (!Array.isArray(completed) || new Set(completed).size!==completed.length || !completed.every(id => typeof id==='string' && promptIds.has(id)))) return json(res, 400, {error:'invalid completed prompts'});
       const config = JSON.parse(JSON.stringify(dailyConfig));
       const previouslyScheduled = new Set();
       for (const [scheduledDate, schedule] of Object.entries(config.schedules)) if (scheduledDate < date) for (const id of schedule.promptIds) previouslyScheduled.add(id);
-      if(ids.some(id => previouslyScheduled.has(id))) return json(res, 400, {error:'a selected prompt was already used in an earlier daily set'});
-      if(ids.some(id => completed.includes(id))) return json(res, 400, {error:'a selected prompt cannot also be marked complete'});
+      if(!overridingToday && ids.some(id => previouslyScheduled.has(id))) return json(res, 400, {error:'a selected prompt was already used in an earlier daily set'});
+      if(!overridingToday && ids.some(id => completed.includes(id))) return json(res, 400, {error:'a selected prompt cannot also be marked complete'});
       config.schedules[date] = {promptIds:ids};
-      config.completedPromptIds = completed;
+      config.completedPromptIds = completed || [];
       config.updatedAt = new Date().toISOString();
       try { await saveDailyConfig(config); }
       catch { return json(res, 500, {error:'could not save daily prompts'}); }
-      return json(res, 200, {ok:true, date, promptIds:ids, completedPromptIds:config.completedPromptIds, scheduledPromptIds:[...scheduledPromptIds(config, date)], usedPromptIds:usedPromptIds(config, date)});
+      return json(res, 200, {ok:true, date, overridingToday, promptIds:ids, completedPromptIds:config.completedPromptIds, scheduledPromptIds:[...scheduledPromptIds(config, date)], usedPromptIds:usedPromptIds(config, date)});
     }); return;
   }
   if(req.method==='POST' && pathname==='/api/check'){
